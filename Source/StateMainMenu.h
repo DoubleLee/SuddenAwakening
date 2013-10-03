@@ -32,6 +32,7 @@ private:
 	void UserMadeSelection();
 	vector< unique_ptr< Button > > mButtons;
 	int mSelectedButton;
+	unique_ptr<sf::Text> mpTitleText;
 };
 
 #endif // STATEMAINMENU_H

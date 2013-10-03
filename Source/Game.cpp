@@ -22,6 +22,8 @@ using std::string;
 // singleton
 Game * Game::mpsGame = nullptr;
 
+std::chrono::high_resolution_clock::time_point gGameStart;
+
 Game::Game()
 	:
 	mpWindow(nullptr),
@@ -37,6 +39,8 @@ Game::Game()
 		throw std::runtime_error("Two Game objects exist.");
 	else
 		mpsGame = this;
+
+	gGameStart = std::chrono::high_resolution_clock::now();
 	}
 
 Game::~Game()
@@ -66,6 +70,7 @@ bool Game::Init()
 						sf::VideoMode( config.GetScreenWidth(), config.GetScreenHeight() ),
 						config.GetWindowTitle() ) );
 
+		mTitleString = config.GetWindowTitle();
 		mpFontButton.reset( new sf::Font( ) );
 
 		if ( !mpFontButton->loadFromFile( config.GetFontButtonFile() ) )
@@ -158,16 +163,17 @@ const sf::Font & Game::GetButtonFont() const
 
 void Game::UpdateTimers()
 	{
-	auto now = std::chrono::duration_cast<std::chrono::microseconds> (std::chrono::high_resolution_clock::now().time_since_epoch());
-	mFrameDelta = now.count() - mFrameStamp;
-	mFrameStamp = now.count();
+	std::chrono::high_resolution_clock::time_point nowTime( std::chrono::high_resolution_clock::now() );
+	std::chrono::microseconds sinceGameStart = std::chrono::duration_cast<std::chrono::microseconds> ( nowTime - gGameStart );
+	mFrameDelta = sinceGameStart.count() - mFrameStamp;
+	mFrameStamp = sinceGameStart.count();
 
-	auto nowDouble = std::chrono::duration_cast< std::chrono::duration<double, std::ratio< 1, 1> > >(now);
+	auto nowDouble = std::chrono::duration_cast< std::chrono::duration<double, std::ratio< 1, 1> > >(sinceGameStart);
 	mFrameDeltaD = nowDouble.count() - mFrameStampD;
 	mFrameStampD = nowDouble.count();
 	}
 
-double Game::GetFrampStampD() const
+double Game::GetFrameStampD() const
 	{
 	return mFrameStampD;
 	}
@@ -185,4 +191,9 @@ TimeInt Game::GetFrameStamp() const
 TimeInt Game::GetFrameDelta() const
 	{
 	return mFrameDelta;
+	}
+
+const string & Game::GetTitleStr() const
+	{
+	return mTitleString;
 	}

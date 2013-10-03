@@ -50,10 +50,12 @@ public:
 
 	const sf::Font & GetButtonFont() const;
 
-	double GetFrampStampD() const;
+	double GetFrameStampD() const;
 	double GetFrameDeltaD() const;
 	TimeInt GetFrameStamp() const;
 	TimeInt GetFrameDelta() const;
+
+	const string & GetTitleStr() const;
 
 private:
 
@@ -73,6 +75,8 @@ private:
 	double mFrameDeltaD;
 	TimeInt mFrameStamp;
 	TimeInt mFrameDelta;
+
+	string mTitleString;
 
 	static Game * mpsGame;
 };

@@ -22,6 +22,8 @@ class Music;
 class Texture;
 class Sprite;
 class Event;
+class Text;
+class Font;
 }
 
 class Game;
