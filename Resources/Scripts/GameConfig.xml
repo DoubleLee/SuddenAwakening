@@ -1,0 +1,8 @@
+<?xml version="1.0f"?>
+<!DOCTYPE PLAY SYSTEM play.dtd>
+< settings
+screenWidth = "1024"
+screenHeight = "768"
+windowTitle = "Sudden Awakening by DoubleLee"
+fontButton = "../Resources/Fonts/Grange.ttf"
+/>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE StateMainMenu>
+
+< music
+file = "../Resources/Audio/first_run_jingle.ogg"
+volume = "50.0"
+/>
+
+ <audios>
+   <audio file = "../Resources/Audio/laserLow.ogg" audioID = "1" />
+   <audio file = "../Resources/Audio/laserMed.ogg" audioID = "1" />
+   <audio file = "../Resources/Audio/laserHigh.ogg" audioID = "1" />
+   <audio file = "../Resources/Audio/click.wav" audioID = "3" />
+ </audios>
+
+ <textures>
+   <texture file = "../Resources/Textures/scareyFace.png" />
+   <texture file = "../Resources/Textures/blackRectButton60-20.png" />
+ </textures>
+ 
+ <sprites>
+   <background texIndex = "0" />
+ </sprites>
+ 
+ <buttons>
+   <button text = "New Game" texIndex = "1" posx = "20.0" posy = "20.0" />
+   <button text = "Options" texIndex = "1" posx = "20.0" posy = "80.0" />
+   <button text = "Exit" texIndex = "1" posx = "20.0" posy = "140.0" />
+ </buttons>
