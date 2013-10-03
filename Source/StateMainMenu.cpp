@@ -14,7 +14,7 @@ using namespace tinyxml2;
 #include <stdexcept>
 
 sf::Color gSelected( 255, 150, 50 );
-sf::Color gNotSelected( 70, 0, 0 );
+sf::Color gNotSelected( 90, 0, 0 );
 
 // StateMainMenu
 StateMainMenu::StateMainMenu()
