@@ -138,6 +138,13 @@ void StateMainMenu::LoadFromXML(const string & file)
 	if ( pBackground->QueryIntAttribute("texIndex", &index) )
 		throw std::runtime_error("Failed to find texIndex in background element");
 
+	mpBackground.reset( new sf::Sprite( mTextures.at(index) ) );
+	sf::Vector2f windowSize( mpGame->GetWindow()->getSize() );
+	sf::FloatRect backgroundRect( mpBackground->getGlobalBounds() );
+
+	mpBackground->setScale( windowSize.x / backgroundRect.width,  windowSize.y / backgroundRect.height );
+
+
 	XMLElement * pButtons ( doc.FirstChildElement("buttons") );
 	if ( !pButtons )
 		{
@@ -178,8 +185,6 @@ void StateMainMenu::LoadFromXML(const string & file)
 		pButton = pButton->NextSiblingElement("button");
 		}
 
-
-	mpBackground.reset( new sf::Sprite( mTextures.at(index) ) );
 	}
 
 void StateMainMenu::ChangeSelectionTo(int newSelection)
