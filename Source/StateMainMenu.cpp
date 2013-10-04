@@ -53,6 +53,19 @@ void StateMainMenu::Update()
 		gunTrigger = now + 1000000;
 		}
 
+	// change selected button to the one under the mouse
+	sf::Vector2f mousePos ( sf::Mouse::getPosition(*(mpGame->GetWindow())) );
+	for ( unsigned int i = 0; i < mButtons.size(); ++i )
+		{
+		Button * pButton( mButtons[i].get() );
+
+		if ( pButton->IsPosWithin( mousePos ) )
+			{
+			ChangeSelectionTo( i );
+			break;
+			}
+		}
+
 	static sf::Color brightOrange( 255, 175, 100 );
 
 	sf::Color changedColor(brightOrange);
