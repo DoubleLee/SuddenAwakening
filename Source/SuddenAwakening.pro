@@ -30,18 +30,14 @@ HEADERS += \
     Button.h \
     StateGamePlay.h
 
-INCLUDEPATH += C:\SFMLMinGW\include
-DEPENDPATH += C:\SFMLMinGW\include
-LIBS += -LC:\SFMLMinGW\lib
+win32:INCLUDEPATH += C:\SFMLMinGW\include
+win32:DEPENDPATH += C:\SFMLMinGW\include
+win32:LIBS += -LC:\SFMLMinGW\lib
 
-CONFIG(release, release|debug){
-LIBS += -lsfml-audio -lsfml-graphics -lsfml-network -lsfml-window -lsfml-system
+
+
+LIBS += -L/usr/lib64 -lsfml-audio-2.0 -lsfml-graphics-2.0 -lsfml-network-2.0 -lsfml-window-2.0 -lsfml-system-2.0
 win32: LIBS += -lsfml-main
-}
 
-CONFIG(debug, release|debug){
-LIBS += -lsfml-audio-d -lsfml-graphics-d -lsfml-network-d -lsfml-window-d -lsfml-system-d
-win32: LIBS += -lsfml-main-d
-}
 
 unix: QMAKE_CXXFLAGS += -std=c++11

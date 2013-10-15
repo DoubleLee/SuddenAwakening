@@ -11,10 +11,11 @@ All rights reserved.
 #include <iomanip>
 #include <fstream>
 #include <cstring>
+#include <stdexcept>
 
 using namespace std;
 
-Logger gLogger("../Resources/Logs/LogFile.log");
+Logger gLogger("LogFile.log");
 
 std::string StripPath( const std::string & fileName)
 	{
@@ -51,7 +52,7 @@ Logger::Logger(const std::string & file)
 	(*mpOfs).open(file, ios::out );
 	if ( !mpOfs->is_open() )
 		{
-		throw;
+        throw std::runtime_error("Failed to open or create log file.");
 		}
 	}
 
