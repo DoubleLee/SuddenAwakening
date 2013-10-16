@@ -3,7 +3,7 @@
 #ifndef STATEMAINMENU_H
 #define STATEMAINMENU_H
 
-#include "State.h"
+#include "State.hpp"
 
 enum class ButtonID
 	{

@@ -1,9 +1,9 @@
-#include "ConfigLoader.h"
+#include "ConfigLoader.hpp"
 
-#include "Logger.h"
-#include "StringUtilities.h"
+#include "Logger.hpp"
+#include "StringUtilities.hpp"
 
-#include "tinyxml2.h"
+#include "tinyxml2.hpp"
 using namespace tinyxml2;
 
 #include <exception>

@@ -1,6 +1,6 @@
-#include "Button.h"
+#include "Button.hpp"
 
-#include "Game.h"
+#include "Game.hpp"
 
 Button::Button( sf::Texture & texture, const sf::Vector2f & pos, string & text, int buttonID)
 	:

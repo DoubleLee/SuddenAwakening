@@ -12,23 +12,24 @@ SOURCES += main.cpp \
 	ConfigLoader.cpp \
 	tinyxml2.cpp \
 	State.cpp \
-    AudioEffects.cpp \
-    StateMainMenu.cpp \
-    Button.cpp \
-    StateGamePlay.cpp
+	AudioEffects.cpp \
+	StateMainMenu.cpp \
+	Button.cpp \
+	StateGamePlay.cpp
 
 HEADERS += \
-	Logger.h \
-	StringUtilities.h \
-	RandomGenerator.h \
-	Game.h \
-	ConfigLoader.h \
-	tinyxml2.h \
-	State.h \
-    AudioEffects.h \
-    StateMainMenu.h \
-    Button.h \
-    StateGamePlay.h
+    ResourceManager.hpp \
+    AudioEffects.hpp \
+    Button.hpp \
+    ConfigLoader.hpp \
+    Game.hpp \
+    Logger.hpp \
+    RandomGenerator.hpp \
+    State.hpp \
+    StateGamePlay.hpp \
+    StateMainMenu.hpp \
+    StringUtilities.hpp \
+    tinyxml2.hpp
 
 win32:INCLUDEPATH += C:\SFMLMinGW\include
 win32:DEPENDPATH += C:\SFMLMinGW\include
@@ -36,7 +37,7 @@ win32:LIBS += -LC:\SFMLMinGW\lib
 
 
 
-LIBS += -L/usr/lib64 -lsfml-audio-2.0 -lsfml-graphics-2.0 -lsfml-network-2.0 -lsfml-window-2.0 -lsfml-system-2.0
+LIBS += -L/usr/lib64 -lsfml-audio -lsfml-graphics -lsfml-network -lsfml-window -lsfml-system
 win32: LIBS += -lsfml-main
 
 

@@ -3,7 +3,7 @@ Copyright 2013 @ Chris Leisure
 All rights reserved.
 */
 
-#include "Logger.h"
+#include "Logger.hpp"
 
 #include <time.h>
 #include <stdio.h>
@@ -52,7 +52,7 @@ Logger::Logger(const std::string & file)
 	(*mpOfs).open(file, ios::out );
 	if ( !mpOfs->is_open() )
 		{
-        throw std::runtime_error("Failed to open or create log file.");
+		throw std::runtime_error("Failed to open or create log file.");
 		}
 	}
 

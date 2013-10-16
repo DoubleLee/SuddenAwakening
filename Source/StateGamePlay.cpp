@@ -1,6 +1,6 @@
-#include "StateGamePlay.h"
+#include "StateGamePlay.hpp"
 
-#include "Game.h"
+#include "Game.hpp"
 
 #include "SFML/System.hpp"
 #include "SFML/Window.hpp"

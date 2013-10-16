@@ -1,4 +1,4 @@
-#include "RandomGenerator.h"
+#include "RandomGenerator.hpp"
 
 #include <chrono>
 #include <random>

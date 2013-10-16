@@ -1,4 +1,4 @@
-#include "StringUtilities.h"
+#include "StringUtilities.hpp"
 
 string & ToPlatformPath(string & str)
 	{

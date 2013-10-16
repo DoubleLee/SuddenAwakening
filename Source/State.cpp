@@ -1,12 +1,12 @@
-#include "State.h"
+#include "State.hpp"
 
-#include "Logger.h"
-#include "Game.h"
-#include "StringUtilities.h"
-#include "RandomGenerator.h"
-#include "AudioEffects.h"
+#include "Logger.hpp"
+#include "Game.hpp"
+#include "StringUtilities.hpp"
+#include "RandomGenerator.hpp"
+#include "AudioEffects.hpp"
 
-#include "tinyxml2.h"
+#include "tinyxml2.hpp"
 using namespace tinyxml2;
 
 #include "SFML/Audio.hpp"

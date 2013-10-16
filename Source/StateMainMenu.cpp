@@ -1,14 +1,14 @@
-#include "StateMainMenu.h"
+#include "StateMainMenu.hpp"
 
-#include "Game.h"
-#include "AudioEffects.h"
-#include "StringUtilities.h"
-#include "Button.h"
+#include "Game.hpp"
+#include "AudioEffects.hpp"
+#include "StringUtilities.hpp"
+#include "Button.hpp"
 
 #include "SFML/Window.hpp"
 #include "SFML/Graphics.hpp"
 
-#include "tinyxml2.h"
+#include "tinyxml2.hpp"
 using namespace tinyxml2;
 
 #include <stdexcept>

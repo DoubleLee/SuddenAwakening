@@ -1,6 +1,6 @@
-#include "AudioEffects.h"
+#include "AudioEffects.hpp"
 
-#include "RandomGenerator.h"
+#include "RandomGenerator.hpp"
 
 #include <utility>
 #include <stdexcept>

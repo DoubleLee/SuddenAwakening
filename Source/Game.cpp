@@ -1,11 +1,11 @@
-#include "Game.h"
+#include "Game.hpp"
 
-#include "Logger.h"
-#include "ConfigLoader.h"
-#include "StringUtilities.h"
-#include "RandomGenerator.h"
-#include "StateMainMenu.h"
-#include "StateGamePlay.h"
+#include "Logger.hpp"
+#include "ConfigLoader.hpp"
+#include "StringUtilities.hpp"
+#include "RandomGenerator.hpp"
+#include "StateMainMenu.hpp"
+#include "StateGamePlay.hpp"
 
 #include "SFML/Graphics.hpp"
 #include "SFML/Window.hpp"

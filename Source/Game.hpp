@@ -2,7 +2,7 @@
 #ifndef GAME_H
 #define GAME_H
 
-#include "State.h"
+#include "State.hpp"
 
 #include <memory>
 using std::unique_ptr;
