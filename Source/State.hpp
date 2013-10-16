@@ -8,6 +8,8 @@ using std::string;
 using std::unique_ptr;
 using std::vector;
 
+#include "ResourceManager.hpp"
+
 enum class StateID : unsigned int
 	{
 	NullID = 0,
@@ -58,7 +60,7 @@ protected:
 
 	Game * mpGame;
 
-	vector<sf::Texture> mTextures;
+	ResourceManager<sf::Texture> mTextures;
 	unique_ptr<sf::Music> mpMusic;
 	unique_ptr<AudioEffects> mpAudioEffects;
 	unique_ptr<sf::Sprite> mpBackground;

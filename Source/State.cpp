@@ -58,35 +58,33 @@ void State::LoadTexturesFromXML(XMLElement * pTexturesElement)
 		}
 
 	// delete any textures old textures if there are any.
-	mTextures.clear();
+	mTextures.ClearAll();
 
 	// Get first texture element
 	XMLElement * pTexIndex( pTexturesElement->FirstChildElement("texture") );
 
 	// loop over each texture element and load them.
 	string file;
+	ResourceID id;
 	while ( pTexturesElement && pTexIndex )
 		{
-		// Create new sf::Texture at back of vector
-		mTextures.emplace_back();
-		sf::Texture & tex ( mTextures.back() );
 
 		// Get texture file name and check for validity
 		const char * pStr ( pTexIndex->Attribute("file") );
 		if ( !pStr )
 			{
-			mTextures.pop_back();
 			throw std::runtime_error("Failed to load texture file string.");
 			}
 
 		file = pStr;
 
-		// Load texture into sfml and check for problems
-		if ( !tex.loadFromFile( ToPlatformPath(file) ) )
+		if ( pTexIndex->QueryUnsignedAttribute("texID", &id) )
 			{
-			mTextures.pop_back();
-			throw std::runtime_error("Failed to load texture file " + file);
+			throw std::runtime_error("Failed to load texture id from xml");
 			}
+
+		mTextures.LoadResource(file, id);
+
 		// Iterate to next texture element.
 		pTexIndex = pTexIndex->NextSiblingElement("texture");
 		}

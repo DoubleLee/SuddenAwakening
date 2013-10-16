@@ -14,16 +14,16 @@ volume = "50.0"
  </audios>
 
  <textures>
-   <texture file = "../Resources/Textures/churchScene.png" />
-   <texture file = "../Resources/Textures/blackRectButton60-20.png" />
+   <texture file = "../Resources/Textures/churchScene.png" texID = "1" />
+   <texture file = "../Resources/Textures/blackRectButton60-20.png" texID = "2" />
  </textures>
  
  <sprites>
-   <background texIndex = "0" />
+   <background texID = "1" />
  </sprites>
  
  <buttons>
-   <button text = "New Game" texIndex = "1" posx = "20.0" posy = "20.0" />
-   <button text = "Options" texIndex = "1" posx = "20.0" posy = "80.0" />
-   <button text = "Exit" texIndex = "1" posx = "20.0" posy = "140.0" />
+   <button text = "New Game" texID = "2" posx = "20.0" posy = "20.0" />
+   <button text = "Options" texID = "2" posx = "20.0" posy = "80.0" />
+   <button text = "Exit" texID = "2" posx = "20.0" posy = "140.0" />
  </buttons>

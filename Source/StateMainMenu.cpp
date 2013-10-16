@@ -171,11 +171,11 @@ void StateMainMenu::LoadFromXML(const string & file)
 		throw std::runtime_error("Failed to load sprites node");
 
 	XMLElement * pBackground = pSprites->FirstChildElement("background");
-	int index = -1;
-	if ( pBackground->QueryIntAttribute("texIndex", &index) )
+	ResourceID texID;
+	if ( pBackground->QueryUnsignedAttribute("texID", &texID) )
 		throw std::runtime_error("Failed to find texIndex in background element");
 
-	mpBackground.reset( new sf::Sprite( mTextures.at(index) ) );
+	mpBackground.reset( new sf::Sprite( mTextures.GetResource(texID) ) );
 	sf::Vector2f windowSize( mpGame->GetWindow()->getSize() );
 	sf::FloatRect backgroundRect( mpBackground->getGlobalBounds() );
 
@@ -190,7 +190,6 @@ void StateMainMenu::LoadFromXML(const string & file)
 	XMLElement * pButton ( pButtons->FirstChildElement("button") );
 
 	string buttonText;
-	int textureIndex;
 	sf::Vector2f pos;
 	while ( pButtons && pButton )
 		{
@@ -202,7 +201,7 @@ void StateMainMenu::LoadFromXML(const string & file)
 
 		buttonText = pStr;
 
-		if ( pButton->QueryIntAttribute("texIndex", &textureIndex) )
+		if ( pButton->QueryUnsignedAttribute("texID", &texID) )
 			{
 			throw std::runtime_error("Failed to find texIndex attribute for button.");
 			}
@@ -217,7 +216,7 @@ void StateMainMenu::LoadFromXML(const string & file)
 			throw std::runtime_error("Failed to find posY attribute for button.");
 			}
 
-		mButtons.emplace_back( new Button( mTextures.at(textureIndex), pos, ToPlatformPath(buttonText), 1 ) );
+		mButtons.emplace_back( new Button( mTextures.GetResource(texID), pos, ToPlatformPath(buttonText), 1 ) );
 		mButtons.back()->SetTextColor(gNotSelected);
 		pButton = pButton->NextSiblingElement("button");
 		}

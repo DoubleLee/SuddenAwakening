@@ -17,7 +17,7 @@ using namespace std;
 
 Logger gLogger("LogFile.log");
 
-std::string StripPath( const std::string & fileName)
+std::string StripPath( const std::string & fileName )
 	{
 	char lookFor;
 #ifdef WIN32
