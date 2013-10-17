@@ -1,3 +1,5 @@
+#pragma once
+
 #ifndef STATE_H
 #define STATE_H
 
@@ -31,11 +33,7 @@ class Font;
 class Game;
 class AudioEffects;
 
-namespace tinyxml2
-{
-class XMLElement;
-}
-using tinyxml2::XMLElement;
+
 
 class State
 {
@@ -53,15 +51,10 @@ private:
 	StateID mID;
 
 protected:
-	virtual void LoadTexturesFromXML( XMLElement * pTexturesElement );
-	virtual void LoadMusicFromXML( XMLElement * pMusicElement );
-	virtual void LoadAudiosFromXML( XMLElement * pAudiosElement );
-	//virtual void LoadSpitesFromXML( XMLElement * pSpritesElement );
 
 	Game * mpGame;
 
 	ResourceManager<sf::Texture> mTextures;
-	unique_ptr<sf::Music> mpMusic;
 	unique_ptr<AudioEffects> mpAudioEffects;
 	unique_ptr<sf::Sprite> mpBackground;
 };

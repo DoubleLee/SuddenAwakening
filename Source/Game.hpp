@@ -1,4 +1,5 @@
 #pragma once
+
 #ifndef GAME_H
 #define GAME_H
 
@@ -50,6 +51,8 @@ public:
 
 	const sf::Font & GetButtonFont() const;
 
+	sf::Music * GetMusic() const;
+
 	double GetFrameStampD() const;
 	double GetFrameDeltaD() const;
 	TimeInt GetFrameStamp() const;
@@ -67,6 +70,7 @@ private:
 	unique_ptr<sf::Font> mpFontButton;
 
 	unique_ptr<State> mpState;
+	unique_ptr<sf::Music> mpMusic;
 	StateID mNewState;
 
 	int mReturnValue;

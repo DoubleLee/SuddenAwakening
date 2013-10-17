@@ -1,3 +1,5 @@
+#pragma once
+
 #ifndef STATEGAMEPLAY_H
 #define STATEGAMEPLAY_H
 

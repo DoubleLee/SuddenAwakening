@@ -79,3 +79,9 @@ weak_ptr<sf::Sound> AudioEffects::PlaySound(AudioID audioID)
 
 	return weak_ptr<sf::Sound>(pSound);
 	}
+
+void AudioEffects::ClearAll()
+	{
+	mActiveSounds.clear();
+	mAudioBuffers.clear();
+	}

@@ -10,6 +10,7 @@
 #include "SFML/Graphics.hpp"
 #include "SFML/Window.hpp"
 #include "SFML/System.hpp"
+#include "SFML/Audio.hpp"
 
 //#include "SFML/Graphics/RenderWindow.hpp"
 
@@ -28,6 +29,7 @@ Game::Game()
 	:
 	mpWindow(nullptr),
 	mpState(nullptr),
+	mpMusic(nullptr),
 	mNewState( StateID::MainMenuID ),
 	mReturnValue(0),
 	mFrameStampD(0.0f),
@@ -77,6 +79,8 @@ bool Game::Init()
 			{
 			throw std::runtime_error("Failed to load font");
 			}
+
+		mpMusic.reset( new sf::Music() );
 
 		mpState.reset( new StateMainMenu() );
 
@@ -159,6 +163,11 @@ sf::RenderWindow * Game::GetWindow()
 const sf::Font & Game::GetButtonFont() const
 	{
 	return (*mpFontButton);
+	}
+
+sf::Music * Game::GetMusic() const
+	{
+	return mpMusic.get();
 	}
 
 void Game::UpdateTimers()

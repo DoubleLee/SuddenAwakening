@@ -1,3 +1,5 @@
+#pragma once
+
 #ifndef AUDIOEFFECTS_H
 #define AUDIOEFFECTS_H
 
@@ -31,6 +33,8 @@ public:
 	weak_ptr<sf::Sound> PlaySound( AudioID audioID );
 
 	void Update();
+
+	void ClearAll();
 
 private:
 	std::vector< shared_ptr< sf::Sound > > mActiveSounds;

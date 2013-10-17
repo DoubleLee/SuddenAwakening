@@ -1,4 +1,5 @@
 #pragma once
+
 #ifndef STRINGUTILITIES_H
 #define STRINGUTILITIES_H
 

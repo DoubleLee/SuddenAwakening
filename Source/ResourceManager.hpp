@@ -1,3 +1,5 @@
+#pragma once
+
 #ifndef RESOURCEMANAGER_HPP
 #define RESOURCEMANAGER_HPP
 

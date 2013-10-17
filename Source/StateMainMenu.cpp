@@ -4,6 +4,7 @@
 #include "AudioEffects.hpp"
 #include "StringUtilities.hpp"
 #include "Button.hpp"
+#include "XMLFunctions.hpp"
 
 #include "SFML/Window.hpp"
 #include "SFML/Graphics.hpp"
@@ -159,11 +160,11 @@ void StateMainMenu::LoadFromXML(const string & file)
 		throw std::runtime_error("Failed to load and/or parse " + file);
 		}
 
-	LoadMusicFromXML( doc.FirstChildElement("music") );
+	LoadMusicFromXML( *(mpGame->GetMusic()), doc.FirstChildElement("music") );
 
-	LoadTexturesFromXML( doc.FirstChildElement("textures") );
+	LoadTexturesFromXML( mTextures, doc.FirstChildElement("textures") );
 
-	LoadAudiosFromXML( doc.FirstChildElement("audios") );
+	LoadAudiosFromXML( *(mpAudioEffects.get()), doc.FirstChildElement("audios") );
 
 	// Sprites code, this code can change quite a bit
 	XMLElement * pSprites = doc.FirstChildElement("sprites");
@@ -175,7 +176,8 @@ void StateMainMenu::LoadFromXML(const string & file)
 	if ( pBackground->QueryUnsignedAttribute("texID", &texID) )
 		throw std::runtime_error("Failed to find texIndex in background element");
 
-	mpBackground.reset( new sf::Sprite( mTextures.GetResource(texID) ) );
+	mpBackground->setTexture( mTextures.GetResource(texID) );
+	mpBackground->setPosition(0.0f, 0.0f);
 	sf::Vector2f windowSize( mpGame->GetWindow()->getSize() );
 	sf::FloatRect backgroundRect( mpBackground->getGlobalBounds() );
 

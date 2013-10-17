@@ -15,7 +15,9 @@ SOURCES += main.cpp \
 	AudioEffects.cpp \
 	StateMainMenu.cpp \
 	Button.cpp \
-	StateGamePlay.cpp
+	StateGamePlay.cpp \
+    Level.cpp \
+    XMLFunctions.cpp
 
 HEADERS += \
     ResourceManager.hpp \
@@ -29,7 +31,9 @@ HEADERS += \
     StateGamePlay.hpp \
     StateMainMenu.hpp \
     StringUtilities.hpp \
-    tinyxml2.hpp
+    tinyxml2.hpp \
+    Level.hpp \
+    XMLFunctions.hpp
 
 win32:INCLUDEPATH += C:\SFMLMinGW\include
 win32:DEPENDPATH += C:\SFMLMinGW\include

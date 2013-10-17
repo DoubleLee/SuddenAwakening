@@ -1,4 +1,5 @@
 #pragma once
+
 #ifndef RANDOMGENERATOR_H
 #define RANDOMGENERATOR_H
 
