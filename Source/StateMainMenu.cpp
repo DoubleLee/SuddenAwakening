@@ -38,7 +38,7 @@ StateMainMenu::StateMainMenu()
 
 StateMainMenu::~StateMainMenu()
 	{
-
+	mpGame->GetMusic()->stop();
 	}
 
 void StateMainMenu::Update()

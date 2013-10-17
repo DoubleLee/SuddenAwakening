@@ -37,10 +37,5 @@ StateID State::GetID() const
 	return mID;
 	}
 
-void State::ProcessEvent(const sf::Event & event)
-	{
-
-	}
-
 
 

@@ -46,7 +46,7 @@ public:
 	virtual void Update() = 0;
 	virtual void Draw() = 0;
 	virtual void LoadFromXML( const string & file ) = 0;
-	virtual void ProcessEvent( const sf::Event & event );
+	virtual void ProcessEvent( const sf::Event & event ) = 0;
 private:
 	StateID mID;
 
