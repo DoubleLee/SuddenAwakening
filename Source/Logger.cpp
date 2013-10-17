@@ -4,6 +4,7 @@ All rights reserved.
 */
 
 #include "Logger.hpp"
+#include "Exceptions.hpp"
 
 #include <time.h>
 #include <stdio.h>
@@ -11,7 +12,7 @@ All rights reserved.
 #include <iomanip>
 #include <fstream>
 #include <cstring>
-#include <stdexcept>
+
 
 using namespace std;
 
@@ -52,7 +53,7 @@ Logger::Logger(const std::string & file)
 	(*mpOfs).open(file, ios::out );
 	if ( !mpOfs->is_open() )
 		{
-		throw std::runtime_error("Failed to open or create log file.");
+		throw RuntimeException("Failed to open or create log file.");
 		}
 	}
 

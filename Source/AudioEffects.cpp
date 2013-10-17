@@ -1,11 +1,9 @@
 #include "AudioEffects.hpp"
 
 #include "RandomGenerator.hpp"
+#include "Exceptions.hpp"
 
 #include <utility>
-#include <stdexcept>
-
-
 
 AudioEffects::AudioEffects()
 	{
@@ -42,7 +40,7 @@ bool AudioEffects::LoadBuffer(const string & file, AudioID audioID)
 		{
 		auto successPair = mAudioBuffers.insert( std::make_pair( audioID, std::vector<sf::SoundBuffer> () ) );
 		if ( !successPair.second )
-			throw std::runtime_error("Failed to insert a new pair into audio buffer map");
+			throw RuntimeException("Failed to insert a new pair into audio buffer map");
 		iter = successPair.first;
 		}
 

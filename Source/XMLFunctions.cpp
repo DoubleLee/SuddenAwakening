@@ -30,7 +30,7 @@ void LoadTexturesFromXML(ResourceManager<sf::Texture> & textures, tinyxml2::XMLE
 	// Make sure element passed in is valid, and the correct one.
 	if ( !pTexturesElement || strcmp(pTexturesElement->Name(), "textures") )
 		{
-		throw std::runtime_error("LoadTexturesFromXML invalid node passed in");
+		throw RuntimeException("LoadTexturesFromXML invalid node passed in");
 		}
 
 	// delete any textures old textures if there are any.
@@ -49,14 +49,14 @@ void LoadTexturesFromXML(ResourceManager<sf::Texture> & textures, tinyxml2::XMLE
 		const char * pStr ( pTexIndex->Attribute("file") );
 		if ( !pStr )
 			{
-			throw std::runtime_error("Failed to load texture file string.");
+			throw RuntimeException("Failed to load texture file string.");
 			}
 
 		file = pStr;
 
 		if ( pTexIndex->QueryUnsignedAttribute("texID", &id) )
 			{
-			throw std::runtime_error("Failed to load texture id from xml");
+			throw RuntimeException("Failed to load texture id from xml");
 			}
 
 		textures.LoadResource(file, id);
@@ -73,7 +73,7 @@ void LoadMusicFromXML(sf::Music & music, tinyxml2::XMLElement * pMusicElement)
 	// Make sure element passed in is valid, and the correct one.
 	if ( !pMusicElement || strcmp(pMusicElement->Name(), "music") )
 		{
-		throw std::runtime_error("Load music from xml, invalid node passed in.");
+		throw RuntimeException("Load music from xml, invalid node passed in.");
 		}
 
 	music.stop();
@@ -81,19 +81,19 @@ void LoadMusicFromXML(sf::Music & music, tinyxml2::XMLElement * pMusicElement)
 	// Get music file name attribute from element and check for error
 	const char * pStr ( pMusicElement->Attribute("file") );
 	if ( !pStr )
-		throw std::runtime_error("No file attribute in music element, use empty string for no music");
+		throw RuntimeException("No file attribute in music element, use empty string for no music");
 
 	string file(pStr);
 
 	if ( file.empty() )
 		{
-		throw std::runtime_error("Music file name is empty.");
+		throw RuntimeException("Music file name is empty.");
 		}
 
 	// Tell sf::Music to load file and check for problems
 	if ( !music.openFromFile(  ToPlatformPath( file ).c_str() ) )
 		{
-		throw std::runtime_error("Failed to load music file into sf::Music");
+		throw RuntimeException("Failed to load music file into sf::Music");
 		}
 
 	float volume ( 100.0f );
@@ -101,7 +101,7 @@ void LoadMusicFromXML(sf::Music & music, tinyxml2::XMLElement * pMusicElement)
 	// Get volume from music attribute and check for problems
 	if ( pMusicElement->QueryFloatAttribute("volume", & volume) )
 		{
-		throw std::runtime_error("Failed to find volume in music element");
+		throw RuntimeException("Failed to find volume in music element");
 		}
 
 	// setup sf::Music settings and play music
@@ -117,7 +117,7 @@ void LoadAudiosFromXML(AudioEffects & audioMan, tinyxml2::XMLElement * pAudiosEl
 	// Make sure element passed in is valid, and the correct one.
 	if ( !pAudiosElement || strcmp( pAudiosElement->Name(), "audios" ) )
 		{
-		throw std::runtime_error("Invalid element sent to LoadAudioFromXML");
+		throw RuntimeException("Invalid element sent to LoadAudioFromXML");
 		}
 
 	audioMan.ClearAll();
@@ -131,7 +131,7 @@ void LoadAudiosFromXML(AudioEffects & audioMan, tinyxml2::XMLElement * pAudiosEl
 		// Get file name for this audio and check for problems
 		const char * pStr ( pAudioIndex->Attribute("file") );
 		if ( !pStr )
-			throw std::runtime_error("audio element has no file attribute");
+			throw RuntimeException("audio element has no file attribute");
 
 		string file(pStr);
 
@@ -140,7 +140,7 @@ void LoadAudiosFromXML(AudioEffects & audioMan, tinyxml2::XMLElement * pAudiosEl
 		// Get audioID from audio element and check for problems
 		if ( pAudioIndex->QueryIntAttribute("audioID", &audioID) )
 			{
-			throw std::runtime_error("audio element has no audio id attribute");
+			throw RuntimeException("audio element has no audio id attribute");
 			}
 
 		AudioID id;
@@ -148,19 +148,19 @@ void LoadAudiosFromXML(AudioEffects & audioMan, tinyxml2::XMLElement * pAudiosEl
 		// Template function to make sure the id is valid
 		if ( !IsValidEnum(id, audioID) )
 			{
-			throw std::runtime_error("AudioID from audio element is not valid.");
+			throw RuntimeException("AudioID from audio element is not valid.");
 			}
 
 //		AudioID id( static_cast< AudioID > (audioID) );
 //		if ( !(audioID < static_cast<int>( decltype(id)::LastID) && audioID > static_cast<int>(decltype(id)::FirstID) ) )
 //			{
-//			throw std::runtime_error("AudioID is not a valid id");
+//			throw RuntimeException("AudioID is not a valid id");
 //			}
 
 		// Load the audio into the AudioEffects manager in the id group
 		if ( !audioMan.LoadBuffer( ToPlatformPath(file), id ) )
 			{
-			throw std::runtime_error("Failed while loading audio buffer file");
+			throw RuntimeException("Failed while loading audio buffer file");
 			}
 
 		// Iterate to next audio element

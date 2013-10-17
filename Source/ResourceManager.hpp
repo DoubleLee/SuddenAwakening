@@ -8,6 +8,8 @@
 #include <string>
 #include <memory>
 
+#include "Exceptions.hpp"
+
 typedef unsigned int ResourceID;
 
 template< typename Type >
@@ -33,13 +35,13 @@ void ResourceManager<Type>::LoadResource(const std::string & file, ResourceID id
 	auto iterCheck = mResourceMap.find(id);
 	if ( iterCheck != mResourceMap.end() )
 		{
-		throw std::runtime_error("Resource map already has this id. " + std::to_string(id) );
+		throw RuntimeException("Resource map already has this id. ID = " + std::to_string(id) );
 		}
 
 	// attempt to load
 	if ( !pResource->loadFromFile( file ) )
 		{
-		throw std::runtime_error("Failed to load " + file );
+		throw RuntimeException("Failed to load " + file );
 		}
 
 	// time to insert into map
@@ -47,7 +49,7 @@ void ResourceManager<Type>::LoadResource(const std::string & file, ResourceID id
 
 	if ( !pairCheck.second )
 		{
-		throw std::runtime_error("Failed to insert resource into map. " + file );
+		throw RuntimeException("Failed to insert resource into map. " + file );
 		}
 
 	}
@@ -58,7 +60,7 @@ Type & ResourceManager<Type>::GetResource(ResourceID id) const
 	auto iterCheck = mResourceMap.find(id);
 	if ( iterCheck == mResourceMap.end() )
 		{
-		throw std::runtime_error("Failed to find the resource id in the map. " + std::to_string(id) );
+		throw RuntimeException("Failed to find the resource id in the map. " + std::to_string(id) );
 		}
 
 	return *((*iterCheck).second.get());

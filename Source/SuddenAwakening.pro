@@ -18,7 +18,8 @@ SOURCES += main.cpp \
 	StateGamePlay.cpp \
     Level.cpp \
     XMLFunctions.cpp \
-    LevelOne.cpp
+    LevelOne.cpp \
+    Exceptions.cpp
 
 HEADERS += \
     ResourceManager.hpp \
@@ -35,7 +36,8 @@ HEADERS += \
     tinyxml2.hpp \
     Level.hpp \
     XMLFunctions.hpp \
-    LevelOne.hpp
+    LevelOne.hpp \
+    Exceptions.hpp
 
 win32:INCLUDEPATH += C:\SFMLMinGW\include
 win32:DEPENDPATH += C:\SFMLMinGW\include

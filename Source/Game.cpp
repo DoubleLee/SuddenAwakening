@@ -38,7 +38,7 @@ Game::Game()
 	mFrameDelta(0)
 	{
 	if ( mpsGame )
-		throw std::runtime_error("Two Game objects exist.");
+		throw RuntimeException("Two Game objects exist.");
 	else
 		mpsGame = this;
 
@@ -77,7 +77,7 @@ bool Game::Init()
 
 		if ( !mpFontButton->loadFromFile( config.GetFontButtonFile() ) )
 			{
-			throw std::runtime_error("Failed to load font");
+			throw RuntimeException("Failed to load font");
 			}
 
 		mpMusic.reset( new sf::Music() );
