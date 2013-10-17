@@ -38,7 +38,7 @@ Game::Game()
 	mFrameDelta(0)
 	{
 	if ( mpsGame )
-		throw RuntimeException("Two Game objects exist.");
+		ThrowRuntimeException("Two Game objects exist.")
 	else
 		mpsGame = this;
 
@@ -77,7 +77,7 @@ bool Game::Init()
 
 		if ( !mpFontButton->loadFromFile( config.GetFontButtonFile() ) )
 			{
-			throw RuntimeException("Failed to load font");
+			ThrowRuntimeException("Failed to load font");
 			}
 
 		mpMusic.reset( new sf::Music() );
@@ -87,7 +87,7 @@ bool Game::Init()
 		}
 	catch ( std::exception & except )
 		{
-		LogFailure(except.what());
+		gLogger.Exception(except);
 		return false;
 		}
 
@@ -124,7 +124,7 @@ int Game::Run()
 		}
 	catch(std::exception & except)
 		{
-		LogFailure(except.what());
+		gLogger.Exception(except);
 		}
 
 	return mReturnValue;

@@ -53,7 +53,7 @@ Logger::Logger(const std::string & file)
 	(*mpOfs).open(file, ios::out );
 	if ( !mpOfs->is_open() )
 		{
-		throw RuntimeException("Failed to open or create log file.");
+		ThrowRuntimeException("Failed to open or create log file.");
 		}
 	}
 
@@ -94,6 +94,13 @@ void Logger::Warning( const string & desc, const string & file, const unsigned l
 	PutTimeStr();
 	(*mpOfs) << " WARNING    ";
 	LogFileLineDesc(file,line,desc);
+	}
+
+void Logger::Exception(const exception & except)
+	{
+	PutTimeStr();
+	(*mpOfs) << " EXCEPTION  ";
+	(*mpOfs) << except.what();
 	}
 
 void Logger::Error( const string & file, const unsigned long long line, const string & desc, const string & error, const int code)

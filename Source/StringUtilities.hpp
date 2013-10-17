@@ -7,5 +7,6 @@
 using std::string;
 
 string & ToPlatformPath( string & str );
+void StripPath( std::string & fileName );
 
 #endif // STRINGUTILITIES_H

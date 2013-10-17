@@ -78,6 +78,8 @@ public:
 	// logs a warning
 	void Warning(const string& desc, const string& file, const unsigned long long line);
 
+	void Exception( const std::exception & except );
+
 	// logs an error with strings and error code
 	void Error(const string& file, const unsigned long long line, const string& desc, const string& error = string(), const int errorCode = 0);
 
