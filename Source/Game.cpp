@@ -28,8 +28,8 @@ std::chrono::high_resolution_clock::time_point gGameStart;
 Game::Game()
 	:
 	mpWindow(nullptr),
-	mpState(nullptr),
 	mpMusic(nullptr),
+	mpState(nullptr),
 	mNewState( StateID::MainMenuID ),
 	mReturnValue(0),
 	mFrameStampD(0.0f),
@@ -88,6 +88,7 @@ bool Game::Init()
 	catch ( std::exception & except )
 		{
 		gLogger.Exception(except);
+		throw std::runtime_error(except.what());
 		return false;
 		}
 

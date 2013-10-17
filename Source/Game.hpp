@@ -69,8 +69,10 @@ private:
 
 	unique_ptr<sf::Font> mpFontButton;
 
-	unique_ptr<State> mpState;
 	unique_ptr<sf::Music> mpMusic;
+
+	unique_ptr<State> mpState;
+
 	StateID mNewState;
 
 	int mReturnValue;
