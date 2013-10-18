@@ -15,7 +15,7 @@ public:
 	ConfigLoader();
 	ConfigLoader(const string & file);
 
-	bool LoadFromFile( const string & file );
+	void LoadFromFile( const string & file );
 
 	// Game Settings
 	int GetScreenWidth() const;

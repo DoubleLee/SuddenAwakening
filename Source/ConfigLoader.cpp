@@ -2,12 +2,10 @@
 
 #include "Logger.hpp"
 #include "StringUtilities.hpp"
+#include "Exceptions.hpp"
 
 #include "tinyxml2.hpp"
 using namespace tinyxml2;
-
-#include <exception>
-#include <stdexcept>
 
 ConfigLoader::ConfigLoader()
 	:
@@ -22,11 +20,10 @@ ConfigLoader::ConfigLoader(const string & file)
 	:
 	ConfigLoader()
 	{
-	if ( !LoadFromFile(file) )
-		throw std::invalid_argument("Can't parse xml file.");
+	LoadFromFile(file);
 	}
 
-bool ConfigLoader::LoadFromFile(const string &file)
+void ConfigLoader::LoadFromFile(const string &file)
 	{
 	XMLDocument doc;
 	XMLError error = doc.LoadFile( file.c_str() );
@@ -34,46 +31,43 @@ bool ConfigLoader::LoadFromFile(const string &file)
 		{
 		case(tinyxml2::XML_NO_ERROR):
 			{
-			LogSuccess("XML-File loaded successful\n")
+			LogSuccess("XML-File loaded successfully, " + file)
 			break;
 			}
 		case(tinyxml2::XML_ERROR_FILE_COULD_NOT_BE_OPENED):
 			{
-			LogFailure("could not open file\n")
-			return false;
+			ThrowRuntimeException("could not open file " + file)
 			}
 		case(tinyxml2::XML_ERROR_FILE_NOT_FOUND):
 			{
-			LogFailure("file not found\n")
-			return false;
+			ThrowRuntimeException("file not found " + file)
 			}
 		default:
 			{
-			LogFailure("unknown error\n")
-			return false;
+			ThrowRuntimeException("unknown error while loading ConfigLoader's xml file. " + file)
 			}
 		} // End of Switch
 
 	XMLElement * pGameSettings = doc.FirstChildElement("settings");
 
 	if ( !pGameSettings )
-		return false;
+		ThrowRuntimeException("Failed to find settings node");
 
 	if ( pGameSettings->QueryIntAttribute("screenWidth", &mScreenWidth) )
 		{
-		return false;
+		ThrowRuntimeException("Failed to find screenWidth attribute");
 		}
 
 	if ( pGameSettings->QueryIntAttribute("screenHeight", &mScreenHeight) )
 		{
-		return false;
+		ThrowRuntimeException("Failed to find screenHeight attribute")
 		}
 
 	const char * pStr = pGameSettings->Attribute("windowTitle");
 
 	if ( !pStr )
 		{
-		return false;
+		ThrowRuntimeException("Failed to find windowTitle attribute");
 		}
 
 	mWindowTitle = pStr;
@@ -81,13 +75,11 @@ bool ConfigLoader::LoadFromFile(const string &file)
 	pStr = pGameSettings->Attribute("fontButton");
 
 	if ( !pStr )
-		return false;
+		ThrowRuntimeException("Failed to find fontButton attribute");
 
 	mFontButtonFile = pStr;
 
 	ToPlatformPath(mFontButtonFile);
-
-	return true;
 	}
 
 int ConfigLoader::GetScreenWidth() const

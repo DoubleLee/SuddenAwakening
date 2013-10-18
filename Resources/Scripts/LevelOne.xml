@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE LevelOne>
+
+< music
+file = "../Resources/Audio/first_run_jingle.ogg"
+volume = "50.0"
+/>
+
+<audios>
+  
+</audios>
+
+<textures>
+  
+</textures>
+
+<sprites>
+  
+</sprites>
+
+<player>
+  
+</player>

@@ -15,6 +15,8 @@ public:
 	virtual void LoadFromXML(const string & file);
 	virtual void ProcessEvent(const sf::Event & event);
 
+protected:
+
 };
 
 #endif // LEVELONE_HPP

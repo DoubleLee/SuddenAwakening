@@ -77,7 +77,7 @@ bool Game::Init()
 
 		if ( !mpFontButton->loadFromFile( config.GetFontButtonFile() ) )
 			{
-			ThrowRuntimeException("Failed to load font");
+			ThrowRuntimeException("Failed to load font, " + config.GetFontButtonFile() );
 			}
 
 		mpMusic.reset( new sf::Music() );
@@ -126,6 +126,10 @@ int Game::Run()
 	catch(std::exception & except)
 		{
 		gLogger.Exception(except);
+		}
+	catch(...)
+		{
+		LogFailure("Unknown Error")
 		}
 
 	return mReturnValue;
