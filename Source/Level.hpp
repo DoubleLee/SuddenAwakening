@@ -7,8 +7,10 @@
 
 #include <memory>
 #include <string>
+#include <vector>
 using std::string;
 using std::unique_ptr;
+using std::vector;
 
 namespace sf
 {
@@ -26,9 +28,16 @@ enum class LevelID
 
 class Game;
 class AudioEffects;
+class Entity;
+
+namespace tinyxml2
+{
+class XMLElement;
+}
 
 class Level
 {
+friend void LoadMapTilesFromXML(Level*, tinyxml2::XMLElement*);
 public:
 	Level(LevelID levelID);
 	virtual ~Level();
@@ -49,7 +58,9 @@ protected:
 
 	ResourceManager<sf::Texture> mTextures;
 	unique_ptr<AudioEffects> mpAudioEffects;
-
+	vector< vector < unique_ptr< Entity > > > mMapTiles;
+	vector< unique_ptr< Entity > > mTiles;
+	unique_ptr<sf::Texture> mpLayerImage;
 };
 
 #endif // LEVEL_HPP

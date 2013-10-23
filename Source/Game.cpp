@@ -77,7 +77,7 @@ bool Game::Init()
 
 		if ( !mpFontButton->loadFromFile( config.GetFontButtonFile() ) )
 			{
-			ThrowRuntimeException("Failed to load font, " + config.GetFontButtonFile() );
+			ThrowRuntimeException("Failed to load font, " + config.GetFontButtonFile() )
 			}
 
 		mpMusic.reset( new sf::Music() );

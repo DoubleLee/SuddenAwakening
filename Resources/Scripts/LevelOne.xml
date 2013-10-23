@@ -6,6 +6,10 @@ file = "../Resources/Audio/first_run_jingle.ogg"
 volume = "50.0"
 />
 
+<map
+file="../Resources/Maps/TiledMap2.tmx"
+/>
+
 <audios>
   
 </audios>

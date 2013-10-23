@@ -53,7 +53,7 @@ Logger::Logger(const std::string & file)
 	(*mpOfs).open(file, ios::out );
 	if ( !mpOfs->is_open() )
 		{
-		ThrowRuntimeException("Failed to open or create log file.");
+		ThrowRuntimeException("Failed to open or create log file.")
 		}
 	}
 

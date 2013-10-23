@@ -19,7 +19,8 @@ SOURCES += main.cpp \
     Level.cpp \
     XMLFunctions.cpp \
     LevelOne.cpp \
-    Exceptions.cpp
+    Exceptions.cpp \
+    Entity.cpp
 
 HEADERS += \
     ResourceManager.hpp \
@@ -37,7 +38,8 @@ HEADERS += \
     Level.hpp \
     XMLFunctions.hpp \
     LevelOne.hpp \
-    Exceptions.hpp
+    Exceptions.hpp \
+    Entity.hpp
 
 win32:INCLUDEPATH += C:\SFMLMinGW\include
 win32:DEPENDPATH += C:\SFMLMinGW\include

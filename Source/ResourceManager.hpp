@@ -35,13 +35,13 @@ void ResourceManager<Type>::LoadResource(const std::string & file, ResourceID id
 	auto iterCheck = mResourceMap.find(id);
 	if ( iterCheck != mResourceMap.end() )
 		{
-		ThrowRuntimeException("Resource map already has this id. ID = " + std::to_string(id) );
+		ThrowRuntimeException("Resource map already has this id. ID = " + std::to_string(id) )
 		}
 
 	// attempt to load
 	if ( !pResource->loadFromFile( file ) )
 		{
-		ThrowRuntimeException("Failed to load " + file );
+		ThrowRuntimeException("Failed to load " + file )
 		}
 
 	// time to insert into map
@@ -49,7 +49,7 @@ void ResourceManager<Type>::LoadResource(const std::string & file, ResourceID id
 
 	if ( !pairCheck.second )
 		{
-		ThrowRuntimeException("Failed to insert resource into map. " + file );
+		ThrowRuntimeException("Failed to insert resource into map. " + file )
 		}
 
 	}
@@ -60,7 +60,7 @@ Type & ResourceManager<Type>::GetResource(ResourceID id) const
 	auto iterCheck = mResourceMap.find(id);
 	if ( iterCheck == mResourceMap.end() )
 		{
-		ThrowRuntimeException("Failed to find the resource id in the map. " + std::to_string(id) );
+		ThrowRuntimeException("Failed to find the resource id in the map. " + std::to_string(id) )
 		}
 
 	return *((*iterCheck).second.get());

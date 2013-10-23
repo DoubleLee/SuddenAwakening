@@ -40,7 +40,7 @@ bool AudioEffects::LoadBuffer(const string & file, AudioID audioID)
 		{
 		auto successPair = mAudioBuffers.insert( std::make_pair( audioID, std::vector<sf::SoundBuffer> () ) );
 		if ( !successPair.second )
-			ThrowRuntimeException("Failed to insert a new pair into audio buffer map");
+			ThrowRuntimeException("Failed to insert a new pair into audio buffer map")
 		iter = successPair.first;
 		}
 

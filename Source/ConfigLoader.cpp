@@ -51,11 +51,11 @@ void ConfigLoader::LoadFromFile(const string &file)
 	XMLElement * pGameSettings = doc.FirstChildElement("settings");
 
 	if ( !pGameSettings )
-		ThrowRuntimeException("Failed to find settings node");
+		ThrowRuntimeException("Failed to find settings node")
 
 	if ( pGameSettings->QueryIntAttribute("screenWidth", &mScreenWidth) )
 		{
-		ThrowRuntimeException("Failed to find screenWidth attribute");
+		ThrowRuntimeException("Failed to find screenWidth attribute")
 		}
 
 	if ( pGameSettings->QueryIntAttribute("screenHeight", &mScreenHeight) )
@@ -67,7 +67,7 @@ void ConfigLoader::LoadFromFile(const string &file)
 
 	if ( !pStr )
 		{
-		ThrowRuntimeException("Failed to find windowTitle attribute");
+		ThrowRuntimeException("Failed to find windowTitle attribute")
 		}
 
 	mWindowTitle = pStr;
@@ -75,7 +75,7 @@ void ConfigLoader::LoadFromFile(const string &file)
 	pStr = pGameSettings->Attribute("fontButton");
 
 	if ( !pStr )
-		ThrowRuntimeException("Failed to find fontButton attribute");
+		ThrowRuntimeException("Failed to find fontButton attribute")
 
 	mFontButtonFile = pStr;
 

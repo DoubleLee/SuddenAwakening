@@ -157,7 +157,7 @@ void StateMainMenu::LoadFromXML(const string & file)
 	XMLDocument doc;
 	if ( doc.LoadFile( file.c_str() ) )
 		{
-		ThrowRuntimeException("Failed to load and/or parse " + file);
+		ThrowRuntimeException("Failed to load and/or parse " + file)
 		}
 
 	LoadMusicFromXML( *(mpGame->GetMusic()), doc.FirstChildElement("music") );
@@ -169,12 +169,12 @@ void StateMainMenu::LoadFromXML(const string & file)
 	// Sprites code, this code can change quite a bit
 	XMLElement * pSprites = doc.FirstChildElement("sprites");
 	if ( ! pSprites )
-		ThrowRuntimeException("Failed to load sprites node");
+		ThrowRuntimeException("Failed to load sprites node")
 
 	XMLElement * pBackground = pSprites->FirstChildElement("background");
 	ResourceID texID;
 	if ( pBackground->QueryUnsignedAttribute("texID", &texID) )
-		ThrowRuntimeException("Failed to find texIndex in background element");
+		ThrowRuntimeException("Failed to find texIndex in background element")
 
 	mpBackground->setTexture( mTextures.GetResource(texID) );
 	mpBackground->setPosition(0.0f, 0.0f);
@@ -186,7 +186,7 @@ void StateMainMenu::LoadFromXML(const string & file)
 	XMLElement * pButtons ( doc.FirstChildElement("buttons") );
 	if ( !pButtons )
 		{
-		ThrowRuntimeException("Failed to find buttons element");
+		ThrowRuntimeException("Failed to find buttons element")
 		}
 
 	XMLElement * pButton ( pButtons->FirstChildElement("button") );
@@ -198,24 +198,24 @@ void StateMainMenu::LoadFromXML(const string & file)
 		const char * pStr( pButton->Attribute("text") );
 		if ( !pStr )
 			{
-			ThrowRuntimeException("Failed to find text attribute for button.");
+			ThrowRuntimeException("Failed to find text attribute for button.")
 			}
 
 		buttonText = pStr;
 
 		if ( pButton->QueryUnsignedAttribute("texID", &texID) )
 			{
-			ThrowRuntimeException("Failed to find texIndex attribute for button.");
+			ThrowRuntimeException("Failed to find texIndex attribute for button.")
 			}
 
 		if ( pButton->QueryFloatAttribute("posx", &pos.x) )
 			{
-			ThrowRuntimeException("Failed to find posX attribute for button.");
+			ThrowRuntimeException("Failed to find posX attribute for button.")
 			}
 
 		if ( pButton->QueryFloatAttribute("posy", &pos.y) )
 			{
-			ThrowRuntimeException("Failed to find posY attribute for button.");
+			ThrowRuntimeException("Failed to find posY attribute for button.")
 			}
 
 		mButtons.emplace_back( new Button( mTextures.GetResource(texID), pos, ToPlatformPath(buttonText), 1 ) );
@@ -269,9 +269,10 @@ void StateMainMenu::UserMadeSelection()
 
 			break;
 			}
-		case 2:
+		case 2: // Exit
 			{
 			mpGame->GetWindow()->close();
+			break;
 			}
 		}
 	}
