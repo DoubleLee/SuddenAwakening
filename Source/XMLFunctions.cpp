@@ -269,6 +269,7 @@ void LoadMapTilesFromXML( Level * pLevel, XMLElement * pMapElement)
 			ThrowRuntimeException("Failed to find tile's gid attribute")
 			}
 
+		// TODO: instead of gid - 1 make it gid - firstgid
 		rect.top = (gid - 1) / imageSetCountTilesHeight;
 		if ( gid == 0 )
 			{

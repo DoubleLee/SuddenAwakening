@@ -10,6 +10,7 @@
 *.dll
 *.dylib
 *.exe
+core.*
 SuddenAwakening
 
 # Qt-es
