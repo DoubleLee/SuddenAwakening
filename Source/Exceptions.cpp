@@ -2,8 +2,6 @@
 
 #include "StringUtilities.hpp"
 
-// TODO: improve this system by making a macro that will collect file and line number information, add to mWhat
-
 
 void BuildLogMessage( std::string & logMessage, const std::string & file, const int line, const std::string & errorDesc )
 	{
