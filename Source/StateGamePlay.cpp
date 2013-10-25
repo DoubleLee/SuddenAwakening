@@ -41,7 +41,7 @@ void StateGamePlay::ProcessEvent(const sf::Event & event)
 		{
 		if ( event.key.code == sf::Keyboard::Escape )
 			{
-			mpGame->SetChangeToState( StateID::MainMenuID );
+			mpGame->SetNewStateEnum( StateID::MainMenuID );
 			}
 		}
 	}

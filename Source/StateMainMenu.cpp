@@ -260,7 +260,7 @@ void StateMainMenu::UserMadeSelection()
 		{
 		case 0: // New Game
 			{
-			mpGame->SetChangeToState( StateID::GamePlayID );
+			mpGame->SetNewStateEnum( StateID::GamePlayID );
 			break;
 			}
 		case 1: // Options

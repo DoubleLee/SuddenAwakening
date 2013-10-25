@@ -43,7 +43,7 @@ public:
 	bool Init();
 	int Run();
 
-	void SetChangeToState( StateID stateID );
+	void SetNewStateEnum( StateID stateID );
 
 	static Game * Get();
 
@@ -62,7 +62,7 @@ public:
 
 private:
 
-	bool ChangeState();
+	void ChangeStateCheck();
 	void UpdateTimers();
 
 	unique_ptr<sf::RenderWindow> mpWindow;

@@ -117,8 +117,7 @@ int Game::Run()
 			mpState->Draw();
 			mpWindow->display();
 
-			if ( !ChangeState() )
-				break; // failed to change state
+			ChangeStateCheck();
 			}
 		}
 	catch(std::exception & except)
@@ -133,29 +132,31 @@ int Game::Run()
 	return mReturnValue;
 	}
 
-void Game::SetChangeToState(StateID stateID)
+void Game::SetNewStateEnum(StateID stateID)
 	{
 	mNewState = stateID;
 	}
 
-bool Game::ChangeState()
+void Game::ChangeStateCheck()
 	{
 	if ( mNewState == mpState->GetID() )
-		return true;
+		return;
 
 	if ( mNewState == StateID::MainMenuID )
 		{
 		mpState.reset(nullptr);
 		mpState.reset( new StateMainMenu() );
+		return;
 		}
 
 	if ( mNewState == StateID::GamePlayID )
 		{
 		mpState.reset(nullptr);
 		mpState.reset( new StateGamePlay() );
+		return;
 		}
 
-	return true;
+	ThrowRuntimeException("Failed to handle the new state enum, " + std::to_string( static_cast<int>(mNewState) ) )
 	}
 
 sf::RenderWindow * Game::GetWindow()
