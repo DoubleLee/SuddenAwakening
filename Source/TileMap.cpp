@@ -30,7 +30,7 @@ void TileMap::LoadFromFile()
 
 void TileMap::LoadFromFile( const std::string & file )
 	{
-	// Load Tiled map xml file
+	// Load Tiled map document from xml file
 	XMLDocument doc;
 	if ( doc.LoadFile(file.c_str()) )
 		{
@@ -102,6 +102,7 @@ void TileMap::LoadFromFile( const std::string & file )
 		if ( pTileSetIndex->QueryUnsignedAttribute("tileheight", &tileHeightSize) )
 			ThrowRuntimeException("Failed to find attribute tileheight in xml file, " + file)
 
+		// Load image element and attribute data
 		XMLElement * pImageElement( pTileSetIndex->FirstChildElement("image") );
 
 		if ( !pImageElement )
@@ -132,8 +133,8 @@ void TileMap::LoadFromFile( const std::string & file )
 		pTileSetIndex = pTileSetIndex->NextSiblingElement("tileset");
 		}
 
+	// Load layer elements and attribute data
 	XMLElement * pMapLayerIndex( pMapElement->FirstChildElement("layer") );
-
 
 	if ( !pMapLayerIndex )
 		ThrowRuntimeException("Failed to find element layer in xml file, " + file)
@@ -160,12 +161,15 @@ void TileMap::LoadFromFile( const std::string & file )
 
 		pTileMapLayer.reset( new TileMapLayer(layerName, tileWidthCount, tileHeightCount) );
 
+		// Load data element and attribute data
 		XMLElement * pData( pMapLayerIndex->FirstChildElement("data"));
 
 		if ( !pData )
 			ThrowRuntimeException("Failed to find element data in xml file, " + file)
 
 
+		// Load tile elements and attribute data
+		// these are the sprite tiles
 		XMLElement * pTile( pData->FirstChildElement("tile") );
 
 		if ( !pTile )
@@ -182,13 +186,16 @@ void TileMap::LoadFromFile( const std::string & file )
 				{
 				const TileMapSet * pTileMapSet( GetTileMapSetFromGid(gid) );
 
-				// NOTE: maybe use layers widthCount
-				pos.x = count % mTileWidthCount * mTileWidthSize;
-				pos.y = count / mTileHeightCount * mTileHeightSize;
+				if ( pTileMapSet )
+					{
+					// NOTE: maybe use layers widthCount
+					pos.x = count % mTileWidthCount * mTileWidthSize;
+					pos.y = count / mTileHeightCount * mTileHeightSize;
 
-				pEntity.reset( new Entity( pTileMapSet->GetTexture(), pTileMapSet->GetTextureRect(gid), pos ) );
+					pEntity.reset( new Entity( pTileMapSet->GetTexture(), pTileMapSet->GetTextureRect(gid), pos ) );
 
-				pTileMapLayer->AddEntity( std::move(pEntity) );
+					pTileMapLayer->AddEntity( std::move(pEntity) );
+					}
 				}
 
 			++count;
@@ -217,6 +224,7 @@ void TileMap::Draw() const
 
 const TileMapSet * TileMap::GetTileMapSetFromGid(const unsigned int gid) const
 	{
+	// Loops backwards so that the < check can be used
 	for ( auto riter = mTileSets.rbegin(); riter != mTileSets.rend(); ++riter )
 		{
 		if ( gid < (*riter)->GetFirstGid() )
@@ -224,7 +232,8 @@ const TileMapSet * TileMap::GetTileMapSetFromGid(const unsigned int gid) const
 
 		return (*riter).get();
 		}
-	ThrowRuntimeException("Failed to find TileMapSet for gid, " + std::to_string(gid) )
+
+	return nullptr;
 	}
 
 // TileMapLayer
@@ -303,6 +312,7 @@ sf::Texture & TileMapSet::GetTexture() const
 
 sf::IntRect TileMapSet::GetTextureRect(unsigned int gid) const
 	{
+	// Builds rect based on 2d cordinate system
 	unsigned int zeroBasedGid( gid - mFirstGid );
 	sf::IntRect rect;
 	rect.left = zeroBasedGid % mTileWidthCount * mTileWidthSize;
