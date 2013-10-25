@@ -7,7 +7,7 @@ volume = "50.0"
 />
 
 <map
-file="../Resources/Maps/TiledMap2.tmx"
+file="../Resources/Maps/TiledMap3.tmx"
 />
 
 <audios>

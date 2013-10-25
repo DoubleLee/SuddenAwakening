@@ -4,6 +4,7 @@
 #include "StringUtilities.hpp"
 #include "XMLFunctions.hpp"
 #include "Entity.hpp"
+#include "TileMap.hpp"
 
 #include "tinyxml2.hpp"
 using namespace tinyxml2;
@@ -30,10 +31,9 @@ void LevelOne::Update()
 void LevelOne::Draw()
 	{
 	sf::RenderWindow * pWindow( mpGame->GetWindow() );
-	for ( unique_ptr<Entity> & pIndex : mTiles )
-		{
-		pIndex->Draw( pWindow );
-		}
+
+	if ( mpTileMap )
+		mpTileMap->Draw();
 	}
 
 void LevelOne::LoadFromXML(const string & file)
@@ -59,15 +59,7 @@ void LevelOne::LoadFromXML(const string & file)
 
 	ToPlatformPath(mapFile);
 
-	XMLDocument mapDoc;
-	if ( mapDoc.LoadFile( mapFile.c_str() ) )
-		{
-		ThrowRuntimeException("Failed to load map xml file")
-		}
-
-	XMLElement * pMapElement( mapDoc.FirstChildElement("map") );
-
-	LoadMapTilesFromXML( this, pMapElement );
+	mpTileMap.reset( new TileMap( mapFile ) );
 	}
 
 void LevelOne::ProcessEvent(const sf::Event & event)

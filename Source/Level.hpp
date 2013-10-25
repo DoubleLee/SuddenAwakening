@@ -29,6 +29,7 @@ enum class LevelID
 class Game;
 class AudioEffects;
 class Entity;
+class TileMap;
 
 namespace tinyxml2
 {
@@ -58,9 +59,7 @@ protected:
 
 	ResourceManager<sf::Texture> mTextures;
 	unique_ptr<AudioEffects> mpAudioEffects;
-	vector< vector < unique_ptr< Entity > > > mMapTiles;
-	vector< unique_ptr< Entity > > mTiles;
-	unique_ptr<sf::Texture> mpLayerImage;
+	unique_ptr< TileMap > mpTileMap;
 };
 
 #endif // LEVEL_HPP

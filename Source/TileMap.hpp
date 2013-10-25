@@ -17,25 +17,25 @@ namespace sf
 class Texture;
 }
 
+class Entity;
+
 class TileMapLayer;
 class TileMapSet;
 
 class TileMap
 {
 public:
-	TileMap();
-	void LoadFromFile( const std::string & file );
+	TileMap( const std::string & file );
 	virtual ~TileMap();
+
+	void LoadFromFile( const std::string & file );
 
 	virtual void Update();
 	virtual void Draw() const;
 
-	typedef std::pair< sf::Texture &, sf::IntRect > TilePair;
-
-	TilePair GetTilePairFromGid( const unsigned int gid ) const;
-
 protected:
 	void LoadFromFile();
+	const TileMapSet * GetTileMapSetFromGid( const unsigned int gid) const;
 	string mFile;
 
 	float mFileVersion;
@@ -54,14 +54,21 @@ protected:
 class TileMapLayer
 {
 public:
-	TileMapLayer();
+	TileMapLayer( const string & layerName, unsigned int tileWidthCount, unsigned int tileHeightCount);
 	virtual ~TileMapLayer();
 
 	virtual void Update();
 	virtual void Draw() const;
 
+	void AddEntity( unique_ptr<Entity> pEnt );
 
 protected:
+
+	string mLayerName;
+
+	unsigned int mTileWidthCount;
+	unsigned int mTileHeightCount;
+
 	vector< unique_ptr< Entity > > mTileEntities;
 };
 
@@ -73,7 +80,13 @@ public:
 			   unsigned int tileWidthSize, unsigned int tileHeightSize,
 			   unsigned int imageWidthSize, unsigned int imageHeightSize);
 
-	unsigned int GetFirstGid();
+	unsigned int GetFirstGid() const;
+
+	unsigned int GetWidthCount() const;
+	unsigned int GetHeightCount() const;
+
+	sf::Texture & GetTexture() const;
+	sf::IntRect GetTextureRect(unsigned int gid) const;
 
 protected:
 
@@ -87,8 +100,8 @@ protected:
 	unsigned int mImageWidthSize;
 	unsigned int mImageHeightSize;
 
-	unsigned int mTilesWidthCount;
-	unsigned int mTilesHeightCount;
+	unsigned int mTileWidthCount;
+	unsigned int mTileHeightCount;
 
 private:
 	unique_ptr< sf::Texture > mpTexture;

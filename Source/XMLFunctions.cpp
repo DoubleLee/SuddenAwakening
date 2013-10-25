@@ -170,126 +170,126 @@ void LoadAudiosFromXML(AudioEffects & audioMan, tinyxml2::XMLElement * pAudiosEl
 		}
 	}
 
-void LoadMapTilesFromXML( Level * pLevel, XMLElement * pMapElement)
-	{
-	// map sure we have the correct element
-	if ( !pMapElement || strcmp( pMapElement->Name(), "map" ) )
-		ThrowRuntimeException("Invalid element sent to LoadMapTilesFromXML")
+//void LoadMapTilesFromXML( Level * pLevel, XMLElement * pMapElement)
+//	{
+//	// map sure we have the correct element
+//	if ( !pMapElement || strcmp( pMapElement->Name(), "map" ) )
+//		ThrowRuntimeException("Invalid element sent to LoadMapTilesFromXML")
 
-	// clear the map in case there was already something in it.
-	pLevel->mMapTiles.clear();
+//	// clear the map in case there was already something in it.
+//	pLevel->mMapTiles.clear();
 
-	// get the basic data from map element
-	int mapTileCountHeight, mapTileCountWidth;
-	int tileSizeWidth, tileSizeHeight;
+//	// get the basic data from map element
+//	int mapTileCountHeight, mapTileCountWidth;
+//	int tileSizeWidth, tileSizeHeight;
 
-	if ( pMapElement->QueryIntAttribute("width", &mapTileCountWidth) )
-		ThrowRuntimeException("Map element has no attribute width")
+//	if ( pMapElement->QueryIntAttribute("width", &mapTileCountWidth) )
+//		ThrowRuntimeException("Map element has no attribute width")
 
-	if ( pMapElement->QueryIntAttribute("height", &mapTileCountHeight) )
-		ThrowRuntimeException("Map element has no attribute height")
+//	if ( pMapElement->QueryIntAttribute("height", &mapTileCountHeight) )
+//		ThrowRuntimeException("Map element has no attribute height")
 
-	if ( pMapElement->QueryIntAttribute("tilewidth", &tileSizeWidth) )
-		ThrowRuntimeException("Map element has no attribute tilewidth")
+//	if ( pMapElement->QueryIntAttribute("tilewidth", &tileSizeWidth) )
+//		ThrowRuntimeException("Map element has no attribute tilewidth")
 
-	if ( pMapElement->QueryIntAttribute("tileheight", &tileSizeHeight) )
-		ThrowRuntimeException("Map element has no attribute tileheight")
+//	if ( pMapElement->QueryIntAttribute("tileheight", &tileSizeHeight) )
+//		ThrowRuntimeException("Map element has no attribute tileheight")
 
-	XMLElement * pTileSet( pMapElement->FirstChildElement("tileset") );
+//	XMLElement * pTileSet( pMapElement->FirstChildElement("tileset") );
 
-	if ( !pTileSet )
-		ThrowRuntimeException("Failed to find tileset element")
+//	if ( !pTileSet )
+//		ThrowRuntimeException("Failed to find tileset element")
 
-	int layerTileSizeHeight, layerTileSizeWidth;
+//	int layerTileSizeHeight, layerTileSizeWidth;
 
-	int firstGUID;
+//	int firstGUID;
 
-	if ( pTileSet->QueryIntAttribute("tilewidth", &layerTileSizeWidth) )
-		ThrowRuntimeException("Failed to find layers attribute tilewidth")
+//	if ( pTileSet->QueryIntAttribute("tilewidth", &layerTileSizeWidth) )
+//		ThrowRuntimeException("Failed to find layers attribute tilewidth")
 
-	if ( pTileSet->QueryIntAttribute("tileheight", &layerTileSizeHeight) )
-		ThrowRuntimeException("Failed to find layers attribute tileheight")
+//	if ( pTileSet->QueryIntAttribute("tileheight", &layerTileSizeHeight) )
+//		ThrowRuntimeException("Failed to find layers attribute tileheight")
 
-	if ( pTileSet->QueryIntAttribute("firstgid", &firstGUID) )
-		ThrowRuntimeException("Failed to find layers attribute firstgid")
+//	if ( pTileSet->QueryIntAttribute("firstgid", &firstGUID) )
+//		ThrowRuntimeException("Failed to find layers attribute firstgid")
 
-	XMLElement * pImageSet( pTileSet->FirstChildElement("image") );
+//	XMLElement * pImageSet( pTileSet->FirstChildElement("image") );
 
-	if ( !pImageSet )
-		ThrowRuntimeException("Failed to find image element")
+//	if ( !pImageSet )
+//		ThrowRuntimeException("Failed to find image element")
 
-	unsigned int imageSizeWidth, imageSizeHeight;
-	unsigned int imageSetCountTilesWidth, imageSetCountTilesHeight;
-	const char * pImageName = pImageSet->Attribute("source");
+//	unsigned int imageSizeWidth, imageSizeHeight;
+//	unsigned int imageSetCountTilesWidth, imageSetCountTilesHeight;
+//	const char * pImageName = pImageSet->Attribute("source");
 
-	if ( !pImageName )
-		ThrowRuntimeException("Failed to find image's attribute source (image file name)")
+//	if ( !pImageName )
+//		ThrowRuntimeException("Failed to find image's attribute source (image file name)")
 
-	if ( pImageSet->QueryUnsignedAttribute("width", &imageSizeWidth) )
-		ThrowRuntimeException("Failed to find image width attribute")
+//	if ( pImageSet->QueryUnsignedAttribute("width", &imageSizeWidth) )
+//		ThrowRuntimeException("Failed to find image width attribute")
 
-	if ( pImageSet->QueryUnsignedAttribute("height", &imageSizeHeight) )
-		ThrowRuntimeException("Failed to find image height attribute")
+//	if ( pImageSet->QueryUnsignedAttribute("height", &imageSizeHeight) )
+//		ThrowRuntimeException("Failed to find image height attribute")
 
-	imageSetCountTilesWidth = imageSizeWidth / layerTileSizeWidth;
-	imageSetCountTilesHeight = imageSizeHeight / layerTileSizeHeight;
+//	imageSetCountTilesWidth = imageSizeWidth / layerTileSizeWidth;
+//	imageSetCountTilesHeight = imageSizeHeight / layerTileSizeHeight;
 
-	// TODO: make the path names a global function that can be queried.
-	string file( "../Resources/Maps/" );
-	file += pImageName;
+//	// TODO: make the path names a global function that can be queried.
+//	string file( "../Resources/Maps/" );
+//	file += pImageName;
 
-	if ( !pLevel->mpLayerImage->loadFromFile( ToPlatformPath(file) ) )
-		{
-		ThrowRuntimeException("Failed to load map layer image file, " + file)
-		}
+//	if ( !pLevel->mpLayerImage->loadFromFile( ToPlatformPath(file) ) )
+//		{
+//		ThrowRuntimeException("Failed to load map layer image file, " + file)
+//		}
 
-	XMLElement * pLayer( pMapElement->FirstChildElement("layer") );
+//	XMLElement * pLayer( pMapElement->FirstChildElement("layer") );
 
-	if ( !pLayer )
-		ThrowRuntimeException("Failed to find layer element in map")
+//	if ( !pLayer )
+//		ThrowRuntimeException("Failed to find layer element in map")
 
-	XMLElement * pData( pLayer->FirstChildElement("data") );
+//	XMLElement * pData( pLayer->FirstChildElement("data") );
 
-	if ( !pData )
-		ThrowRuntimeException("Failed to load data element from map")
+//	if ( !pData )
+//		ThrowRuntimeException("Failed to load data element from map")
 
-	XMLElement * pTileIndex( pData->FirstChildElement("tile") );
+//	XMLElement * pTileIndex( pData->FirstChildElement("tile") );
 
-	std::unique_ptr<Entity> pEnt(nullptr);
-	unsigned int gid;
-	sf::IntRect rect;
-	rect.width = layerTileSizeWidth;
-	rect.height = layerTileSizeHeight;
-	sf::Vector2f pos;
-	unsigned int count = 0;
-	while ( pTileIndex )
-		{
-		if ( pTileIndex->QueryUnsignedAttribute("gid", &gid) )
-			{
-			ThrowRuntimeException("Failed to find tile's gid attribute")
-			}
+//	std::unique_ptr<Entity> pEnt(nullptr);
+//	unsigned int gid;
+//	sf::IntRect rect;
+//	rect.width = layerTileSizeWidth;
+//	rect.height = layerTileSizeHeight;
+//	sf::Vector2f pos;
+//	unsigned int count = 0;
+//	while ( pTileIndex )
+//		{
+//		if ( pTileIndex->QueryUnsignedAttribute("gid", &gid) )
+//			{
+//			ThrowRuntimeException("Failed to find tile's gid attribute")
+//			}
 
-		// TODO: instead of gid - 1 make it gid - firstgid
-		rect.top = (gid - 1) / imageSetCountTilesHeight;
-		if ( gid == 0 )
-			{
-			pTileIndex = pTileIndex->NextSiblingElement("tile");
-			++count;
-			continue;
-			}
+//		// TODO: instead of gid - 1 make it gid - firstgid
+//		rect.top = (gid - 1) / imageSetCountTilesHeight;
+//		if ( gid == 0 )
+//			{
+//			pTileIndex = pTileIndex->NextSiblingElement("tile");
+//			++count;
+//			continue;
+//			}
 
-		rect.left = (gid - 1) % imageSetCountTilesWidth;
-		rect.top *= rect.height;
-		rect.left *= rect.width;
+//		rect.left = (gid - 1) % imageSetCountTilesWidth;
+//		rect.top *= rect.height;
+//		rect.left *= rect.width;
 
-		pos.x = count % mapTileCountWidth  * rect.width;
-		pos.y = count / mapTileCountHeight * rect.height;
+//		pos.x = count % mapTileCountWidth  * rect.width;
+//		pos.y = count / mapTileCountHeight * rect.height;
 
-		pEnt.reset( new Entity( *(pLevel->mpLayerImage.get()), rect, pos ) );
+//		pEnt.reset( new Entity( *(pLevel->mpLayerImage.get()), rect, pos ) );
 
-		pLevel->mTiles.emplace_back( std::move(pEnt) );
+//		pLevel->mTiles.emplace_back( std::move(pEnt) );
 
-		pTileIndex = pTileIndex->NextSiblingElement("tile");
-		++count;
-		}
-	}
+//		pTileIndex = pTileIndex->NextSiblingElement("tile");
+//		++count;
+//		}
+//	}

@@ -28,6 +28,6 @@ template <typename Type> class ResourceManager;
 void LoadTexturesFromXML( ResourceManager<sf::Texture> & textures, XMLElement * pTexturesElement );
 void LoadMusicFromXML( sf::Music & music, XMLElement * pMusicElement );
 void LoadAudiosFromXML( AudioEffects & audioMan, XMLElement * pAudiosElement );
-void LoadMapTilesFromXML( Level * pLevel, XMLElement * pMapElement );
+//void LoadMapTilesFromXML( Level * pLevel, XMLElement * pMapElement );
 
 #endif // XMLFUNCTIONS_HPP
