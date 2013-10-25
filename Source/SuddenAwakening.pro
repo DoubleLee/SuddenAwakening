@@ -16,39 +16,49 @@ SOURCES += main.cpp \
 	StateMainMenu.cpp \
 	Button.cpp \
 	StateGamePlay.cpp \
-    Level.cpp \
-    XMLFunctions.cpp \
-    LevelOne.cpp \
-    Exceptions.cpp \
-    Entity.cpp \
-    TileMap.cpp
+	Level.cpp \
+	XMLFunctions.cpp \
+	LevelOne.cpp \
+	Exceptions.cpp \
+	Entity.cpp \
+	TileMap.cpp
 
 HEADERS += \
-    ResourceManager.hpp \
-    AudioEffects.hpp \
-    Button.hpp \
-    ConfigLoader.hpp \
-    Game.hpp \
-    Logger.hpp \
-    RandomGenerator.hpp \
-    State.hpp \
-    StateGamePlay.hpp \
-    StateMainMenu.hpp \
-    StringUtilities.hpp \
-    tinyxml2.hpp \
-    Level.hpp \
-    XMLFunctions.hpp \
-    LevelOne.hpp \
-    Exceptions.hpp \
-    Entity.hpp \
-    TileMap.hpp
+	ResourceManager.hpp \
+	AudioEffects.hpp \
+	Button.hpp \
+	ConfigLoader.hpp \
+	Game.hpp \
+	Logger.hpp \
+	RandomGenerator.hpp \
+	State.hpp \
+	StateGamePlay.hpp \
+	StateMainMenu.hpp \
+	StringUtilities.hpp \
+	tinyxml2.hpp \
+	Level.hpp \
+	XMLFunctions.hpp \
+	LevelOne.hpp \
+	Exceptions.hpp \
+	Entity.hpp \
+	TileMap.hpp
 
 win32:INCLUDEPATH += C:\SFMLMinGW\include
 win32:DEPENDPATH += C:\SFMLMinGW\include
 win32:LIBS += -LC:\SFMLMinGW\lib
 
+CONFIG ( release, debug | release ) {
+
 LIBS += -lsfml-audio -lsfml-network -lsfml-graphics -lsfml-window -lsfml-system
 win32: LIBS += -lsfml-main
 
+}
+
+CONFIG ( debug, debug | release ) {
+
+LIBS += -lsfml-audio-d -lsfml-network-d -lsfml-graphics-d -lsfml-window-d -lsfml-system-d
+win32: LIBS += -lsfml-main
+
+}
 
 QMAKE_CXXFLAGS += -std=c++11

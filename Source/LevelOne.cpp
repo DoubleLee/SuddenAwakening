@@ -33,7 +33,7 @@ void LevelOne::Draw()
 	sf::RenderWindow * pWindow( mpGame->GetWindow() );
 
 	if ( mpTileMap )
-		mpTileMap->Draw();
+		mpTileMap->Draw(pWindow);
 	}
 
 void LevelOne::LoadFromXML(const string & file)

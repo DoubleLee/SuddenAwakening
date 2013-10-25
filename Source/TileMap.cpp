@@ -23,57 +23,52 @@ TileMap::~TileMap()
 
 	}
 
-void TileMap::LoadFromFile()
-	{
-	LoadFromFile(mFile);
-	}
-
-void TileMap::LoadFromFile( const std::string & file )
+void TileMap::LoadFromFile( )
 	{
 	// Load Tiled map document from xml file
 	XMLDocument doc;
-	if ( doc.LoadFile(file.c_str()) )
+	if ( doc.LoadFile(mFile.c_str()) )
 		{
-		ThrowRuntimeException("Failed to load xml map file, " + file )
+		ThrowRuntimeException("Failed to load xml map file, " + mFile )
 		}
 
 	// Get the map element and load it's attribute data
 	XMLElement * pMapElement( doc.FirstChildElement("map") );
 
 	if ( !pMapElement )
-		ThrowRuntimeException("Failed to find map element in xml file, " + file)
+		ThrowRuntimeException("Failed to find map element in xml file, " + mFile)
 
 	if ( pMapElement->QueryFloatAttribute("version", &mFileVersion) )
 		{
-		ThrowRuntimeException("Failed to find attribute version in xml file, " + file)
+		ThrowRuntimeException("Failed to find attribute version in xml file, " + mFile)
 		}
 
 	const char * pStr( pMapElement->Attribute("orientation") );
 
 	if ( !pStr )
 		{
-		ThrowRuntimeException("Failed to find attribute orientation in xml file, " + file)
+		ThrowRuntimeException("Failed to find attribute orientation in xml file, " + mFile)
 		}
 
 	mOrientation = pStr;
 
 	if ( pMapElement->QueryUnsignedAttribute("width", &mTileWidthCount) )
-		ThrowRuntimeException("Failed to find attribute width in xml file, " + file)
+		ThrowRuntimeException("Failed to find attribute width in xml file, " + mFile)
 
 	if ( pMapElement->QueryUnsignedAttribute("height", &mTileHeightCount) )
-		ThrowRuntimeException("Failed to find attribute height in xml file, " + file)
+		ThrowRuntimeException("Failed to find attribute height in xml file, " + mFile)
 
 	if ( pMapElement->QueryUnsignedAttribute("tilewidth", &mTileWidthSize) )
-		ThrowRuntimeException("Failed to find attribute tilewidth in xml file, " + file)
+		ThrowRuntimeException("Failed to find attribute tilewidth in xml file, " + mFile)
 
 	if ( pMapElement->QueryUnsignedAttribute("tileheight", &mTileHeightSize) )
-		ThrowRuntimeException("Failed to find attribute tileheight in xml file, " + file)
+		ThrowRuntimeException("Failed to find attribute tileheight in xml file, " + mFile)
 
 	// Get the tileset nodes and load their data
 	XMLElement * pTileSetIndex( pMapElement->FirstChildElement("tileset") );
 
 	if ( !pTileSetIndex )
-		ThrowRuntimeException("Failed to find element tileset in xml file, " + file)
+		ThrowRuntimeException("Failed to find element tileset in xml file, " + mFile)
 
 	unsigned int gid, tileWidthSize, tileHeightSize, imageWidthSize, imageHeightSize;
 
@@ -86,42 +81,42 @@ void TileMap::LoadFromFile( const std::string & file )
 		{
 
 		if ( pTileSetIndex->QueryUnsignedAttribute("firstgid", &gid) )
-			ThrowRuntimeException("Failed to find attribute firstgid in xml file, " + file)
+			ThrowRuntimeException("Failed to find attribute firstgid in xml file, " + mFile)
 
 		pStr = pTileSetIndex->Attribute("name");
 
 		if ( !pStr )
-			ThrowRuntimeException("Failed to find attribute name in xml file, " + file)
+			ThrowRuntimeException("Failed to find attribute name in xml file, " + mFile)
 
 		tileSetName = pStr;
 		ToPlatformPath(tileSetName);
 
 		if ( pTileSetIndex->QueryUnsignedAttribute("tilewidth", &tileWidthSize) )
-			ThrowRuntimeException("Failed to find attribute tileWidth in xml file, " + file)
+			ThrowRuntimeException("Failed to find attribute tileWidth in xml file, " + mFile)
 
 		if ( pTileSetIndex->QueryUnsignedAttribute("tileheight", &tileHeightSize) )
-			ThrowRuntimeException("Failed to find attribute tileheight in xml file, " + file)
+			ThrowRuntimeException("Failed to find attribute tileheight in xml file, " + mFile)
 
 		// Load image element and attribute data
 		XMLElement * pImageElement( pTileSetIndex->FirstChildElement("image") );
 
 		if ( !pImageElement )
-			ThrowRuntimeException("Failed to find element image in xml file, " + file)
+			ThrowRuntimeException("Failed to find element image in xml file, " + mFile)
 
 		pStr = pImageElement->Attribute("source");
 
 		if ( !pStr )
-			ThrowRuntimeException("Failed to find attribute source in xml file, " + file)
+			ThrowRuntimeException("Failed to find attribute source in xml file, " + mFile)
 
 		texFile = "../Resources/Maps/";
 		texFile += pStr;
 		ToPlatformPath(texFile);
 
 		if ( pImageElement->QueryUnsignedAttribute("width", &imageWidthSize) )
-			ThrowRuntimeException("Failed to find attribute width in xml file, " + file)
+			ThrowRuntimeException("Failed to find attribute width in xml file, " + mFile)
 
 		if ( pImageElement->QueryUnsignedAttribute("height", &imageHeightSize) )
-			ThrowRuntimeException("Failed to find attribute height in xml file, " + file)
+			ThrowRuntimeException("Failed to find attribute height in xml file, " + mFile)
 
 		// Add data loaded for this tile set, construct class and insert into vector
 
@@ -137,7 +132,7 @@ void TileMap::LoadFromFile( const std::string & file )
 	XMLElement * pMapLayerIndex( pMapElement->FirstChildElement("layer") );
 
 	if ( !pMapLayerIndex )
-		ThrowRuntimeException("Failed to find element layer in xml file, " + file)
+		ThrowRuntimeException("Failed to find element layer in xml file, " + mFile)
 
 	unsigned int tileWidthCount, tileHeightCount;
 	unique_ptr< TileMapLayer > pTileMapLayer;
@@ -149,15 +144,15 @@ void TileMap::LoadFromFile( const std::string & file )
 		pStr = pMapLayerIndex->Attribute("name");
 
 		if ( !pStr )
-			ThrowRuntimeException("Failed to find attribute name in xml file, " + file)
+			ThrowRuntimeException("Failed to find attribute name in xml file, " + mFile)
 
 		layerName = pStr;
 
 		if ( pMapLayerIndex->QueryUnsignedAttribute("width", &tileWidthCount) )
-			ThrowRuntimeException("Failed to find attribute width in xml file, " + file)
+			ThrowRuntimeException("Failed to find attribute width in xml file, " + mFile)
 
 		if ( pMapLayerIndex->QueryUnsignedAttribute("height", &tileHeightCount) )
-			ThrowRuntimeException("Failed to find attribute height in xml file, " + file)
+			ThrowRuntimeException("Failed to find attribute height in xml file, " + mFile)
 
 		pTileMapLayer.reset( new TileMapLayer(layerName, tileWidthCount, tileHeightCount) );
 
@@ -165,7 +160,7 @@ void TileMap::LoadFromFile( const std::string & file )
 		XMLElement * pData( pMapLayerIndex->FirstChildElement("data"));
 
 		if ( !pData )
-			ThrowRuntimeException("Failed to find element data in xml file, " + file)
+			ThrowRuntimeException("Failed to find element data in xml file, " + mFile)
 
 
 		// Load tile elements and attribute data
@@ -173,14 +168,14 @@ void TileMap::LoadFromFile( const std::string & file )
 		XMLElement * pTile( pData->FirstChildElement("tile") );
 
 		if ( !pTile )
-			ThrowRuntimeException("Failed to find element tile in xml file, " + file)
+			ThrowRuntimeException("Failed to find element tile in xml file, " + mFile)
 
 		unsigned int count = 0;
 
 		while (pTile)
 			{
 			if ( pTile->QueryUnsignedAttribute("gid", &gid) )
-				ThrowRuntimeException("Failed to find attribute gid in xml file, " + file)
+				ThrowRuntimeException("Failed to find attribute gid in xml file, " + mFile)
 
 			if ( gid )
 				{
@@ -214,11 +209,11 @@ void TileMap::Update()
 
 	}
 
-void TileMap::Draw() const
+void TileMap::Draw(sf::RenderWindow * pWindow) const
 	{
 	for ( const unique_ptr< TileMapLayer > & pTileMapLayer : mTileMapLayers )
 		{
-		pTileMapLayer->Draw();
+		pTileMapLayer->Draw(pWindow);
 		}
 	}
 
@@ -262,10 +257,8 @@ void TileMapLayer::Update()
 
 	}
 
-void TileMapLayer::Draw() const
+void TileMapLayer::Draw(sf::RenderWindow * pWindow) const
 	{
-	sf::RenderWindow * pWindow(Game::Get()->GetWindow());
-
 	for ( const unique_ptr< Entity > & pEntity : mTileEntities )
 		{
 		pEntity->Draw(pWindow);

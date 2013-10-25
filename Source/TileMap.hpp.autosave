@@ -30,7 +30,7 @@ public:
 	virtual ~TileMap();
 
 	virtual void Update();
-	virtual void Draw( sf::RenderWindow * pWindow) const;
+	virtual void Draw( sf::RenderWindow * pWindow ) const;
 
 protected:
 	void LoadFromFile();
