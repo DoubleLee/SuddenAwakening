@@ -106,9 +106,7 @@ int Game::Run()
 			sf::Event event;
 			while( mpWindow->pollEvent(event) )
 				{
-				if ( event.type == sf::Event::Closed )
-					mpWindow->close();
-
+				if ( event.type == sf::Event::Closed ) mpWindow->close();
 				assert( mpState && mpWindow );
 				mpState->ProcessEvent( event );
 				}
