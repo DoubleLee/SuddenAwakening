@@ -9,7 +9,7 @@
  <tileset firstgid="18" name="Lights" tilewidth="32" tileheight="32">
   <image source="christmasLights.png" width="64" height="32"/>
  </tileset>
- <tileset firstgid="20" name="PresentsSet" tilewidth="32" tileheight="32">
+ <tileset firstgid="20" name="Presents" tilewidth="32" tileheight="32">
   <image source="presents.png" width="64" height="32"/>
  </tileset>
  <tileset firstgid="22" name="TreeLights" tilewidth="32" tileheight="32">
@@ -18,7 +18,7 @@
  <tileset firstgid="24" name="Turkey" tilewidth="32" tileheight="32">
   <image source="turkey.png" width="64" height="32"/>
  </tileset>
- <layer name="Kachelebene 1" width="12" height="12">
+ <layer name="BuildingTable" width="12" height="12">
   <data>
    <tile gid="1"/>
    <tile gid="1"/>
@@ -166,7 +166,7 @@
    <tile gid="0"/>
   </data>
  </layer>
- <layer name="Another Layer" width="12" height="12" opacity="0.76">
+ <layer name="Trees" width="12" height="12" opacity="0.76">
   <data>
    <tile gid="0"/>
    <tile gid="0"/>

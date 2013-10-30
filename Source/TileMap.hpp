@@ -59,6 +59,9 @@ public:
 	virtual void Update();
 	virtual void Draw(sf::RenderWindow * pWindow) const;
 
+	unsigned int GetTileWidthCount() const;
+	unsigned int GetTileHeightCount() const;
+
 	void AddEntity( unique_ptr<Entity> pEnt );
 
 protected:

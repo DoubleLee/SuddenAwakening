@@ -134,7 +134,7 @@ void TileMap::LoadFromFile( )
 	if ( !pMapLayerIndex )
 		ThrowRuntimeException("Failed to find element layer in xml file, " + mFile)
 
-	unsigned int tileWidthCount, tileHeightCount;
+	unsigned int layerTileWidthCount, layerTileHeightCount;
 	unique_ptr< TileMapLayer > pTileMapLayer;
 	unique_ptr< Entity > pEntity;
 	string layerName;
@@ -148,13 +148,13 @@ void TileMap::LoadFromFile( )
 
 		layerName = pStr;
 
-		if ( pMapLayerIndex->QueryUnsignedAttribute("width", &tileWidthCount) )
+		if ( pMapLayerIndex->QueryUnsignedAttribute("width", &layerTileWidthCount) )
 			ThrowRuntimeException("Failed to find attribute width in xml file, " + mFile)
 
-		if ( pMapLayerIndex->QueryUnsignedAttribute("height", &tileHeightCount) )
+		if ( pMapLayerIndex->QueryUnsignedAttribute("height", &layerTileHeightCount) )
 			ThrowRuntimeException("Failed to find attribute height in xml file, " + mFile)
 
-		pTileMapLayer.reset( new TileMapLayer(layerName, tileWidthCount, tileHeightCount) );
+		pTileMapLayer.reset( new TileMapLayer(layerName, layerTileWidthCount, layerTileHeightCount) );
 
 		// Load data element and attribute data
 		XMLElement * pData( pMapLayerIndex->FirstChildElement("data"));
@@ -183,9 +183,8 @@ void TileMap::LoadFromFile( )
 
 				if ( pTileMapSet )
 					{
-					// NOTE: maybe use layers widthCount
-					pos.x = count % mTileWidthCount * mTileWidthSize;
-					pos.y = count / mTileHeightCount * mTileHeightSize;
+					pos.x = count % layerTileWidthCount * mTileWidthSize;
+					pos.y = count / layerTileHeightCount * mTileHeightSize;
 
 					pEntity.reset( new Entity( pTileMapSet->GetTexture(), pTileMapSet->GetTextureRect(gid), pos ) );
 
@@ -247,11 +246,6 @@ TileMapLayer::~TileMapLayer()
 
 	}
 
-void TileMapLayer::AddEntity(unique_ptr<Entity> pEnt)
-	{
-	mTileEntities.push_back(std::move(pEnt));
-	}
-
 void TileMapLayer::Update()
 	{
 
@@ -263,6 +257,21 @@ void TileMapLayer::Draw(sf::RenderWindow * pWindow) const
 		{
 		pEntity->Draw(pWindow);
 		}
+	}
+
+unsigned int TileMapLayer::GetTileWidthCount() const
+	{
+	return mTileWidthCount;
+	}
+
+unsigned int TileMapLayer::GetTileHeightCount() const
+	{
+	return mTileHeightCount;
+	}
+
+void TileMapLayer::AddEntity(unique_ptr<Entity> pEnt)
+	{
+	mTileEntities.push_back(std::move(pEnt));
 	}
 
 TileMapSet::TileMapSet(const std::string &texFile, unsigned int firstGid, const std::string &tileSetName, unsigned int tileWidthSize, unsigned int tileHeightSize, unsigned int imageWidthSize, unsigned int imageHeightSize)
