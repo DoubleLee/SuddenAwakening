@@ -14,7 +14,7 @@ volume = "50.0"
  </audios>
 
  <textures>
-   <texture file = "../Resources/Textures/churchScene.png" texID = "1" />
+   <texture file = "../Resources/Textures/TitleScreen.png" texID = "1" />
    <texture file = "../Resources/Textures/blackRectButton60-20.png" texID = "2" />
  </textures>
  
