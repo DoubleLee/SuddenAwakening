@@ -147,7 +147,7 @@ void Player::UpdateControls()
 			}
 
 		// move the trigger forward
-		mNextFrameTrigger = now + TimeInt(150000);
+		mNextFrameTrigger = now + TimeInt(132000);
 		}
 
 	// calculate and set texture rect
