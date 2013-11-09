@@ -107,6 +107,7 @@ void Player::UpdateControls()
 	Game * pGame = Game::Get();
 	TimeInt now = pGame->GetFrameStamp();
 
+	// set animation direction on Y cordinate of sheet
 	bool directionPressed = false;
 	if ( sf::Keyboard::isKeyPressed( sf::Keyboard::D ) )
 		{
@@ -119,33 +120,37 @@ void Player::UpdateControls()
 		directionPressed = true;
 		}
 
-
+	// move animation forward each time step
 	if ( mNextFrameTrigger <= now )
 		{
-
+		// if a direction is pressed move the animation forward
 		if ( directionPressed )
 			{
 			mXcoord += mXDirection;
+			// check high side
 			if ( mXcoord > (mTextureSheetWidth - 1) )
 				{
 				mXDirection = -1;
 				mXcoord = (mTextureSheetWidth - 1) - 1;
 				}
+			// check low side
 			if ( mXcoord < 0 )
 				{
 				mXDirection = 1;
 				mXcoord = 1;
 				}
 			}
-		else
+		else  // if no button is pressed change to first frame for standing
 			{
 			mXDirection = 1;
 			mXcoord = 0;
 			}
 
+		// move the trigger forward
 		mNextFrameTrigger = now + TimeInt(150000);
 		}
 
+	// calculate and set texture rect
 	sf::IntRect rect;
 	rect.top = mYcoord * 32;
 	rect.left = mXcoord * 32;
