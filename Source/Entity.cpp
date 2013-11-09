@@ -125,21 +125,22 @@ void Player::UpdateControls()
 
 		if ( directionPressed )
 			{
-			mXcoord = mXcoord + mXDirection;
-			if ( mXcoord >= mTextureSheetWidth )
+			mXcoord += mXDirection;
+			if ( mXcoord > (mTextureSheetWidth - 1) )
 				{
 				mXDirection = -1;
-				mXcoord = mTextureSheetWidth;
+				mXcoord = (mTextureSheetWidth - 1) - 1;
+				}
+			if ( mXcoord < 0 )
+				{
+				mXDirection = 1;
+				mXcoord = 1;
 				}
 			}
 		else
 			{
-			mXDirection = -1;
-			if ( mXcoord <= 0 )
-				{
-				mXDirection = 1;
-				mXcoord = 0;
-				}
+			mXDirection = 1;
+			mXcoord = 0;
 			}
 
 		mNextFrameTrigger = now + TimeInt(150000);
