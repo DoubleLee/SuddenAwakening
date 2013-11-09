@@ -15,13 +15,16 @@ file="../Resources/Maps/TiledMap3.tmx"
 </audios>
 
 <textures>
-  
+  <texture 
+    file = "../Resources/Textures/Player3232.png" 
+    texID = "0" 
+  />
 </textures>
 
 <sprites>
   
 </sprites>
 
-<player>
-  
-</player>
+<player
+  texID = "0"
+/>

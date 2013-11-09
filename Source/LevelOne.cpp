@@ -25,7 +25,7 @@ LevelOne::~LevelOne()
 
 void LevelOne::Update()
 	{
-
+	mpPlayer->Update();
 	}
 
 void LevelOne::Draw()
@@ -34,6 +34,9 @@ void LevelOne::Draw()
 
 	if ( mpTileMap )
 		mpTileMap->Draw(pWindow);
+
+	if ( mpPlayer )
+		mpPlayer->Draw(pWindow);
 	}
 
 void LevelOne::LoadFromXML(const string & file)
@@ -43,6 +46,8 @@ void LevelOne::LoadFromXML(const string & file)
 		{
 		ThrowRuntimeException("Failed to load xml file, " + file )
 		}
+
+	LoadTexturesFromXML( mTextures, doc.FirstChildElement("textures") );
 
 	LoadMusicFromXML( *(mpGame->GetMusic()), doc.FirstChildElement("music") );
 
@@ -60,6 +65,21 @@ void LevelOne::LoadFromXML(const string & file)
 	ToPlatformPath(mapFile);
 
 	mpTileMap.reset( new TileMap( mapFile ) );
+
+	// player load
+	XMLElement * pPlayerElement = doc.FirstChildElement("player");
+
+	if ( !pPlayerElement )
+		{
+		ThrowRuntimeException("Failed to find player node in level xml")
+		}
+
+	int playerTexID = -1;
+
+	if ( pPlayerElement->QueryIntAttribute("texID", &playerTexID) )
+		ThrowRuntimeException("Failed to find player texID in level xml")
+
+	mpPlayer.reset( new Player( mTextures.GetResource(playerTexID), sf::Vector2f(0,0) ) );
 	}
 
 void LevelOne::ProcessEvent(const sf::Event & event)

@@ -30,6 +30,7 @@ class Game;
 class AudioEffects;
 class Entity;
 class TileMap;
+class Player;
 
 namespace tinyxml2
 {
@@ -60,6 +61,7 @@ protected:
 	ResourceManager<sf::Texture> mTextures;
 	unique_ptr<AudioEffects> mpAudioEffects;
 	unique_ptr< TileMap > mpTileMap;
+	unique_ptr< Player > mpPlayer;
 };
 
 #endif // LEVEL_HPP

@@ -18,7 +18,7 @@ class Texture;
 class RenderWindow;
 }
 
-class Entity;
+class MapEntity;
 
 class TileMapLayer;
 class TileMapSet;
@@ -62,7 +62,7 @@ public:
 	unsigned int GetTileWidthCount() const;
 	unsigned int GetTileHeightCount() const;
 
-	void AddEntity( unique_ptr<Entity> pEnt );
+	void AddEntity( unique_ptr<MapEntity> pEnt );
 
 protected:
 
@@ -71,7 +71,7 @@ protected:
 	unsigned int mTileWidthCount;
 	unsigned int mTileHeightCount;
 
-	vector< unique_ptr< Entity > > mTileEntities;
+	vector< unique_ptr< MapEntity > > mTileEntities;
 };
 
 

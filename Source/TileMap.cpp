@@ -136,7 +136,7 @@ void TileMap::LoadFromFile( )
 
 	unsigned int layerTileWidthCount, layerTileHeightCount;
 	unique_ptr< TileMapLayer > pTileMapLayer;
-	unique_ptr< Entity > pEntity;
+	unique_ptr< MapEntity > pMapEntity;
 	string layerName;
 	sf::Vector2f pos;
 	while ( pMapLayerIndex )
@@ -186,9 +186,9 @@ void TileMap::LoadFromFile( )
 					pos.x = count % layerTileWidthCount * mTileWidthSize;
 					pos.y = count / layerTileHeightCount * mTileHeightSize;
 
-					pEntity.reset( new Entity( pTileMapSet->GetTexture(), pTileMapSet->GetTextureRect(gid), pos ) );
+					pMapEntity.reset( new MapEntity( pTileMapSet->GetTexture(), pTileMapSet->GetTextureRect(gid), pos ) );
 
-					pTileMapLayer->AddEntity( std::move(pEntity) );
+					pTileMapLayer->AddEntity( std::move(pMapEntity) );
 					}
 				}
 
@@ -253,7 +253,7 @@ void TileMapLayer::Update()
 
 void TileMapLayer::Draw(sf::RenderWindow * pWindow) const
 	{
-	for ( const unique_ptr< Entity > & pEntity : mTileEntities )
+	for ( const unique_ptr< MapEntity > & pEntity : mTileEntities )
 		{
 		pEntity->Draw(pWindow);
 		}
@@ -269,7 +269,7 @@ unsigned int TileMapLayer::GetTileHeightCount() const
 	return mTileHeightCount;
 	}
 
-void TileMapLayer::AddEntity(unique_ptr<Entity> pEnt)
+void TileMapLayer::AddEntity(unique_ptr<MapEntity> pEnt)
 	{
 	mTileEntities.push_back(std::move(pEnt));
 	}

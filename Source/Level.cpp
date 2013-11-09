@@ -12,7 +12,9 @@ Level::Level(LevelID levelID)
 	:
 	mID(levelID),
 	mpGame( Game::Get() ),
-	mpAudioEffects( new AudioEffects() )
+	mpAudioEffects( new AudioEffects() ),
+	mpTileMap(nullptr),
+	mpPlayer(nullptr)
 	{
 
 	}
