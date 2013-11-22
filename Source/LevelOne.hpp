@@ -1,3 +1,5 @@
+#pragma once
+
 #ifndef LEVELONE_HPP
 #define LEVELONE_HPP
 

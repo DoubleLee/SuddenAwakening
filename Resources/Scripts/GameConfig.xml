@@ -3,6 +3,7 @@
 < settings
 screenWidth = "1024"
 screenHeight = "768"
+mapTileSize = "64"
 windowTitle = "Sudden Awakening by DoubleLee & Commander Keen"
 fontButton = "../Resources/Fonts/Grange.ttf"
 />

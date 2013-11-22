@@ -11,6 +11,7 @@ ConfigLoader::ConfigLoader()
 	:
 	mScreenWidth(800),
 	mScreenHeight(600),
+	mMapTileSize(32),
 	mWindowTitle("SFML Game!")
 	{
 
@@ -63,6 +64,11 @@ void ConfigLoader::LoadFromFile(const string &file)
 		ThrowRuntimeException("Failed to find screenHeight attribute")
 		}
 
+	if ( pGameSettings->QueryIntAttribute("mapTileSize", &mMapTileSize) )
+		{
+		ThrowRuntimeException("Failed to find mapTileSize attribute")
+		}
+
 	const char * pStr = pGameSettings->Attribute("windowTitle");
 
 	if ( !pStr )
@@ -90,6 +96,11 @@ int ConfigLoader::GetScreenWidth() const
 int ConfigLoader::GetScreenHeight() const
 	{
 	return mScreenHeight;
+	}
+
+int ConfigLoader::GetMapTileSize() const
+	{
+	return mMapTileSize;
 	}
 
 const std::string & ConfigLoader::GetWindowTitle() const

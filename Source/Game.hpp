@@ -53,6 +53,8 @@ public:
 
 	sf::Music * GetMusic() const;
 
+	int GetMapTileSize() const;
+
 	double GetFrameStampD() const;
 	double GetFrameDeltaD() const;
 	TimeInt GetFrameStamp() const;
@@ -64,6 +66,8 @@ private:
 
 	void ChangeStateCheck();
 	void UpdateTimers();
+
+	int mMapTileSize;
 
 	unique_ptr<sf::RenderWindow> mpWindow;
 

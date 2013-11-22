@@ -20,6 +20,7 @@ public:
 	// Game Settings
 	int GetScreenWidth() const;
 	int GetScreenHeight() const;
+	int GetMapTileSize() const;
 	const string & GetWindowTitle() const;
 	const string & GetFontButtonFile() const;
 
@@ -27,6 +28,7 @@ private:
 	// Game Settings
 	int mScreenWidth;
 	int mScreenHeight;
+	int mMapTileSize;
 	string mWindowTitle;
 	string mFontButtonFile;
 };

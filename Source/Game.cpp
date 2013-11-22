@@ -68,6 +68,8 @@ bool Game::Init()
 
 		config.LoadFromFile( ToPlatformPath( file ) );
 
+		mMapTileSize = config.GetMapTileSize();
+
 		mpWindow.reset( new sf::RenderWindow(
 						sf::VideoMode( config.GetScreenWidth(), config.GetScreenHeight() ),
 						config.GetWindowTitle() ) );
@@ -184,6 +186,11 @@ void Game::UpdateTimers()
 	auto nowDouble = std::chrono::duration_cast< std::chrono::duration<double, std::ratio< 1, 1> > >(sinceGameStart);
 	mFrameDeltaD = nowDouble.count() - mFrameStampD;
 	mFrameStampD = nowDouble.count();
+	}
+
+int Game::GetMapTileSize() const
+	{
+	return mMapTileSize;
 	}
 
 double Game::GetFrameStampD() const

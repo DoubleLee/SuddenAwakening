@@ -1,3 +1,5 @@
+#pragma once
+
 #ifndef ENTITY_HPP
 #define ENTITY_HPP
 
@@ -46,8 +48,10 @@ public:
 
 enum class Direction
 	{
-	Right = 0,
-	Left
+	Left = 0,
+	Right,
+	Up,
+	Down
 	};
 
 class Player : public Entity
@@ -68,6 +72,7 @@ protected:
 
 	int mTextureSheetWidth;
 	int mTextureSheetHeight;
+	int mMapTileSize;
 	TimeInt mNextFrameTrigger;
 };
 

@@ -7,7 +7,7 @@ volume = "100.0"
 />
 
 <map
-file="../Resources/Maps/TiledMap3.tmx"
+file="../Resources/Maps/Tileset64.tmx"
 />
 
 <audios>
@@ -16,7 +16,7 @@ file="../Resources/Maps/TiledMap3.tmx"
 
 <textures>
   <texture 
-    file = "../Resources/Textures/Player3232.png" 
+    file = "../Resources/Textures/Player6464.png" 
     texID = "0" 
   />
 </textures>

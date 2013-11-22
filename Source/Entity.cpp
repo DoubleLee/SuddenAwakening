@@ -73,23 +73,27 @@ Player::Player(const sf::Texture &texture, const sf::Vector2f &pos)
 	mXDirection(1),
 	mTextureSheetWidth(32),
 	mTextureSheetHeight(32),
+	mMapTileSize(0),
 	mNextFrameTrigger(0)
 	{
-	// TODO: figure out a better way to get tile size (32), should not ever use constants.
+	Game * pGame = Game::Get();
+	mMapTileSize = pGame->GetMapTileSize();
+
+
 	sf::Vector2u size = texture.getSize();
 
-	if ( size.x % 32 || size.y % 32 )
+	if ( size.x % mMapTileSize || size.y % mMapTileSize )
 		{
 		ThrowRuntimeException("Players texture sheet frame size is not a multiple of 32")
 		}
 
-	if ( size.y / 32 != 4 )
+	if ( size.y / mMapTileSize != 4 )
 		{
-		//ThrowRuntimeException("Players texture sheet doesn't have all 4 directions.")
+		ThrowRuntimeException("Players texture sheet doesn't have all 4 directions.")
 		}
 
-	mTextureSheetWidth = size.x / 32;
-	mTextureSheetHeight = size.y / 32;
+	mTextureSheetWidth = size.x / mMapTileSize;
+	mTextureSheetHeight = size.y / mMapTileSize;
 	}
 
 Player::~Player()
@@ -106,17 +110,35 @@ void Player::UpdateControls()
 	{
 	Game * pGame = Game::Get();
 	TimeInt now = pGame->GetFrameStamp();
+	float delta = float(pGame->GetFrameDeltaD());
+
+	sf::Vector2f moveVec(0.0f,0.0f);
+	float speed = mMapTileSize * 3.0f * delta;
 
 	// set animation direction on Y cordinate of sheet
 	bool directionPressed = false;
 	if ( sf::Keyboard::isKeyPressed( sf::Keyboard::D ) )
 		{
 		mYcoord = static_cast<int>( Direction::Right );
+		moveVec.x += speed;
 		directionPressed = true;
 		}
 	if ( sf::Keyboard::isKeyPressed( sf::Keyboard::A ) )
 		{
 		mYcoord = static_cast<int>( Direction::Left );
+		moveVec.x -= speed;
+		directionPressed = true;
+		}
+	if ( sf::Keyboard::isKeyPressed( sf::Keyboard::W ) )
+		{
+		mYcoord = static_cast<int>( Direction::Up );
+		moveVec.y -= speed;
+		directionPressed = true;
+		}
+	if ( sf::Keyboard::isKeyPressed( sf::Keyboard::S ) )
+		{
+		mYcoord = static_cast<int>( Direction::Down );
+		moveVec.y += speed;
 		directionPressed = true;
 		}
 
@@ -152,13 +174,14 @@ void Player::UpdateControls()
 
 	// calculate and set texture rect
 	sf::IntRect rect;
-	rect.top = mYcoord * 32;
-	rect.left = mXcoord * 32;
+	rect.top = mYcoord * mMapTileSize;
+	rect.left = mXcoord * mMapTileSize;
 
-	rect.height = 32;
-	rect.width = 32;
+	rect.height = mMapTileSize;
+	rect.width = mMapTileSize;
 
 	mpSprite->setTextureRect( rect );
+	mpSprite->move( moveVec );
 	}
 
 // class MapEntity
