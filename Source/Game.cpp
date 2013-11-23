@@ -34,8 +34,8 @@ Game::Game()
 	mReturnValue(0),
 	mFrameStampD(0.0f),
 	mFrameDeltaD(0.0f),
-	mFrameStamp(0),
-	mFrameDelta(0)
+	mFrameStampInt(0),
+	mFrameDeltaInt(0)
 	{
 	if ( mpsGame )
 		ThrowRuntimeException("Two Game objects exist.")
@@ -180,8 +180,8 @@ void Game::UpdateTimers()
 	{
 	std::chrono::high_resolution_clock::time_point nowTime( std::chrono::high_resolution_clock::now() );
 	std::chrono::microseconds sinceGameStart = std::chrono::duration_cast<std::chrono::microseconds> ( nowTime - gGameStart );
-	mFrameDelta = sinceGameStart.count() - mFrameStamp;
-	mFrameStamp = sinceGameStart.count();
+	mFrameDeltaInt = sinceGameStart.count() - mFrameStampInt;
+	mFrameStampInt = sinceGameStart.count();
 
 	auto nowDouble = std::chrono::duration_cast< std::chrono::duration<double, std::ratio< 1, 1> > >(sinceGameStart);
 	mFrameDeltaD = nowDouble.count() - mFrameStampD;
@@ -203,14 +203,14 @@ double Game::GetFrameDeltaD() const
 	return mFrameDeltaD;
 	}
 
-TimeInt Game::GetFrameStamp() const
+TimeInt Game::GetFrameStampInt() const
 	{
-	return mFrameStamp;
+	return mFrameStampInt;
 	}
 
-TimeInt Game::GetFrameDelta() const
+TimeInt Game::GetFrameDeltaInt() const
 	{
-	return mFrameDelta;
+	return mFrameDeltaInt;
 	}
 
 const string & Game::GetTitleStr() const

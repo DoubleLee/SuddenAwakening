@@ -60,7 +60,7 @@ void AnimatedEntity::Update()
 	if ( !pGame )
 		return;
 
-	TimeInt time = pGame->GetFrameDelta();
+	TimeInt time = pGame->GetFrameDeltaInt();
 	}
 
 // class Player
@@ -109,7 +109,7 @@ void Player::Update()
 void Player::UpdateControls()
 	{
 	Game * pGame = Game::Get();
-	TimeInt now = pGame->GetFrameStamp();
+	TimeInt now = pGame->GetFrameStampInt();
 	float delta = float(pGame->GetFrameDeltaD());
 
 	sf::Vector2f moveVec(0.0f,0.0f);

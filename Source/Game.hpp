@@ -57,8 +57,8 @@ public:
 
 	double GetFrameStampD() const;
 	double GetFrameDeltaD() const;
-	TimeInt GetFrameStamp() const;
-	TimeInt GetFrameDelta() const;
+	TimeInt GetFrameStampInt() const;
+	TimeInt GetFrameDeltaInt() const;
 
 	const string & GetTitleStr() const;
 
@@ -83,8 +83,8 @@ private:
 
 	double mFrameStampD;
 	double mFrameDeltaD;
-	TimeInt mFrameStamp;
-	TimeInt mFrameDelta;
+	TimeInt mFrameStampInt;
+	TimeInt mFrameDeltaInt;
 
 	string mTitleString;
 

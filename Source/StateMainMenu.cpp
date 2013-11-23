@@ -43,7 +43,7 @@ StateMainMenu::~StateMainMenu()
 
 void StateMainMenu::Update()
 	{
-	TimeInt now ( mpGame->GetFrameStamp() );
+	TimeInt now ( mpGame->GetFrameStampInt() );
 	float nowFloat( mpGame->GetFrameStampD() );
 
 	// Detect keyboard's space button down for shooting
@@ -98,7 +98,7 @@ void StateMainMenu::Draw()
 
 void StateMainMenu::ProcessEvent(const sf::Event & event)
 	{
-	TimeInt now( mpGame->GetFrameStamp() );
+	TimeInt now( mpGame->GetFrameStampInt() );
 
 	// Detect click event and handle it
 	if ( event.type == sf::Event::MouseButtonPressed )
