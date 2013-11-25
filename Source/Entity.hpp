@@ -48,10 +48,10 @@ public:
 
 enum class Direction
 	{
-	Left = 0,
-	Right,
-	Up,
-	Down
+	Up = 0,
+	Down,
+	Left,
+	Right
 	};
 
 class Player : public Entity
