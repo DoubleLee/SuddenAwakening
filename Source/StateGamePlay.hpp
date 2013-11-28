@@ -18,6 +18,8 @@ public:
 	virtual void LoadFromXML(const string & file);
 	virtual void ProcessEvent(const sf::Event & event);
 
+	Level * GetLevel();
+
 private:
 	void LoadNewGame();
 

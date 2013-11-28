@@ -116,7 +116,7 @@ void StateMainMenu::ProcessEvent(const sf::Event & event)
 				for ( unique_ptr<Button> & pIndex : mButtons )
 					{
 					Button * pButton( pIndex.get() );
-					if ( pButton->Contains( event.mouseButton.x, event.mouseButton.y ) )
+					if ( pButton->IsPosWithin( event.mouseButton.x, event.mouseButton.y ) )
 						{
 						ChangeSelectionTo(i);
 						UserMadeSelection();

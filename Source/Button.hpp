@@ -15,15 +15,18 @@ class Button
 public:
 	Button( sf::Texture & texture, const sf::Vector2f & pos, string & text, int buttonID);
 
-	bool IsPosWithin( const sf::Vector2f & pos );
-
+	// draw button to window
 	void Draw( sf::RenderWindow & renderWindow );
 
+	// sets the color of the text on the button
 	void SetTextColor( const sf::Color & color );
 
+	// return the button id field
 	int GetButtonID() const;
 
-	bool Contains( float x, float y );
+	// check if point is within the button bounds
+	bool IsPosWithin( const sf::Vector2f & pos );
+	bool IsPosWithin( float x, float y );
 
 private:
 	sf::Sprite mSprite;

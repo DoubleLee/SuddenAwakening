@@ -14,6 +14,7 @@ using std::unique_ptr;
 
 namespace sf
 {
+class Sprite;
 class Texture;
 class RenderWindow;
 }
@@ -31,6 +32,9 @@ public:
 
 	virtual void Update();
 	virtual void Draw( sf::RenderWindow * pWindow ) const;
+	virtual bool IsValidPosition( sf::Sprite * pSprite ) const;
+
+	virtual const TileMapLayer * GetDataLayer() const;
 
 protected:
 	void LoadFromFile();
@@ -46,6 +50,8 @@ protected:
 	unsigned int mTileWidthSize;
 	unsigned int mTileHeightSize;
 
+	TileMapLayer * mpDataLayer;
+
 	vector< unique_ptr< TileMapSet > > mTileSets;
 	vector< unique_ptr< TileMapLayer > > mTileMapLayers;
 };
@@ -59,8 +65,13 @@ public:
 	virtual void Update();
 	virtual void Draw(sf::RenderWindow * pWindow) const;
 
+	virtual bool IsColliding( sf::Sprite * pSprite ) const;
+
 	unsigned int GetTileWidthCount() const;
 	unsigned int GetTileHeightCount() const;
+
+	void SetIsVisible( bool visible );
+	bool GetIsVisible() const;
 
 	void AddEntity( unique_ptr<MapEntity> pEnt );
 
@@ -70,6 +81,8 @@ protected:
 
 	unsigned int mTileWidthCount;
 	unsigned int mTileHeightCount;
+
+	bool mIsVisible;
 
 	vector< unique_ptr< MapEntity > > mTileEntities;
 };
@@ -86,6 +99,12 @@ public:
 
 	unsigned int GetWidthCount() const;
 	unsigned int GetHeightCount() const;
+
+	void SetIndexCollidable( int index );
+	int GetIndexCollidable() const;
+
+	void SetIndexSpawnable( int index );
+	int GetIndexSpawnable() const;
 
 	sf::Texture & GetTexture() const;
 	sf::IntRect GetTextureRect(unsigned int gid) const;
@@ -104,6 +123,9 @@ protected:
 
 	unsigned int mTileWidthCount;
 	unsigned int mTileHeightCount;
+
+	int mIndexCollidable;
+	int mIndexSpawn;
 
 private:
 	unique_ptr< sf::Texture > mpTexture;

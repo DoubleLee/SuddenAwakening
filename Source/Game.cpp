@@ -90,7 +90,7 @@ bool Game::Init()
 	catch ( std::exception & except )
 		{
 		gLogger.Exception(except);
-		throw std::runtime_error(except.what());
+		throw std::runtime_error( except.what() );
 		return false;
 		}
 
@@ -108,12 +108,13 @@ int Game::Run()
 			sf::Event event;
 			while( mpWindow->pollEvent(event) )
 				{
-				if ( event.type == sf::Event::Closed ) mpWindow->close();
-				assert( mpState && mpWindow );
+				if ( event.type == sf::Event::Closed )
+					{
+					mpWindow->close();
+					}
 				mpState->ProcessEvent( event );
 				}
 			UpdateTimers();
-			assert( mpState && mpWindow );
 			mpState->Update();
 			mpWindow->clear();
 			mpState->Draw();

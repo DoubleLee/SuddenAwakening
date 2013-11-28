@@ -6,9 +6,6 @@
 #include <string>
 using std::string;
 
-// STEFAN don't look at this class until you've made your own.
-// For learning purposes.
-
 class ConfigLoader
 {
 public:

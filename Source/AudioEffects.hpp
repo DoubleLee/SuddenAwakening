@@ -28,12 +28,18 @@ class AudioEffects
 public:
 	AudioEffects();
 
+	// Loads a buffer into an id's buffer array
 	bool LoadBuffer( const string & file, AudioID audioID );
 
+	// Play a sound by id, also returns a weak_ptr to the sound
+	// if you want to change a setting.  Never hold onto a shared_ptr
+	// to one of these.
 	weak_ptr<sf::Sound> PlaySound( AudioID audioID );
 
+	// Remove ended sounds
 	void Update();
 
+	// immediately removes all sounds from the manager
 	void ClearAll();
 
 private:

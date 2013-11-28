@@ -21,11 +21,14 @@ class RenderWindow;
 class Entity
 {
 public:
-	Entity( const sf::Texture & texture, const sf::Vector2f & pos);
+	Entity( const sf::Texture & texture, const sf::Vector2f & pos, bool collidable = false);
 	virtual ~Entity();
 
 	virtual void Update();
 	virtual void Draw( sf::RenderWindow * pWindow );
+
+	void SetIsCollidable( bool collidable );
+	bool GetIsCollidable() const;
 
 	const sf::Vector2f & GetPosition();
 	const sf::FloatRect & GetGlobalRect();
@@ -34,6 +37,7 @@ public:
 
 protected:
 	unique_ptr<sf::Sprite> mpSprite;
+	bool mIsCollidable;
 };
 
 class AnimatedEntity : public Entity
@@ -64,6 +68,21 @@ public:
 
 	virtual void UpdateControls();
 
+	int GetXCoord() const;
+	void SetXCoord(int xCoord);
+
+	int GetYCoord() const;
+	void SetYCoord(int yCoord);
+
+	int GetXDirection() const;
+	void SetXDirection(int xDirection);
+
+	int GetTextureSheetWidth() const;
+	int GetTextureSheetHeight() const;
+
+	int GetNextFrameTrigger() const;
+	void SetNextFrameTrigger(TimeInt trigger);
+
 protected:
 	int mXcoord;
 	int mYcoord;
@@ -72,7 +91,9 @@ protected:
 
 	int mTextureSheetWidth;
 	int mTextureSheetHeight;
+
 	int mMapTileSize;
+
 	TimeInt mNextFrameTrigger;
 };
 

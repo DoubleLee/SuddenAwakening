@@ -13,7 +13,13 @@ using namespace tinyxml2;
 
 TileMap::TileMap( const std::string & file )
 	:
-	mFile(file)
+	mFile(file),
+	mFileVersion(0.0f),
+	mTileWidthCount(0),
+	mTileHeightCount(0),
+	mTileWidthSize(0),
+	mTileHeightSize(0),
+	mpDataLayer(nullptr)
 	{
 	LoadFromFile();
 	}
@@ -36,7 +42,9 @@ void TileMap::LoadFromFile( )
 	XMLElement * pMapElement( doc.FirstChildElement("map") );
 
 	if ( !pMapElement )
+		{
 		ThrowRuntimeException("Failed to find map element in xml file, " + mFile)
+		}
 
 	if ( pMapElement->QueryFloatAttribute("version", &mFileVersion) )
 		{
@@ -122,8 +130,55 @@ void TileMap::LoadFromFile( )
 
 		pTileMapSet.reset( new TileMapSet( texFile, gid, tileSetName, tileWidthSize, tileHeightSize, imageWidthSize, imageHeightSize ) );
 
-		mTileSets.push_back( std::move( pTileMapSet ) );
+		// Load properties for the map set.
+		// TODO: change so that it loops over the properties
+		XMLElement * pTileIndex = pTileSetIndex->FirstChildElement("tile");
+		if ( pTileIndex )
+			{
+			int tileID = -1;
+			if ( pTileIndex->QueryIntAttribute("id", &tileID) )
+				{
+				ThrowRuntimeException("Failed to find attribute id in xml file, " + mFile)
+				}
+			XMLElement * pPropertiesElement = pTileIndex->FirstChildElement("properties");
+			if ( pPropertiesElement )
+				{
+				XMLElement * pPropertyElement = pPropertiesElement->FirstChildElement("property");
+				if ( pPropertyElement )
+					{
 
+					const char * pStr = pPropertyElement->Attribute("name");
+					if ( pStr )
+						{
+						string str = pStr;
+						if ( str == "collidable" )
+							{
+							bool collidable;
+							if ( !pPropertyElement->QueryBoolAttribute("value", &collidable) )
+								{
+								if ( collidable )
+									{
+									pTileMapSet->SetIndexCollidable( tileID );
+									}
+								}
+							}
+						if ( str == "spawnable" )
+							{
+							bool spawnable;
+							if ( !pPropertyElement->QueryBoolAttribute("value", &spawnable) )
+								{
+								if ( spawnable )
+									{
+									pTileMapSet->SetIndexSpawnable( tileID );
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+		mTileSets.push_back( std::move( pTileMapSet ) );
 		// Advance to next tileset element
 		pTileSetIndex = pTileSetIndex->NextSiblingElement("tileset");
 		}
@@ -139,8 +194,10 @@ void TileMap::LoadFromFile( )
 	unique_ptr< MapEntity > pMapEntity;
 	string layerName;
 	sf::Vector2f pos;
+	bool visible = true;
 	while ( pMapLayerIndex )
 		{
+		bool isDataLayer = false;
 		pStr = pMapLayerIndex->Attribute("name");
 
 		if ( !pStr )
@@ -155,6 +212,46 @@ void TileMap::LoadFromFile( )
 			ThrowRuntimeException("Failed to find attribute height in xml file, " + mFile)
 
 		pTileMapLayer.reset( new TileMapLayer(layerName, layerTileWidthCount, layerTileHeightCount) );
+
+
+		XMLElement * pPropertiesElement = pMapLayerIndex->FirstChildElement("properties");
+
+		if ( pPropertiesElement )
+			{
+			XMLElement * pPropIndex = pPropertiesElement->FirstChildElement("property");
+			for ( ; pPropIndex ; pPropIndex = pPropIndex->NextSiblingElement("property") )
+				{
+				// load visible attribute, if not found then it defaults to true,
+				// it's not an error if this attribute doesn't exist.
+				const char * pName = pPropIndex->Attribute("name");
+				if ( !pName )
+					{
+					ThrowRuntimeException("Failed to find name attribute in tile element")
+					}
+				string name = pName;
+				if ( name == "visible" )
+					{
+					if ( pPropIndex->QueryBoolAttribute("value", &visible) == 0 )
+						pTileMapLayer->SetIsVisible(visible);
+
+					visible = true;
+					}
+
+				// check for data layer attribute
+				// if found then set to TileMap's mpDataLayer field
+				// if not found then do nothing, not an error
+				if ( name == "isDataLayer" )
+					{
+					if ( pPropIndex->QueryBoolAttribute("value", &isDataLayer) == 0)
+						{
+						if ( isDataLayer )
+							{
+							mpDataLayer = pTileMapLayer.get();
+							}
+						}
+					}
+				}
+			}
 
 		// Load data element and attribute data
 		XMLElement * pData( pMapLayerIndex->FirstChildElement("data"));
@@ -174,12 +271,14 @@ void TileMap::LoadFromFile( )
 
 		while (pTile)
 			{
+			bool collidable = false;
+			bool spawn = false;
 			if ( pTile->QueryUnsignedAttribute("gid", &gid) )
 				ThrowRuntimeException("Failed to find attribute gid in xml file, " + mFile)
 
 			if ( gid )
 				{
-				const TileMapSet * pTileMapSet( GetTileMapSetFromGid(gid) );
+				const TileMapSet * pTileMapSet = GetTileMapSetFromGid(gid);
 
 				if ( pTileMapSet )
 					{
@@ -187,6 +286,16 @@ void TileMap::LoadFromFile( )
 					pos.y = count / layerTileHeightCount * mTileHeightSize;
 
 					pMapEntity.reset( new MapEntity( pTileMapSet->GetTexture(), pTileMapSet->GetTextureRect(gid), pos ) );
+
+					int collideIndex = pTileMapSet->GetIndexCollidable();
+
+					if ( collideIndex > -1 )
+						{
+						if ( gid == collideIndex + pTileMapSet->GetFirstGid() )
+							{
+							pMapEntity->SetIsCollidable(true);
+							}
+						}
 
 					pTileMapLayer->AddEntity( std::move(pMapEntity) );
 					}
@@ -212,8 +321,21 @@ void TileMap::Draw(sf::RenderWindow * pWindow) const
 	{
 	for ( const unique_ptr< TileMapLayer > & pTileMapLayer : mTileMapLayers )
 		{
-		pTileMapLayer->Draw(pWindow);
+		if ( pTileMapLayer->GetIsVisible() )
+			{
+			pTileMapLayer->Draw(pWindow);
+			}
 		}
+	}
+
+bool TileMap::IsValidPosition(sf::Sprite * pSprite) const
+	{
+	return !( GetDataLayer()->IsColliding( pSprite ) );
+	}
+
+const TileMapLayer * TileMap::GetDataLayer() const
+	{
+	return mpDataLayer;
 	}
 
 const TileMapSet * TileMap::GetTileMapSetFromGid(const unsigned int gid) const
@@ -236,7 +358,8 @@ TileMapLayer::TileMapLayer(const string &layerName, unsigned int tileWidthCount,
 	:
 	mLayerName( layerName ),
 	mTileWidthCount( tileWidthCount ),
-	mTileHeightCount( tileHeightCount )
+	mTileHeightCount( tileHeightCount ),
+	mIsVisible(true)
 	{
 
 	}
@@ -259,6 +382,20 @@ void TileMapLayer::Draw(sf::RenderWindow * pWindow) const
 		}
 	}
 
+bool TileMapLayer::IsColliding(sf::Sprite * pSprite) const
+	{
+	sf::FloatRect inRect = pSprite->getGlobalBounds();
+	for ( const unique_ptr< MapEntity > & pEntity : mTileEntities )
+		{
+		// TODO: when Qt Creator works with unique_ptr remove this line and use the smart pointer directly
+		MapEntity * pEnt = pEntity.get();
+		sf::FloatRect entRect = pEnt->GetGlobalRect();
+		if ( pEnt->GetIsCollidable() && entRect.intersects( inRect ) )
+			return true;
+		}
+	return false;
+	}
+
 unsigned int TileMapLayer::GetTileWidthCount() const
 	{
 	return mTileWidthCount;
@@ -267,6 +404,16 @@ unsigned int TileMapLayer::GetTileWidthCount() const
 unsigned int TileMapLayer::GetTileHeightCount() const
 	{
 	return mTileHeightCount;
+	}
+
+void TileMapLayer::SetIsVisible(bool visible)
+	{
+	mIsVisible = visible;
+	}
+
+bool TileMapLayer::GetIsVisible() const
+	{
+	return mIsVisible;
 	}
 
 void TileMapLayer::AddEntity(unique_ptr<MapEntity> pEnt)
@@ -284,6 +431,8 @@ TileMapSet::TileMapSet(const std::string &texFile, unsigned int firstGid, const 
 	mImageHeightSize( imageHeightSize ),
 	mTileWidthCount( mImageWidthSize / mTileWidthSize ),
 	mTileHeightCount( mImageHeightSize / mTileHeightSize ),
+	mIndexCollidable(-1),
+	mIndexSpawn(-1),
 	mpTexture( new sf::Texture() ),
 	mTextureFile(texFile)
 	{
@@ -305,6 +454,26 @@ unsigned int TileMapSet::GetWidthCount() const
 unsigned int TileMapSet::GetHeightCount() const
 	{
 	return mTileHeightCount;
+	}
+
+void TileMapSet::SetIndexCollidable(int index)
+	{
+	mIndexCollidable = index;
+	}
+
+int TileMapSet::GetIndexCollidable() const
+	{
+	return mIndexCollidable;
+	}
+
+void TileMapSet::SetIndexSpawnable(int index)
+	{
+	mIndexSpawn = index;
+	}
+
+int TileMapSet::GetIndexSpawnable() const
+	{
+	return mIndexSpawn;
 	}
 
 sf::Texture & TileMapSet::GetTexture() const

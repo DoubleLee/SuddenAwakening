@@ -1,15 +1,17 @@
 #include "Entity.hpp"
 
 #include "Game.hpp"
+#include "StateGamePlay.hpp"
 
 #include <SFML/Graphics.hpp>
 
 
 // class Entity
 
-Entity::Entity(const sf::Texture &texture, const sf::Vector2f &pos)
+Entity::Entity(const sf::Texture &texture, const sf::Vector2f &pos, bool collidable)
 	:
-	mpSprite( new sf::Sprite( texture ) )
+	mpSprite( new sf::Sprite( texture ) ),
+	mIsCollidable(collidable)
 	{
 	mpSprite->setPosition(pos);
 	}
@@ -17,16 +19,6 @@ Entity::Entity(const sf::Texture &texture, const sf::Vector2f &pos)
 Entity::~Entity()
 	{
 
-	}
-
-const sf::Vector2f & Entity::GetPosition()
-	{
-	return mpSprite->getPosition();
-	}
-
-sf::Sprite * Entity::GetSprite()
-	{
-	return mpSprite.get();
 	}
 
 void Entity::Update()
@@ -37,6 +29,32 @@ void Entity::Update()
 void Entity::Draw(sf::RenderWindow * pWindow)
 	{
 	pWindow->draw( *(mpSprite.get()) );
+	}
+
+
+const sf::Vector2f & Entity::GetPosition()
+	{
+	return mpSprite->getPosition();
+	}
+
+const sf::FloatRect & Entity::GetGlobalRect()
+	{
+	return mpSprite->getGlobalBounds();
+	}
+
+sf::Sprite * Entity::GetSprite()
+	{
+	return mpSprite.get();
+	}
+
+void Entity::SetIsCollidable(bool collidable)
+	{
+	mIsCollidable = collidable;
+	}
+
+bool Entity::GetIsCollidable() const
+	{
+	return mIsCollidable;
 	}
 
 // class AnimatedEntity
@@ -108,80 +126,56 @@ void Player::Update()
 
 void Player::UpdateControls()
 	{
-	Game * pGame = Game::Get();
-	TimeInt now = pGame->GetFrameStampInt();
-	float delta = float(pGame->GetFrameDeltaD());
+	}
 
-	sf::Vector2f moveVec(0.0f,0.0f);
-	float speed = mMapTileSize * 3.0f * delta;
+int Player::GetXCoord() const
+	{
+	return mXcoord;
+	}
 
-	// set animation direction on Y cordinate of sheet
-	bool directionPressed = false;
-	if ( sf::Keyboard::isKeyPressed( sf::Keyboard::D ) )
-		{
-		mYcoord = static_cast<int>( Direction::Right );
-		moveVec.x += speed;
-		directionPressed = true;
-		}
-	if ( sf::Keyboard::isKeyPressed( sf::Keyboard::A ) )
-		{
-		mYcoord = static_cast<int>( Direction::Left );
-		moveVec.x -= speed;
-		directionPressed = true;
-		}
-	if ( sf::Keyboard::isKeyPressed( sf::Keyboard::W ) )
-		{
-		mYcoord = static_cast<int>( Direction::Up );
-		moveVec.y -= speed;
-		directionPressed = true;
-		}
-	if ( sf::Keyboard::isKeyPressed( sf::Keyboard::S ) )
-		{
-		mYcoord = static_cast<int>( Direction::Down );
-		moveVec.y += speed;
-		directionPressed = true;
-		}
+void Player::SetXCoord(int xCoord)
+	{
+	mXcoord = xCoord;
+	}
 
-	// move animation forward each time step
-	if ( mNextFrameTrigger <= now )
-		{
-		// if a direction is pressed move the animation forward
-		if ( directionPressed )
-			{
-			mXcoord += mXDirection;
-			// check high side
-			if ( mXcoord > (mTextureSheetWidth - 1) )
-				{
-				mXDirection = -1;
-				mXcoord = (mTextureSheetWidth - 1) - 1;
-				}
-			// check low side
-			if ( mXcoord < 0 )
-				{
-				mXDirection = 1;
-				mXcoord = 1;
-				}
-			}
-		else  // if no button is pressed change to first frame for standing
-			{
-			mXDirection = 1;
-			mXcoord = 0;
-			}
+int Player::GetYCoord() const
+	{
+	return mYcoord;
+	}
 
-		// move the trigger forward
-		mNextFrameTrigger = now + TimeInt(132000);
-		}
+void Player::SetYCoord(int yCoord)
+	{
+	mYcoord = yCoord;
+	}
 
-	// calculate and set texture rect
-	sf::IntRect rect;
-	rect.top = mYcoord * mMapTileSize;
-	rect.left = mXcoord * mMapTileSize;
+int Player::GetXDirection() const
+	{
+	return mXDirection;
+	}
 
-	rect.height = mMapTileSize;
-	rect.width = mMapTileSize;
+void Player::SetXDirection(int xDirection)
+	{
+	mXDirection = xDirection;
+	}
 
-	mpSprite->setTextureRect( rect );
-	mpSprite->move( moveVec );
+int Player::GetTextureSheetWidth() const
+	{
+	return mTextureSheetWidth;
+	}
+
+int Player::GetTextureSheetHeight() const
+	{
+	return mTextureSheetHeight;
+	}
+
+int Player::GetNextFrameTrigger() const
+	{
+	return mNextFrameTrigger;
+	}
+
+void Player::SetNextFrameTrigger(TimeInt trigger)
+	{
+	mNextFrameTrigger = trigger;
 	}
 
 // class MapEntity

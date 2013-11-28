@@ -53,6 +53,8 @@ public:
 
 	sf::Music * GetMusic() const;
 
+	const State * GetState() const;
+
 	int GetMapTileSize() const;
 
 	double GetFrameStampD() const;

@@ -26,9 +26,7 @@ Button::Button( sf::Texture & texture, const sf::Vector2f & pos, string & text, 
 
 bool Button::IsPosWithin(const sf::Vector2f & pos)
 	{
-	sf::FloatRect rect = mSprite.getGlobalBounds();
-
-	return rect.contains( sf::Vector2f(pos) );
+	return mSprite.getGlobalBounds().contains( sf::Vector2f(pos) );
 	}
 
 void Button::Draw(sf::RenderWindow & renderWindow)
@@ -47,7 +45,7 @@ int Button::GetButtonID() const
 	return mButtonID;
 	}
 
-bool Button::Contains(float x, float y)
+bool Button::IsPosWithin(float x, float y)
 	{
 	return mSprite.getGlobalBounds().contains( x, y );
 	}
