@@ -12,6 +12,7 @@
 *.exe
 core.*
 SuddenAwakening
+*.odt~
 
 # Qt-es
 
