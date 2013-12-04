@@ -27,11 +27,11 @@
   </tile>
   <tile id="1">
    <properties>
-    <property name="spawn" value="true"/>
+    <property name="spawnable" value="true"/>
    </properties>
   </tile>
  </tileset>
- <layer name="Floor and Walls" width="12" height="12">
+ <layer name="Floor and Walls" width="12" height="12" visible="0">
   <data>
    <tile gid="1"/>
    <tile gid="1"/>
@@ -179,7 +179,7 @@
    <tile gid="1"/>
   </data>
  </layer>
- <layer name="Trees" width="12" height="12">
+ <layer name="Trees" width="12" height="12" visible="0">
   <data>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -327,7 +327,7 @@
    <tile gid="0"/>
   </data>
  </layer>
- <layer name="Christmas Lights" width="12" height="12">
+ <layer name="Christmas Lights" width="12" height="12" visible="0">
   <data>
    <tile gid="13"/>
    <tile gid="14"/>
@@ -530,7 +530,7 @@
    <tile gid="23"/>
    <tile gid="23"/>
    <tile gid="0"/>
-   <tile gid="0"/>
+   <tile gid="24"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>

@@ -28,6 +28,7 @@ void StateGamePlay::Draw()
 	{
 	if ( mpLevel )
 		mpLevel->Draw();
+
 	}
 
 void StateGamePlay::LoadFromXML(const string & file)

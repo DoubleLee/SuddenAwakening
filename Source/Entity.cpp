@@ -11,7 +11,8 @@
 Entity::Entity(const sf::Texture &texture, const sf::Vector2f &pos, bool collidable)
 	:
 	mpSprite( new sf::Sprite( texture ) ),
-	mIsCollidable(collidable)
+	mIsCollidable(collidable),
+	mIsSpawnable(false)
 	{
 	mpSprite->setPosition(pos);
 	}
@@ -55,6 +56,16 @@ void Entity::SetIsCollidable(bool collidable)
 bool Entity::GetIsCollidable() const
 	{
 	return mIsCollidable;
+	}
+
+void Entity::SetIsSpawnable(bool spawnable)
+	{
+	mIsSpawnable = spawnable;
+	}
+
+bool Entity::GetIsSpawnable() const
+	{
+	return mIsSpawnable;
 	}
 
 // class AnimatedEntity

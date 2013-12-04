@@ -30,6 +30,9 @@ public:
 	void SetIsCollidable( bool collidable );
 	bool GetIsCollidable() const;
 
+	void SetIsSpawnable( bool spawnable );
+	bool GetIsSpawnable() const;
+
 	const sf::Vector2f & GetPosition();
 	const sf::FloatRect & GetGlobalRect();
 
@@ -38,6 +41,7 @@ public:
 protected:
 	unique_ptr<sf::Sprite> mpSprite;
 	bool mIsCollidable;
+	bool mIsSpawnable;
 };
 
 class AnimatedEntity : public Entity

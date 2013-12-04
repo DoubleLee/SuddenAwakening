@@ -33,12 +33,13 @@ public:
 	virtual void Update();
 	virtual void Draw( sf::RenderWindow * pWindow ) const;
 	virtual bool IsValidPosition( sf::Sprite * pSprite ) const;
+	virtual sf::Vector2f GetSpawnPosition( ) const;
 
 	virtual const TileMapLayer * GetDataLayer() const;
 
 protected:
 	void LoadFromFile();
-	const TileMapSet * GetTileMapSetFromGid( const unsigned int gid) const;
+	const TileMapSet * GetTileMapSetFromGid( const unsigned int gid ) const;
 	string mFile;
 
 	float mFileVersion;
@@ -66,6 +67,7 @@ public:
 	virtual void Draw(sf::RenderWindow * pWindow) const;
 
 	virtual bool IsColliding( sf::Sprite * pSprite ) const;
+	virtual sf::Vector2f GetSpawnPosition() const;
 
 	unsigned int GetTileWidthCount() const;
 	unsigned int GetTileHeightCount() const;
@@ -94,7 +96,6 @@ public:
 	TileMapSet(const std::string & texFile, unsigned int firstGid, const std::string & tileSetName,
 			   unsigned int tileWidthSize, unsigned int tileHeightSize,
 			   unsigned int imageWidthSize, unsigned int imageHeightSize);
-
 	unsigned int GetFirstGid() const;
 
 	unsigned int GetWidthCount() const;

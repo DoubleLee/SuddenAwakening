@@ -193,7 +193,7 @@ void LevelOne::LoadFromXML(const string & file)
 	if ( pPlayerElement->QueryIntAttribute("texID", &playerTexID) )
 		ThrowRuntimeException("Failed to find player texID in level xml")
 
-	mpPlayer.reset( new Player( mTextures.GetResource(playerTexID), sf::Vector2f(64 * 5, 64 * 2) ) );
+	mpPlayer.reset( new Player( mTextures.GetResource(playerTexID), mpTileMap->GetSpawnPosition() ) );
 	}
 
 void LevelOne::ProcessEvent(const sf::Event & event)

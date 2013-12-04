@@ -131,9 +131,8 @@ void TileMap::LoadFromFile( )
 		pTileMapSet.reset( new TileMapSet( texFile, gid, tileSetName, tileWidthSize, tileHeightSize, imageWidthSize, imageHeightSize ) );
 
 		// Load properties for the map set.
-		// TODO: change so that it loops over the properties
 		XMLElement * pTileIndex = pTileSetIndex->FirstChildElement("tile");
-		if ( pTileIndex )
+		while ( pTileIndex )
 			{
 			int tileID = -1;
 			if ( pTileIndex->QueryIntAttribute("id", &tileID) )
@@ -144,7 +143,7 @@ void TileMap::LoadFromFile( )
 			if ( pPropertiesElement )
 				{
 				XMLElement * pPropertyElement = pPropertiesElement->FirstChildElement("property");
-				if ( pPropertyElement )
+				while ( pPropertyElement )
 					{
 
 					const char * pStr = pPropertyElement->Attribute("name");
@@ -174,8 +173,10 @@ void TileMap::LoadFromFile( )
 								}
 							}
 						}
+					pPropertyElement = pPropertyElement->NextSiblingElement("property");
 					}
 				}
+			pTileIndex = pTileIndex->NextSiblingElement("tile");
 			}
 
 		mTileSets.push_back( std::move( pTileMapSet ) );
@@ -297,6 +298,16 @@ void TileMap::LoadFromFile( )
 							}
 						}
 
+					int spawnIndex = pTileMapSet->GetIndexSpawnable();
+
+					if ( spawnIndex > -1 )
+						{
+						if ( gid == spawnIndex + pTileMapSet->GetFirstGid() )
+							{
+							pMapEntity->SetIsSpawnable(true);
+							}
+						}
+
 					pTileMapLayer->AddEntity( std::move(pMapEntity) );
 					}
 				}
@@ -331,6 +342,11 @@ void TileMap::Draw(sf::RenderWindow * pWindow) const
 bool TileMap::IsValidPosition(sf::Sprite * pSprite) const
 	{
 	return !( GetDataLayer()->IsColliding( pSprite ) );
+	}
+
+sf::Vector2f TileMap::GetSpawnPosition() const
+	{
+	return GetDataLayer()->GetSpawnPosition();
 	}
 
 const TileMapLayer * TileMap::GetDataLayer() const
@@ -394,6 +410,16 @@ bool TileMapLayer::IsColliding(sf::Sprite * pSprite) const
 			return true;
 		}
 	return false;
+	}
+
+sf::Vector2f TileMapLayer::GetSpawnPosition() const
+	{
+	for ( const unique_ptr< MapEntity > & pEntity : mTileEntities )
+		{
+		if ( pEntity->GetIsSpawnable() )
+			return pEntity->GetPosition();
+		}
+	ThrowRuntimeException("Failed to find spawn location in map data layer.")
 	}
 
 unsigned int TileMapLayer::GetTileWidthCount() const
