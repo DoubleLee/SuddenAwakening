@@ -417,7 +417,9 @@ sf::Vector2f TileMapLayer::GetSpawnPosition() const
 	for ( const unique_ptr< MapEntity > & pEntity : mTileEntities )
 		{
 		if ( pEntity->GetIsSpawnable() )
+			{
 			return pEntity->GetPosition();
+			}
 		}
 	ThrowRuntimeException("Failed to find spawn location in map data layer.")
 	}

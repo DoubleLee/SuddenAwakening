@@ -49,6 +49,8 @@ public:
 	virtual void Update() = 0;
 	virtual void Draw() = 0;
 
+	virtual void UpdatePlayer();
+
 	virtual void LoadFromXML( const string & file ) = 0;
 	virtual void ProcessEvent( const sf::Event & event ) = 0;
 

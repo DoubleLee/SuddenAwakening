@@ -18,7 +18,6 @@ public:
 	virtual void ProcessEvent(const sf::Event & event);
 
 protected:
-	void UpdatePlayer();
 };
 
 #endif // LEVELONE_HPP
