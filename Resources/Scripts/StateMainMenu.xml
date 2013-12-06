@@ -2,7 +2,7 @@
 <!DOCTYPE StateMainMenu>
 
 < music
-file = "../Resources/Audio/SA-MainMenu.ogg"
+file = "../Resources/Audio/first_run_jingle.ogg"
 volume = "50.0"
 />
 
