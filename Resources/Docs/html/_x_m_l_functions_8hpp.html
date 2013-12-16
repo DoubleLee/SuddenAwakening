@@ -145,10 +145,13 @@ Macros</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:af201af8196c019b97faea24abddef75d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_x_m_l_functions_8hpp.html#af201af8196c019b97faea24abddef75d">LoadTexturesFromXML</a> (<a class="el" href="class_resource_manager.html">ResourceManager</a>&lt; sf::Texture &gt; &amp;textures, <a class="el" href="classtinyxml2_1_1_x_m_l_element.html">XMLElement</a> *pTexturesElement)</td></tr>
+<tr class="memdesc:af201af8196c019b97faea24abddef75d"><td class="mdescLeft">&#160;</td><td class="mdescRight">LoadTexturesFromXML loads from xml into a <a class="el" href="class_resource_manager.html" title="ResourceManager is simple class for managing resources. ">ResourceManager</a> a set of textures.  <a href="#af201af8196c019b97faea24abddef75d">More...</a><br/></td></tr>
 <tr class="separator:af201af8196c019b97faea24abddef75d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42cbe03ebda339a95cc12d69ed0012ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_x_m_l_functions_8hpp.html#a42cbe03ebda339a95cc12d69ed0012ac">LoadMusicFromXML</a> (sf::Music &amp;music, <a class="el" href="classtinyxml2_1_1_x_m_l_element.html">XMLElement</a> *pMusicElement)</td></tr>
+<tr class="memdesc:a42cbe03ebda339a95cc12d69ed0012ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">LoadMusicFromXML loads music information from the xml element passed in.  <a href="#a42cbe03ebda339a95cc12d69ed0012ac">More...</a><br/></td></tr>
 <tr class="separator:a42cbe03ebda339a95cc12d69ed0012ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af7c51d7ea82b1f7c52496cf38424a729"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_x_m_l_functions_8hpp.html#af7c51d7ea82b1f7c52496cf38424a729">LoadAudiosFromXML</a> (<a class="el" href="class_audio_effects.html">AudioEffects</a> &amp;audioMan, <a class="el" href="classtinyxml2_1_1_x_m_l_element.html">XMLElement</a> *pAudiosElement)</td></tr>
+<tr class="memdesc:af7c51d7ea82b1f7c52496cf38424a729"><td class="mdescLeft">&#160;</td><td class="mdescRight">LoadAudiosFromXML loads audo effects into the class from an xml Audios element.  <a href="#af7c51d7ea82b1f7c52496cf38424a729">More...</a><br/></td></tr>
 <tr class="separator:af7c51d7ea82b1f7c52496cf38424a729"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
@@ -191,6 +194,15 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>LoadAudiosFromXML loads audo effects into the class from an xml Audios element. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">audioMan</td><td>The audio effect manager to load the audio buffers into. </td></tr>
+    <tr><td class="paramname">pAudiosElement</td><td>The xml Audios element for loading. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Definition at line <a class="el" href="_x_m_l_functions_8cpp_source.html#l00117">117</a> of file <a class="el" href="_x_m_l_functions_8cpp_source.html">XMLFunctions.cpp</a>.</p>
 
 </div>
@@ -218,6 +230,15 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>LoadMusicFromXML loads music information from the xml element passed in. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">music</td><td>The sfml2 music class to load the music into. </td></tr>
+    <tr><td class="paramname">pMusicElement</td><td>The xml Music element for loading. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Definition at line <a class="el" href="_x_m_l_functions_8cpp_source.html#l00073">73</a> of file <a class="el" href="_x_m_l_functions_8cpp_source.html">XMLFunctions.cpp</a>.</p>
 
@@ -247,6 +268,15 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>LoadTexturesFromXML loads from xml into a <a class="el" href="class_resource_manager.html" title="ResourceManager is simple class for managing resources. ">ResourceManager</a> a set of textures. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">textures</td><td>The resource manager to load the textures into </td></tr>
+    <tr><td class="paramname">pTexturesElement</td><td>The Textures element in xml to load from. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Definition at line <a class="el" href="_x_m_l_functions_8cpp_source.html#l00030">30</a> of file <a class="el" href="_x_m_l_functions_8cpp_source.html">XMLFunctions.cpp</a>.</p>
 
 </div>
@@ -257,7 +287,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_74389ed8173ad57b461b9d623a1f3867.html">Source</a></li><li class="navelem"><a class="el" href="_x_m_l_functions_8hpp.html">XMLFunctions.hpp</a></li>
-    <li class="footer">Generated on Mon Dec 16 2013 10:51:03 for Sudden Awakening by
+    <li class="footer">Generated on Mon Dec 16 2013 11:32:18 for Sudden Awakening by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
   </ul>

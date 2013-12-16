@@ -114,30 +114,42 @@ $(document).ready(function(){initNavTree('class_tile_map.html','');});
 </div><!--header-->
 <div class="contents">
 
+<p>The <a class="el" href="class_tile_map.html" title="The TileMap class presents the a map loaded from xml files from Tiled map editor. ...">TileMap</a> class presents the a map loaded from xml files from Tiled map editor.  
+ <a href="class_tile_map.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_tile_map_8hpp_source.html">TileMap.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a4914f83099a0cd9b71b0ab9a665956c5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_map.html#a4914f83099a0cd9b71b0ab9a665956c5">TileMap</a> (const std::string &amp;file)</td></tr>
+<tr class="memdesc:a4914f83099a0cd9b71b0ab9a665956c5"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_tile_map.html" title="The TileMap class presents the a map loaded from xml files from Tiled map editor. ...">TileMap</a> ctor, attempts to load the map file, throws exception if fails.  <a href="#a4914f83099a0cd9b71b0ab9a665956c5">More...</a><br/></td></tr>
 <tr class="separator:a4914f83099a0cd9b71b0ab9a665956c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3448728e45d6a43fff3a02d4c6d72e9d"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_map.html#a3448728e45d6a43fff3a02d4c6d72e9d">~TileMap</a> ()</td></tr>
+<tr class="memdesc:a3448728e45d6a43fff3a02d4c6d72e9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">~TileMap virtual dtor.  <a href="#a3448728e45d6a43fff3a02d4c6d72e9d">More...</a><br/></td></tr>
 <tr class="separator:a3448728e45d6a43fff3a02d4c6d72e9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a03106c4fd480ab81782778a28af5484f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_map.html#a03106c4fd480ab81782778a28af5484f">Update</a> ()</td></tr>
+<tr class="memdesc:a03106c4fd480ab81782778a28af5484f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update currently empty. Maybe something added in future.  <a href="#a03106c4fd480ab81782778a28af5484f">More...</a><br/></td></tr>
 <tr class="separator:a03106c4fd480ab81782778a28af5484f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc7449af6dab5033f9af54b85f2dd8b1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_map.html#adc7449af6dab5033f9af54b85f2dd8b1">Draw</a> (sf::RenderWindow *pWindow) const </td></tr>
+<tr class="memdesc:adc7449af6dab5033f9af54b85f2dd8b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw will use sfml2 to draw the entire map with layers and transperancey.  <a href="#adc7449af6dab5033f9af54b85f2dd8b1">More...</a><br/></td></tr>
 <tr class="separator:adc7449af6dab5033f9af54b85f2dd8b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf04fac57f31135e607b0cd23bb4de1c"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_map.html#abf04fac57f31135e607b0cd23bb4de1c">IsValidPosition</a> (sf::Sprite *pSprite) const </td></tr>
+<tr class="memdesc:abf04fac57f31135e607b0cd23bb4de1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">IsValidPosition is a check for collision. This is how collisions with the map work.  <a href="#abf04fac57f31135e607b0cd23bb4de1c">More...</a><br/></td></tr>
 <tr class="separator:abf04fac57f31135e607b0cd23bb4de1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31c15d30a5d05e3667bd37d5e46c5b56"><td class="memItemLeft" align="right" valign="top">virtual sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_map.html#a31c15d30a5d05e3667bd37d5e46c5b56">GetSpawnPosition</a> () const </td></tr>
+<tr class="memdesc:a31c15d30a5d05e3667bd37d5e46c5b56"><td class="mdescLeft">&#160;</td><td class="mdescRight">GetSpawnPosition getter for the spawn location.  <a href="#a31c15d30a5d05e3667bd37d5e46c5b56">More...</a><br/></td></tr>
 <tr class="separator:a31c15d30a5d05e3667bd37d5e46c5b56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b501e63e2e7040a41b65d489a77dfaf"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="class_tile_map_layer.html">TileMapLayer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_map.html#a8b501e63e2e7040a41b65d489a77dfaf">GetDataLayer</a> () const </td></tr>
+<tr class="memdesc:a8b501e63e2e7040a41b65d489a77dfaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">GetDataLayer getter for the data layer which holds the data for collisions, spawns, ect..  <a href="#a8b501e63e2e7040a41b65d489a77dfaf">More...</a><br/></td></tr>
 <tr class="separator:a8b501e63e2e7040a41b65d489a77dfaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a04a757f8848ecfb120324b1225b5622c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_map.html#a04a757f8848ecfb120324b1225b5622c">LoadFromFile</a> ()</td></tr>
+<tr class="memdesc:a04a757f8848ecfb120324b1225b5622c"><td class="mdescLeft">&#160;</td><td class="mdescRight">LoadFromFile private method for loading the tiled map from xml, can't be called outside this classes ctor.  <a href="#a04a757f8848ecfb120324b1225b5622c">More...</a><br/></td></tr>
 <tr class="separator:a04a757f8848ecfb120324b1225b5622c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a103bc4ec51b473b430bb859b1d5a215e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_tile_map_set.html">TileMapSet</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_map.html#a103bc4ec51b473b430bb859b1d5a215e">GetTileMapSetFromGid</a> (const unsigned int gid) const </td></tr>
+<tr class="memdesc:a103bc4ec51b473b430bb859b1d5a215e"><td class="mdescLeft">&#160;</td><td class="mdescRight">GetTileMapSetFromGid getter for the tile map set which the gid is in. The gid represents a tile on the map.  <a href="#a103bc4ec51b473b430bb859b1d5a215e">More...</a><br/></td></tr>
 <tr class="separator:a103bc4ec51b473b430bb859b1d5a215e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
@@ -165,8 +177,13 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a954cc80053d31eab8a7950a36793f7b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="_tile_map_8hpp_source.html#l00027">27</a> of file <a class="el" href="_tile_map_8hpp_source.html">TileMap.hpp</a>.</p>
+<div class="textblock"><p>The <a class="el" href="class_tile_map.html" title="The TileMap class presents the a map loaded from xml files from Tiled map editor. ...">TileMap</a> class presents the a map loaded from xml files from Tiled map editor. </p>
+<p>This can load a Tiled map from editor, via xml files.</p>
+<p>It must be in xml format.</p>
+<p>The ctor will load the map and if there is an error will throw an exception.</p>
+<p>Supports many layers, and many tile sets. </p>
+
+<p>Definition at line <a class="el" href="_tile_map_8hpp_source.html#l00039">39</a> of file <a class="el" href="_tile_map_8hpp_source.html">TileMap.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a4914f83099a0cd9b71b0ab9a665956c5"></a>
 <div class="memitem">
@@ -181,6 +198,14 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p><a class="el" href="class_tile_map.html" title="The TileMap class presents the a map loaded from xml files from Tiled map editor. ...">TileMap</a> ctor, attempts to load the map file, throws exception if fails. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>The file name and path to a map xml file. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Definition at line <a class="el" href="_tile_map_8cpp_source.html#l00014">14</a> of file <a class="el" href="_tile_map_8cpp_source.html">TileMap.cpp</a>.</p>
 
@@ -206,6 +231,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>~TileMap virtual dtor. </p>
 
 <p>Definition at line <a class="el" href="_tile_map_8cpp_source.html#l00027">27</a> of file <a class="el" href="_tile_map_8cpp_source.html">TileMap.cpp</a>.</p>
 
@@ -234,6 +261,14 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Draw will use sfml2 to draw the entire map with layers and transperancey. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pWindow</td><td>The SFML2 window to draw to. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Definition at line <a class="el" href="_tile_map_8cpp_source.html#l00331">331</a> of file <a class="el" href="_tile_map_8cpp_source.html">TileMap.cpp</a>.</p>
 
 </div>
@@ -259,6 +294,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>GetDataLayer getter for the data layer which holds the data for collisions, spawns, ect.. </p>
+<dl class="section return"><dt>Returns</dt><dd>The map layer which is the data layer. </dd></dl>
+
 <p>Definition at line <a class="el" href="_tile_map_8cpp_source.html#l00352">352</a> of file <a class="el" href="_tile_map_8cpp_source.html">TileMap.cpp</a>.</p>
 
 </div>
@@ -283,6 +321,9 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>GetSpawnPosition getter for the spawn location. </p>
+<dl class="section return"><dt>Returns</dt><dd>The coordinate for spawning as top left corner. </dd></dl>
 
 <p>Definition at line <a class="el" href="_tile_map_8cpp_source.html#l00347">347</a> of file <a class="el" href="_tile_map_8cpp_source.html">TileMap.cpp</a>.</p>
 
@@ -310,6 +351,15 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>GetTileMapSetFromGid getter for the tile map set which the gid is in. The gid represents a tile on the map. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gid</td><td>The tile ID. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The map set which this id is on. </dd></dl>
+
 <p>Definition at line <a class="el" href="_tile_map_8cpp_source.html#l00357">357</a> of file <a class="el" href="_tile_map_8cpp_source.html">TileMap.cpp</a>.</p>
 
 </div>
@@ -336,6 +386,15 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>IsValidPosition is a check for collision. This is how collisions with the map work. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pSprite</td><td>True if the position is valid, false if its colliding with something it shouldn't be. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
 <p>Definition at line <a class="el" href="_tile_map_8cpp_source.html#l00342">342</a> of file <a class="el" href="_tile_map_8cpp_source.html">TileMap.cpp</a>.</p>
 
 </div>
@@ -360,6 +419,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>LoadFromFile private method for loading the tiled map from xml, can't be called outside this classes ctor. </p>
 
 <p>Definition at line <a class="el" href="_tile_map_8cpp_source.html#l00032">32</a> of file <a class="el" href="_tile_map_8cpp_source.html">TileMap.cpp</a>.</p>
 
@@ -386,6 +447,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Update currently empty. Maybe something added in future. </p>
+<p>Such as animation for tiles. Or opening and closing doors. </p>
+
 <p>Definition at line <a class="el" href="_tile_map_8cpp_source.html#l00326">326</a> of file <a class="el" href="_tile_map_8cpp_source.html">TileMap.cpp</a>.</p>
 
 </div>
@@ -409,7 +473,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_tile_map_8hpp_source.html#l00043">43</a> of file <a class="el" href="_tile_map_8hpp_source.html">TileMap.hpp</a>.</p>
+<p>Definition at line <a class="el" href="_tile_map_8hpp_source.html#l00099">99</a> of file <a class="el" href="_tile_map_8hpp_source.html">TileMap.hpp</a>.</p>
 
 </div>
 </div>
@@ -431,7 +495,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_tile_map_8hpp_source.html#l00045">45</a> of file <a class="el" href="_tile_map_8hpp_source.html">TileMap.hpp</a>.</p>
+<p>Definition at line <a class="el" href="_tile_map_8hpp_source.html#l00101">101</a> of file <a class="el" href="_tile_map_8hpp_source.html">TileMap.hpp</a>.</p>
 
 </div>
 </div>
@@ -453,7 +517,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_tile_map_8hpp_source.html#l00046">46</a> of file <a class="el" href="_tile_map_8hpp_source.html">TileMap.hpp</a>.</p>
+<p>Definition at line <a class="el" href="_tile_map_8hpp_source.html#l00102">102</a> of file <a class="el" href="_tile_map_8hpp_source.html">TileMap.hpp</a>.</p>
 
 </div>
 </div>
@@ -475,7 +539,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_tile_map_8hpp_source.html#l00054">54</a> of file <a class="el" href="_tile_map_8hpp_source.html">TileMap.hpp</a>.</p>
+<p>Definition at line <a class="el" href="_tile_map_8hpp_source.html#l00110">110</a> of file <a class="el" href="_tile_map_8hpp_source.html">TileMap.hpp</a>.</p>
 
 </div>
 </div>
@@ -497,7 +561,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_tile_map_8hpp_source.html#l00049">49</a> of file <a class="el" href="_tile_map_8hpp_source.html">TileMap.hpp</a>.</p>
+<p>Definition at line <a class="el" href="_tile_map_8hpp_source.html#l00105">105</a> of file <a class="el" href="_tile_map_8hpp_source.html">TileMap.hpp</a>.</p>
 
 </div>
 </div>
@@ -519,7 +583,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_tile_map_8hpp_source.html#l00052">52</a> of file <a class="el" href="_tile_map_8hpp_source.html">TileMap.hpp</a>.</p>
+<p>Definition at line <a class="el" href="_tile_map_8hpp_source.html#l00108">108</a> of file <a class="el" href="_tile_map_8hpp_source.html">TileMap.hpp</a>.</p>
 
 </div>
 </div>
@@ -541,7 +605,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_tile_map_8hpp_source.html#l00057">57</a> of file <a class="el" href="_tile_map_8hpp_source.html">TileMap.hpp</a>.</p>
+<p>Definition at line <a class="el" href="_tile_map_8hpp_source.html#l00113">113</a> of file <a class="el" href="_tile_map_8hpp_source.html">TileMap.hpp</a>.</p>
 
 </div>
 </div>
@@ -563,7 +627,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_tile_map_8hpp_source.html#l00056">56</a> of file <a class="el" href="_tile_map_8hpp_source.html">TileMap.hpp</a>.</p>
+<p>Definition at line <a class="el" href="_tile_map_8hpp_source.html#l00112">112</a> of file <a class="el" href="_tile_map_8hpp_source.html">TileMap.hpp</a>.</p>
 
 </div>
 </div>
@@ -585,7 +649,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_tile_map_8hpp_source.html#l00048">48</a> of file <a class="el" href="_tile_map_8hpp_source.html">TileMap.hpp</a>.</p>
+<p>Definition at line <a class="el" href="_tile_map_8hpp_source.html#l00104">104</a> of file <a class="el" href="_tile_map_8hpp_source.html">TileMap.hpp</a>.</p>
 
 </div>
 </div>
@@ -607,7 +671,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_tile_map_8hpp_source.html#l00051">51</a> of file <a class="el" href="_tile_map_8hpp_source.html">TileMap.hpp</a>.</p>
+<p>Definition at line <a class="el" href="_tile_map_8hpp_source.html#l00107">107</a> of file <a class="el" href="_tile_map_8hpp_source.html">TileMap.hpp</a>.</p>
 
 </div>
 </div>
@@ -621,7 +685,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_tile_map.html">TileMap</a></li>
-    <li class="footer">Generated on Mon Dec 16 2013 10:51:05 for Sudden Awakening by
+    <li class="footer">Generated on Mon Dec 16 2013 11:32:19 for Sudden Awakening by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
   </ul>

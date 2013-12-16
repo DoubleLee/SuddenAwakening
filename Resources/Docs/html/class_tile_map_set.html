@@ -113,29 +113,42 @@ $(document).ready(function(){initNavTree('class_tile_map_set.html','');});
 </div><!--header-->
 <div class="contents">
 
+<p>The <a class="el" href="class_tile_map_set.html" title="The TileMapSet class represents one image that is divided into many tiles. ">TileMapSet</a> class represents one image that is divided into many tiles.  
+ <a href="class_tile_map_set.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_tile_map_8hpp_source.html">TileMap.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a34d33c801d9c62d9c95049c270e83002"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_map_set.html#a34d33c801d9c62d9c95049c270e83002">TileMapSet</a> (const std::string &amp;texFile, unsigned int firstGid, const std::string &amp;tileSetName, unsigned int tileWidthSize, unsigned int tileHeightSize, unsigned int imageWidthSize, unsigned int imageHeightSize)</td></tr>
+<tr class="memdesc:a34d33c801d9c62d9c95049c270e83002"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_tile_map_set.html" title="The TileMapSet class represents one image that is divided into many tiles. ">TileMapSet</a> ctor builds the set and loads the image into sfml texture.  <a href="#a34d33c801d9c62d9c95049c270e83002">More...</a><br/></td></tr>
 <tr class="separator:a34d33c801d9c62d9c95049c270e83002"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a510130a6caf01a72483600ce6497a2b3"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_map_set.html#a510130a6caf01a72483600ce6497a2b3">GetFirstGid</a> () const </td></tr>
+<tr class="memdesc:a510130a6caf01a72483600ce6497a2b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">GetFirstGid getter for the first gid on this tile set.  <a href="#a510130a6caf01a72483600ce6497a2b3">More...</a><br/></td></tr>
 <tr class="separator:a510130a6caf01a72483600ce6497a2b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31f0031164701fe7d98dc7683e6c35f5"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_map_set.html#a31f0031164701fe7d98dc7683e6c35f5">GetWidthCount</a> () const </td></tr>
+<tr class="memdesc:a31f0031164701fe7d98dc7683e6c35f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">GetWidthCount getter for the width count of tiles on this image.  <a href="#a31f0031164701fe7d98dc7683e6c35f5">More...</a><br/></td></tr>
 <tr class="separator:a31f0031164701fe7d98dc7683e6c35f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33bf48147ee5eb77efbfd45da82f60ee"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_map_set.html#a33bf48147ee5eb77efbfd45da82f60ee">GetHeightCount</a> () const </td></tr>
+<tr class="memdesc:a33bf48147ee5eb77efbfd45da82f60ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">GetHeightCount getter for the height count of tiles on this image.  <a href="#a33bf48147ee5eb77efbfd45da82f60ee">More...</a><br/></td></tr>
 <tr class="separator:a33bf48147ee5eb77efbfd45da82f60ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c14b329f61709654953c7978065778a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_map_set.html#a9c14b329f61709654953c7978065778a">SetIndexCollidable</a> (int index)</td></tr>
+<tr class="memdesc:a9c14b329f61709654953c7978065778a"><td class="mdescLeft">&#160;</td><td class="mdescRight">SetIndexCollidable setter for the index into this map set that is the collidable gid. The collidable gid is the firstGid + index.  <a href="#a9c14b329f61709654953c7978065778a">More...</a><br/></td></tr>
 <tr class="separator:a9c14b329f61709654953c7978065778a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3aa4aadee0b9686dc7a03beb7604203"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_map_set.html#ad3aa4aadee0b9686dc7a03beb7604203">GetIndexCollidable</a> () const </td></tr>
+<tr class="memdesc:ad3aa4aadee0b9686dc7a03beb7604203"><td class="mdescLeft">&#160;</td><td class="mdescRight">GetIndexCollidable getter for the index in this map set that is the collidable gid. The collidable gid is the firstGid + index.  <a href="#ad3aa4aadee0b9686dc7a03beb7604203">More...</a><br/></td></tr>
 <tr class="separator:ad3aa4aadee0b9686dc7a03beb7604203"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a477cc5c81ce119e7611270448dbe73fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_map_set.html#a477cc5c81ce119e7611270448dbe73fa">SetIndexSpawnable</a> (int index)</td></tr>
+<tr class="memdesc:a477cc5c81ce119e7611270448dbe73fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">SetIndexSpawnable setter for the index that is to be considered spawnable. The spawnable gid is the firstGid + index.  <a href="#a477cc5c81ce119e7611270448dbe73fa">More...</a><br/></td></tr>
 <tr class="separator:a477cc5c81ce119e7611270448dbe73fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaedc48df137fa504bf4911e6cf31e63a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_map_set.html#aaedc48df137fa504bf4911e6cf31e63a">GetIndexSpawnable</a> () const </td></tr>
+<tr class="memdesc:aaedc48df137fa504bf4911e6cf31e63a"><td class="mdescLeft">&#160;</td><td class="mdescRight">GetIndexSpawnable getter for the index in this map set that is spawnable. The collidable gid is the firstGid + index.  <a href="#aaedc48df137fa504bf4911e6cf31e63a">More...</a><br/></td></tr>
 <tr class="separator:aaedc48df137fa504bf4911e6cf31e63a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a903f3babc3298ec0d91208cb1a0a476a"><td class="memItemLeft" align="right" valign="top">sf::Texture &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_map_set.html#a903f3babc3298ec0d91208cb1a0a476a">GetTexture</a> () const </td></tr>
+<tr class="memdesc:a903f3babc3298ec0d91208cb1a0a476a"><td class="mdescLeft">&#160;</td><td class="mdescRight">GetTexture getter for the image/texture this map set represents.  <a href="#a903f3babc3298ec0d91208cb1a0a476a">More...</a><br/></td></tr>
 <tr class="separator:a903f3babc3298ec0d91208cb1a0a476a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ffb31b962f96260211537f5c8256db3"><td class="memItemLeft" align="right" valign="top">sf::IntRect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile_map_set.html#a3ffb31b962f96260211537f5c8256db3">GetTextureRect</a> (unsigned int gid) const </td></tr>
+<tr class="memdesc:a3ffb31b962f96260211537f5c8256db3"><td class="mdescLeft">&#160;</td><td class="mdescRight">GetTextureRect getter for the texture rect that a gid represents.  <a href="#a3ffb31b962f96260211537f5c8256db3">More...</a><br/></td></tr>
 <tr class="separator:a3ffb31b962f96260211537f5c8256db3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
@@ -162,8 +175,9 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:abdcf3d4f5e9d82aeba620a7358068a42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="_tile_map_8hpp_source.html#l00093">93</a> of file <a class="el" href="_tile_map_8hpp_source.html">TileMap.hpp</a>.</p>
+<div class="textblock"><p>The <a class="el" href="class_tile_map_set.html" title="The TileMapSet class represents one image that is divided into many tiles. ">TileMapSet</a> class represents one image that is divided into many tiles. </p>
+
+<p>Definition at line <a class="el" href="_tile_map_8hpp_source.html#l00208">208</a> of file <a class="el" href="_tile_map_8hpp_source.html">TileMap.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a34d33c801d9c62d9c95049c270e83002"></a>
 <div class="memitem">
@@ -219,6 +233,20 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p><a class="el" href="class_tile_map_set.html" title="The TileMapSet class represents one image that is divided into many tiles. ">TileMapSet</a> ctor builds the set and loads the image into sfml texture. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">texFile</td><td>The texture file name and path to load. </td></tr>
+    <tr><td class="paramname">firstGid</td><td>The first gid on this tile set. </td></tr>
+    <tr><td class="paramname">tileSetName</td><td></td></tr>
+    <tr><td class="paramname">tileWidthSize</td><td></td></tr>
+    <tr><td class="paramname">tileHeightSize</td><td></td></tr>
+    <tr><td class="paramname">imageWidthSize</td><td></td></tr>
+    <tr><td class="paramname">imageHeightSize</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Definition at line <a class="el" href="_tile_map_8cpp_source.html#l00452">452</a> of file <a class="el" href="_tile_map_8cpp_source.html">TileMap.cpp</a>.</p>
 
 </div>
@@ -237,6 +265,9 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>GetFirstGid getter for the first gid on this tile set. </p>
+<dl class="section return"><dt>Returns</dt><dd>The first gid on this tile set. </dd></dl>
+
 <p>Definition at line <a class="el" href="_tile_map_8cpp_source.html#l00472">472</a> of file <a class="el" href="_tile_map_8cpp_source.html">TileMap.cpp</a>.</p>
 
 </div>
@@ -253,6 +284,9 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>GetHeightCount getter for the height count of tiles on this image. </p>
+<dl class="section return"><dt>Returns</dt><dd>The count of tiles on this image height. </dd></dl>
 
 <p>Definition at line <a class="el" href="_tile_map_8cpp_source.html#l00482">482</a> of file <a class="el" href="_tile_map_8cpp_source.html">TileMap.cpp</a>.</p>
 
@@ -271,6 +305,9 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>GetIndexCollidable getter for the index in this map set that is the collidable gid. The collidable gid is the firstGid + index. </p>
+<dl class="section return"><dt>Returns</dt><dd>The index that is the collidable entity. </dd></dl>
+
 <p>Definition at line <a class="el" href="_tile_map_8cpp_source.html#l00492">492</a> of file <a class="el" href="_tile_map_8cpp_source.html">TileMap.cpp</a>.</p>
 
 </div>
@@ -288,6 +325,9 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>GetIndexSpawnable getter for the index in this map set that is spawnable. The collidable gid is the firstGid + index. </p>
+<dl class="section return"><dt>Returns</dt><dd>The index that is the spawnable entity. </dd></dl>
+
 <p>Definition at line <a class="el" href="_tile_map_8cpp_source.html#l00502">502</a> of file <a class="el" href="_tile_map_8cpp_source.html">TileMap.cpp</a>.</p>
 
 </div>
@@ -304,6 +344,9 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>GetTexture getter for the image/texture this map set represents. </p>
+<dl class="section return"><dt>Returns</dt><dd>The sfml2 texture this map set contains. </dd></dl>
 
 <p>Definition at line <a class="el" href="_tile_map_8cpp_source.html#l00507">507</a> of file <a class="el" href="_tile_map_8cpp_source.html">TileMap.cpp</a>.</p>
 
@@ -323,6 +366,15 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>GetTextureRect getter for the texture rect that a gid represents. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gid</td><td>The gid of the rect you want. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The int rect you requested. </dd></dl>
+
 <p>Definition at line <a class="el" href="_tile_map_8cpp_source.html#l00512">512</a> of file <a class="el" href="_tile_map_8cpp_source.html">TileMap.cpp</a>.</p>
 
 </div>
@@ -339,6 +391,9 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>GetWidthCount getter for the width count of tiles on this image. </p>
+<dl class="section return"><dt>Returns</dt><dd>The count of tiles on this image width. </dd></dl>
 
 <p>Definition at line <a class="el" href="_tile_map_8cpp_source.html#l00477">477</a> of file <a class="el" href="_tile_map_8cpp_source.html">TileMap.cpp</a>.</p>
 
@@ -358,6 +413,14 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>SetIndexCollidable setter for the index into this map set that is the collidable gid. The collidable gid is the firstGid + index. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>The index that should be considered the collidable entity. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Definition at line <a class="el" href="_tile_map_8cpp_source.html#l00487">487</a> of file <a class="el" href="_tile_map_8cpp_source.html">TileMap.cpp</a>.</p>
 
 </div>
@@ -375,6 +438,14 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>SetIndexSpawnable setter for the index that is to be considered spawnable. The spawnable gid is the firstGid + index. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>The index to be considered spawnable. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Definition at line <a class="el" href="_tile_map_8cpp_source.html#l00497">497</a> of file <a class="el" href="_tile_map_8cpp_source.html">TileMap.cpp</a>.</p>
 
@@ -399,7 +470,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_tile_map_8hpp_source.html#l00115">115</a> of file <a class="el" href="_tile_map_8hpp_source.html">TileMap.hpp</a>.</p>
+<p>Definition at line <a class="el" href="_tile_map_8hpp_source.html#l00287">287</a> of file <a class="el" href="_tile_map_8hpp_source.html">TileMap.hpp</a>.</p>
 
 </div>
 </div>
@@ -421,7 +492,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_tile_map_8hpp_source.html#l00123">123</a> of file <a class="el" href="_tile_map_8hpp_source.html">TileMap.hpp</a>.</p>
+<p>Definition at line <a class="el" href="_tile_map_8hpp_source.html#l00295">295</a> of file <a class="el" href="_tile_map_8hpp_source.html">TileMap.hpp</a>.</p>
 
 </div>
 </div>
@@ -443,7 +514,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_tile_map_8hpp_source.html#l00122">122</a> of file <a class="el" href="_tile_map_8hpp_source.html">TileMap.hpp</a>.</p>
+<p>Definition at line <a class="el" href="_tile_map_8hpp_source.html#l00294">294</a> of file <a class="el" href="_tile_map_8hpp_source.html">TileMap.hpp</a>.</p>
 
 </div>
 </div>
@@ -465,7 +536,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_tile_map_8hpp_source.html#l00128">128</a> of file <a class="el" href="_tile_map_8hpp_source.html">TileMap.hpp</a>.</p>
+<p>Definition at line <a class="el" href="_tile_map_8hpp_source.html#l00300">300</a> of file <a class="el" href="_tile_map_8hpp_source.html">TileMap.hpp</a>.</p>
 
 </div>
 </div>
@@ -487,7 +558,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_tile_map_8hpp_source.html#l00129">129</a> of file <a class="el" href="_tile_map_8hpp_source.html">TileMap.hpp</a>.</p>
+<p>Definition at line <a class="el" href="_tile_map_8hpp_source.html#l00301">301</a> of file <a class="el" href="_tile_map_8hpp_source.html">TileMap.hpp</a>.</p>
 
 </div>
 </div>
@@ -509,7 +580,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_tile_map_8hpp_source.html#l00126">126</a> of file <a class="el" href="_tile_map_8hpp_source.html">TileMap.hpp</a>.</p>
+<p>Definition at line <a class="el" href="_tile_map_8hpp_source.html#l00298">298</a> of file <a class="el" href="_tile_map_8hpp_source.html">TileMap.hpp</a>.</p>
 
 </div>
 </div>
@@ -531,7 +602,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_tile_map_8hpp_source.html#l00120">120</a> of file <a class="el" href="_tile_map_8hpp_source.html">TileMap.hpp</a>.</p>
+<p>Definition at line <a class="el" href="_tile_map_8hpp_source.html#l00292">292</a> of file <a class="el" href="_tile_map_8hpp_source.html">TileMap.hpp</a>.</p>
 
 </div>
 </div>
@@ -553,7 +624,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_tile_map_8hpp_source.html#l00117">117</a> of file <a class="el" href="_tile_map_8hpp_source.html">TileMap.hpp</a>.</p>
+<p>Definition at line <a class="el" href="_tile_map_8hpp_source.html#l00289">289</a> of file <a class="el" href="_tile_map_8hpp_source.html">TileMap.hpp</a>.</p>
 
 </div>
 </div>
@@ -575,7 +646,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_tile_map_8hpp_source.html#l00125">125</a> of file <a class="el" href="_tile_map_8hpp_source.html">TileMap.hpp</a>.</p>
+<p>Definition at line <a class="el" href="_tile_map_8hpp_source.html#l00297">297</a> of file <a class="el" href="_tile_map_8hpp_source.html">TileMap.hpp</a>.</p>
 
 </div>
 </div>
@@ -597,7 +668,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_tile_map_8hpp_source.html#l00119">119</a> of file <a class="el" href="_tile_map_8hpp_source.html">TileMap.hpp</a>.</p>
+<p>Definition at line <a class="el" href="_tile_map_8hpp_source.html#l00291">291</a> of file <a class="el" href="_tile_map_8hpp_source.html">TileMap.hpp</a>.</p>
 
 </div>
 </div>
@@ -611,7 +682,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_tile_map_set.html">TileMapSet</a></li>
-    <li class="footer">Generated on Mon Dec 16 2013 10:51:05 for Sudden Awakening by
+    <li class="footer">Generated on Mon Dec 16 2013 11:32:19 for Sudden Awakening by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
   </ul>

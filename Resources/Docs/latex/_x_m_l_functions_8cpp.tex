@@ -18,11 +18,11 @@
 {\footnotesize template$<$class T $>$ }\\bool \hyperlink{_x_m_l_functions_8cpp_abc7b520958d2011d2c018fc2948d18b2}{Is\-Valid\-Enum} (T \&enum\-Ref, int value\-I\-D)
 \item 
 void \hyperlink{_x_m_l_functions_8cpp_a81e7aa4cc159aaeead9f01d9b63d03d6}{Load\-Textures\-From\-X\-M\-L} (\hyperlink{class_resource_manager}{Resource\-Manager}$<$ sf\-::\-Texture $>$ \&textures, \hyperlink{classtinyxml2_1_1_x_m_l_element}{tinyxml2\-::\-X\-M\-L\-Element} $\ast$p\-Textures\-Element)
-\item 
+\begin{DoxyCompactList}\small\item\em Load\-Textures\-From\-X\-M\-L loads from xml into a \hyperlink{class_resource_manager}{Resource\-Manager} a set of textures. \end{DoxyCompactList}\item 
 void \hyperlink{_x_m_l_functions_8cpp_a58d2529e6b2668c375c655edb018f350}{Load\-Music\-From\-X\-M\-L} (sf\-::\-Music \&music, \hyperlink{classtinyxml2_1_1_x_m_l_element}{tinyxml2\-::\-X\-M\-L\-Element} $\ast$p\-Music\-Element)
-\item 
+\begin{DoxyCompactList}\small\item\em Load\-Music\-From\-X\-M\-L loads music information from the xml element passed in. \end{DoxyCompactList}\item 
 void \hyperlink{_x_m_l_functions_8cpp_a9579e0ff2c67ce1fb6005a72dfb0473d}{Load\-Audios\-From\-X\-M\-L} (\hyperlink{class_audio_effects}{Audio\-Effects} \&audio\-Man, \hyperlink{classtinyxml2_1_1_x_m_l_element}{tinyxml2\-::\-X\-M\-L\-Element} $\ast$p\-Audios\-Element)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Load\-Audios\-From\-X\-M\-L loads audo effects into the class from an xml Audios element. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Function Documentation}
@@ -43,9 +43,20 @@ Definition at line 20 of file X\-M\-L\-Functions.\-cpp.
 \subsubsection[{Load\-Audios\-From\-X\-M\-L}]{\setlength{\rightskip}{0pt plus 5cm}void Load\-Audios\-From\-X\-M\-L (
 \begin{DoxyParamCaption}
 \item[{{\bf Audio\-Effects} \&}]{audio\-Man, }
-\item[{{\bf tinyxml2\-::\-X\-M\-L\-Element} $\ast$}]{p\-Audios\-Element}
+\item[{{\bf X\-M\-L\-Element} $\ast$}]{p\-Audios\-Element}
 \end{DoxyParamCaption}
 )}}\label{_x_m_l_functions_8cpp_a9579e0ff2c67ce1fb6005a72dfb0473d}
+
+
+Load\-Audios\-From\-X\-M\-L loads audo effects into the class from an xml Audios element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em audio\-Man} & The audio effect manager to load the audio buffers into. \\
+\hline
+{\em p\-Audios\-Element} & The xml Audios element for loading. \\
+\hline
+\end{DoxyParams}
 
 
 Definition at line 117 of file X\-M\-L\-Functions.\-cpp.
@@ -55,9 +66,20 @@ Definition at line 117 of file X\-M\-L\-Functions.\-cpp.
 \subsubsection[{Load\-Music\-From\-X\-M\-L}]{\setlength{\rightskip}{0pt plus 5cm}void Load\-Music\-From\-X\-M\-L (
 \begin{DoxyParamCaption}
 \item[{sf\-::\-Music \&}]{music, }
-\item[{{\bf tinyxml2\-::\-X\-M\-L\-Element} $\ast$}]{p\-Music\-Element}
+\item[{{\bf X\-M\-L\-Element} $\ast$}]{p\-Music\-Element}
 \end{DoxyParamCaption}
 )}}\label{_x_m_l_functions_8cpp_a58d2529e6b2668c375c655edb018f350}
+
+
+Load\-Music\-From\-X\-M\-L loads music information from the xml element passed in. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em music} & The sfml2 music class to load the music into. \\
+\hline
+{\em p\-Music\-Element} & The xml Music element for loading. \\
+\hline
+\end{DoxyParams}
 
 
 Definition at line 73 of file X\-M\-L\-Functions.\-cpp.
@@ -67,9 +89,20 @@ Definition at line 73 of file X\-M\-L\-Functions.\-cpp.
 \subsubsection[{Load\-Textures\-From\-X\-M\-L}]{\setlength{\rightskip}{0pt plus 5cm}void Load\-Textures\-From\-X\-M\-L (
 \begin{DoxyParamCaption}
 \item[{{\bf Resource\-Manager}$<$ sf\-::\-Texture $>$ \&}]{textures, }
-\item[{{\bf tinyxml2\-::\-X\-M\-L\-Element} $\ast$}]{p\-Textures\-Element}
+\item[{{\bf X\-M\-L\-Element} $\ast$}]{p\-Textures\-Element}
 \end{DoxyParamCaption}
 )}}\label{_x_m_l_functions_8cpp_a81e7aa4cc159aaeead9f01d9b63d03d6}
+
+
+Load\-Textures\-From\-X\-M\-L loads from xml into a \hyperlink{class_resource_manager}{Resource\-Manager} a set of textures. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em textures} & The resource manager to load the textures into \\
+\hline
+{\em p\-Textures\-Element} & The Textures element in xml to load from. \\
+\hline
+\end{DoxyParams}
 
 
 Definition at line 30 of file X\-M\-L\-Functions.\-cpp.

@@ -3,32 +3,37 @@
 }
 
 
+The \hyperlink{class_tile_map}{Tile\-Map} class presents the a map loaded from xml files from Tiled map editor.  
+
+
+
+
 {\ttfamily \#include $<$Tile\-Map.\-hpp$>$}
 
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_tile_map_a4914f83099a0cd9b71b0ab9a665956c5}{Tile\-Map} (const std\-::string \&file)
-\item 
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_tile_map}{Tile\-Map} ctor, attempts to load the map file, throws exception if fails. \end{DoxyCompactList}\item 
 virtual \hyperlink{class_tile_map_a3448728e45d6a43fff3a02d4c6d72e9d}{$\sim$\-Tile\-Map} ()
-\item 
+\begin{DoxyCompactList}\small\item\em $\sim$\-Tile\-Map virtual dtor. \end{DoxyCompactList}\item 
 virtual void \hyperlink{class_tile_map_a03106c4fd480ab81782778a28af5484f}{Update} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Update currently empty. Maybe something added in future. \end{DoxyCompactList}\item 
 virtual void \hyperlink{class_tile_map_adc7449af6dab5033f9af54b85f2dd8b1}{Draw} (sf\-::\-Render\-Window $\ast$p\-Window) const 
-\item 
+\begin{DoxyCompactList}\small\item\em Draw will use sfml2 to draw the entire map with layers and transperancey. \end{DoxyCompactList}\item 
 virtual bool \hyperlink{class_tile_map_abf04fac57f31135e607b0cd23bb4de1c}{Is\-Valid\-Position} (sf\-::\-Sprite $\ast$p\-Sprite) const 
-\item 
+\begin{DoxyCompactList}\small\item\em Is\-Valid\-Position is a check for collision. This is how collisions with the map work. \end{DoxyCompactList}\item 
 virtual sf\-::\-Vector2f \hyperlink{class_tile_map_a31c15d30a5d05e3667bd37d5e46c5b56}{Get\-Spawn\-Position} () const 
-\item 
+\begin{DoxyCompactList}\small\item\em Get\-Spawn\-Position getter for the spawn location. \end{DoxyCompactList}\item 
 virtual const \hyperlink{class_tile_map_layer}{Tile\-Map\-Layer} $\ast$ \hyperlink{class_tile_map_a8b501e63e2e7040a41b65d489a77dfaf}{Get\-Data\-Layer} () const 
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Get\-Data\-Layer getter for the data layer which holds the data for collisions, spawns, ect.. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \hyperlink{class_tile_map_a04a757f8848ecfb120324b1225b5622c}{Load\-From\-File} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Load\-From\-File private method for loading the tiled map from xml, can't be called outside this classes ctor. \end{DoxyCompactList}\item 
 const \hyperlink{class_tile_map_set}{Tile\-Map\-Set} $\ast$ \hyperlink{class_tile_map_a103bc4ec51b473b430bb859b1d5a215e}{Get\-Tile\-Map\-Set\-From\-Gid} (const unsigned int gid) const 
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Get\-Tile\-Map\-Set\-From\-Gid getter for the tile map set which the gid is in. The gid represents a tile on the map. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -56,9 +61,17 @@ $<$ \hyperlink{class_tile_map_layer}{Tile\-Map\-Layer} $>$ $>$ \hyperlink{class_
 
 
 \subsection{Detailed Description}
+The \hyperlink{class_tile_map}{Tile\-Map} class presents the a map loaded from xml files from Tiled map editor. 
 
+This can load a Tiled map from editor, via xml files.
 
-Definition at line 27 of file Tile\-Map.\-hpp.
+It must be in xml format.
+
+The ctor will load the map and if there is an error will throw an exception.
+
+Supports many layers, and many tile sets. 
+
+Definition at line 39 of file Tile\-Map.\-hpp.
 
 
 
@@ -72,6 +85,15 @@ Definition at line 27 of file Tile\-Map.\-hpp.
 )}}\label{class_tile_map_a4914f83099a0cd9b71b0ab9a665956c5}
 
 
+\hyperlink{class_tile_map}{Tile\-Map} ctor, attempts to load the map file, throws exception if fails. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The file name and path to a map xml file. \\
+\hline
+\end{DoxyParams}
+
+
 Definition at line 14 of file Tile\-Map.\-cpp.
 
 \hypertarget{class_tile_map_a3448728e45d6a43fff3a02d4c6d72e9d}{\index{Tile\-Map@{Tile\-Map}!$\sim$\-Tile\-Map@{$\sim$\-Tile\-Map}}
@@ -81,6 +103,10 @@ Definition at line 14 of file Tile\-Map.\-cpp.
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_tile_map_a3448728e45d6a43fff3a02d4c6d72e9d}
+
+
+$\sim$\-Tile\-Map virtual dtor. 
+
 
 
 Definition at line 27 of file Tile\-Map.\-cpp.
@@ -97,6 +123,15 @@ Definition at line 27 of file Tile\-Map.\-cpp.
 ) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_tile_map_adc7449af6dab5033f9af54b85f2dd8b1}
 
 
+Draw will use sfml2 to draw the entire map with layers and transperancey. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-Window} & The S\-F\-M\-L2 window to draw to. \\
+\hline
+\end{DoxyParams}
+
+
 Definition at line 331 of file Tile\-Map.\-cpp.
 
 \hypertarget{class_tile_map_a8b501e63e2e7040a41b65d489a77dfaf}{\index{Tile\-Map@{Tile\-Map}!Get\-Data\-Layer@{Get\-Data\-Layer}}
@@ -106,6 +141,13 @@ Definition at line 331 of file Tile\-Map.\-cpp.
 {}
 \end{DoxyParamCaption}
 ) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_tile_map_a8b501e63e2e7040a41b65d489a77dfaf}
+
+
+Get\-Data\-Layer getter for the data layer which holds the data for collisions, spawns, ect.. 
+
+\begin{DoxyReturn}{Returns}
+The map layer which is the data layer. 
+\end{DoxyReturn}
 
 
 Definition at line 352 of file Tile\-Map.\-cpp.
@@ -119,6 +161,13 @@ Definition at line 352 of file Tile\-Map.\-cpp.
 ) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_tile_map_a31c15d30a5d05e3667bd37d5e46c5b56}
 
 
+Get\-Spawn\-Position getter for the spawn location. 
+
+\begin{DoxyReturn}{Returns}
+The coordinate for spawning as top left corner. 
+\end{DoxyReturn}
+
+
 Definition at line 347 of file Tile\-Map.\-cpp.
 
 \hypertarget{class_tile_map_a103bc4ec51b473b430bb859b1d5a215e}{\index{Tile\-Map@{Tile\-Map}!Get\-Tile\-Map\-Set\-From\-Gid@{Get\-Tile\-Map\-Set\-From\-Gid}}
@@ -128,6 +177,18 @@ Definition at line 347 of file Tile\-Map.\-cpp.
 \item[{const unsigned int}]{gid}
 \end{DoxyParamCaption}
 ) const\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tile_map_a103bc4ec51b473b430bb859b1d5a215e}
+
+
+Get\-Tile\-Map\-Set\-From\-Gid getter for the tile map set which the gid is in. The gid represents a tile on the map. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gid} & The tile I\-D. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The map set which this id is on. 
+\end{DoxyReturn}
 
 
 Definition at line 357 of file Tile\-Map.\-cpp.
@@ -141,6 +202,18 @@ Definition at line 357 of file Tile\-Map.\-cpp.
 ) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_tile_map_abf04fac57f31135e607b0cd23bb4de1c}
 
 
+Is\-Valid\-Position is a check for collision. This is how collisions with the map work. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-Sprite} & True if the position is valid, false if its colliding with something it shouldn't be. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
 Definition at line 342 of file Tile\-Map.\-cpp.
 
 \hypertarget{class_tile_map_a04a757f8848ecfb120324b1225b5622c}{\index{Tile\-Map@{Tile\-Map}!Load\-From\-File@{Load\-From\-File}}
@@ -150,6 +223,10 @@ Definition at line 342 of file Tile\-Map.\-cpp.
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tile_map_a04a757f8848ecfb120324b1225b5622c}
+
+
+Load\-From\-File private method for loading the tiled map from xml, can't be called outside this classes ctor. 
+
 
 
 Definition at line 32 of file Tile\-Map.\-cpp.
@@ -163,6 +240,10 @@ Definition at line 32 of file Tile\-Map.\-cpp.
 )\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_tile_map_a03106c4fd480ab81782778a28af5484f}
 
 
+Update currently empty. Maybe something added in future. 
+
+Such as animation for tiles. Or opening and closing doors. 
+
 Definition at line 326 of file Tile\-Map.\-cpp.
 
 
@@ -173,70 +254,70 @@ Definition at line 326 of file Tile\-Map.\-cpp.
 \subsubsection[{m\-File}]{\setlength{\rightskip}{0pt plus 5cm}string Tile\-Map\-::m\-File\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tile_map_a16522fed3a3c05fd048d4627918dac4e}
 
 
-Definition at line 43 of file Tile\-Map.\-hpp.
+Definition at line 99 of file Tile\-Map.\-hpp.
 
 \hypertarget{class_tile_map_a6067e70fab16c65ecbb49ac3a939c2a1}{\index{Tile\-Map@{Tile\-Map}!m\-File\-Version@{m\-File\-Version}}
 \index{m\-File\-Version@{m\-File\-Version}!TileMap@{Tile\-Map}}
 \subsubsection[{m\-File\-Version}]{\setlength{\rightskip}{0pt plus 5cm}float Tile\-Map\-::m\-File\-Version\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tile_map_a6067e70fab16c65ecbb49ac3a939c2a1}
 
 
-Definition at line 45 of file Tile\-Map.\-hpp.
+Definition at line 101 of file Tile\-Map.\-hpp.
 
 \hypertarget{class_tile_map_a57c00e3034715bdd4feeb0ea6170829f}{\index{Tile\-Map@{Tile\-Map}!m\-Orientation@{m\-Orientation}}
 \index{m\-Orientation@{m\-Orientation}!TileMap@{Tile\-Map}}
 \subsubsection[{m\-Orientation}]{\setlength{\rightskip}{0pt plus 5cm}string Tile\-Map\-::m\-Orientation\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tile_map_a57c00e3034715bdd4feeb0ea6170829f}
 
 
-Definition at line 46 of file Tile\-Map.\-hpp.
+Definition at line 102 of file Tile\-Map.\-hpp.
 
 \hypertarget{class_tile_map_a8a388c1792d2170c8c5b27098f4ef439}{\index{Tile\-Map@{Tile\-Map}!mp\-Data\-Layer@{mp\-Data\-Layer}}
 \index{mp\-Data\-Layer@{mp\-Data\-Layer}!TileMap@{Tile\-Map}}
 \subsubsection[{mp\-Data\-Layer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tile\-Map\-Layer}$\ast$ Tile\-Map\-::mp\-Data\-Layer\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tile_map_a8a388c1792d2170c8c5b27098f4ef439}
 
 
-Definition at line 54 of file Tile\-Map.\-hpp.
+Definition at line 110 of file Tile\-Map.\-hpp.
 
 \hypertarget{class_tile_map_a2d6863a88f0ce522376c1d90c448a385}{\index{Tile\-Map@{Tile\-Map}!m\-Tile\-Height\-Count@{m\-Tile\-Height\-Count}}
 \index{m\-Tile\-Height\-Count@{m\-Tile\-Height\-Count}!TileMap@{Tile\-Map}}
 \subsubsection[{m\-Tile\-Height\-Count}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Tile\-Map\-::m\-Tile\-Height\-Count\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tile_map_a2d6863a88f0ce522376c1d90c448a385}
 
 
-Definition at line 49 of file Tile\-Map.\-hpp.
+Definition at line 105 of file Tile\-Map.\-hpp.
 
 \hypertarget{class_tile_map_a74b8c66dd13864f60cea068a8872499d}{\index{Tile\-Map@{Tile\-Map}!m\-Tile\-Height\-Size@{m\-Tile\-Height\-Size}}
 \index{m\-Tile\-Height\-Size@{m\-Tile\-Height\-Size}!TileMap@{Tile\-Map}}
 \subsubsection[{m\-Tile\-Height\-Size}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Tile\-Map\-::m\-Tile\-Height\-Size\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tile_map_a74b8c66dd13864f60cea068a8872499d}
 
 
-Definition at line 52 of file Tile\-Map.\-hpp.
+Definition at line 108 of file Tile\-Map.\-hpp.
 
 \hypertarget{class_tile_map_a954cc80053d31eab8a7950a36793f7b6}{\index{Tile\-Map@{Tile\-Map}!m\-Tile\-Map\-Layers@{m\-Tile\-Map\-Layers}}
 \index{m\-Tile\-Map\-Layers@{m\-Tile\-Map\-Layers}!TileMap@{Tile\-Map}}
 \subsubsection[{m\-Tile\-Map\-Layers}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ unique\-\_\-ptr$<$ {\bf Tile\-Map\-Layer} $>$ $>$ Tile\-Map\-::m\-Tile\-Map\-Layers\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tile_map_a954cc80053d31eab8a7950a36793f7b6}
 
 
-Definition at line 57 of file Tile\-Map.\-hpp.
+Definition at line 113 of file Tile\-Map.\-hpp.
 
 \hypertarget{class_tile_map_ae9003055f192d71c5b5f9032852214a2}{\index{Tile\-Map@{Tile\-Map}!m\-Tile\-Sets@{m\-Tile\-Sets}}
 \index{m\-Tile\-Sets@{m\-Tile\-Sets}!TileMap@{Tile\-Map}}
 \subsubsection[{m\-Tile\-Sets}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ unique\-\_\-ptr$<$ {\bf Tile\-Map\-Set} $>$ $>$ Tile\-Map\-::m\-Tile\-Sets\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tile_map_ae9003055f192d71c5b5f9032852214a2}
 
 
-Definition at line 56 of file Tile\-Map.\-hpp.
+Definition at line 112 of file Tile\-Map.\-hpp.
 
 \hypertarget{class_tile_map_aaee5f34ef457d19fa32768301ac81fc2}{\index{Tile\-Map@{Tile\-Map}!m\-Tile\-Width\-Count@{m\-Tile\-Width\-Count}}
 \index{m\-Tile\-Width\-Count@{m\-Tile\-Width\-Count}!TileMap@{Tile\-Map}}
 \subsubsection[{m\-Tile\-Width\-Count}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Tile\-Map\-::m\-Tile\-Width\-Count\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tile_map_aaee5f34ef457d19fa32768301ac81fc2}
 
 
-Definition at line 48 of file Tile\-Map.\-hpp.
+Definition at line 104 of file Tile\-Map.\-hpp.
 
 \hypertarget{class_tile_map_a98fe1a15d2a9fae5ecd3290fc9700661}{\index{Tile\-Map@{Tile\-Map}!m\-Tile\-Width\-Size@{m\-Tile\-Width\-Size}}
 \index{m\-Tile\-Width\-Size@{m\-Tile\-Width\-Size}!TileMap@{Tile\-Map}}
 \subsubsection[{m\-Tile\-Width\-Size}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Tile\-Map\-::m\-Tile\-Width\-Size\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tile_map_a98fe1a15d2a9fae5ecd3290fc9700661}
 
 
-Definition at line 51 of file Tile\-Map.\-hpp.
+Definition at line 107 of file Tile\-Map.\-hpp.
 
 
 

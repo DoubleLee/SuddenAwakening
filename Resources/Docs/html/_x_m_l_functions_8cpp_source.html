@@ -135,7 +135,7 @@ $(document).ready(function(){initNavTree('_x_m_l_functions_8cpp_source.html','')
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    }</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="code" href="_x_m_l_functions_8hpp.html#af201af8196c019b97faea24abddef75d">   30</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="_x_m_l_functions_8cpp.html#a81e7aa4cc159aaeead9f01d9b63d03d6">LoadTexturesFromXML</a>(<a class="code" href="class_resource_manager.html">ResourceManager&lt;sf::Texture&gt;</a> &amp; textures, <a class="code" href="classtinyxml2_1_1_x_m_l_element.html">tinyxml2::XMLElement</a> * pTexturesElement)</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="code" href="_x_m_l_functions_8hpp.html#af201af8196c019b97faea24abddef75d">   30</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="_x_m_l_functions_8cpp.html#a81e7aa4cc159aaeead9f01d9b63d03d6" title="LoadTexturesFromXML loads from xml into a ResourceManager a set of textures. ">LoadTexturesFromXML</a>(<a class="code" href="class_resource_manager.html">ResourceManager&lt;sf::Texture&gt;</a> &amp; textures, <a class="code" href="classtinyxml2_1_1_x_m_l_element.html">tinyxml2::XMLElement</a> * pTexturesElement)</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    {</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="comment">// Make sure element passed in is valid, and the correct one.</span></div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">if</span> ( !pTexturesElement || strcmp(pTexturesElement-&gt;<a class="code" href="classtinyxml2_1_1_x_m_l_element.html#a8bff355472bce2c60d4b50a212bf7f5f" title="Get the name of an element (which is the Value() of the node.) ">Name</a>(), <span class="stringliteral">&quot;textures&quot;</span>) )</div>
@@ -178,7 +178,7 @@ $(document).ready(function(){initNavTree('_x_m_l_functions_8cpp_source.html','')
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno"><a class="code" href="_x_m_l_functions_8hpp.html#a42cbe03ebda339a95cc12d69ed0012ac">   73</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="_x_m_l_functions_8cpp.html#a58d2529e6b2668c375c655edb018f350">LoadMusicFromXML</a>(sf::Music &amp; music, <a class="code" href="classtinyxml2_1_1_x_m_l_element.html">tinyxml2::XMLElement</a> * pMusicElement)</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="code" href="_x_m_l_functions_8hpp.html#a42cbe03ebda339a95cc12d69ed0012ac">   73</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="_x_m_l_functions_8cpp.html#a58d2529e6b2668c375c655edb018f350" title="LoadMusicFromXML loads music information from the xml element passed in. ">LoadMusicFromXML</a>(sf::Music &amp; music, <a class="code" href="classtinyxml2_1_1_x_m_l_element.html">tinyxml2::XMLElement</a> * pMusicElement)</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    {</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="comment">// Make sure element passed in is valid, and the correct one.</span></div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">if</span> ( !pMusicElement || strcmp(pMusicElement-&gt;<a class="code" href="classtinyxml2_1_1_x_m_l_element.html#a8bff355472bce2c60d4b50a212bf7f5f" title="Get the name of an element (which is the Value() of the node.) ">Name</a>(), <span class="stringliteral">&quot;music&quot;</span>) )</div>
@@ -222,7 +222,7 @@ $(document).ready(function(){initNavTree('_x_m_l_functions_8cpp_source.html','')
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    }</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
-<div class="line"><a name="l00117"></a><span class="lineno"><a class="code" href="_x_m_l_functions_8hpp.html#af7c51d7ea82b1f7c52496cf38424a729">  117</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="_x_m_l_functions_8cpp.html#a9579e0ff2c67ce1fb6005a72dfb0473d">LoadAudiosFromXML</a>(<a class="code" href="class_audio_effects.html" title="The AudioEffects class. ">AudioEffects</a> &amp; audioMan, <a class="code" href="classtinyxml2_1_1_x_m_l_element.html">tinyxml2::XMLElement</a> * pAudiosElement)</div>
+<div class="line"><a name="l00117"></a><span class="lineno"><a class="code" href="_x_m_l_functions_8hpp.html#af7c51d7ea82b1f7c52496cf38424a729">  117</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="_x_m_l_functions_8cpp.html#a9579e0ff2c67ce1fb6005a72dfb0473d" title="LoadAudiosFromXML loads audo effects into the class from an xml Audios element. ">LoadAudiosFromXML</a>(<a class="code" href="class_audio_effects.html" title="The AudioEffects class. ">AudioEffects</a> &amp; audioMan, <a class="code" href="classtinyxml2_1_1_x_m_l_element.html">tinyxml2::XMLElement</a> * pAudiosElement)</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    {</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="comment">// Make sure element passed in is valid, and the correct one.</span></div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordflow">if</span> ( !pAudiosElement || strcmp( pAudiosElement-&gt;<a class="code" href="classtinyxml2_1_1_x_m_l_element.html#a8bff355472bce2c60d4b50a212bf7f5f" title="Get the name of an element (which is the Value() of the node.) ">Name</a>(), <span class="stringliteral">&quot;audios&quot;</span> ) )</div>
@@ -407,7 +407,7 @@ $(document).ready(function(){initNavTree('_x_m_l_functions_8cpp_source.html','')
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_74389ed8173ad57b461b9d623a1f3867.html">Source</a></li><li class="navelem"><a class="el" href="_x_m_l_functions_8cpp.html">XMLFunctions.cpp</a></li>
-    <li class="footer">Generated on Mon Dec 16 2013 10:51:03 for Sudden Awakening by
+    <li class="footer">Generated on Mon Dec 16 2013 11:32:18 for Sudden Awakening by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
   </ul>

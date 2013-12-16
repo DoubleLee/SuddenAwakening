@@ -3,33 +3,38 @@
 }
 
 
+The \hyperlink{class_tile_map_layer}{Tile\-Map\-Layer} class represents a layer on the map. It can draw itself to the map.  
+
+
+
+
 {\ttfamily \#include $<$Tile\-Map.\-hpp$>$}
 
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_tile_map_layer_ac9fba07c129ad2a52be1601f58eee773}{Tile\-Map\-Layer} (const string \&layer\-Name, unsigned int tile\-Width\-Count, unsigned int tile\-Height\-Count)
-\item 
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_tile_map_layer}{Tile\-Map\-Layer} ctor builds the tile map layer. \end{DoxyCompactList}\item 
 virtual \hyperlink{class_tile_map_layer_a8bee35e5252ed1c3c1ea6935003c5d10}{$\sim$\-Tile\-Map\-Layer} ()
-\item 
+\begin{DoxyCompactList}\small\item\em $\sim$\-Tile\-Map\-Layer virtual call to dtor. \end{DoxyCompactList}\item 
 virtual void \hyperlink{class_tile_map_layer_a1befe86a2d2bed2d410924875eca4847}{Update} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Update currently empty. \end{DoxyCompactList}\item 
 virtual void \hyperlink{class_tile_map_layer_ab09044152ad8bebc2afbe837858ac4ae}{Draw} (sf\-::\-Render\-Window $\ast$p\-Window) const 
-\item 
+\begin{DoxyCompactList}\small\item\em Draw uses sfml2 to draw the map layer's entities to the window. \end{DoxyCompactList}\item 
 virtual bool \hyperlink{class_tile_map_layer_af6140d8910838621911ee1aaefcf317e}{Is\-Colliding} (sf\-::\-Sprite $\ast$p\-Sprite) const 
-\item 
+\begin{DoxyCompactList}\small\item\em Is\-Colliding is a check to see if a sprite is colliding with any of the collidable Map layer Entities. \end{DoxyCompactList}\item 
 virtual sf\-::\-Vector2f \hyperlink{class_tile_map_layer_a04a978cd751d8c67f483816827888c21}{Get\-Spawn\-Position} () const 
-\item 
+\begin{DoxyCompactList}\small\item\em Get\-Spawn\-Position looks for a entity that is spawnable then returns it's position. \end{DoxyCompactList}\item 
 unsigned int \hyperlink{class_tile_map_layer_ace19c01d1db3ebd4d1d370a6b34a2db5}{Get\-Tile\-Width\-Count} () const 
-\item 
+\begin{DoxyCompactList}\small\item\em Get\-Tile\-Width\-Count getter for the map layer tile width count. \end{DoxyCompactList}\item 
 unsigned int \hyperlink{class_tile_map_layer_a14fce828daafd9e07f855ad0bb274299}{Get\-Tile\-Height\-Count} () const 
-\item 
+\begin{DoxyCompactList}\small\item\em Get\-Tile\-Height\-Count getter for the map layer tile height count. \end{DoxyCompactList}\item 
 void \hyperlink{class_tile_map_layer_add757a7c1952dc4e0b6cf67e2887b509}{Set\-Is\-Visible} (bool visible)
-\item 
+\begin{DoxyCompactList}\small\item\em Set\-Is\-Visible setter for the layers visible flag. \end{DoxyCompactList}\item 
 bool \hyperlink{class_tile_map_layer_a068d3fa1c63e2c78ec0feb41a441e63c}{Get\-Is\-Visible} () const 
-\item 
+\begin{DoxyCompactList}\small\item\em Get\-Is\-Visible getter for the layers visible flag. \end{DoxyCompactList}\item 
 void \hyperlink{class_tile_map_layer_a7a1e6fc535c544905cd5e96adbc0813a}{Add\-Entity} (unique\-\_\-ptr$<$ \hyperlink{class_map_entity}{Map\-Entity} $>$ p\-Ent)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Add\-Entity adds an entity to the vector of entities on this map. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -46,9 +51,13 @@ vector$<$ unique\-\_\-ptr$<$ \hyperlink{class_map_entity}{Map\-Entity} $>$ $>$ \
 
 
 \subsection{Detailed Description}
+The \hyperlink{class_tile_map_layer}{Tile\-Map\-Layer} class represents a layer on the map. It can draw itself to the map. 
 
+It's made up of the vector of entities which are on this layer.
 
-Definition at line 60 of file Tile\-Map.\-hpp.
+This class shouldn't be used by any devs directly, only within the \hyperlink{class_tile_map}{Tile\-Map} class. 
+
+Definition at line 123 of file Tile\-Map.\-hpp.
 
 
 
@@ -64,6 +73,19 @@ Definition at line 60 of file Tile\-Map.\-hpp.
 )}}\label{class_tile_map_layer_ac9fba07c129ad2a52be1601f58eee773}
 
 
+\hyperlink{class_tile_map_layer}{Tile\-Map\-Layer} ctor builds the tile map layer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em layer\-Name} & The string name for this layer. \\
+\hline
+{\em tile\-Width\-Count} & The count of tiles width. \\
+\hline
+{\em tile\-Height\-Count} & The count of tiles height. \\
+\hline
+\end{DoxyParams}
+
+
 Definition at line 373 of file Tile\-Map.\-cpp.
 
 \hypertarget{class_tile_map_layer_a8bee35e5252ed1c3c1ea6935003c5d10}{\index{Tile\-Map\-Layer@{Tile\-Map\-Layer}!$\sim$\-Tile\-Map\-Layer@{$\sim$\-Tile\-Map\-Layer}}
@@ -73,6 +95,10 @@ Definition at line 373 of file Tile\-Map.\-cpp.
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_tile_map_layer_a8bee35e5252ed1c3c1ea6935003c5d10}
+
+
+$\sim$\-Tile\-Map\-Layer virtual call to dtor. 
+
 
 
 Definition at line 383 of file Tile\-Map.\-cpp.
@@ -89,6 +115,15 @@ Definition at line 383 of file Tile\-Map.\-cpp.
 )}}\label{class_tile_map_layer_a7a1e6fc535c544905cd5e96adbc0813a}
 
 
+Add\-Entity adds an entity to the vector of entities on this map. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-Ent} & The entity to add. \\
+\hline
+\end{DoxyParams}
+
+
 Definition at line 447 of file Tile\-Map.\-cpp.
 
 \hypertarget{class_tile_map_layer_ab09044152ad8bebc2afbe837858ac4ae}{\index{Tile\-Map\-Layer@{Tile\-Map\-Layer}!Draw@{Draw}}
@@ -98,6 +133,15 @@ Definition at line 447 of file Tile\-Map.\-cpp.
 \item[{sf\-::\-Render\-Window $\ast$}]{p\-Window}
 \end{DoxyParamCaption}
 ) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_tile_map_layer_ab09044152ad8bebc2afbe837858ac4ae}
+
+
+Draw uses sfml2 to draw the map layer's entities to the window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-Window} & The window to draw to. \\
+\hline
+\end{DoxyParams}
 
 
 Definition at line 393 of file Tile\-Map.\-cpp.
@@ -111,6 +155,13 @@ Definition at line 393 of file Tile\-Map.\-cpp.
 ) const}}\label{class_tile_map_layer_a068d3fa1c63e2c78ec0feb41a441e63c}
 
 
+Get\-Is\-Visible getter for the layers visible flag. 
+
+\begin{DoxyReturn}{Returns}
+The visible flag. 
+\end{DoxyReturn}
+
+
 Definition at line 442 of file Tile\-Map.\-cpp.
 
 \hypertarget{class_tile_map_layer_a04a978cd751d8c67f483816827888c21}{\index{Tile\-Map\-Layer@{Tile\-Map\-Layer}!Get\-Spawn\-Position@{Get\-Spawn\-Position}}
@@ -120,6 +171,13 @@ Definition at line 442 of file Tile\-Map.\-cpp.
 {}
 \end{DoxyParamCaption}
 ) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_tile_map_layer_a04a978cd751d8c67f483816827888c21}
+
+
+Get\-Spawn\-Position looks for a entity that is spawnable then returns it's position. 
+
+\begin{DoxyReturn}{Returns}
+The position of the first found spawnable entity. 
+\end{DoxyReturn}
 
 
 Definition at line 415 of file Tile\-Map.\-cpp.
@@ -133,6 +191,13 @@ Definition at line 415 of file Tile\-Map.\-cpp.
 ) const}}\label{class_tile_map_layer_a14fce828daafd9e07f855ad0bb274299}
 
 
+Get\-Tile\-Height\-Count getter for the map layer tile height count. 
+
+\begin{DoxyReturn}{Returns}
+The map layer tile height count. 
+\end{DoxyReturn}
+
+
 Definition at line 432 of file Tile\-Map.\-cpp.
 
 \hypertarget{class_tile_map_layer_ace19c01d1db3ebd4d1d370a6b34a2db5}{\index{Tile\-Map\-Layer@{Tile\-Map\-Layer}!Get\-Tile\-Width\-Count@{Get\-Tile\-Width\-Count}}
@@ -142,6 +207,13 @@ Definition at line 432 of file Tile\-Map.\-cpp.
 {}
 \end{DoxyParamCaption}
 ) const}}\label{class_tile_map_layer_ace19c01d1db3ebd4d1d370a6b34a2db5}
+
+
+Get\-Tile\-Width\-Count getter for the map layer tile width count. 
+
+\begin{DoxyReturn}{Returns}
+The map layer tile width count. 
+\end{DoxyReturn}
 
 
 Definition at line 427 of file Tile\-Map.\-cpp.
@@ -155,6 +227,18 @@ Definition at line 427 of file Tile\-Map.\-cpp.
 ) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_tile_map_layer_af6140d8910838621911ee1aaefcf317e}
 
 
+Is\-Colliding is a check to see if a sprite is colliding with any of the collidable Map layer Entities. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-Sprite} & The sprite to check against the map layer entities. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True or False if is colliding with a collidable map layer entity. 
+\end{DoxyReturn}
+
+
 Definition at line 401 of file Tile\-Map.\-cpp.
 
 \hypertarget{class_tile_map_layer_add757a7c1952dc4e0b6cf67e2887b509}{\index{Tile\-Map\-Layer@{Tile\-Map\-Layer}!Set\-Is\-Visible@{Set\-Is\-Visible}}
@@ -164,6 +248,15 @@ Definition at line 401 of file Tile\-Map.\-cpp.
 \item[{bool}]{visible}
 \end{DoxyParamCaption}
 )}}\label{class_tile_map_layer_add757a7c1952dc4e0b6cf67e2887b509}
+
+
+Set\-Is\-Visible setter for the layers visible flag. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em visible} & The flag to set. \\
+\hline
+\end{DoxyParams}
 
 
 Definition at line 437 of file Tile\-Map.\-cpp.
@@ -177,6 +270,10 @@ Definition at line 437 of file Tile\-Map.\-cpp.
 )\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_tile_map_layer_a1befe86a2d2bed2d410924875eca4847}
 
 
+Update currently empty. 
+
+
+
 Definition at line 388 of file Tile\-Map.\-cpp.
 
 
@@ -187,35 +284,35 @@ Definition at line 388 of file Tile\-Map.\-cpp.
 \subsubsection[{m\-Is\-Visible}]{\setlength{\rightskip}{0pt plus 5cm}bool Tile\-Map\-Layer\-::m\-Is\-Visible\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tile_map_layer_a516864f25003dad7720675ef44e727c0}
 
 
-Definition at line 87 of file Tile\-Map.\-hpp.
+Definition at line 200 of file Tile\-Map.\-hpp.
 
 \hypertarget{class_tile_map_layer_a2d89ec99671ed9cd422c68a5db26a5e4}{\index{Tile\-Map\-Layer@{Tile\-Map\-Layer}!m\-Layer\-Name@{m\-Layer\-Name}}
 \index{m\-Layer\-Name@{m\-Layer\-Name}!TileMapLayer@{Tile\-Map\-Layer}}
 \subsubsection[{m\-Layer\-Name}]{\setlength{\rightskip}{0pt plus 5cm}string Tile\-Map\-Layer\-::m\-Layer\-Name\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tile_map_layer_a2d89ec99671ed9cd422c68a5db26a5e4}
 
 
-Definition at line 82 of file Tile\-Map.\-hpp.
+Definition at line 195 of file Tile\-Map.\-hpp.
 
 \hypertarget{class_tile_map_layer_a9c9c569f4c2f5de09b5541d079f5f97a}{\index{Tile\-Map\-Layer@{Tile\-Map\-Layer}!m\-Tile\-Entities@{m\-Tile\-Entities}}
 \index{m\-Tile\-Entities@{m\-Tile\-Entities}!TileMapLayer@{Tile\-Map\-Layer}}
 \subsubsection[{m\-Tile\-Entities}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ unique\-\_\-ptr$<$ {\bf Map\-Entity} $>$ $>$ Tile\-Map\-Layer\-::m\-Tile\-Entities\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tile_map_layer_a9c9c569f4c2f5de09b5541d079f5f97a}
 
 
-Definition at line 89 of file Tile\-Map.\-hpp.
+Definition at line 202 of file Tile\-Map.\-hpp.
 
 \hypertarget{class_tile_map_layer_ad3731c3f3e38579327eb1a6b40e74af3}{\index{Tile\-Map\-Layer@{Tile\-Map\-Layer}!m\-Tile\-Height\-Count@{m\-Tile\-Height\-Count}}
 \index{m\-Tile\-Height\-Count@{m\-Tile\-Height\-Count}!TileMapLayer@{Tile\-Map\-Layer}}
 \subsubsection[{m\-Tile\-Height\-Count}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Tile\-Map\-Layer\-::m\-Tile\-Height\-Count\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tile_map_layer_ad3731c3f3e38579327eb1a6b40e74af3}
 
 
-Definition at line 85 of file Tile\-Map.\-hpp.
+Definition at line 198 of file Tile\-Map.\-hpp.
 
 \hypertarget{class_tile_map_layer_a1f7ed47471eae14e321db6e2da4d0547}{\index{Tile\-Map\-Layer@{Tile\-Map\-Layer}!m\-Tile\-Width\-Count@{m\-Tile\-Width\-Count}}
 \index{m\-Tile\-Width\-Count@{m\-Tile\-Width\-Count}!TileMapLayer@{Tile\-Map\-Layer}}
 \subsubsection[{m\-Tile\-Width\-Count}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Tile\-Map\-Layer\-::m\-Tile\-Width\-Count\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tile_map_layer_a1f7ed47471eae14e321db6e2da4d0547}
 
 
-Definition at line 84 of file Tile\-Map.\-hpp.
+Definition at line 197 of file Tile\-Map.\-hpp.
 
 
 
