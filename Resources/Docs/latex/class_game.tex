@@ -28,21 +28,21 @@ sf\-::\-Render\-Window $\ast$ \hyperlink{class_game_a14241d779a3aa1dd9f4bb68cd01
 const sf\-::\-Font \& \hyperlink{class_game_ac508be317e5c3a7d7c41df0f9c740a96}{Get\-Button\-Font} () const 
 \begin{DoxyCompactList}\small\item\em Get\-Button\-Font getter for the font to be used with the buttons. \end{DoxyCompactList}\item 
 sf\-::\-Music $\ast$ \hyperlink{class_game_a156aeef24e86a468033121036fed239c}{Get\-Music} () const 
-\begin{DoxyCompactList}\small\item\em Get\-Music. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Get\-Music getter for the sfml2 music object. \end{DoxyCompactList}\item 
 const \hyperlink{class_state}{State} $\ast$ \hyperlink{class_game_affa409c844370f25a5419a1f5225b0b5}{Get\-State} () const 
-\item 
+\begin{DoxyCompactList}\small\item\em Get\-State getter for the current state field. \end{DoxyCompactList}\item 
 int \hyperlink{class_game_aa5913044e335b5624f52d6c95deed081}{Get\-Map\-Tile\-Size} () const 
-\item 
+\begin{DoxyCompactList}\small\item\em Get\-Map\-Tile\-Size getter for the global map tile size. \end{DoxyCompactList}\item 
 double \hyperlink{class_game_a1a3becd8fb845889b4a2a86a32397393}{Get\-Frame\-Stamp\-D} () const 
-\item 
+\begin{DoxyCompactList}\small\item\em Get\-Frame\-Stamp\-D getter for the time stamp. This is used to track time progression. \end{DoxyCompactList}\item 
 double \hyperlink{class_game_a85bcfed7671cd09b10f3ea3c1c7a52db}{Get\-Frame\-Delta\-D} () const 
-\item 
+\begin{DoxyCompactList}\small\item\em Get\-Frame\-Delta\-D getter for the time delta. This is used to track time between frames. \end{DoxyCompactList}\item 
 \hyperlink{_game_8hpp_a332b72dfb4bc8b4c16b8dc43864fe343}{Time\-Int} \hyperlink{class_game_aa7cf915c5e5f3a4b57b28eba915cfe2c}{Get\-Frame\-Stamp\-Int} () const 
-\item 
+\begin{DoxyCompactList}\small\item\em Get\-Frame\-Stamp\-Int getter for the time stamp. This is used to track time progression. \end{DoxyCompactList}\item 
 \hyperlink{_game_8hpp_a332b72dfb4bc8b4c16b8dc43864fe343}{Time\-Int} \hyperlink{class_game_a60b3e0977db00a1c6c6ead044c7b1f27}{Get\-Frame\-Delta\-Int} () const 
-\item 
+\begin{DoxyCompactList}\small\item\em Get\-Frame\-Delta\-Int getter for the time delta. This is used to track time between frames. \end{DoxyCompactList}\item 
 const string \& \hyperlink{class_game_ad4eddde638de70fbbcdc212375fd7342}{Get\-Title\-Str} () const 
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Get\-Title\-Str getter for the title string. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -148,6 +148,13 @@ Definition at line 170 of file Game.\-cpp.
 ) const}}\label{class_game_a85bcfed7671cd09b10f3ea3c1c7a52db}
 
 
+Get\-Frame\-Delta\-D getter for the time delta. This is used to track time between frames. 
+
+\begin{DoxyReturn}{Returns}
+The time between frames in seconds. 
+\end{DoxyReturn}
+
+
 Definition at line 202 of file Game.\-cpp.
 
 \hypertarget{class_game_a60b3e0977db00a1c6c6ead044c7b1f27}{\index{Game@{Game}!Get\-Frame\-Delta\-Int@{Get\-Frame\-Delta\-Int}}
@@ -157,6 +164,13 @@ Definition at line 202 of file Game.\-cpp.
 {}
 \end{DoxyParamCaption}
 ) const}}\label{class_game_a60b3e0977db00a1c6c6ead044c7b1f27}
+
+
+Get\-Frame\-Delta\-Int getter for the time delta. This is used to track time between frames. 
+
+\begin{DoxyReturn}{Returns}
+The time between frames in microseconds. 
+\end{DoxyReturn}
 
 
 Definition at line 212 of file Game.\-cpp.
@@ -170,6 +184,13 @@ Definition at line 212 of file Game.\-cpp.
 ) const}}\label{class_game_a1a3becd8fb845889b4a2a86a32397393}
 
 
+Get\-Frame\-Stamp\-D getter for the time stamp. This is used to track time progression. 
+
+\begin{DoxyReturn}{Returns}
+The current time stamp. 
+\end{DoxyReturn}
+
+
 Definition at line 197 of file Game.\-cpp.
 
 \hypertarget{class_game_aa7cf915c5e5f3a4b57b28eba915cfe2c}{\index{Game@{Game}!Get\-Frame\-Stamp\-Int@{Get\-Frame\-Stamp\-Int}}
@@ -179,6 +200,13 @@ Definition at line 197 of file Game.\-cpp.
 {}
 \end{DoxyParamCaption}
 ) const}}\label{class_game_aa7cf915c5e5f3a4b57b28eba915cfe2c}
+
+
+Get\-Frame\-Stamp\-Int getter for the time stamp. This is used to track time progression. 
+
+\begin{DoxyReturn}{Returns}
+The current time stamp. 
+\end{DoxyReturn}
 
 
 Definition at line 207 of file Game.\-cpp.
@@ -192,6 +220,13 @@ Definition at line 207 of file Game.\-cpp.
 ) const}}\label{class_game_aa5913044e335b5624f52d6c95deed081}
 
 
+Get\-Map\-Tile\-Size getter for the global map tile size. 
+
+\begin{DoxyReturn}{Returns}
+The global map tile size. 
+\end{DoxyReturn}
+
+
 Definition at line 192 of file Game.\-cpp.
 
 \hypertarget{class_game_a156aeef24e86a468033121036fed239c}{\index{Game@{Game}!Get\-Music@{Get\-Music}}
@@ -203,10 +238,10 @@ Definition at line 192 of file Game.\-cpp.
 ) const}}\label{class_game_a156aeef24e86a468033121036fed239c}
 
 
-Get\-Music. 
+Get\-Music getter for the sfml2 music object. 
 
 \begin{DoxyReturn}{Returns}
-
+The sfml2 music object. 
 \end{DoxyReturn}
 
 
@@ -219,6 +254,13 @@ Definition at line 175 of file Game.\-cpp.
 {}
 \end{DoxyParamCaption}
 ) const}}\label{class_game_affa409c844370f25a5419a1f5225b0b5}
+
+
+Get\-State getter for the current state field. 
+
+\begin{DoxyReturn}{Returns}
+The current state. 
+\end{DoxyReturn}
 \hypertarget{class_game_ad4eddde638de70fbbcdc212375fd7342}{\index{Game@{Game}!Get\-Title\-Str@{Get\-Title\-Str}}
 \index{Get\-Title\-Str@{Get\-Title\-Str}!Game@{Game}}
 \subsubsection[{Get\-Title\-Str}]{\setlength{\rightskip}{0pt plus 5cm}const string \& Game\-::\-Get\-Title\-Str (
@@ -226,6 +268,13 @@ Definition at line 175 of file Game.\-cpp.
 {}
 \end{DoxyParamCaption}
 ) const}}\label{class_game_ad4eddde638de70fbbcdc212375fd7342}
+
+
+Get\-Title\-Str getter for the title string. 
+
+\begin{DoxyReturn}{Returns}
+The current title string. 
+\end{DoxyReturn}
 
 
 Definition at line 217 of file Game.\-cpp.

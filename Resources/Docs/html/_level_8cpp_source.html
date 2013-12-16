@@ -140,9 +140,9 @@ $(document).ready(function(){initNavTree('_level_8cpp_source.html','');});
 <div class="line"><a name="l00032"></a><span class="lineno"><a class="code" href="class_level.html#a95bbafd05f5aa2396c36ff8343c62a2f">   32</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_level.html#a95bbafd05f5aa2396c36ff8343c62a2f" title="UpdatePlayer is for updating the player code. ">Level::UpdatePlayer</a>()</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    {</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="class_game.html" title="The Game class everything for this game starts here. ">Game</a> * pGame = <a class="code" href="class_game.html#a700c0cde9d2a8c5ad2672a8fdc0cfb4a" title="Get is the singleton getter. ">Game::Get</a>();</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="_game_8hpp.html#a332b72dfb4bc8b4c16b8dc43864fe343">TimeInt</a> now = pGame-&gt;<a class="code" href="class_game.html#aa7cf915c5e5f3a4b57b28eba915cfe2c">GetFrameStampInt</a>();</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">float</span> frameDelta = <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(pGame-&gt;<a class="code" href="class_game.html#a85bcfed7671cd09b10f3ea3c1c7a52db">GetFrameDeltaD</a>());</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">int</span> mapTileSize = pGame-&gt;<a class="code" href="class_game.html#aa5913044e335b5624f52d6c95deed081">GetMapTileSize</a>();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="_game_8hpp.html#a332b72dfb4bc8b4c16b8dc43864fe343">TimeInt</a> now = pGame-&gt;<a class="code" href="class_game.html#aa7cf915c5e5f3a4b57b28eba915cfe2c" title="GetFrameStampInt getter for the time stamp. This is used to track time progression. ">GetFrameStampInt</a>();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">float</span> frameDelta = <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(pGame-&gt;<a class="code" href="class_game.html#a85bcfed7671cd09b10f3ea3c1c7a52db" title="GetFrameDeltaD getter for the time delta. This is used to track time between frames. ">GetFrameDeltaD</a>());</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">int</span> mapTileSize = pGame-&gt;<a class="code" href="class_game.html#aa5913044e335b5624f52d6c95deed081" title="GetMapTileSize getter for the global map tile size. ">GetMapTileSize</a>();</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="class_player.html" title="The Player class, is the class that holds the data for the player. ">Player</a> * pPlayer = <a class="code" href="class_level.html#a1cb20848f0e9d49a6469b4682e105d94">mpPlayer</a>.get();</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
@@ -254,7 +254,7 @@ $(document).ready(function(){initNavTree('_level_8cpp_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_74389ed8173ad57b461b9d623a1f3867.html">Source</a></li><li class="navelem"><a class="el" href="_level_8cpp.html">Level.cpp</a></li>
-    <li class="footer">Generated on Mon Dec 16 2013 11:32:18 for Sudden Awakening by
+    <li class="footer">Generated on Mon Dec 16 2013 11:41:55 for Sudden Awakening by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
   </ul>

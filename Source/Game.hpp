@@ -88,25 +88,64 @@ public:
 	const sf::Font & GetButtonFont() const;
 
 	/**
-	 * @brief GetMusic
-	 * @return
+	 * @brief GetMusic getter for the sfml2 music object.
+	 * @return The sfml2 music object.
 	 */
 	sf::Music * GetMusic() const;
 
+	/**
+	 * @brief GetState getter for the current state field.
+	 * @return The current state.
+	 */
 	const State * GetState() const;
 
+	/**
+	 * @brief GetMapTileSize getter for the global map tile size.
+	 * @return The global map tile size.
+	 */
 	int GetMapTileSize() const;
 
+	/**
+	 * @brief GetFrameStampD getter for the time stamp.  This is used to track time progression.
+	 * @return The current time stamp.
+	 */
 	double GetFrameStampD() const;
+
+	/**
+	 * @brief GetFrameDeltaD getter for the time delta.  This is used to track time between frames.
+	 * @return The time between frames in seconds.
+	 */
 	double GetFrameDeltaD() const;
+
+	/**
+	 * @brief GetFrameStampInt getter for the time stamp.  This is used to track time progression.
+	 * @return The current time stamp.
+	 */
 	TimeInt GetFrameStampInt() const;
+
+	/**
+	 * @brief GetFrameDeltaInt getter for the time delta.  This is used to track time between frames.
+	 * @return The time between frames in microseconds.
+	 */
 	TimeInt GetFrameDeltaInt() const;
 
+	/**
+	 * @brief GetTitleStr getter for the title string.
+	 * @return The current title string.
+	 */
 	const string & GetTitleStr() const;
 
 private:
-
+	/**
+	 * @brief ChangeStateCheck check method for changing the state.
+	 *
+	 * If the current states ID does not match the newState ID then we should change the state to the new one.
+	 */
 	void ChangeStateCheck();
+
+	/**
+	 * @brief UpdateTimers updates the time progression data, including frame delta and stamp.
+	 */
 	void UpdateTimers();
 
 	int mMapTileSize;
