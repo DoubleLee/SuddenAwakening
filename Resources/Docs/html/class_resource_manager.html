@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.4"/>
-<title>SuddenAwakening: ResourceManager&lt; Type &gt; Class Template Reference</title>
+<title>Sudden Awakening: ResourceManager&lt; Type &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,9 +29,9 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">SuddenAwakening
+   <div id="projectname">Sudden Awakening
    </div>
-   <div id="projectbrief">Sudden Awakening is a 2D role playing game with Zelda like elements.</div>
+   <div id="projectbrief">A 2D zelda like game with modern story.</div>
   </td>
  </tr>
  </tbody>
@@ -113,15 +113,21 @@ $(document).ready(function(){initNavTree('class_resource_manager.html','');});
 </div><!--header-->
 <div class="contents">
 
+<p><a class="el" href="class_resource_manager.html" title="ResourceManager is simple class for managing resources. ">ResourceManager</a> is simple class for managing resources.  
+ <a href="class_resource_manager.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_resource_manager_8hpp_source.html">ResourceManager.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a38f6162e5f7d3b16273a23340b34e438"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_resource_manager.html#a38f6162e5f7d3b16273a23340b34e438">LoadResource</a> (const std::string &amp;file, <a class="el" href="_resource_manager_8hpp.html#adfdcfc7f1686e261462215a5a516110e">ResourceID</a> id)</td></tr>
+<tr class="memdesc:a38f6162e5f7d3b16273a23340b34e438"><td class="mdescLeft">&#160;</td><td class="mdescRight">LoadResource is where resources are loaded and associated with an integer ID.  <a href="#a38f6162e5f7d3b16273a23340b34e438">More...</a><br/></td></tr>
 <tr class="separator:a38f6162e5f7d3b16273a23340b34e438"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3e977ad6ea9972aebf6c7d7c15a19d6"><td class="memItemLeft" align="right" valign="top">Type &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_resource_manager.html#af3e977ad6ea9972aebf6c7d7c15a19d6">GetResource</a> (<a class="el" href="_resource_manager_8hpp.html#adfdcfc7f1686e261462215a5a516110e">ResourceID</a> id) const </td></tr>
+<tr class="memdesc:af3e977ad6ea9972aebf6c7d7c15a19d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">GetResource is where you can get a reference to a loaded resource. If an ID requested was not found it will throw an exception.  <a href="#af3e977ad6ea9972aebf6c7d7c15a19d6">More...</a><br/></td></tr>
 <tr class="separator:af3e977ad6ea9972aebf6c7d7c15a19d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a919997a4e1b07f62181bedad680915aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_resource_manager.html#a919997a4e1b07f62181bedad680915aa">ClearAll</a> ()</td></tr>
+<tr class="memdesc:a919997a4e1b07f62181bedad680915aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">ClearAll immediately destructs all the resources in this manager.  <a href="#a919997a4e1b07f62181bedad680915aa">More...</a><br/></td></tr>
 <tr class="separator:a919997a4e1b07f62181bedad680915aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
@@ -134,8 +140,13 @@ std::unique_ptr&lt; Type &gt; &gt;&#160;</td><td class="memItemRight" valign="bo
 <div class="textblock"><h3>template&lt;typename Type&gt;<br/>
 class ResourceManager&lt; Type &gt;</h3>
 
+<p><a class="el" href="class_resource_manager.html" title="ResourceManager is simple class for managing resources. ">ResourceManager</a> is simple class for managing resources. </p>
+<p>It will take in a file name and path, and an integer ID to associate with that resource.</p>
+<p>If LoadResource loads the resource successfully you may then get a reference to it by calling GetResource(id).</p>
+<p>If loading was not successful the class will throw an exception.</p>
+<p>Resource IDs should be unique. </p>
 
-<p>Definition at line <a class="el" href="_resource_manager_8hpp_source.html#l00016">16</a> of file <a class="el" href="_resource_manager_8hpp_source.html">ResourceManager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="_resource_manager_8hpp_source.html#l00027">27</a> of file <a class="el" href="_resource_manager_8hpp_source.html">ResourceManager.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a919997a4e1b07f62181bedad680915aa"></a>
 <div class="memitem">
@@ -152,7 +163,9 @@ template&lt;typename Type &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_resource_manager_8hpp_source.html#l00070">70</a> of file <a class="el" href="_resource_manager_8hpp_source.html">ResourceManager.hpp</a>.</p>
+<p>ClearAll immediately destructs all the resources in this manager. </p>
+
+<p>Definition at line <a class="el" href="_resource_manager_8hpp_source.html#l00094">94</a> of file <a class="el" href="_resource_manager_8hpp_source.html">ResourceManager.hpp</a>.</p>
 
 </div>
 </div>
@@ -172,7 +185,16 @@ template&lt;typename Type &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_resource_manager_8hpp_source.html#l00058">58</a> of file <a class="el" href="_resource_manager_8hpp_source.html">ResourceManager.hpp</a>.</p>
+<p>GetResource is where you can get a reference to a loaded resource. If an ID requested was not found it will throw an exception. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>The integer ID requested. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A reference to the resource. </dd></dl>
+
+<p>Definition at line <a class="el" href="_resource_manager_8hpp_source.html#l00082">82</a> of file <a class="el" href="_resource_manager_8hpp_source.html">ResourceManager.hpp</a>.</p>
 
 </div>
 </div>
@@ -202,7 +224,16 @@ template&lt;typename Type &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_resource_manager_8hpp_source.html#l00030">30</a> of file <a class="el" href="_resource_manager_8hpp_source.html">ResourceManager.hpp</a>.</p>
+<p>LoadResource is where resources are loaded and associated with an integer ID. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>The file name and path to the resource for loading. </td></tr>
+    <tr><td class="paramname">id</td><td>The integer ID to associate with this resource. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_resource_manager_8hpp_source.html#l00054">54</a> of file <a class="el" href="_resource_manager_8hpp_source.html">ResourceManager.hpp</a>.</p>
 
 </div>
 </div>
@@ -227,12 +258,12 @@ template&lt;typename Type&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_resource_manager_8hpp_source.html#l00026">26</a> of file <a class="el" href="_resource_manager_8hpp_source.html">ResourceManager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="_resource_manager_8hpp_source.html#l00050">50</a> of file <a class="el" href="_resource_manager_8hpp_source.html">ResourceManager.hpp</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Source/<a class="el" href="_resource_manager_8hpp_source.html">ResourceManager.hpp</a></li>
+<li>/home/lee/Projects/SuddenAwakening/Source/<a class="el" href="_resource_manager_8hpp_source.html">ResourceManager.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -240,7 +271,7 @@ template&lt;typename Type&gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_resource_manager.html">ResourceManager</a></li>
-    <li class="footer">Generated on Mon Dec 16 2013 01:15:36 for SuddenAwakening by
+    <li class="footer">Generated on Mon Dec 16 2013 10:51:04 for Sudden Awakening by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
   </ul>

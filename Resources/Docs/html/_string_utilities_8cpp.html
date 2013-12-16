@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.4"/>
-<title>SuddenAwakening: Source/StringUtilities.cpp File Reference</title>
+<title>Sudden Awakening: /home/lee/Projects/SuddenAwakening/Source/StringUtilities.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,9 +29,9 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">SuddenAwakening
+   <div id="projectname">Sudden Awakening
    </div>
-   <div id="projectbrief">Sudden Awakening is a 2D role playing game with Zelda like elements.</div>
+   <div id="projectbrief">A 2D zelda like game with modern story.</div>
   </td>
  </tr>
  </tbody>
@@ -115,8 +115,10 @@ $(document).ready(function(){initNavTree('_string_utilities_8cpp.html','');});
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a4a695277a97a5728265060692c0e9878"><td class="memItemLeft" align="right" valign="top">string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_string_utilities_8cpp.html#a4a695277a97a5728265060692c0e9878">ToPlatformPath</a> (string &amp;str)</td></tr>
+<tr class="memdesc:a4a695277a97a5728265060692c0e9878"><td class="mdescLeft">&#160;</td><td class="mdescRight">ToPlatformPath ensures the file name and paths are in the correct format, supports / and \ slashes.  <a href="#a4a695277a97a5728265060692c0e9878">More...</a><br/></td></tr>
 <tr class="separator:a4a695277a97a5728265060692c0e9878"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e488061940aec63c5eea1c3bf440be8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_string_utilities_8cpp.html#a6e488061940aec63c5eea1c3bf440be8">StripPath</a> (std::string &amp;fileName)</td></tr>
+<tr class="memdesc:a6e488061940aec63c5eea1c3bf440be8"><td class="mdescLeft">&#160;</td><td class="mdescRight">StripPath removes the path information ( folders ), and leaves the file name and extension ( if any ).  <a href="#a6e488061940aec63c5eea1c3bf440be8">More...</a><br/></td></tr>
 <tr class="separator:a6e488061940aec63c5eea1c3bf440be8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -133,6 +135,14 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>StripPath removes the path information ( folders ), and leaves the file name and extension ( if any ). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fileName</td><td>The file to strip the path from. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Definition at line <a class="el" href="_string_utilities_8cpp_source.html#l00027">27</a> of file <a class="el" href="_string_utilities_8cpp_source.html">StringUtilities.cpp</a>.</p>
 
@@ -152,6 +162,15 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>ToPlatformPath ensures the file name and paths are in the correct format, supports / and \ slashes. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>The file name and path to change. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The file name and path, which is now platform correct. </dd></dl>
+
 <p>Definition at line <a class="el" href="_string_utilities_8cpp_source.html#l00003">3</a> of file <a class="el" href="_string_utilities_8cpp_source.html">StringUtilities.cpp</a>.</p>
 
 </div>
@@ -162,7 +181,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_74389ed8173ad57b461b9d623a1f3867.html">Source</a></li><li class="navelem"><a class="el" href="_string_utilities_8cpp.html">StringUtilities.cpp</a></li>
-    <li class="footer">Generated on Mon Dec 16 2013 01:15:35 for SuddenAwakening by
+    <li class="footer">Generated on Mon Dec 16 2013 10:51:03 for Sudden Awakening by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
   </ul>

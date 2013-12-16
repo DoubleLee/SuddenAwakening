@@ -1,6 +1,6 @@
 var NAVTREE =
 [
-  [ "SuddenAwakening", "index.html", [
+  [ "Sudden Awakening", "index.html", [
     [ "Namespaces", null, [
       [ "Namespace List", "namespaces.html", "namespaces" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -40,9 +40,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_audio_effects_8cpp.html",
-"class_player.html",
-"classtinyxml2_1_1_x_m_l_document.html#a686ea28672c0e0c60383ec28148c1ac0",
-"functions_func_0x71.html"
+"class_player.html#a154b6b768b9a1541d29873affd36af85",
+"classtinyxml2_1_1_x_m_l_document.html#a8b95779479a0035acc67b3a61dfe1b74",
+"functions_func_0x75.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

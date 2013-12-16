@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.4"/>
-<title>SuddenAwakening: Source/StateMainMenu.cpp Source File</title>
+<title>Sudden Awakening: /home/lee/Projects/SuddenAwakening/Source/StateMainMenu.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,9 +29,9 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">SuddenAwakening
+   <div id="projectname">Sudden Awakening
    </div>
-   <div id="projectbrief">Sudden Awakening is a 2D role playing game with Zelda like elements.</div>
+   <div id="projectbrief">A 2D zelda like game with modern story.</div>
   </td>
  </tr>
  </tbody>
@@ -128,12 +128,12 @@ $(document).ready(function(){initNavTree('_state_main_menu_8cpp_source.html','')
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">// StateMainMenu</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno"><a class="code" href="class_state_main_menu.html#af1bc1b6bfef9775a92eda9dd4c5f8d80">   21</a></span>&#160;<a class="code" href="class_state_main_menu.html#af1bc1b6bfef9775a92eda9dd4c5f8d80">StateMainMenu::StateMainMenu</a>()</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    :</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="class_state.html">State</a>( <a class="code" href="_state_8hpp.html#a905494cc15ee9757a813dbfe4b1072fe">StateID</a>::<a class="code" href="_state_8hpp.html#a905494cc15ee9757a813dbfe4b1072feada6dc80a6caa5076735110b08243299b">MainMenuID</a> ),</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="class_state.html" title="The State class is the base class for states. ">State</a>( <a class="code" href="_state_8hpp.html#a905494cc15ee9757a813dbfe4b1072fe" title="The StateID enum is the enum to represent a State type as integer values. ">StateID</a>::<a class="code" href="_state_8hpp.html#a905494cc15ee9757a813dbfe4b1072feada6dc80a6caa5076735110b08243299b">MainMenuID</a> ),</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    mSelectedButton(0),</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    mpTitleText( new sf::Text( mpGame-&gt;GetTitleStr(), mpGame-&gt;GetButtonFont() ) )</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    {</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">string</span> file(<span class="stringliteral">&quot;../Resources/Scripts/StateMainMenu.xml&quot;</span>);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="class_state_main_menu.html#a988befa6ae7c087935581b269fb8863f">LoadFromXML</a>( <a class="code" href="_string_utilities_8cpp.html#a4a695277a97a5728265060692c0e9878">ToPlatformPath</a>(file) );</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="class_state_main_menu.html#a988befa6ae7c087935581b269fb8863f" title="LoadFromXML pure virtual call to load the child classes data from an xml file. ">LoadFromXML</a>( <a class="code" href="_string_utilities_8cpp.html#a4a695277a97a5728265060692c0e9878" title="ToPlatformPath ensures the file name and paths are in the correct format, supports / and \ slashes...">ToPlatformPath</a>(file) );</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    ChangeSelectionTo(mSelectedButton);</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    sf::FloatRect textRect( mpTitleText-&gt;getGlobalBounds() );</div>
@@ -149,7 +149,7 @@ $(document).ready(function(){initNavTree('_state_main_menu_8cpp_source.html','')
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="class_state.html#a418f507cf3deef8f3653b8209a9f7b85">mpGame</a>-&gt;<a class="code" href="class_game.html#a156aeef24e86a468033121036fed239c" title="GetMusic. ">GetMusic</a>()-&gt;stop();</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    }</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="code" href="class_state_main_menu.html#afa9c12c0975a2af95fdd2cf1829c56df">   44</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_state_main_menu.html#afa9c12c0975a2af95fdd2cf1829c56df">StateMainMenu::Update</a>()</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="code" href="class_state_main_menu.html#afa9c12c0975a2af95fdd2cf1829c56df">   44</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_state_main_menu.html#afa9c12c0975a2af95fdd2cf1829c56df" title="Update pure virtual call to update the child class. ">StateMainMenu::Update</a>()</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    {</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="_game_8hpp.html#a332b72dfb4bc8b4c16b8dc43864fe343">TimeInt</a> now ( <a class="code" href="class_state.html#a418f507cf3deef8f3653b8209a9f7b85">mpGame</a>-&gt;<a class="code" href="class_game.html#aa7cf915c5e5f3a4b57b28eba915cfe2c">GetFrameStampInt</a>() );</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">float</span> nowFloat( <a class="code" href="class_state.html#a418f507cf3deef8f3653b8209a9f7b85">mpGame</a>-&gt;<a class="code" href="class_game.html#a1a3becd8fb845889b4a2a86a32397393">GetFrameStampD</a>() );</div>
@@ -191,7 +191,7 @@ $(document).ready(function(){initNavTree('_state_main_menu_8cpp_source.html','')
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <a class="code" href="class_state.html#a5b54964067de86bec58088f13d5a7564">mpAudioEffects</a>-&gt;Update();</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    }</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
-<div class="line"><a name="l00086"></a><span class="lineno"><a class="code" href="class_state_main_menu.html#acd8b820dddbd9bd5515b1a3cebbe6978">   86</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_state_main_menu.html#acd8b820dddbd9bd5515b1a3cebbe6978">StateMainMenu::Draw</a>()</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="code" href="class_state_main_menu.html#acd8b820dddbd9bd5515b1a3cebbe6978">   86</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_state_main_menu.html#acd8b820dddbd9bd5515b1a3cebbe6978" title="Draw pure virtual call to draw the child class. ">StateMainMenu::Draw</a>()</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    {</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    sf::RenderWindow * <span class="keyword">const</span> pWindow = <a class="code" href="class_state.html#a418f507cf3deef8f3653b8209a9f7b85">mpGame</a>-&gt;<a class="code" href="class_game.html#a14241d779a3aa1dd9f4bb68cd018bbe8" title="GetWindow getter for the render window. ">GetWindow</a>();</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    pWindow-&gt;draw( *<a class="code" href="class_state.html#ad77d6e8727cab4ac8ac5d44eacb41eba">mpBackground</a> );</div>
@@ -204,7 +204,7 @@ $(document).ready(function(){initNavTree('_state_main_menu_8cpp_source.html','')
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    pWindow-&gt;draw( *mpTitleText );</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    }</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
-<div class="line"><a name="l00099"></a><span class="lineno"><a class="code" href="class_state_main_menu.html#ac9a02be51b4faa9c7d82e10af97ef6e4">   99</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_state_main_menu.html#ac9a02be51b4faa9c7d82e10af97ef6e4">StateMainMenu::ProcessEvent</a>(<span class="keyword">const</span> sf::Event &amp; event)</div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="code" href="class_state_main_menu.html#ac9a02be51b4faa9c7d82e10af97ef6e4">   99</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_state_main_menu.html#ac9a02be51b4faa9c7d82e10af97ef6e4" title="ProcessEvent pure virtual call, is where operating system events can be processed. ">StateMainMenu::ProcessEvent</a>(<span class="keyword">const</span> sf::Event &amp; event)</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    {</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <a class="code" href="_game_8hpp.html#a332b72dfb4bc8b4c16b8dc43864fe343">TimeInt</a> now( <a class="code" href="class_state.html#a418f507cf3deef8f3653b8209a9f7b85">mpGame</a>-&gt;<a class="code" href="class_game.html#aa7cf915c5e5f3a4b57b28eba915cfe2c">GetFrameStampInt</a>() );</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
@@ -259,7 +259,7 @@ $(document).ready(function(){initNavTree('_state_main_menu_8cpp_source.html','')
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        }</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    }</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
-<div class="line"><a name="l00154"></a><span class="lineno"><a class="code" href="class_state_main_menu.html#a988befa6ae7c087935581b269fb8863f">  154</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_state_main_menu.html#a988befa6ae7c087935581b269fb8863f">StateMainMenu::LoadFromXML</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp; file)</div>
+<div class="line"><a name="l00154"></a><span class="lineno"><a class="code" href="class_state_main_menu.html#a988befa6ae7c087935581b269fb8863f">  154</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_state_main_menu.html#a988befa6ae7c087935581b269fb8863f" title="LoadFromXML pure virtual call to load the child classes data from an xml file. ">StateMainMenu::LoadFromXML</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp; file)</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    {</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="comment">// Load the document</span></div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <a class="code" href="classtinyxml2_1_1_x_m_l_document.html">XMLDocument</a> doc;</div>
@@ -284,7 +284,7 @@ $(document).ready(function(){initNavTree('_state_main_menu_8cpp_source.html','')
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keywordflow">if</span> ( pBackground-&gt;<a class="code" href="classtinyxml2_1_1_x_m_l_element.html#aa3d8d1b9311da8fc249b4352749aaa84" title="See QueryIntAttribute() ">QueryUnsignedAttribute</a>(<span class="stringliteral">&quot;texID&quot;</span>, &amp;texID) )</div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        <a class="code" href="_exceptions_8hpp.html#a5ac38416c603d2a2ac182687a070056d">ThrowRuntimeException</a>(<span class="stringliteral">&quot;Failed to find texIndex in background element&quot;</span>)</div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <a class="code" href="class_state.html#ad77d6e8727cab4ac8ac5d44eacb41eba">mpBackground</a>-&gt;setTexture( <a class="code" href="class_state.html#a4eb530bbd8c56bb10ab4e36adeb097d9">mTextures</a>.<a class="code" href="class_resource_manager.html#af3e977ad6ea9972aebf6c7d7c15a19d6">GetResource</a>(texID) );</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <a class="code" href="class_state.html#ad77d6e8727cab4ac8ac5d44eacb41eba">mpBackground</a>-&gt;setTexture( <a class="code" href="class_state.html#a4eb530bbd8c56bb10ab4e36adeb097d9">mTextures</a>.<a class="code" href="class_resource_manager.html#af3e977ad6ea9972aebf6c7d7c15a19d6" title="GetResource is where you can get a reference to a loaded resource. If an ID requested was not found i...">GetResource</a>(texID) );</div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <a class="code" href="class_state.html#ad77d6e8727cab4ac8ac5d44eacb41eba">mpBackground</a>-&gt;setPosition(0.0f, 0.0f);</div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    sf::Vector2f windowSize( <a class="code" href="class_state.html#a418f507cf3deef8f3653b8209a9f7b85">mpGame</a>-&gt;<a class="code" href="class_game.html#a14241d779a3aa1dd9f4bb68cd018bbe8" title="GetWindow getter for the render window. ">GetWindow</a>()-&gt;getSize() );</div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    sf::FloatRect backgroundRect( <a class="code" href="class_state.html#ad77d6e8727cab4ac8ac5d44eacb41eba">mpBackground</a>-&gt;getGlobalBounds() );</div>
@@ -326,7 +326,7 @@ $(document).ready(function(){initNavTree('_state_main_menu_8cpp_source.html','')
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;            <a class="code" href="_exceptions_8hpp.html#a5ac38416c603d2a2ac182687a070056d">ThrowRuntimeException</a>(<span class="stringliteral">&quot;Failed to find posY attribute for button.&quot;</span>)</div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;            }</div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        mButtons.emplace_back( <span class="keyword">new</span> <a class="code" href="class_button.html" title="The Button class. This class represents a clickable and selectable button. ">Button</a>( <a class="code" href="class_state.html#a4eb530bbd8c56bb10ab4e36adeb097d9">mTextures</a>.<a class="code" href="class_resource_manager.html#af3e977ad6ea9972aebf6c7d7c15a19d6">GetResource</a>(texID), pos, <a class="code" href="_string_utilities_8cpp.html#a4a695277a97a5728265060692c0e9878">ToPlatformPath</a>(buttonText), 1 ) );</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        mButtons.emplace_back( <span class="keyword">new</span> <a class="code" href="class_button.html" title="The Button class. This class represents a clickable and selectable button. ">Button</a>( <a class="code" href="class_state.html#a4eb530bbd8c56bb10ab4e36adeb097d9">mTextures</a>.<a class="code" href="class_resource_manager.html#af3e977ad6ea9972aebf6c7d7c15a19d6" title="GetResource is where you can get a reference to a loaded resource. If an ID requested was not found i...">GetResource</a>(texID), pos, <a class="code" href="_string_utilities_8cpp.html#a4a695277a97a5728265060692c0e9878" title="ToPlatformPath ensures the file name and paths are in the correct format, supports / and \ slashes...">ToPlatformPath</a>(buttonText), 1 ) );</div>
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        mButtons.back()-&gt;SetTextColor(<a class="code" href="_state_main_menu_8cpp.html#a59fced02c05adc21e4e9dd3c5c6c2b17">gNotSelected</a>);</div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        pButton = pButton-&gt;NextSiblingElement(<span class="stringliteral">&quot;button&quot;</span>);</div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        }</div>
@@ -390,7 +390,7 @@ $(document).ready(function(){initNavTree('_state_main_menu_8cpp_source.html','')
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_74389ed8173ad57b461b9d623a1f3867.html">Source</a></li><li class="navelem"><a class="el" href="_state_main_menu_8cpp.html">StateMainMenu.cpp</a></li>
-    <li class="footer">Generated on Mon Dec 16 2013 01:15:35 for SuddenAwakening by
+    <li class="footer">Generated on Mon Dec 16 2013 10:51:03 for Sudden Awakening by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
   </ul>

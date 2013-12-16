@@ -8,17 +8,6 @@
 #include <memory>
 using std::unique_ptr;
 
-// States
-namespace NewState
-{
-enum NewState
-	{
-	NullState = 0,
-	MainMenu,
-	GamePlay
-	};
-}
-
 // Forward Declarations
 namespace sf
 {

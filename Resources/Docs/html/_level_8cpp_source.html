@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.4"/>
-<title>SuddenAwakening: Source/Level.cpp Source File</title>
+<title>Sudden Awakening: /home/lee/Projects/SuddenAwakening/Source/Level.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,9 +29,9 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">SuddenAwakening
+   <div id="projectname">Sudden Awakening
    </div>
-   <div id="projectbrief">Sudden Awakening is a 2D role playing game with Zelda like elements.</div>
+   <div id="projectbrief">A 2D zelda like game with modern story.</div>
   </td>
  </tr>
  </tbody>
@@ -116,7 +116,7 @@ $(document).ready(function(){initNavTree('_level_8cpp_source.html','');});
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;SFML/Graphics.hpp&quot;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;SFML/Audio.hpp&quot;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="code" href="class_level.html#a638468d7d98ba422bbcaf2e5ea05d421">   11</a></span>&#160;<a class="code" href="class_level.html#a638468d7d98ba422bbcaf2e5ea05d421">Level::Level</a>(<a class="code" href="_level_8hpp.html#aa0e387304096fe83aba77c85cb7be77a">LevelID</a> levelID)</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="code" href="class_level.html#a638468d7d98ba422bbcaf2e5ea05d421">   11</a></span>&#160;<a class="code" href="class_level.html#a638468d7d98ba422bbcaf2e5ea05d421" title="Level ctor. ">Level::Level</a>(<a class="code" href="_level_8hpp.html#aa0e387304096fe83aba77c85cb7be77a" title="The LevelID enum is a set of values for each level. ">LevelID</a> levelID)</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    :</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    mID(levelID),</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    mpGame( <a class="code" href="class_game.html" title="The Game class everything for this game starts here. ">Game</a>::Get() ),</div>
@@ -127,17 +127,17 @@ $(document).ready(function(){initNavTree('_level_8cpp_source.html','');});
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    }</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="code" href="class_level.html#a249eac1e8f19ff44134efa5e986feaca">   22</a></span>&#160;<a class="code" href="class_level.html#a249eac1e8f19ff44134efa5e986feaca">Level::~Level</a>()</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="code" href="class_level.html#a249eac1e8f19ff44134efa5e986feaca">   22</a></span>&#160;<a class="code" href="class_level.html#a249eac1e8f19ff44134efa5e986feaca" title="~Level virtual dtor. ">Level::~Level</a>()</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    {</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    }</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="code" href="class_level.html#a03ef47d6709e8b62568cfaad9decfd0e">   27</a></span>&#160;<a class="code" href="_level_8hpp.html#aa0e387304096fe83aba77c85cb7be77a">LevelID</a> <a class="code" href="class_level.html#a03ef47d6709e8b62568cfaad9decfd0e">Level::GetID</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="code" href="class_level.html#a03ef47d6709e8b62568cfaad9decfd0e">   27</a></span>&#160;<a class="code" href="_level_8hpp.html#aa0e387304096fe83aba77c85cb7be77a" title="The LevelID enum is a set of values for each level. ">LevelID</a> <a class="code" href="class_level.html#a03ef47d6709e8b62568cfaad9decfd0e" title="GetID getter for the level ID. ">Level::GetID</a>()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">    </span>{</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">return</span> mID;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    }</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="code" href="class_level.html#a95bbafd05f5aa2396c36ff8343c62a2f">   32</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_level.html#a95bbafd05f5aa2396c36ff8343c62a2f">Level::UpdatePlayer</a>()</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="code" href="class_level.html#a95bbafd05f5aa2396c36ff8343c62a2f">   32</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_level.html#a95bbafd05f5aa2396c36ff8343c62a2f" title="UpdatePlayer is for updating the player code. ">Level::UpdatePlayer</a>()</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    {</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="class_game.html" title="The Game class everything for this game starts here. ">Game</a> * pGame = <a class="code" href="class_game.html#a700c0cde9d2a8c5ad2672a8fdc0cfb4a" title="Get is the singleton getter. ">Game::Get</a>();</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="_game_8hpp.html#a332b72dfb4bc8b4c16b8dc43864fe343">TimeInt</a> now = pGame-&gt;<a class="code" href="class_game.html#aa7cf915c5e5f3a4b57b28eba915cfe2c">GetFrameStampInt</a>();</div>
@@ -254,7 +254,7 @@ $(document).ready(function(){initNavTree('_level_8cpp_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_74389ed8173ad57b461b9d623a1f3867.html">Source</a></li><li class="navelem"><a class="el" href="_level_8cpp.html">Level.cpp</a></li>
-    <li class="footer">Generated on Mon Dec 16 2013 01:15:35 for SuddenAwakening by
+    <li class="footer">Generated on Mon Dec 16 2013 10:51:03 for Sudden Awakening by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
   </ul>

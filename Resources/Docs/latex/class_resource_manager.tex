@@ -3,17 +3,22 @@
 }
 
 
+\hyperlink{class_resource_manager}{Resource\-Manager} is simple class for managing resources.  
+
+
+
+
 {\ttfamily \#include $<$Resource\-Manager.\-hpp$>$}
 
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \hyperlink{class_resource_manager_a38f6162e5f7d3b16273a23340b34e438}{Load\-Resource} (const std\-::string \&file, \hyperlink{_resource_manager_8hpp_adfdcfc7f1686e261462215a5a516110e}{Resource\-I\-D} id)
-\item 
+\begin{DoxyCompactList}\small\item\em Load\-Resource is where resources are loaded and associated with an integer I\-D. \end{DoxyCompactList}\item 
 Type \& \hyperlink{class_resource_manager_af3e977ad6ea9972aebf6c7d7c15a19d6}{Get\-Resource} (\hyperlink{_resource_manager_8hpp_adfdcfc7f1686e261462215a5a516110e}{Resource\-I\-D} id) const 
-\item 
+\begin{DoxyCompactList}\small\item\em Get\-Resource is where you can get a reference to a loaded resource. If an I\-D requested was not found it will throw an exception. \end{DoxyCompactList}\item 
 void \hyperlink{class_resource_manager_a919997a4e1b07f62181bedad680915aa}{Clear\-All} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Clear\-All immediately destructs all the resources in this manager. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -25,9 +30,17 @@ std\-::unique\-\_\-ptr$<$ Type $>$ $>$ \hyperlink{class_resource_manager_af7f7ac
 \subsection{Detailed Description}
 \subsubsection*{template$<$typename Type$>$class Resource\-Manager$<$ Type $>$}
 
+\hyperlink{class_resource_manager}{Resource\-Manager} is simple class for managing resources. 
 
+It will take in a file name and path, and an integer I\-D to associate with that resource.
 
-Definition at line 16 of file Resource\-Manager.\-hpp.
+If Load\-Resource loads the resource successfully you may then get a reference to it by calling Get\-Resource(id).
+
+If loading was not successful the class will throw an exception.
+
+Resource I\-Ds should be unique. 
+
+Definition at line 27 of file Resource\-Manager.\-hpp.
 
 
 
@@ -41,7 +54,11 @@ Definition at line 16 of file Resource\-Manager.\-hpp.
 )}}\label{class_resource_manager_a919997a4e1b07f62181bedad680915aa}
 
 
-Definition at line 70 of file Resource\-Manager.\-hpp.
+Clear\-All immediately destructs all the resources in this manager. 
+
+
+
+Definition at line 94 of file Resource\-Manager.\-hpp.
 
 \hypertarget{class_resource_manager_af3e977ad6ea9972aebf6c7d7c15a19d6}{\index{Resource\-Manager@{Resource\-Manager}!Get\-Resource@{Get\-Resource}}
 \index{Get\-Resource@{Get\-Resource}!ResourceManager@{Resource\-Manager}}
@@ -52,7 +69,19 @@ Definition at line 70 of file Resource\-Manager.\-hpp.
 ) const}}\label{class_resource_manager_af3e977ad6ea9972aebf6c7d7c15a19d6}
 
 
-Definition at line 58 of file Resource\-Manager.\-hpp.
+Get\-Resource is where you can get a reference to a loaded resource. If an I\-D requested was not found it will throw an exception. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The integer I\-D requested. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the resource. 
+\end{DoxyReturn}
+
+
+Definition at line 82 of file Resource\-Manager.\-hpp.
 
 \hypertarget{class_resource_manager_a38f6162e5f7d3b16273a23340b34e438}{\index{Resource\-Manager@{Resource\-Manager}!Load\-Resource@{Load\-Resource}}
 \index{Load\-Resource@{Load\-Resource}!ResourceManager@{Resource\-Manager}}
@@ -64,7 +93,18 @@ Definition at line 58 of file Resource\-Manager.\-hpp.
 )}}\label{class_resource_manager_a38f6162e5f7d3b16273a23340b34e438}
 
 
-Definition at line 30 of file Resource\-Manager.\-hpp.
+Load\-Resource is where resources are loaded and associated with an integer I\-D. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The file name and path to the resource for loading. \\
+\hline
+{\em id} & The integer I\-D to associate with this resource. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 54 of file Resource\-Manager.\-hpp.
 
 
 
@@ -74,10 +114,10 @@ Definition at line 30 of file Resource\-Manager.\-hpp.
 \subsubsection[{m\-Resource\-Map}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Type$>$ std\-::map$<${\bf Resource\-I\-D}, std\-::unique\-\_\-ptr$<$Type$>$ $>$ {\bf Resource\-Manager}$<$ Type $>$\-::m\-Resource\-Map\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_resource_manager_af7f7accf221f620d9816ad3cfb80674e}
 
 
-Definition at line 26 of file Resource\-Manager.\-hpp.
+Definition at line 50 of file Resource\-Manager.\-hpp.
 
 
 
 The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
 \item 
-Source/\hyperlink{_resource_manager_8hpp}{Resource\-Manager.\-hpp}\end{DoxyCompactItemize}
+/home/lee/\-Projects/\-Sudden\-Awakening/\-Source/\hyperlink{_resource_manager_8hpp}{Resource\-Manager.\-hpp}\end{DoxyCompactItemize}

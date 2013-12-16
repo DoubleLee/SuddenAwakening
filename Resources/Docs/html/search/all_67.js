@@ -4,7 +4,6 @@ var searchData=
   ['game_2ecpp',['Game.cpp',['../_game_8cpp.html',1,'']]],
   ['game_2ehpp',['Game.hpp',['../_game_8hpp.html',1,'']]],
   ['game_5fh',['GAME_H',['../_game_8hpp.html#a57ea2f3b1bafe4de806492ca9ce85116',1,'Game.hpp']]],
-  ['gameplay',['GamePlay',['../namespace_new_state.html#a5c7ea0525ea511d1a4445581518dfca6a15eeddf82660caf82512f29ff322f27a',1,'NewState']]],
   ['gameplayid',['GamePlayID',['../_state_8hpp.html#a905494cc15ee9757a813dbfe4b1072feaf7050022712237f5cacb4f01769118d2',1,'State.hpp']]],
   ['get',['Get',['../class_game.html#a700c0cde9d2a8c5ad2672a8fdc0cfb4a',1,'Game']]],
   ['getbuttonfont',['GetButtonFont',['../class_game.html#ac508be317e5c3a7d7c41df0f9c740a96',1,'Game']]],

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.4"/>
-<title>SuddenAwakening: Source/XMLFunctions.cpp Source File</title>
+<title>Sudden Awakening: /home/lee/Projects/SuddenAwakening/Source/XMLFunctions.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,9 +29,9 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">SuddenAwakening
+   <div id="projectname">Sudden Awakening
    </div>
-   <div id="projectbrief">Sudden Awakening is a 2D role playing game with Zelda like elements.</div>
+   <div id="projectbrief">A 2D zelda like game with modern story.</div>
   </td>
  </tr>
  </tbody>
@@ -144,7 +144,7 @@ $(document).ready(function(){initNavTree('_x_m_l_functions_8cpp_source.html','')
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        }</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="comment">// delete any textures old textures if there are any.</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    textures.<a class="code" href="class_resource_manager.html#a919997a4e1b07f62181bedad680915aa">ClearAll</a>();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    textures.<a class="code" href="class_resource_manager.html#a919997a4e1b07f62181bedad680915aa" title="ClearAll immediately destructs all the resources in this manager. ">ClearAll</a>();</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="comment">// Get first texture element</span></div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="classtinyxml2_1_1_x_m_l_element.html">XMLElement</a> * pTexIndex( pTexturesElement-&gt;<a class="code" href="classtinyxml2_1_1_x_m_l_node.html#a20f48e99b03e9c17487944f229bee130">FirstChildElement</a>(<span class="stringliteral">&quot;texture&quot;</span>) );</div>
@@ -169,7 +169,7 @@ $(document).ready(function(){initNavTree('_x_m_l_functions_8cpp_source.html','')
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <a class="code" href="_exceptions_8hpp.html#a5ac38416c603d2a2ac182687a070056d">ThrowRuntimeException</a>(<span class="stringliteral">&quot;Failed to load texture id from xml&quot;</span>)</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            }</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        textures.<a class="code" href="class_resource_manager.html#a38f6162e5f7d3b16273a23340b34e438">LoadResource</a>(file, <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        textures.<a class="code" href="class_resource_manager.html#a38f6162e5f7d3b16273a23340b34e438" title="LoadResource is where resources are loaded and associated with an integer ID. ">LoadResource</a>(file, <span class="keywordtype">id</span>);</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="comment">// Iterate to next texture element.</span></div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        pTexIndex = pTexIndex-&gt;NextSiblingElement(<span class="stringliteral">&quot;texture&quot;</span>);</div>
@@ -201,7 +201,7 @@ $(document).ready(function(){initNavTree('_x_m_l_functions_8cpp_source.html','')
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        }</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="comment">// Tell sf::Music to load file and check for problems</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordflow">if</span> ( !music.openFromFile(  <a class="code" href="_string_utilities_8cpp.html#a4a695277a97a5728265060692c0e9878">ToPlatformPath</a>( file ).c_str() ) )</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordflow">if</span> ( !music.openFromFile(  <a class="code" href="_string_utilities_8cpp.html#a4a695277a97a5728265060692c0e9878" title="ToPlatformPath ensures the file name and paths are in the correct format, supports / and \ slashes...">ToPlatformPath</a>( file ).c_str() ) )</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        {</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <a class="code" href="_exceptions_8hpp.html#a5ac38416c603d2a2ac182687a070056d">ThrowRuntimeException</a>(<span class="stringliteral">&quot;Failed to load music file into sf::Music&quot;</span>)</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        }</div>
@@ -268,7 +268,7 @@ $(document).ready(function(){initNavTree('_x_m_l_functions_8cpp_source.html','')
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="comment">//          }</span></div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <span class="comment">// Load the audio into the AudioEffects manager in the id group</span></div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <span class="keywordflow">if</span> ( !audioMan.<a class="code" href="class_audio_effects.html#abdcd1e6bd73b10ed07433ad8fa73b00d" title="LoadBuffer is where you load a sound file into memory. ">LoadBuffer</a>( <a class="code" href="_string_utilities_8cpp.html#a4a695277a97a5728265060692c0e9878">ToPlatformPath</a>(file), <span class="keywordtype">id</span> ) )</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <span class="keywordflow">if</span> ( !audioMan.<a class="code" href="class_audio_effects.html#abdcd1e6bd73b10ed07433ad8fa73b00d" title="LoadBuffer is where you load a sound file into memory. ">LoadBuffer</a>( <a class="code" href="_string_utilities_8cpp.html#a4a695277a97a5728265060692c0e9878" title="ToPlatformPath ensures the file name and paths are in the correct format, supports / and \ slashes...">ToPlatformPath</a>(file), <span class="keywordtype">id</span> ) )</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;            {</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            <a class="code" href="_exceptions_8hpp.html#a5ac38416c603d2a2ac182687a070056d">ThrowRuntimeException</a>(<span class="stringliteral">&quot;Failed while loading audio buffer file&quot;</span>)</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            }</div>
@@ -407,7 +407,7 @@ $(document).ready(function(){initNavTree('_x_m_l_functions_8cpp_source.html','')
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_74389ed8173ad57b461b9d623a1f3867.html">Source</a></li><li class="navelem"><a class="el" href="_x_m_l_functions_8cpp.html">XMLFunctions.cpp</a></li>
-    <li class="footer">Generated on Mon Dec 16 2013 01:15:35 for SuddenAwakening by
+    <li class="footer">Generated on Mon Dec 16 2013 10:51:03 for Sudden Awakening by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
   </ul>

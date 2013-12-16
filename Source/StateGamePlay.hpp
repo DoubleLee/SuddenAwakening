@@ -18,9 +18,16 @@ public:
 	virtual void LoadFromXML(const string & file);
 	virtual void ProcessEvent(const sf::Event & event);
 
+	/**
+	 * @brief GetLevel getter for the current level.
+	 * @return The current level.
+	 */
 	Level * GetLevel();
 
 private:
+	/**
+	 * @brief LoadNewGame is where a new game is loaded starting at level 1.
+	 */
 	void LoadNewGame();
 
 	unique_ptr<Level> mpLevel;

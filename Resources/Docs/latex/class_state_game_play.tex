@@ -19,15 +19,15 @@ Inheritance diagram for State\-Game\-Play\-:\begin{figure}[H]
 virtual \hyperlink{class_state_game_play_aa4538a8a8ff81e66c0c826249d410c63}{$\sim$\-State\-Game\-Play} ()
 \item 
 virtual void \hyperlink{class_state_game_play_a56b45e9ee196d709557dac2a3a6f2b3d}{Update} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Update pure virtual call to update the child class. \end{DoxyCompactList}\item 
 virtual void \hyperlink{class_state_game_play_a5a4710616480b177cc8164675d5295ae}{Draw} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Draw pure virtual call to draw the child class. \end{DoxyCompactList}\item 
 virtual void \hyperlink{class_state_game_play_ab959c0ecf1e0db614a89a87bacd1ead1}{Load\-From\-X\-M\-L} (const string \&file)
-\item 
+\begin{DoxyCompactList}\small\item\em Load\-From\-X\-M\-L pure virtual call to load the child classes data from an xml file. \end{DoxyCompactList}\item 
 virtual void \hyperlink{class_state_game_play_a9123dfdcf99f92706a00740245e98d23}{Process\-Event} (const sf\-::\-Event \&event)
-\item 
+\begin{DoxyCompactList}\small\item\em Process\-Event pure virtual call, is where operating system events can be processed. \end{DoxyCompactList}\item 
 \hyperlink{class_level}{Level} $\ast$ \hyperlink{class_state_game_play_a5bd072a6e7414b47fd9fcdfa34301aa6}{Get\-Level} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Get\-Level getter for the current level. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
 
@@ -73,6 +73,10 @@ Definition at line 16 of file State\-Game\-Play.\-cpp.
 )\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_state_game_play_a5a4710616480b177cc8164675d5295ae}
 
 
+Draw pure virtual call to draw the child class. 
+
+
+
 Implements \hyperlink{class_state_a8b0cdb0e7450a9bb3580a33dfbe4d981}{State}.
 
 
@@ -86,6 +90,13 @@ Definition at line 27 of file State\-Game\-Play.\-cpp.
 {}
 \end{DoxyParamCaption}
 )}}\label{class_state_game_play_a5bd072a6e7414b47fd9fcdfa34301aa6}
+
+
+Get\-Level getter for the current level. 
+
+\begin{DoxyReturn}{Returns}
+The current level. 
+\end{DoxyReturn}
 \hypertarget{class_state_game_play_ab959c0ecf1e0db614a89a87bacd1ead1}{\index{State\-Game\-Play@{State\-Game\-Play}!Load\-From\-X\-M\-L@{Load\-From\-X\-M\-L}}
 \index{Load\-From\-X\-M\-L@{Load\-From\-X\-M\-L}!StateGamePlay@{State\-Game\-Play}}
 \subsubsection[{Load\-From\-X\-M\-L}]{\setlength{\rightskip}{0pt plus 5cm}void State\-Game\-Play\-::\-Load\-From\-X\-M\-L (
@@ -93,6 +104,15 @@ Definition at line 27 of file State\-Game\-Play.\-cpp.
 \item[{const string \&}]{file}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_state_game_play_ab959c0ecf1e0db614a89a87bacd1ead1}
+
+
+Load\-From\-X\-M\-L pure virtual call to load the child classes data from an xml file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The file name and path to an xml file. \\
+\hline
+\end{DoxyParams}
 
 
 Implements \hyperlink{class_state_a8c96aac63e62b9b6bb491cae071d08f2}{State}.
@@ -110,6 +130,15 @@ Definition at line 34 of file State\-Game\-Play.\-cpp.
 )\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_state_game_play_a9123dfdcf99f92706a00740245e98d23}
 
 
+Process\-Event pure virtual call, is where operating system events can be processed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & The sfml Event to be processed. \\
+\hline
+\end{DoxyParams}
+
+
 Implements \hyperlink{class_state_aac4126b251b0c55d5c934982310c80ae}{State}.
 
 
@@ -125,6 +154,10 @@ Definition at line 39 of file State\-Game\-Play.\-cpp.
 )\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_state_game_play_a56b45e9ee196d709557dac2a3a6f2b3d}
 
 
+Update pure virtual call to update the child class. 
+
+
+
 Implements \hyperlink{class_state_a43d4ca30d927c023316c058b700c0716}{State}.
 
 
@@ -135,5 +168,5 @@ Definition at line 21 of file State\-Game\-Play.\-cpp.
 
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-Source/\hyperlink{_state_game_play_8hpp}{State\-Game\-Play.\-hpp}\item 
-Source/\hyperlink{_state_game_play_8cpp}{State\-Game\-Play.\-cpp}\end{DoxyCompactItemize}
+/home/lee/\-Projects/\-Sudden\-Awakening/\-Source/\hyperlink{_state_game_play_8hpp}{State\-Game\-Play.\-hpp}\item 
+/home/lee/\-Projects/\-Sudden\-Awakening/\-Source/\hyperlink{_state_game_play_8cpp}{State\-Game\-Play.\-cpp}\end{DoxyCompactItemize}

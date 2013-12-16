@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.4"/>
-<title>SuddenAwakening: State Class Reference</title>
+<title>Sudden Awakening: State Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,9 +29,9 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">SuddenAwakening
+   <div id="projectname">Sudden Awakening
    </div>
-   <div id="projectbrief">Sudden Awakening is a 2D role playing game with Zelda like elements.</div>
+   <div id="projectbrief">A 2D zelda like game with modern story.</div>
   </td>
  </tr>
  </tbody>
@@ -113,6 +113,9 @@ $(document).ready(function(){initNavTree('class_state.html','');});
 </div><!--header-->
 <div class="contents">
 
+<p>The <a class="el" href="class_state.html" title="The State class is the base class for states. ">State</a> class is the base class for states.  
+ <a href="class_state.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_state_8hpp_source.html">State.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for State:</div>
@@ -128,18 +131,25 @@ Inheritance diagram for State:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a4da3d6c4c175efa74f87a1d413a4486b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state.html#a4da3d6c4c175efa74f87a1d413a4486b">State</a> (const <a class="el" href="_state_8hpp.html#a905494cc15ee9757a813dbfe4b1072fe">StateID</a> stateID)</td></tr>
+<tr class="memdesc:a4da3d6c4c175efa74f87a1d413a4486b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_state.html" title="The State class is the base class for states. ">State</a> ctor.  <a href="#a4da3d6c4c175efa74f87a1d413a4486b">More...</a><br/></td></tr>
 <tr class="separator:a4da3d6c4c175efa74f87a1d413a4486b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afab438d92b90dc18d194dbd9c9c8bab3"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state.html#afab438d92b90dc18d194dbd9c9c8bab3">~State</a> ()</td></tr>
+<tr class="memdesc:afab438d92b90dc18d194dbd9c9c8bab3"><td class="mdescLeft">&#160;</td><td class="mdescRight">~State virtual dtor.  <a href="#afab438d92b90dc18d194dbd9c9c8bab3">More...</a><br/></td></tr>
 <tr class="separator:afab438d92b90dc18d194dbd9c9c8bab3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7022716d4d0c7aec82dbdd90e1e039e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_state_8hpp.html#a905494cc15ee9757a813dbfe4b1072fe">StateID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state.html#ab7022716d4d0c7aec82dbdd90e1e039e">GetID</a> () const </td></tr>
+<tr class="memdesc:ab7022716d4d0c7aec82dbdd90e1e039e"><td class="mdescLeft">&#160;</td><td class="mdescRight">GetID getter for the state id.  <a href="#ab7022716d4d0c7aec82dbdd90e1e039e">More...</a><br/></td></tr>
 <tr class="separator:ab7022716d4d0c7aec82dbdd90e1e039e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43d4ca30d927c023316c058b700c0716"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state.html#a43d4ca30d927c023316c058b700c0716">Update</a> ()=0</td></tr>
+<tr class="memdesc:a43d4ca30d927c023316c058b700c0716"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update pure virtual call to update the child class.  <a href="#a43d4ca30d927c023316c058b700c0716">More...</a><br/></td></tr>
 <tr class="separator:a43d4ca30d927c023316c058b700c0716"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b0cdb0e7450a9bb3580a33dfbe4d981"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state.html#a8b0cdb0e7450a9bb3580a33dfbe4d981">Draw</a> ()=0</td></tr>
+<tr class="memdesc:a8b0cdb0e7450a9bb3580a33dfbe4d981"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw pure virtual call to draw the child class.  <a href="#a8b0cdb0e7450a9bb3580a33dfbe4d981">More...</a><br/></td></tr>
 <tr class="separator:a8b0cdb0e7450a9bb3580a33dfbe4d981"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c96aac63e62b9b6bb491cae071d08f2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state.html#a8c96aac63e62b9b6bb491cae071d08f2">LoadFromXML</a> (const string &amp;file)=0</td></tr>
+<tr class="memdesc:a8c96aac63e62b9b6bb491cae071d08f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">LoadFromXML pure virtual call to load the child classes data from an xml file.  <a href="#a8c96aac63e62b9b6bb491cae071d08f2">More...</a><br/></td></tr>
 <tr class="separator:a8c96aac63e62b9b6bb491cae071d08f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac4126b251b0c55d5c934982310c80ae"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state.html#aac4126b251b0c55d5c934982310c80ae">ProcessEvent</a> (const sf::Event &amp;event)=0</td></tr>
+<tr class="memdesc:aac4126b251b0c55d5c934982310c80ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">ProcessEvent pure virtual call, is where operating system events can be processed.  <a href="#aac4126b251b0c55d5c934982310c80ae">More...</a><br/></td></tr>
 <tr class="separator:aac4126b251b0c55d5c934982310c80ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
@@ -154,8 +164,15 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:ad77d6e8727cab4ac8ac5d44eacb41eba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="_state_8hpp_source.html#l00038">38</a> of file <a class="el" href="_state_8hpp_source.html">State.hpp</a>.</p>
+<div class="textblock"><p>The <a class="el" href="class_state.html" title="The State class is the base class for states. ">State</a> class is the base class for states. </p>
+<p>This is meant to be inherited from, to create concrete state types.</p>
+<p>The states are for the different states the game maybe in.</p>
+<p>There are 4 pure virtual methods, Update and Draw are for updating and drawing of all the child states.</p>
+<p>LoadFromXML is for loading the states data, which should be unique to each state.</p>
+<p>ProcessEvent is where the states can become aware of operating system messages such as keypresses.</p>
+<p>Each state keeps track of the StateID which signifies what type of state it is. </p>
+
+<p>Definition at line <a class="el" href="_state_8hpp_source.html#l00056">56</a> of file <a class="el" href="_state_8hpp_source.html">State.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a4da3d6c4c175efa74f87a1d413a4486b"></a>
 <div class="memitem">
@@ -170,6 +187,14 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p><a class="el" href="class_state.html" title="The State class is the base class for states. ">State</a> ctor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stateID</td><td>The enum to signify what type of state the child is. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Definition at line <a class="el" href="_state_8cpp_source.html#l00020">20</a> of file <a class="el" href="_state_8cpp_source.html">State.cpp</a>.</p>
 
@@ -195,6 +220,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>~State virtual dtor. </p>
 
 <p>Definition at line <a class="el" href="_state_8cpp_source.html#l00030">30</a> of file <a class="el" href="_state_8cpp_source.html">State.cpp</a>.</p>
 
@@ -222,6 +249,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Draw pure virtual call to draw the child class. </p>
+
 <p>Implemented in <a class="el" href="class_state_main_menu.html#acd8b820dddbd9bd5515b1a3cebbe6978">StateMainMenu</a>, and <a class="el" href="class_state_game_play.html#a5a4710616480b177cc8164675d5295ae">StateGamePlay</a>.</p>
 
 </div>
@@ -238,6 +267,9 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>GetID getter for the state id. </p>
+<dl class="section return"><dt>Returns</dt><dd>This states ID. </dd></dl>
 
 <p>Definition at line <a class="el" href="_state_8cpp_source.html#l00035">35</a> of file <a class="el" href="_state_8cpp_source.html">State.cpp</a>.</p>
 
@@ -265,6 +297,14 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>LoadFromXML pure virtual call to load the child classes data from an xml file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>The file name and path to an xml file. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Implemented in <a class="el" href="class_state_main_menu.html#a988befa6ae7c087935581b269fb8863f">StateMainMenu</a>, and <a class="el" href="class_state_game_play.html#ab959c0ecf1e0db614a89a87bacd1ead1">StateGamePlay</a>.</p>
 
 </div>
@@ -291,6 +331,14 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>ProcessEvent pure virtual call, is where operating system events can be processed. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">event</td><td>The sfml Event to be processed. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Implemented in <a class="el" href="class_state_main_menu.html#ac9a02be51b4faa9c7d82e10af97ef6e4">StateMainMenu</a>, and <a class="el" href="class_state_game_play.html#a9123dfdcf99f92706a00740245e98d23">StateGamePlay</a>.</p>
 
 </div>
@@ -316,6 +364,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Update pure virtual call to update the child class. </p>
+
 <p>Implemented in <a class="el" href="class_state_main_menu.html#afa9c12c0975a2af95fdd2cf1829c56df">StateMainMenu</a>, and <a class="el" href="class_state_game_play.html#a56b45e9ee196d709557dac2a3a6f2b3d">StateGamePlay</a>.</p>
 
 </div>
@@ -339,7 +389,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_state_8hpp_source.html#l00058">58</a> of file <a class="el" href="_state_8hpp_source.html">State.hpp</a>.</p>
+<p>Definition at line <a class="el" href="_state_8hpp_source.html#l00105">105</a> of file <a class="el" href="_state_8hpp_source.html">State.hpp</a>.</p>
 
 </div>
 </div>
@@ -361,7 +411,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_state_8hpp_source.html#l00059">59</a> of file <a class="el" href="_state_8hpp_source.html">State.hpp</a>.</p>
+<p>Definition at line <a class="el" href="_state_8hpp_source.html#l00106">106</a> of file <a class="el" href="_state_8hpp_source.html">State.hpp</a>.</p>
 
 </div>
 </div>
@@ -383,7 +433,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_state_8hpp_source.html#l00055">55</a> of file <a class="el" href="_state_8hpp_source.html">State.hpp</a>.</p>
+<p>Definition at line <a class="el" href="_state_8hpp_source.html#l00102">102</a> of file <a class="el" href="_state_8hpp_source.html">State.hpp</a>.</p>
 
 </div>
 </div>
@@ -405,13 +455,13 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_state_8hpp_source.html#l00057">57</a> of file <a class="el" href="_state_8hpp_source.html">State.hpp</a>.</p>
+<p>Definition at line <a class="el" href="_state_8hpp_source.html#l00104">104</a> of file <a class="el" href="_state_8hpp_source.html">State.hpp</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>Source/<a class="el" href="_state_8hpp_source.html">State.hpp</a></li>
-<li>Source/<a class="el" href="_state_8cpp_source.html">State.cpp</a></li>
+<li>/home/lee/Projects/SuddenAwakening/Source/<a class="el" href="_state_8hpp_source.html">State.hpp</a></li>
+<li>/home/lee/Projects/SuddenAwakening/Source/<a class="el" href="_state_8cpp_source.html">State.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -419,7 +469,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_state.html">State</a></li>
-    <li class="footer">Generated on Mon Dec 16 2013 01:15:36 for SuddenAwakening by
+    <li class="footer">Generated on Mon Dec 16 2013 10:51:05 for Sudden Awakening by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
   </ul>

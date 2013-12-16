@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.4"/>
-<title>SuddenAwakening: Source/StateMainMenu.hpp Source File</title>
+<title>Sudden Awakening: /home/lee/Projects/SuddenAwakening/Source/StateMainMenu.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,9 +29,9 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">SuddenAwakening
+   <div id="projectname">Sudden Awakening
    </div>
-   <div id="projectbrief">Sudden Awakening is a 2D role playing game with Zelda like elements.</div>
+   <div id="projectbrief">A 2D zelda like game with modern story.</div>
   </td>
  </tr>
  </tbody>
@@ -124,33 +124,35 @@ $(document).ready(function(){initNavTree('_state_main_menu_8hpp_source.html','')
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">class </span><a class="code" href="class_button.html" title="The Button class. This class represents a clickable and selectable button. ">Button</a>;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="code" href="class_state_main_menu.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_state_main_menu.html">StateMainMenu</a> : <span class="keyword">public</span> <a class="code" href="class_state.html">State</a></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="code" href="class_state_main_menu.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_state_main_menu.html">StateMainMenu</a> : <span class="keyword">public</span> <a class="code" href="class_state.html" title="The State class is the base class for states. ">State</a></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="class_state_main_menu.html#af1bc1b6bfef9775a92eda9dd4c5f8d80">StateMainMenu</a>();</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="class_state_main_menu.html#aae1ad451be64082e6e8f021d72d2050c">~StateMainMenu</a>();</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_state_main_menu.html#afa9c12c0975a2af95fdd2cf1829c56df">Update</a>();</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_state_main_menu.html#acd8b820dddbd9bd5515b1a3cebbe6978">Draw</a>();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_state_main_menu.html#a988befa6ae7c087935581b269fb8863f">LoadFromXML</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp; file);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_state_main_menu.html#ac9a02be51b4faa9c7d82e10af97ef6e4">ProcessEvent</a>(<span class="keyword">const</span> sf::Event &amp; event);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_state_main_menu.html#afa9c12c0975a2af95fdd2cf1829c56df" title="Update pure virtual call to update the child class. ">Update</a>();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_state_main_menu.html#acd8b820dddbd9bd5515b1a3cebbe6978" title="Draw pure virtual call to draw the child class. ">Draw</a>();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_state_main_menu.html#a988befa6ae7c087935581b269fb8863f" title="LoadFromXML pure virtual call to load the child classes data from an xml file. ">LoadFromXML</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp; file);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_state_main_menu.html#ac9a02be51b4faa9c7d82e10af97ef6e4" title="ProcessEvent pure virtual call, is where operating system events can be processed. ">ProcessEvent</a>(<span class="keyword">const</span> sf::Event &amp; event);</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span> ChangeSelectionTo( <span class="keywordtype">int</span> newSelection );</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">void</span> ChangeSelectionBy( <span class="keywordtype">int</span> offset );</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">void</span> UserMadeSelection();</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    vector&lt; unique_ptr&lt; Button &gt; &gt; mButtons;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">int</span> mSelectedButton;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    unique_ptr&lt;sf::Text&gt; mpTitleText;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;};</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#endif // STATEMAINMENU_H</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">void</span> ChangeSelectionTo( <span class="keywordtype">int</span> newSelection );</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">void</span> ChangeSelectionBy( <span class="keywordtype">int</span> offset );</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">void</span> UserMadeSelection();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    vector&lt; unique_ptr&lt; Button &gt; &gt; mButtons;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">int</span> mSelectedButton;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    unique_ptr&lt;sf::Text&gt; mpTitleText;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;};</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#endif // STATEMAINMENU_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_74389ed8173ad57b461b9d623a1f3867.html">Source</a></li><li class="navelem"><a class="el" href="_state_main_menu_8hpp.html">StateMainMenu.hpp</a></li>
-    <li class="footer">Generated on Mon Dec 16 2013 01:15:35 for SuddenAwakening by
+    <li class="footer">Generated on Mon Dec 16 2013 10:51:03 for Sudden Awakening by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
   </ul>

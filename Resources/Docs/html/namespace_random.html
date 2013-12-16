@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.4"/>
-<title>SuddenAwakening: Random Namespace Reference</title>
+<title>Sudden Awakening: Random Namespace Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,9 +29,9 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">SuddenAwakening
+   <div id="projectname">Sudden Awakening
    </div>
-   <div id="projectbrief">Sudden Awakening is a 2D role playing game with Zelda like elements.</div>
+   <div id="projectbrief">A 2D zelda like game with modern story.</div>
   </td>
  </tr>
  </tbody>
@@ -112,12 +112,16 @@ $(document).ready(function(){initNavTree('namespace_random.html','');});
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a4d271cd065de9fbe8907d4df5bf8f89c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_random.html#a4d271cd065de9fbe8907d4df5bf8f89c">Seed</a> ()</td></tr>
+<tr class="memdesc:a4d271cd065de9fbe8907d4df5bf8f89c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Seed is called to seed the random engines.  <a href="#a4d271cd065de9fbe8907d4df5bf8f89c">More...</a><br/></td></tr>
 <tr class="separator:a4d271cd065de9fbe8907d4df5bf8f89c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9456a1bb9616cb6db26f5452896b2da1"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_random.html#a9456a1bb9616cb6db26f5452896b2da1">Between</a> (float low, float high)</td></tr>
+<tr class="memdesc:a9456a1bb9616cb6db26f5452896b2da1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Between is for getting a random float between two floats.  <a href="#a9456a1bb9616cb6db26f5452896b2da1">More...</a><br/></td></tr>
 <tr class="separator:a9456a1bb9616cb6db26f5452896b2da1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca0cc9c7b6ac26d4c000fd33e32ef6d9"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_random.html#aca0cc9c7b6ac26d4c000fd33e32ef6d9">Between</a> (double low, double high)</td></tr>
+<tr class="memdesc:aca0cc9c7b6ac26d4c000fd33e32ef6d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Between is for getting a random double between two doubles.  <a href="#aca0cc9c7b6ac26d4c000fd33e32ef6d9">More...</a><br/></td></tr>
 <tr class="separator:aca0cc9c7b6ac26d4c000fd33e32ef6d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c53fd9d1c5f259e185d329d8250fee5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_random.html#a7c53fd9d1c5f259e185d329d8250fee5">Between</a> (int low, int high)</td></tr>
+<tr class="memdesc:a7c53fd9d1c5f259e185d329d8250fee5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Between is for getting a random in between two ints.  <a href="#a7c53fd9d1c5f259e185d329d8250fee5">More...</a><br/></td></tr>
 <tr class="separator:a7c53fd9d1c5f259e185d329d8250fee5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -144,6 +148,16 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Between is for getting a random float between two floats. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">low</td><td>The low side for the range, inclusive. </td></tr>
+    <tr><td class="paramname">high</td><td>The high side for the range, inclusive. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The random float value. </dd></dl>
 
 <p>Definition at line <a class="el" href="_random_generator_8cpp_source.html#l00019">19</a> of file <a class="el" href="_random_generator_8cpp_source.html">RandomGenerator.cpp</a>.</p>
 
@@ -173,6 +187,16 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Between is for getting a random double between two doubles. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">low</td><td>The low side for the range, inclusive. </td></tr>
+    <tr><td class="paramname">high</td><td>The high side for the range, inclusive. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The random double value. </dd></dl>
+
 <p>Definition at line <a class="el" href="_random_generator_8cpp_source.html#l00025">25</a> of file <a class="el" href="_random_generator_8cpp_source.html">RandomGenerator.cpp</a>.</p>
 
 </div>
@@ -201,6 +225,16 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Between is for getting a random in between two ints. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">low</td><td>The low side for the range, inclusive. </td></tr>
+    <tr><td class="paramname">high</td><td>The high side for the range, inclusive. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The random int value. </dd></dl>
+
 <p>Definition at line <a class="el" href="_random_generator_8cpp_source.html#l00031">31</a> of file <a class="el" href="_random_generator_8cpp_source.html">RandomGenerator.cpp</a>.</p>
 
 </div>
@@ -218,6 +252,9 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Seed is called to seed the random engines. </p>
+<p>Make sure to call this some time early durning engine construction. </p>
+
 <p>Definition at line <a class="el" href="_random_generator_8cpp_source.html#l00012">12</a> of file <a class="el" href="_random_generator_8cpp_source.html">RandomGenerator.cpp</a>.</p>
 
 </div>
@@ -228,7 +265,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespace_random.html">Random</a></li>
-    <li class="footer">Generated on Mon Dec 16 2013 01:15:37 for SuddenAwakening by
+    <li class="footer">Generated on Mon Dec 16 2013 10:51:05 for Sudden Awakening by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
   </ul>

@@ -3,6 +3,11 @@
 }
 
 
+The \hyperlink{class_state}{State} class is the base class for states.  
+
+
+
+
 {\ttfamily \#include $<$State.\-hpp$>$}
 
 Inheritance diagram for State\-:\begin{figure}[H]
@@ -15,19 +20,19 @@ Inheritance diagram for State\-:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_state_a4da3d6c4c175efa74f87a1d413a4486b}{State} (const \hyperlink{_state_8hpp_a905494cc15ee9757a813dbfe4b1072fe}{State\-I\-D} state\-I\-D)
-\item 
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_state}{State} ctor. \end{DoxyCompactList}\item 
 virtual \hyperlink{class_state_afab438d92b90dc18d194dbd9c9c8bab3}{$\sim$\-State} ()
-\item 
+\begin{DoxyCompactList}\small\item\em $\sim$\-State virtual dtor. \end{DoxyCompactList}\item 
 \hyperlink{_state_8hpp_a905494cc15ee9757a813dbfe4b1072fe}{State\-I\-D} \hyperlink{class_state_ab7022716d4d0c7aec82dbdd90e1e039e}{Get\-I\-D} () const 
-\item 
+\begin{DoxyCompactList}\small\item\em Get\-I\-D getter for the state id. \end{DoxyCompactList}\item 
 virtual void \hyperlink{class_state_a43d4ca30d927c023316c058b700c0716}{Update} ()=0
-\item 
+\begin{DoxyCompactList}\small\item\em Update pure virtual call to update the child class. \end{DoxyCompactList}\item 
 virtual void \hyperlink{class_state_a8b0cdb0e7450a9bb3580a33dfbe4d981}{Draw} ()=0
-\item 
+\begin{DoxyCompactList}\small\item\em Draw pure virtual call to draw the child class. \end{DoxyCompactList}\item 
 virtual void \hyperlink{class_state_a8c96aac63e62b9b6bb491cae071d08f2}{Load\-From\-X\-M\-L} (const string \&file)=0
-\item 
+\begin{DoxyCompactList}\small\item\em Load\-From\-X\-M\-L pure virtual call to load the child classes data from an xml file. \end{DoxyCompactList}\item 
 virtual void \hyperlink{class_state_aac4126b251b0c55d5c934982310c80ae}{Process\-Event} (const sf\-::\-Event \&event)=0
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Process\-Event pure virtual call, is where operating system events can be processed. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -42,9 +47,21 @@ unique\-\_\-ptr$<$ sf\-::\-Sprite $>$ \hyperlink{class_state_ad77d6e8727cab4ac8a
 
 
 \subsection{Detailed Description}
+The \hyperlink{class_state}{State} class is the base class for states. 
 
+This is meant to be inherited from, to create concrete state types.
 
-Definition at line 38 of file State.\-hpp.
+The states are for the different states the game maybe in.
+
+There are 4 pure virtual methods, Update and Draw are for updating and drawing of all the child states.
+
+Load\-From\-X\-M\-L is for loading the states data, which should be unique to each state.
+
+Process\-Event is where the states can become aware of operating system messages such as keypresses.
+
+Each state keeps track of the State\-I\-D which signifies what type of state it is. 
+
+Definition at line 56 of file State.\-hpp.
 
 
 
@@ -58,6 +75,15 @@ Definition at line 38 of file State.\-hpp.
 )}}\label{class_state_a4da3d6c4c175efa74f87a1d413a4486b}
 
 
+\hyperlink{class_state}{State} ctor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state\-I\-D} & The enum to signify what type of state the child is. \\
+\hline
+\end{DoxyParams}
+
+
 Definition at line 20 of file State.\-cpp.
 
 \hypertarget{class_state_afab438d92b90dc18d194dbd9c9c8bab3}{\index{State@{State}!$\sim$\-State@{$\sim$\-State}}
@@ -67,6 +93,10 @@ Definition at line 20 of file State.\-cpp.
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_state_afab438d92b90dc18d194dbd9c9c8bab3}
+
+
+$\sim$\-State virtual dtor. 
+
 
 
 Definition at line 30 of file State.\-cpp.
@@ -83,6 +113,10 @@ Definition at line 30 of file State.\-cpp.
 )\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_state_a8b0cdb0e7450a9bb3580a33dfbe4d981}
 
 
+Draw pure virtual call to draw the child class. 
+
+
+
 Implemented in \hyperlink{class_state_main_menu_acd8b820dddbd9bd5515b1a3cebbe6978}{State\-Main\-Menu}, and \hyperlink{class_state_game_play_a5a4710616480b177cc8164675d5295ae}{State\-Game\-Play}.
 
 \hypertarget{class_state_ab7022716d4d0c7aec82dbdd90e1e039e}{\index{State@{State}!Get\-I\-D@{Get\-I\-D}}
@@ -92,6 +126,13 @@ Implemented in \hyperlink{class_state_main_menu_acd8b820dddbd9bd5515b1a3cebbe697
 {}
 \end{DoxyParamCaption}
 ) const}}\label{class_state_ab7022716d4d0c7aec82dbdd90e1e039e}
+
+
+Get\-I\-D getter for the state id. 
+
+\begin{DoxyReturn}{Returns}
+This states I\-D. 
+\end{DoxyReturn}
 
 
 Definition at line 35 of file State.\-cpp.
@@ -105,6 +146,15 @@ Definition at line 35 of file State.\-cpp.
 )\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_state_a8c96aac63e62b9b6bb491cae071d08f2}
 
 
+Load\-From\-X\-M\-L pure virtual call to load the child classes data from an xml file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The file name and path to an xml file. \\
+\hline
+\end{DoxyParams}
+
+
 Implemented in \hyperlink{class_state_main_menu_a988befa6ae7c087935581b269fb8863f}{State\-Main\-Menu}, and \hyperlink{class_state_game_play_ab959c0ecf1e0db614a89a87bacd1ead1}{State\-Game\-Play}.
 
 \hypertarget{class_state_aac4126b251b0c55d5c934982310c80ae}{\index{State@{State}!Process\-Event@{Process\-Event}}
@@ -114,6 +164,15 @@ Implemented in \hyperlink{class_state_main_menu_a988befa6ae7c087935581b269fb8863
 \item[{const sf\-::\-Event \&}]{event}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_state_aac4126b251b0c55d5c934982310c80ae}
+
+
+Process\-Event pure virtual call, is where operating system events can be processed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & The sfml Event to be processed. \\
+\hline
+\end{DoxyParams}
 
 
 Implemented in \hyperlink{class_state_main_menu_ac9a02be51b4faa9c7d82e10af97ef6e4}{State\-Main\-Menu}, and \hyperlink{class_state_game_play_a9123dfdcf99f92706a00740245e98d23}{State\-Game\-Play}.
@@ -127,6 +186,10 @@ Implemented in \hyperlink{class_state_main_menu_ac9a02be51b4faa9c7d82e10af97ef6e
 )\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_state_a43d4ca30d927c023316c058b700c0716}
 
 
+Update pure virtual call to update the child class. 
+
+
+
 Implemented in \hyperlink{class_state_main_menu_afa9c12c0975a2af95fdd2cf1829c56df}{State\-Main\-Menu}, and \hyperlink{class_state_game_play_a56b45e9ee196d709557dac2a3a6f2b3d}{State\-Game\-Play}.
 
 
@@ -137,32 +200,32 @@ Implemented in \hyperlink{class_state_main_menu_afa9c12c0975a2af95fdd2cf1829c56d
 \subsubsection[{mp\-Audio\-Effects}]{\setlength{\rightskip}{0pt plus 5cm}unique\-\_\-ptr$<${\bf Audio\-Effects}$>$ State\-::mp\-Audio\-Effects\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_state_a5b54964067de86bec58088f13d5a7564}
 
 
-Definition at line 58 of file State.\-hpp.
+Definition at line 105 of file State.\-hpp.
 
 \hypertarget{class_state_ad77d6e8727cab4ac8ac5d44eacb41eba}{\index{State@{State}!mp\-Background@{mp\-Background}}
 \index{mp\-Background@{mp\-Background}!State@{State}}
 \subsubsection[{mp\-Background}]{\setlength{\rightskip}{0pt plus 5cm}unique\-\_\-ptr$<$sf\-::\-Sprite$>$ State\-::mp\-Background\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_state_ad77d6e8727cab4ac8ac5d44eacb41eba}
 
 
-Definition at line 59 of file State.\-hpp.
+Definition at line 106 of file State.\-hpp.
 
 \hypertarget{class_state_a418f507cf3deef8f3653b8209a9f7b85}{\index{State@{State}!mp\-Game@{mp\-Game}}
 \index{mp\-Game@{mp\-Game}!State@{State}}
 \subsubsection[{mp\-Game}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Game}$\ast$ State\-::mp\-Game\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_state_a418f507cf3deef8f3653b8209a9f7b85}
 
 
-Definition at line 55 of file State.\-hpp.
+Definition at line 102 of file State.\-hpp.
 
 \hypertarget{class_state_a4eb530bbd8c56bb10ab4e36adeb097d9}{\index{State@{State}!m\-Textures@{m\-Textures}}
 \index{m\-Textures@{m\-Textures}!State@{State}}
 \subsubsection[{m\-Textures}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Resource\-Manager}$<$sf\-::\-Texture$>$ State\-::m\-Textures\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_state_a4eb530bbd8c56bb10ab4e36adeb097d9}
 
 
-Definition at line 57 of file State.\-hpp.
+Definition at line 104 of file State.\-hpp.
 
 
 
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-Source/\hyperlink{_state_8hpp}{State.\-hpp}\item 
-Source/\hyperlink{_state_8cpp}{State.\-cpp}\end{DoxyCompactItemize}
+/home/lee/\-Projects/\-Sudden\-Awakening/\-Source/\hyperlink{_state_8hpp}{State.\-hpp}\item 
+/home/lee/\-Projects/\-Sudden\-Awakening/\-Source/\hyperlink{_state_8cpp}{State.\-cpp}\end{DoxyCompactItemize}

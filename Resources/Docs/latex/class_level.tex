@@ -3,6 +3,11 @@
 }
 
 
+The \hyperlink{class_level}{Level} class represents everything required to have a level.  
+
+
+
+
 {\ttfamily \#include $<$Level.\-hpp$>$}
 
 Inheritance diagram for Level\-:\begin{figure}[H]
@@ -15,21 +20,21 @@ Inheritance diagram for Level\-:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_level_a638468d7d98ba422bbcaf2e5ea05d421}{Level} (\hyperlink{_level_8hpp_aa0e387304096fe83aba77c85cb7be77a}{Level\-I\-D} level\-I\-D)
-\item 
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_level}{Level} ctor. \end{DoxyCompactList}\item 
 virtual \hyperlink{class_level_a249eac1e8f19ff44134efa5e986feaca}{$\sim$\-Level} ()
-\item 
+\begin{DoxyCompactList}\small\item\em $\sim$\-Level virtual dtor. \end{DoxyCompactList}\item 
 \hyperlink{_level_8hpp_aa0e387304096fe83aba77c85cb7be77a}{Level\-I\-D} \hyperlink{class_level_a03ef47d6709e8b62568cfaad9decfd0e}{Get\-I\-D} () const 
-\item 
+\begin{DoxyCompactList}\small\item\em Get\-I\-D getter for the level I\-D. \end{DoxyCompactList}\item 
 virtual void \hyperlink{class_level_a540d45e6d0ed7ce481d985881e8e27e2}{Update} ()=0
-\item 
+\begin{DoxyCompactList}\small\item\em Update pure virtual call to a child class. \end{DoxyCompactList}\item 
 virtual void \hyperlink{class_level_a308eb5521217a781d2357ba83d041054}{Draw} ()=0
-\item 
+\begin{DoxyCompactList}\small\item\em Draw pure virtual call to a child class. \end{DoxyCompactList}\item 
 virtual void \hyperlink{class_level_a95bbafd05f5aa2396c36ff8343c62a2f}{Update\-Player} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Update\-Player is for updating the player code. \end{DoxyCompactList}\item 
 virtual void \hyperlink{class_level_a26a3990bd47120e8e5c59f71d29ccb0a}{Load\-From\-X\-M\-L} (const string \&file)=0
-\item 
+\begin{DoxyCompactList}\small\item\em Load\-From\-X\-M\-L is for loading levels from xml files. \end{DoxyCompactList}\item 
 virtual void \hyperlink{class_level_af8c86b5de9abc37b7f639fd9f5e9ea8e}{Process\-Event} (const sf\-::\-Event \&event)=0
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Process\-Event is where operating system events are processsed. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -51,9 +56,13 @@ void \hyperlink{class_level_ac44de73f21a1e6e5ae31d28a411395da}{Load\-Map\-Tiles\
 
 
 \subsection{Detailed Description}
+The \hyperlink{class_level}{Level} class represents everything required to have a level. 
 
+It holds the \hyperlink{class_tile_map}{Tile\-Map} class. The \hyperlink{class_player}{Player} class, an audio effects class and the textures class.
 
-Definition at line 40 of file Level.\-hpp.
+This class is ment to be inherited from, with child classes adding to it's functionality for each level. 
+
+Definition at line 50 of file Level.\-hpp.
 
 
 
@@ -67,6 +76,15 @@ Definition at line 40 of file Level.\-hpp.
 )}}\label{class_level_a638468d7d98ba422bbcaf2e5ea05d421}
 
 
+\hyperlink{class_level}{Level} ctor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em level\-I\-D} & The I\-D for what level it is. \\
+\hline
+\end{DoxyParams}
+
+
 Definition at line 11 of file Level.\-cpp.
 
 \hypertarget{class_level_a249eac1e8f19ff44134efa5e986feaca}{\index{Level@{Level}!$\sim$\-Level@{$\sim$\-Level}}
@@ -76,6 +94,10 @@ Definition at line 11 of file Level.\-cpp.
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_level_a249eac1e8f19ff44134efa5e986feaca}
+
+
+$\sim$\-Level virtual dtor. 
+
 
 
 Definition at line 22 of file Level.\-cpp.
@@ -92,6 +114,10 @@ Definition at line 22 of file Level.\-cpp.
 )\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_level_a308eb5521217a781d2357ba83d041054}
 
 
+Draw pure virtual call to a child class. 
+
+This call is for drawing the child classes. 
+
 Implemented in \hyperlink{class_level_one_ac39dc2f3934694f3428737b97001ff41}{Level\-One}.
 
 \hypertarget{class_level_a03ef47d6709e8b62568cfaad9decfd0e}{\index{Level@{Level}!Get\-I\-D@{Get\-I\-D}}
@@ -101,6 +127,13 @@ Implemented in \hyperlink{class_level_one_ac39dc2f3934694f3428737b97001ff41}{Lev
 {}
 \end{DoxyParamCaption}
 ) const}}\label{class_level_a03ef47d6709e8b62568cfaad9decfd0e}
+
+
+Get\-I\-D getter for the level I\-D. 
+
+\begin{DoxyReturn}{Returns}
+The level I\-D. 
+\end{DoxyReturn}
 
 
 Definition at line 27 of file Level.\-cpp.
@@ -114,6 +147,15 @@ Definition at line 27 of file Level.\-cpp.
 )\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_level_a26a3990bd47120e8e5c59f71d29ccb0a}
 
 
+Load\-From\-X\-M\-L is for loading levels from xml files. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & File name and path to an xml file from Tiled map editor. \\
+\hline
+\end{DoxyParams}
+
+
 Implemented in \hyperlink{class_level_one_a6ff4ce4a9eaeb94987f897e47de62856}{Level\-One}.
 
 \hypertarget{class_level_af8c86b5de9abc37b7f639fd9f5e9ea8e}{\index{Level@{Level}!Process\-Event@{Process\-Event}}
@@ -123,6 +165,15 @@ Implemented in \hyperlink{class_level_one_a6ff4ce4a9eaeb94987f897e47de62856}{Lev
 \item[{const sf\-::\-Event \&}]{event}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_level_af8c86b5de9abc37b7f639fd9f5e9ea8e}
+
+
+Process\-Event is where operating system events are processsed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & The sfml event type for processing. \\
+\hline
+\end{DoxyParams}
 
 
 Implemented in \hyperlink{class_level_one_ab806ffec162c436857edd2539e8f3d4e}{Level\-One}.
@@ -136,6 +187,10 @@ Implemented in \hyperlink{class_level_one_ab806ffec162c436857edd2539e8f3d4e}{Lev
 )\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_level_a540d45e6d0ed7ce481d985881e8e27e2}
 
 
+Update pure virtual call to a child class. 
+
+This call is for updating the child classes. 
+
 Implemented in \hyperlink{class_level_one_ad0078eaa35f035c1a6ec7bf0bbef2fba}{Level\-One}.
 
 \hypertarget{class_level_a95bbafd05f5aa2396c36ff8343c62a2f}{\index{Level@{Level}!Update\-Player@{Update\-Player}}
@@ -146,6 +201,10 @@ Implemented in \hyperlink{class_level_one_ad0078eaa35f035c1a6ec7bf0bbef2fba}{Lev
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_level_a95bbafd05f5aa2396c36ff8343c62a2f}
 
+
+Update\-Player is for updating the player code. 
+
+This is where the player controls are updated and the animations. 
 
 Definition at line 32 of file Level.\-cpp.
 
@@ -168,39 +227,39 @@ Definition at line 32 of file Level.\-cpp.
 \subsubsection[{mp\-Audio\-Effects}]{\setlength{\rightskip}{0pt plus 5cm}unique\-\_\-ptr$<${\bf Audio\-Effects}$>$ Level\-::mp\-Audio\-Effects\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_level_ad7ed6a1f41d6557b9ca3f7e62d705eb2}
 
 
-Definition at line 64 of file Level.\-hpp.
+Definition at line 111 of file Level.\-hpp.
 
 \hypertarget{class_level_a21c456b270db451d1da365d37e365b32}{\index{Level@{Level}!mp\-Game@{mp\-Game}}
 \index{mp\-Game@{mp\-Game}!Level@{Level}}
 \subsubsection[{mp\-Game}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Game}$\ast$ Level\-::mp\-Game\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_level_a21c456b270db451d1da365d37e365b32}
 
 
-Definition at line 61 of file Level.\-hpp.
+Definition at line 108 of file Level.\-hpp.
 
 \hypertarget{class_level_a1cb20848f0e9d49a6469b4682e105d94}{\index{Level@{Level}!mp\-Player@{mp\-Player}}
 \index{mp\-Player@{mp\-Player}!Level@{Level}}
 \subsubsection[{mp\-Player}]{\setlength{\rightskip}{0pt plus 5cm}unique\-\_\-ptr$<$ {\bf Player} $>$ Level\-::mp\-Player\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_level_a1cb20848f0e9d49a6469b4682e105d94}
 
 
-Definition at line 66 of file Level.\-hpp.
+Definition at line 113 of file Level.\-hpp.
 
 \hypertarget{class_level_a2294842a4de2c0fbe9b28a670088b5c4}{\index{Level@{Level}!mp\-Tile\-Map@{mp\-Tile\-Map}}
 \index{mp\-Tile\-Map@{mp\-Tile\-Map}!Level@{Level}}
 \subsubsection[{mp\-Tile\-Map}]{\setlength{\rightskip}{0pt plus 5cm}unique\-\_\-ptr$<$ {\bf Tile\-Map} $>$ Level\-::mp\-Tile\-Map\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_level_a2294842a4de2c0fbe9b28a670088b5c4}
 
 
-Definition at line 65 of file Level.\-hpp.
+Definition at line 112 of file Level.\-hpp.
 
 \hypertarget{class_level_a17bf54432fa53317ab5d7ffffbfdec6f}{\index{Level@{Level}!m\-Textures@{m\-Textures}}
 \index{m\-Textures@{m\-Textures}!Level@{Level}}
 \subsubsection[{m\-Textures}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Resource\-Manager}$<$sf\-::\-Texture$>$ Level\-::m\-Textures\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_level_a17bf54432fa53317ab5d7ffffbfdec6f}
 
 
-Definition at line 63 of file Level.\-hpp.
+Definition at line 110 of file Level.\-hpp.
 
 
 
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-Source/\hyperlink{_level_8hpp}{Level.\-hpp}\item 
-Source/\hyperlink{_level_8cpp}{Level.\-cpp}\end{DoxyCompactItemize}
+/home/lee/\-Projects/\-Sudden\-Awakening/\-Source/\hyperlink{_level_8hpp}{Level.\-hpp}\item 
+/home/lee/\-Projects/\-Sudden\-Awakening/\-Source/\hyperlink{_level_8cpp}{Level.\-cpp}\end{DoxyCompactItemize}

@@ -1,5 +1,5 @@
-\hypertarget{_string_utilities_8hpp}{\section{Source/\-String\-Utilities.hpp File Reference}
-\label{_string_utilities_8hpp}\index{Source/\-String\-Utilities.\-hpp@{Source/\-String\-Utilities.\-hpp}}
+\hypertarget{_string_utilities_8hpp}{\section{/home/lee/\-Projects/\-Sudden\-Awakening/\-Source/\-String\-Utilities.hpp File Reference}
+\label{_string_utilities_8hpp}\index{/home/lee/\-Projects/\-Sudden\-Awakening/\-Source/\-String\-Utilities.\-hpp@{/home/lee/\-Projects/\-Sudden\-Awakening/\-Source/\-String\-Utilities.\-hpp}}
 }
 {\ttfamily \#include $<$string$>$}\\*
 \subsection*{Macros}
@@ -11,9 +11,9 @@
 \begin{DoxyCompactItemize}
 \item 
 string \& \hyperlink{_string_utilities_8hpp_a4a695277a97a5728265060692c0e9878}{To\-Platform\-Path} (string \&str)
-\item 
+\begin{DoxyCompactList}\small\item\em To\-Platform\-Path ensures the file name and paths are in the correct format, supports / and \textbackslash{} slashes. \end{DoxyCompactList}\item 
 void \hyperlink{_string_utilities_8hpp_a6e488061940aec63c5eea1c3bf440be8}{Strip\-Path} (std\-::string \&file\-Name)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Strip\-Path removes the path information ( folders ), and leaves the file name and extension ( if any ). \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Macro Definition Documentation}
@@ -36,6 +36,15 @@ Definition at line 4 of file String\-Utilities.\-hpp.
 )}}\label{_string_utilities_8hpp_a6e488061940aec63c5eea1c3bf440be8}
 
 
+Strip\-Path removes the path information ( folders ), and leaves the file name and extension ( if any ). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\-Name} & The file to strip the path from. \\
+\hline
+\end{DoxyParams}
+
+
 Definition at line 27 of file String\-Utilities.\-cpp.
 
 \hypertarget{_string_utilities_8hpp_a4a695277a97a5728265060692c0e9878}{\index{String\-Utilities.\-hpp@{String\-Utilities.\-hpp}!To\-Platform\-Path@{To\-Platform\-Path}}
@@ -45,6 +54,18 @@ Definition at line 27 of file String\-Utilities.\-cpp.
 \item[{string \&}]{str}
 \end{DoxyParamCaption}
 )}}\label{_string_utilities_8hpp_a4a695277a97a5728265060692c0e9878}
+
+
+To\-Platform\-Path ensures the file name and paths are in the correct format, supports / and \textbackslash{} slashes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & The file name and path to change. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The file name and path, which is now platform correct. 
+\end{DoxyReturn}
 
 
 Definition at line 3 of file String\-Utilities.\-cpp.
