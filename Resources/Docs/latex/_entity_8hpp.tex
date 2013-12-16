@@ -1,0 +1,75 @@
+\hypertarget{_entity_8hpp}{\section{Source/\-Entity.hpp File Reference}
+\label{_entity_8hpp}\index{Source/\-Entity.\-hpp@{Source/\-Entity.\-hpp}}
+}
+{\ttfamily \#include \char`\"{}Game.\-hpp\char`\"{}}\\*
+{\ttfamily \#include $<$memory$>$}\\*
+{\ttfamily \#include \char`\"{}S\-F\-M\-L/\-System/\-Vector2.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\-F\-M\-L/\-Graphics/\-Rect.\-hpp\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_entity}{Entity}
+\begin{DoxyCompactList}\small\item\em The \hyperlink{class_entity}{Entity} class, represents a basic entity that exists in the 2d world. \end{DoxyCompactList}\item 
+class \hyperlink{class_animated_entity}{Animated\-Entity}
+\begin{DoxyCompactList}\small\item\em The \hyperlink{class_animated_entity}{Animated\-Entity} class, unfinished, maybe not used and/or deleted later. \end{DoxyCompactList}\item 
+class \hyperlink{class_player}{Player}
+\begin{DoxyCompactList}\small\item\em The \hyperlink{class_player}{Player} class, is the class that holds the data for the player. \end{DoxyCompactList}\item 
+class \hyperlink{class_map_entity}{Map\-Entity}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacesf}{sf}
+\end{DoxyCompactItemize}
+\subsection*{Constant Groups}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacesf}{sf}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_entity_8hpp_a89266e28a97ce0806eeabefa2677cb51}{E\-N\-T\-I\-T\-Y\-\_\-\-H\-P\-P}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{_entity_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}{Direction} \{ \hyperlink{_entity_8hpp_a224b9163917ac32fc95a60d8c1eec3aaa258f49887ef8d14ac268c92b02503aaa}{Direction\-::\-Up} = 0, 
+\hyperlink{_entity_8hpp_a224b9163917ac32fc95a60d8c1eec3aaa08a38277b0309070706f6652eeae9a53}{Direction\-::\-Down}, 
+\hyperlink{_entity_8hpp_a224b9163917ac32fc95a60d8c1eec3aaa945d5e233cf7d6240f6b783b36a374ff}{Direction\-::\-Left}, 
+\hyperlink{_entity_8hpp_a224b9163917ac32fc95a60d8c1eec3aaa92b09c7c48c520c3c55e497875da437c}{Direction\-::\-Right}
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{_entity_8hpp_a89266e28a97ce0806eeabefa2677cb51}{\index{Entity.\-hpp@{Entity.\-hpp}!E\-N\-T\-I\-T\-Y\-\_\-\-H\-P\-P@{E\-N\-T\-I\-T\-Y\-\_\-\-H\-P\-P}}
+\index{E\-N\-T\-I\-T\-Y\-\_\-\-H\-P\-P@{E\-N\-T\-I\-T\-Y\-\_\-\-H\-P\-P}!Entity.hpp@{Entity.\-hpp}}
+\subsubsection[{E\-N\-T\-I\-T\-Y\-\_\-\-H\-P\-P}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-N\-T\-I\-T\-Y\-\_\-\-H\-P\-P}}\label{_entity_8hpp_a89266e28a97ce0806eeabefa2677cb51}
+
+
+Definition at line 4 of file Entity.\-hpp.
+
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{_entity_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}{\index{Entity.\-hpp@{Entity.\-hpp}!Direction@{Direction}}
+\index{Direction@{Direction}!Entity.hpp@{Entity.\-hpp}}
+\subsubsection[{Direction}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Direction}\hspace{0.3cm}{\ttfamily [strong]}}}\label{_entity_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Up@{Up}!Entity.\-hpp@{Entity.\-hpp}}\index{Entity.\-hpp@{Entity.\-hpp}!Up@{Up}}\item[{\em 
+\hypertarget{_entity_8hpp_a224b9163917ac32fc95a60d8c1eec3aaa258f49887ef8d14ac268c92b02503aaa}{Up}\label{_entity_8hpp_a224b9163917ac32fc95a60d8c1eec3aaa258f49887ef8d14ac268c92b02503aaa}
+}]\index{Down@{Down}!Entity.\-hpp@{Entity.\-hpp}}\index{Entity.\-hpp@{Entity.\-hpp}!Down@{Down}}\item[{\em 
+\hypertarget{_entity_8hpp_a224b9163917ac32fc95a60d8c1eec3aaa08a38277b0309070706f6652eeae9a53}{Down}\label{_entity_8hpp_a224b9163917ac32fc95a60d8c1eec3aaa08a38277b0309070706f6652eeae9a53}
+}]\index{Left@{Left}!Entity.\-hpp@{Entity.\-hpp}}\index{Entity.\-hpp@{Entity.\-hpp}!Left@{Left}}\item[{\em 
+\hypertarget{_entity_8hpp_a224b9163917ac32fc95a60d8c1eec3aaa945d5e233cf7d6240f6b783b36a374ff}{Left}\label{_entity_8hpp_a224b9163917ac32fc95a60d8c1eec3aaa945d5e233cf7d6240f6b783b36a374ff}
+}]\index{Right@{Right}!Entity.\-hpp@{Entity.\-hpp}}\index{Entity.\-hpp@{Entity.\-hpp}!Right@{Right}}\item[{\em 
+\hypertarget{_entity_8hpp_a224b9163917ac32fc95a60d8c1eec3aaa92b09c7c48c520c3c55e497875da437c}{Right}\label{_entity_8hpp_a224b9163917ac32fc95a60d8c1eec3aaa92b09c7c48c520c3c55e497875da437c}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 119 of file Entity.\-hpp.
+

@@ -1,0 +1,261 @@
+\hypertarget{class_tile_map_set}{\section{Tile\-Map\-Set Class Reference}
+\label{class_tile_map_set}\index{Tile\-Map\-Set@{Tile\-Map\-Set}}
+}
+
+
+{\ttfamily \#include $<$Tile\-Map.\-hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tile_map_set_a34d33c801d9c62d9c95049c270e83002}{Tile\-Map\-Set} (const std\-::string \&tex\-File, unsigned int first\-Gid, const std\-::string \&tile\-Set\-Name, unsigned int tile\-Width\-Size, unsigned int tile\-Height\-Size, unsigned int image\-Width\-Size, unsigned int image\-Height\-Size)
+\item 
+unsigned int \hyperlink{class_tile_map_set_a510130a6caf01a72483600ce6497a2b3}{Get\-First\-Gid} () const 
+\item 
+unsigned int \hyperlink{class_tile_map_set_a31f0031164701fe7d98dc7683e6c35f5}{Get\-Width\-Count} () const 
+\item 
+unsigned int \hyperlink{class_tile_map_set_a33bf48147ee5eb77efbfd45da82f60ee}{Get\-Height\-Count} () const 
+\item 
+void \hyperlink{class_tile_map_set_a9c14b329f61709654953c7978065778a}{Set\-Index\-Collidable} (int index)
+\item 
+int \hyperlink{class_tile_map_set_ad3aa4aadee0b9686dc7a03beb7604203}{Get\-Index\-Collidable} () const 
+\item 
+void \hyperlink{class_tile_map_set_a477cc5c81ce119e7611270448dbe73fa}{Set\-Index\-Spawnable} (int index)
+\item 
+int \hyperlink{class_tile_map_set_aaedc48df137fa504bf4911e6cf31e63a}{Get\-Index\-Spawnable} () const 
+\item 
+sf\-::\-Texture \& \hyperlink{class_tile_map_set_a903f3babc3298ec0d91208cb1a0a476a}{Get\-Texture} () const 
+\item 
+sf\-::\-Int\-Rect \hyperlink{class_tile_map_set_a3ffb31b962f96260211537f5c8256db3}{Get\-Texture\-Rect} (unsigned int gid) const 
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{class_tile_map_set_aa30770be0b41115d5267c288c980d967}{m\-First\-Gid}
+\item 
+string \hyperlink{class_tile_map_set_a355b36e8f407752bd128b2a7d8babbba}{m\-Tile\-Set\-Name}
+\item 
+unsigned int \hyperlink{class_tile_map_set_ad1dee478b0dd00ff72a6635fd068b8cb}{m\-Tile\-Width\-Size}
+\item 
+unsigned int \hyperlink{class_tile_map_set_aa4620605087a8738afdfa4ef3e5fad99}{m\-Tile\-Height\-Size}
+\item 
+unsigned int \hyperlink{class_tile_map_set_ad70411018be2b8ce950e00b70020c703}{m\-Image\-Width\-Size}
+\item 
+unsigned int \hyperlink{class_tile_map_set_abf6e23ffe5ce47b8d25bd7e24e8bf386}{m\-Image\-Height\-Size}
+\item 
+unsigned int \hyperlink{class_tile_map_set_a53e0c59bfbd6285e0b0ca8f79a4af02c}{m\-Tile\-Width\-Count}
+\item 
+unsigned int \hyperlink{class_tile_map_set_a6bd7b84fef3fdd9fb1312e256ec55b4a}{m\-Tile\-Height\-Count}
+\item 
+int \hyperlink{class_tile_map_set_a02448f7bf82af58a2b660b7c4811479d}{m\-Index\-Collidable}
+\item 
+int \hyperlink{class_tile_map_set_abdcf3d4f5e9d82aeba620a7358068a42}{m\-Index\-Spawn}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 93 of file Tile\-Map.\-hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_tile_map_set_a34d33c801d9c62d9c95049c270e83002}{\index{Tile\-Map\-Set@{Tile\-Map\-Set}!Tile\-Map\-Set@{Tile\-Map\-Set}}
+\index{Tile\-Map\-Set@{Tile\-Map\-Set}!TileMapSet@{Tile\-Map\-Set}}
+\subsubsection[{Tile\-Map\-Set}]{\setlength{\rightskip}{0pt plus 5cm}Tile\-Map\-Set\-::\-Tile\-Map\-Set (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{tex\-File, }
+\item[{unsigned int}]{first\-Gid, }
+\item[{const std\-::string \&}]{tile\-Set\-Name, }
+\item[{unsigned int}]{tile\-Width\-Size, }
+\item[{unsigned int}]{tile\-Height\-Size, }
+\item[{unsigned int}]{image\-Width\-Size, }
+\item[{unsigned int}]{image\-Height\-Size}
+\end{DoxyParamCaption}
+)}}\label{class_tile_map_set_a34d33c801d9c62d9c95049c270e83002}
+
+
+Definition at line 452 of file Tile\-Map.\-cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_tile_map_set_a510130a6caf01a72483600ce6497a2b3}{\index{Tile\-Map\-Set@{Tile\-Map\-Set}!Get\-First\-Gid@{Get\-First\-Gid}}
+\index{Get\-First\-Gid@{Get\-First\-Gid}!TileMapSet@{Tile\-Map\-Set}}
+\subsubsection[{Get\-First\-Gid}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Tile\-Map\-Set\-::\-Get\-First\-Gid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_tile_map_set_a510130a6caf01a72483600ce6497a2b3}
+
+
+Definition at line 472 of file Tile\-Map.\-cpp.
+
+\hypertarget{class_tile_map_set_a33bf48147ee5eb77efbfd45da82f60ee}{\index{Tile\-Map\-Set@{Tile\-Map\-Set}!Get\-Height\-Count@{Get\-Height\-Count}}
+\index{Get\-Height\-Count@{Get\-Height\-Count}!TileMapSet@{Tile\-Map\-Set}}
+\subsubsection[{Get\-Height\-Count}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Tile\-Map\-Set\-::\-Get\-Height\-Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_tile_map_set_a33bf48147ee5eb77efbfd45da82f60ee}
+
+
+Definition at line 482 of file Tile\-Map.\-cpp.
+
+\hypertarget{class_tile_map_set_ad3aa4aadee0b9686dc7a03beb7604203}{\index{Tile\-Map\-Set@{Tile\-Map\-Set}!Get\-Index\-Collidable@{Get\-Index\-Collidable}}
+\index{Get\-Index\-Collidable@{Get\-Index\-Collidable}!TileMapSet@{Tile\-Map\-Set}}
+\subsubsection[{Get\-Index\-Collidable}]{\setlength{\rightskip}{0pt plus 5cm}int Tile\-Map\-Set\-::\-Get\-Index\-Collidable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_tile_map_set_ad3aa4aadee0b9686dc7a03beb7604203}
+
+
+Definition at line 492 of file Tile\-Map.\-cpp.
+
+\hypertarget{class_tile_map_set_aaedc48df137fa504bf4911e6cf31e63a}{\index{Tile\-Map\-Set@{Tile\-Map\-Set}!Get\-Index\-Spawnable@{Get\-Index\-Spawnable}}
+\index{Get\-Index\-Spawnable@{Get\-Index\-Spawnable}!TileMapSet@{Tile\-Map\-Set}}
+\subsubsection[{Get\-Index\-Spawnable}]{\setlength{\rightskip}{0pt plus 5cm}int Tile\-Map\-Set\-::\-Get\-Index\-Spawnable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_tile_map_set_aaedc48df137fa504bf4911e6cf31e63a}
+
+
+Definition at line 502 of file Tile\-Map.\-cpp.
+
+\hypertarget{class_tile_map_set_a903f3babc3298ec0d91208cb1a0a476a}{\index{Tile\-Map\-Set@{Tile\-Map\-Set}!Get\-Texture@{Get\-Texture}}
+\index{Get\-Texture@{Get\-Texture}!TileMapSet@{Tile\-Map\-Set}}
+\subsubsection[{Get\-Texture}]{\setlength{\rightskip}{0pt plus 5cm}sf\-::\-Texture \& Tile\-Map\-Set\-::\-Get\-Texture (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_tile_map_set_a903f3babc3298ec0d91208cb1a0a476a}
+
+
+Definition at line 507 of file Tile\-Map.\-cpp.
+
+\hypertarget{class_tile_map_set_a3ffb31b962f96260211537f5c8256db3}{\index{Tile\-Map\-Set@{Tile\-Map\-Set}!Get\-Texture\-Rect@{Get\-Texture\-Rect}}
+\index{Get\-Texture\-Rect@{Get\-Texture\-Rect}!TileMapSet@{Tile\-Map\-Set}}
+\subsubsection[{Get\-Texture\-Rect}]{\setlength{\rightskip}{0pt plus 5cm}sf\-::\-Int\-Rect Tile\-Map\-Set\-::\-Get\-Texture\-Rect (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{gid}
+\end{DoxyParamCaption}
+) const}}\label{class_tile_map_set_a3ffb31b962f96260211537f5c8256db3}
+
+
+Definition at line 512 of file Tile\-Map.\-cpp.
+
+\hypertarget{class_tile_map_set_a31f0031164701fe7d98dc7683e6c35f5}{\index{Tile\-Map\-Set@{Tile\-Map\-Set}!Get\-Width\-Count@{Get\-Width\-Count}}
+\index{Get\-Width\-Count@{Get\-Width\-Count}!TileMapSet@{Tile\-Map\-Set}}
+\subsubsection[{Get\-Width\-Count}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Tile\-Map\-Set\-::\-Get\-Width\-Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_tile_map_set_a31f0031164701fe7d98dc7683e6c35f5}
+
+
+Definition at line 477 of file Tile\-Map.\-cpp.
+
+\hypertarget{class_tile_map_set_a9c14b329f61709654953c7978065778a}{\index{Tile\-Map\-Set@{Tile\-Map\-Set}!Set\-Index\-Collidable@{Set\-Index\-Collidable}}
+\index{Set\-Index\-Collidable@{Set\-Index\-Collidable}!TileMapSet@{Tile\-Map\-Set}}
+\subsubsection[{Set\-Index\-Collidable}]{\setlength{\rightskip}{0pt plus 5cm}void Tile\-Map\-Set\-::\-Set\-Index\-Collidable (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}}\label{class_tile_map_set_a9c14b329f61709654953c7978065778a}
+
+
+Definition at line 487 of file Tile\-Map.\-cpp.
+
+\hypertarget{class_tile_map_set_a477cc5c81ce119e7611270448dbe73fa}{\index{Tile\-Map\-Set@{Tile\-Map\-Set}!Set\-Index\-Spawnable@{Set\-Index\-Spawnable}}
+\index{Set\-Index\-Spawnable@{Set\-Index\-Spawnable}!TileMapSet@{Tile\-Map\-Set}}
+\subsubsection[{Set\-Index\-Spawnable}]{\setlength{\rightskip}{0pt plus 5cm}void Tile\-Map\-Set\-::\-Set\-Index\-Spawnable (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}}\label{class_tile_map_set_a477cc5c81ce119e7611270448dbe73fa}
+
+
+Definition at line 497 of file Tile\-Map.\-cpp.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_tile_map_set_aa30770be0b41115d5267c288c980d967}{\index{Tile\-Map\-Set@{Tile\-Map\-Set}!m\-First\-Gid@{m\-First\-Gid}}
+\index{m\-First\-Gid@{m\-First\-Gid}!TileMapSet@{Tile\-Map\-Set}}
+\subsubsection[{m\-First\-Gid}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Tile\-Map\-Set\-::m\-First\-Gid\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tile_map_set_aa30770be0b41115d5267c288c980d967}
+
+
+Definition at line 115 of file Tile\-Map.\-hpp.
+
+\hypertarget{class_tile_map_set_abf6e23ffe5ce47b8d25bd7e24e8bf386}{\index{Tile\-Map\-Set@{Tile\-Map\-Set}!m\-Image\-Height\-Size@{m\-Image\-Height\-Size}}
+\index{m\-Image\-Height\-Size@{m\-Image\-Height\-Size}!TileMapSet@{Tile\-Map\-Set}}
+\subsubsection[{m\-Image\-Height\-Size}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Tile\-Map\-Set\-::m\-Image\-Height\-Size\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tile_map_set_abf6e23ffe5ce47b8d25bd7e24e8bf386}
+
+
+Definition at line 123 of file Tile\-Map.\-hpp.
+
+\hypertarget{class_tile_map_set_ad70411018be2b8ce950e00b70020c703}{\index{Tile\-Map\-Set@{Tile\-Map\-Set}!m\-Image\-Width\-Size@{m\-Image\-Width\-Size}}
+\index{m\-Image\-Width\-Size@{m\-Image\-Width\-Size}!TileMapSet@{Tile\-Map\-Set}}
+\subsubsection[{m\-Image\-Width\-Size}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Tile\-Map\-Set\-::m\-Image\-Width\-Size\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tile_map_set_ad70411018be2b8ce950e00b70020c703}
+
+
+Definition at line 122 of file Tile\-Map.\-hpp.
+
+\hypertarget{class_tile_map_set_a02448f7bf82af58a2b660b7c4811479d}{\index{Tile\-Map\-Set@{Tile\-Map\-Set}!m\-Index\-Collidable@{m\-Index\-Collidable}}
+\index{m\-Index\-Collidable@{m\-Index\-Collidable}!TileMapSet@{Tile\-Map\-Set}}
+\subsubsection[{m\-Index\-Collidable}]{\setlength{\rightskip}{0pt plus 5cm}int Tile\-Map\-Set\-::m\-Index\-Collidable\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tile_map_set_a02448f7bf82af58a2b660b7c4811479d}
+
+
+Definition at line 128 of file Tile\-Map.\-hpp.
+
+\hypertarget{class_tile_map_set_abdcf3d4f5e9d82aeba620a7358068a42}{\index{Tile\-Map\-Set@{Tile\-Map\-Set}!m\-Index\-Spawn@{m\-Index\-Spawn}}
+\index{m\-Index\-Spawn@{m\-Index\-Spawn}!TileMapSet@{Tile\-Map\-Set}}
+\subsubsection[{m\-Index\-Spawn}]{\setlength{\rightskip}{0pt plus 5cm}int Tile\-Map\-Set\-::m\-Index\-Spawn\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tile_map_set_abdcf3d4f5e9d82aeba620a7358068a42}
+
+
+Definition at line 129 of file Tile\-Map.\-hpp.
+
+\hypertarget{class_tile_map_set_a6bd7b84fef3fdd9fb1312e256ec55b4a}{\index{Tile\-Map\-Set@{Tile\-Map\-Set}!m\-Tile\-Height\-Count@{m\-Tile\-Height\-Count}}
+\index{m\-Tile\-Height\-Count@{m\-Tile\-Height\-Count}!TileMapSet@{Tile\-Map\-Set}}
+\subsubsection[{m\-Tile\-Height\-Count}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Tile\-Map\-Set\-::m\-Tile\-Height\-Count\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tile_map_set_a6bd7b84fef3fdd9fb1312e256ec55b4a}
+
+
+Definition at line 126 of file Tile\-Map.\-hpp.
+
+\hypertarget{class_tile_map_set_aa4620605087a8738afdfa4ef3e5fad99}{\index{Tile\-Map\-Set@{Tile\-Map\-Set}!m\-Tile\-Height\-Size@{m\-Tile\-Height\-Size}}
+\index{m\-Tile\-Height\-Size@{m\-Tile\-Height\-Size}!TileMapSet@{Tile\-Map\-Set}}
+\subsubsection[{m\-Tile\-Height\-Size}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Tile\-Map\-Set\-::m\-Tile\-Height\-Size\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tile_map_set_aa4620605087a8738afdfa4ef3e5fad99}
+
+
+Definition at line 120 of file Tile\-Map.\-hpp.
+
+\hypertarget{class_tile_map_set_a355b36e8f407752bd128b2a7d8babbba}{\index{Tile\-Map\-Set@{Tile\-Map\-Set}!m\-Tile\-Set\-Name@{m\-Tile\-Set\-Name}}
+\index{m\-Tile\-Set\-Name@{m\-Tile\-Set\-Name}!TileMapSet@{Tile\-Map\-Set}}
+\subsubsection[{m\-Tile\-Set\-Name}]{\setlength{\rightskip}{0pt plus 5cm}string Tile\-Map\-Set\-::m\-Tile\-Set\-Name\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tile_map_set_a355b36e8f407752bd128b2a7d8babbba}
+
+
+Definition at line 117 of file Tile\-Map.\-hpp.
+
+\hypertarget{class_tile_map_set_a53e0c59bfbd6285e0b0ca8f79a4af02c}{\index{Tile\-Map\-Set@{Tile\-Map\-Set}!m\-Tile\-Width\-Count@{m\-Tile\-Width\-Count}}
+\index{m\-Tile\-Width\-Count@{m\-Tile\-Width\-Count}!TileMapSet@{Tile\-Map\-Set}}
+\subsubsection[{m\-Tile\-Width\-Count}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Tile\-Map\-Set\-::m\-Tile\-Width\-Count\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tile_map_set_a53e0c59bfbd6285e0b0ca8f79a4af02c}
+
+
+Definition at line 125 of file Tile\-Map.\-hpp.
+
+\hypertarget{class_tile_map_set_ad1dee478b0dd00ff72a6635fd068b8cb}{\index{Tile\-Map\-Set@{Tile\-Map\-Set}!m\-Tile\-Width\-Size@{m\-Tile\-Width\-Size}}
+\index{m\-Tile\-Width\-Size@{m\-Tile\-Width\-Size}!TileMapSet@{Tile\-Map\-Set}}
+\subsubsection[{m\-Tile\-Width\-Size}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Tile\-Map\-Set\-::m\-Tile\-Width\-Size\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tile_map_set_ad1dee478b0dd00ff72a6635fd068b8cb}
+
+
+Definition at line 119 of file Tile\-Map.\-hpp.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Source/\hyperlink{_tile_map_8hpp}{Tile\-Map.\-hpp}\item 
+Source/\hyperlink{_tile_map_8cpp}{Tile\-Map.\-cpp}\end{DoxyCompactItemize}

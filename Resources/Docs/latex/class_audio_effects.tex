@@ -1,0 +1,126 @@
+\hypertarget{class_audio_effects}{\section{Audio\-Effects Class Reference}
+\label{class_audio_effects}\index{Audio\-Effects@{Audio\-Effects}}
+}
+
+
+The \hyperlink{class_audio_effects}{Audio\-Effects} class.  
+
+
+
+
+{\ttfamily \#include $<$Audio\-Effects.\-hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_audio_effects_a22b61ed4ae1964a3e7803280220fd0e4}{Audio\-Effects} ()
+\item 
+bool \hyperlink{class_audio_effects_abdcd1e6bd73b10ed07433ad8fa73b00d}{Load\-Buffer} (const string \&file, \hyperlink{_audio_effects_8hpp_ae425ddce7a5b8a70e26b9f985aec4a20}{Audio\-I\-D} audio\-I\-D)
+\begin{DoxyCompactList}\small\item\em Load\-Buffer is where you load a sound file into memory. \end{DoxyCompactList}\item 
+weak\-\_\-ptr$<$ sf\-::\-Sound $>$ \hyperlink{class_audio_effects_aafa468b82acca3e9706c049ced67ad7f}{Play\-Sound} (\hyperlink{_audio_effects_8hpp_ae425ddce7a5b8a70e26b9f985aec4a20}{Audio\-I\-D} audio\-I\-D)
+\item 
+void \hyperlink{class_audio_effects_a6438b2debf1de6520ac2f278d4867a9a}{Update} ()
+\begin{DoxyCompactList}\small\item\em Update removes ended sounds from open\-A\-L. \end{DoxyCompactList}\item 
+void \hyperlink{class_audio_effects_adb816ed41858558299a6554a0c2b3053}{Clear\-All} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_audio_effects}{Audio\-Effects} class. 
+
+This class manages sound buffers and effects that are in use by open\-A\-L.
+
+You can load audio files and associate them with an int I\-D.
+
+When a file is successfully loaded it you may play an instance of that sound by calling, Play\-Sound( I\-D ), which returns a weak\-\_\-ptr$<$sf\-::\-Sound$>$ so you may modify its attributes such as position. It is safe to hold onto the weak\-\_\-ptr but don't hold onto a shared\-\_\-ptr from it.
+
+Sounds that have played through the entire buffer are ended. They will be removed automatically. 
+
+Definition at line 39 of file Audio\-Effects.\-hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_audio_effects_a22b61ed4ae1964a3e7803280220fd0e4}{\index{Audio\-Effects@{Audio\-Effects}!Audio\-Effects@{Audio\-Effects}}
+\index{Audio\-Effects@{Audio\-Effects}!AudioEffects@{Audio\-Effects}}
+\subsubsection[{Audio\-Effects}]{\setlength{\rightskip}{0pt plus 5cm}Audio\-Effects\-::\-Audio\-Effects (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_audio_effects_a22b61ed4ae1964a3e7803280220fd0e4}
+
+
+Definition at line 8 of file Audio\-Effects.\-cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_audio_effects_adb816ed41858558299a6554a0c2b3053}{\index{Audio\-Effects@{Audio\-Effects}!Clear\-All@{Clear\-All}}
+\index{Clear\-All@{Clear\-All}!AudioEffects@{Audio\-Effects}}
+\subsubsection[{Clear\-All}]{\setlength{\rightskip}{0pt plus 5cm}void Audio\-Effects\-::\-Clear\-All (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_audio_effects_adb816ed41858558299a6554a0c2b3053}
+
+
+Definition at line 81 of file Audio\-Effects.\-cpp.
+
+\hypertarget{class_audio_effects_abdcd1e6bd73b10ed07433ad8fa73b00d}{\index{Audio\-Effects@{Audio\-Effects}!Load\-Buffer@{Load\-Buffer}}
+\index{Load\-Buffer@{Load\-Buffer}!AudioEffects@{Audio\-Effects}}
+\subsubsection[{Load\-Buffer}]{\setlength{\rightskip}{0pt plus 5cm}bool Audio\-Effects\-::\-Load\-Buffer (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{file, }
+\item[{{\bf Audio\-I\-D}}]{audio\-I\-D}
+\end{DoxyParamCaption}
+)}}\label{class_audio_effects_abdcd1e6bd73b10ed07433ad8fa73b00d}
+
+
+Load\-Buffer is where you load a sound file into memory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The file name and path to load. \\
+\hline
+{\em audio\-I\-D} & The int I\-D to associate with this audio file. Should be used to play the sound. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value to indicate if the file loaded successfully. 
+\end{DoxyReturn}
+
+
+Definition at line 29 of file Audio\-Effects.\-cpp.
+
+\hypertarget{class_audio_effects_aafa468b82acca3e9706c049ced67ad7f}{\index{Audio\-Effects@{Audio\-Effects}!Play\-Sound@{Play\-Sound}}
+\index{Play\-Sound@{Play\-Sound}!AudioEffects@{Audio\-Effects}}
+\subsubsection[{Play\-Sound}]{\setlength{\rightskip}{0pt plus 5cm}weak\-\_\-ptr$<$ sf\-::\-Sound $>$ Audio\-Effects\-::\-Play\-Sound (
+\begin{DoxyParamCaption}
+\item[{{\bf Audio\-I\-D}}]{audio\-I\-D}
+\end{DoxyParamCaption}
+)}}\label{class_audio_effects_aafa468b82acca3e9706c049ced67ad7f}
+
+
+Definition at line 52 of file Audio\-Effects.\-cpp.
+
+\hypertarget{class_audio_effects_a6438b2debf1de6520ac2f278d4867a9a}{\index{Audio\-Effects@{Audio\-Effects}!Update@{Update}}
+\index{Update@{Update}!AudioEffects@{Audio\-Effects}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}void Audio\-Effects\-::\-Update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_audio_effects_a6438b2debf1de6520ac2f278d4867a9a}
+
+
+Update removes ended sounds from open\-A\-L. 
+
+
+
+Definition at line 13 of file Audio\-Effects.\-cpp.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Source/\hyperlink{_audio_effects_8hpp}{Audio\-Effects.\-hpp}\item 
+Source/\hyperlink{_audio_effects_8cpp}{Audio\-Effects.\-cpp}\end{DoxyCompactItemize}

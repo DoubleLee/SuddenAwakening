@@ -1,0 +1,405 @@
+\hypertarget{class_player}{\section{Player Class Reference}
+\label{class_player}\index{Player@{Player}}
+}
+
+
+The \hyperlink{class_player}{Player} class, is the class that holds the data for the player.  
+
+
+
+
+{\ttfamily \#include $<$Entity.\-hpp$>$}
+
+Inheritance diagram for Player\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_player}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_player_a154b6b768b9a1541d29873affd36af85}{Player} (const sf\-::\-Texture \&texture, const sf\-::\-Vector2f \&pos)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_player}{Player} ctor. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_player_a749d2c00e1fe0f5c2746f7505a58c062}{$\sim$\-Player} ()
+\begin{DoxyCompactList}\small\item\em $\sim$\-Player virtual call to dtor. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_player_a05b60cac1922c5be5c1be16baffa4497}{Update} ()
+\begin{DoxyCompactList}\small\item\em Update, currently empty. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_player_aee32aba0a12ace035c1fc0f3acfa31ca}{Update\-Controls} ()
+\begin{DoxyCompactList}\small\item\em Update\-Controls is empty, code moved to \hyperlink{class_level}{Level} class. \end{DoxyCompactList}\item 
+int \hyperlink{class_player_a63b37d8526ab108d420f59daa8b456ab}{Get\-X\-Coord} () const 
+\begin{DoxyCompactList}\small\item\em Get\-X\-Coord getter for the x coordinate of the current frame. \end{DoxyCompactList}\item 
+void \hyperlink{class_player_a171909ce2bc5ad4ed7bd1e329818f1cb}{Set\-X\-Coord} (int x\-Coord)
+\begin{DoxyCompactList}\small\item\em Set\-X\-Coord setter for the x coordinate of the current frame. \end{DoxyCompactList}\item 
+int \hyperlink{class_player_a7ea86222c187ffc350e4948e3d82459e}{Get\-Y\-Coord} () const 
+\begin{DoxyCompactList}\small\item\em Get\-Y\-Coord getter for the y coordinate of the current frame. \end{DoxyCompactList}\item 
+void \hyperlink{class_player_ae2b9268a010501d169798c201be0aea0}{Set\-Y\-Coord} (int y\-Coord)
+\begin{DoxyCompactList}\small\item\em Set\-Y\-Coord. \end{DoxyCompactList}\item 
+int \hyperlink{class_player_a0b6c9a9030fe30e04bd00f423d617b72}{Get\-X\-Direction} () const 
+\begin{DoxyCompactList}\small\item\em Get\-X\-Direction getter for the direction of the animation either +-\/ 1 to indicate direction. \end{DoxyCompactList}\item 
+void \hyperlink{class_player_ad1d525ce156cc87325d671faa537c644}{Set\-X\-Direction} (int x\-Direction)
+\begin{DoxyCompactList}\small\item\em Set\-X\-Direction setter for the direction of the animation either +-\/ 1 to indicate direction. \end{DoxyCompactList}\item 
+int \hyperlink{class_player_afd3cdd13b6de01c1a52ce47a5871df65}{Get\-Texture\-Sheet\-Width} () const 
+\begin{DoxyCompactList}\small\item\em Get\-Texture\-Sheet\-Width getter for the texture sheets width. \end{DoxyCompactList}\item 
+int \hyperlink{class_player_adbce7ab22e580ba85cd9a3fddac9695f}{Get\-Texture\-Sheet\-Height} () const 
+\begin{DoxyCompactList}\small\item\em Get\-Texture\-Sheet\-Height getter for the texture sheets height. \end{DoxyCompactList}\item 
+\hyperlink{_game_8hpp_a332b72dfb4bc8b4c16b8dc43864fe343}{Time\-Int} \hyperlink{class_player_a8cf47bf652a24ea4826c04810251e332}{Get\-Next\-Frame\-Trigger} () const 
+\begin{DoxyCompactList}\small\item\em Get\-Next\-Frame\-Trigger get the time until the next frame should be displayed. \end{DoxyCompactList}\item 
+void \hyperlink{class_player_a34ee83b70e69a08c2f397a05ab6421b9}{Set\-Next\-Frame\-Trigger} (\hyperlink{_game_8hpp_a332b72dfb4bc8b4c16b8dc43864fe343}{Time\-Int} trigger)
+\begin{DoxyCompactList}\small\item\em Set\-Next\-Frame\-Trigger setter for the time until the next frame should be displayed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_player_ab5f657ba805e70319fc312533d715d96}{m\-Xcoord}
+\item 
+int \hyperlink{class_player_ab3a89b65abf92da672ebc3c55b22dc80}{m\-Ycoord}
+\item 
+int \hyperlink{class_player_a141ca66b2ec828bb84617b21dc7e9db0}{m\-X\-Direction}
+\item 
+int \hyperlink{class_player_abdccfacdffb3a21371af39dbe0255453}{m\-Texture\-Sheet\-Width}
+\item 
+int \hyperlink{class_player_a9d15c816285b1708e3a93ef41a628263}{m\-Texture\-Sheet\-Height}
+\item 
+int \hyperlink{class_player_a8edce47b376093a95a89c91eee9b253e}{m\-Map\-Tile\-Size}
+\item 
+\hyperlink{_game_8hpp_a332b72dfb4bc8b4c16b8dc43864fe343}{Time\-Int} \hyperlink{class_player_a97ef6ab1b525c97f0e4fdd9ece101b03}{m\-Next\-Frame\-Trigger}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_player}{Player} class, is the class that holds the data for the player. 
+
+It inherits from \hyperlink{class_entity}{Entity}
+
+This class is capable of animating itself. It can be moved around the screen. Other than that not much else functionality.
+
+The animation works by tracking the frames in x and y.
+
+You then multiply the tile size by the coordinate frame. So x\-Coord $\ast$ tile\-Size = position of frame in x on the texture. 
+
+Definition at line 139 of file Entity.\-hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_player_a154b6b768b9a1541d29873affd36af85}{\index{Player@{Player}!Player@{Player}}
+\index{Player@{Player}!Player@{Player}}
+\subsubsection[{Player}]{\setlength{\rightskip}{0pt plus 5cm}Player\-::\-Player (
+\begin{DoxyParamCaption}
+\item[{const sf\-::\-Texture \&}]{texture, }
+\item[{const sf\-::\-Vector2f \&}]{pos}
+\end{DoxyParamCaption}
+)}}\label{class_player_a154b6b768b9a1541d29873affd36af85}
+
+
+\hyperlink{class_player}{Player} ctor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em texture} & The sf\-::\-Texture to use as the players representation. \\
+\hline
+{\em pos} & The initial position of the player. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 97 of file Entity.\-cpp.
+
+\hypertarget{class_player_a749d2c00e1fe0f5c2746f7505a58c062}{\index{Player@{Player}!$\sim$\-Player@{$\sim$\-Player}}
+\index{$\sim$\-Player@{$\sim$\-Player}!Player@{Player}}
+\subsubsection[{$\sim$\-Player}]{\setlength{\rightskip}{0pt plus 5cm}Player\-::$\sim$\-Player (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_player_a749d2c00e1fe0f5c2746f7505a58c062}
+
+
+$\sim$\-Player virtual call to dtor. 
+
+
+
+Definition at line 128 of file Entity.\-cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_player_a8cf47bf652a24ea4826c04810251e332}{\index{Player@{Player}!Get\-Next\-Frame\-Trigger@{Get\-Next\-Frame\-Trigger}}
+\index{Get\-Next\-Frame\-Trigger@{Get\-Next\-Frame\-Trigger}!Player@{Player}}
+\subsubsection[{Get\-Next\-Frame\-Trigger}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Time\-Int} Player\-::\-Get\-Next\-Frame\-Trigger (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_player_a8cf47bf652a24ea4826c04810251e332}
+
+
+Get\-Next\-Frame\-Trigger get the time until the next frame should be displayed. 
+
+\begin{DoxyReturn}{Returns}
+The time until the next frame should be displayed. 
+\end{DoxyReturn}
+
+
+Definition at line 183 of file Entity.\-cpp.
+
+\hypertarget{class_player_adbce7ab22e580ba85cd9a3fddac9695f}{\index{Player@{Player}!Get\-Texture\-Sheet\-Height@{Get\-Texture\-Sheet\-Height}}
+\index{Get\-Texture\-Sheet\-Height@{Get\-Texture\-Sheet\-Height}!Player@{Player}}
+\subsubsection[{Get\-Texture\-Sheet\-Height}]{\setlength{\rightskip}{0pt plus 5cm}int Player\-::\-Get\-Texture\-Sheet\-Height (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_player_adbce7ab22e580ba85cd9a3fddac9695f}
+
+
+Get\-Texture\-Sheet\-Height getter for the texture sheets height. 
+
+\begin{DoxyReturn}{Returns}
+The texture sheets height. 
+\end{DoxyReturn}
+
+
+Definition at line 178 of file Entity.\-cpp.
+
+\hypertarget{class_player_afd3cdd13b6de01c1a52ce47a5871df65}{\index{Player@{Player}!Get\-Texture\-Sheet\-Width@{Get\-Texture\-Sheet\-Width}}
+\index{Get\-Texture\-Sheet\-Width@{Get\-Texture\-Sheet\-Width}!Player@{Player}}
+\subsubsection[{Get\-Texture\-Sheet\-Width}]{\setlength{\rightskip}{0pt plus 5cm}int Player\-::\-Get\-Texture\-Sheet\-Width (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_player_afd3cdd13b6de01c1a52ce47a5871df65}
+
+
+Get\-Texture\-Sheet\-Width getter for the texture sheets width. 
+
+\begin{DoxyReturn}{Returns}
+The texture sheets width. 
+\end{DoxyReturn}
+
+
+Definition at line 173 of file Entity.\-cpp.
+
+\hypertarget{class_player_a63b37d8526ab108d420f59daa8b456ab}{\index{Player@{Player}!Get\-X\-Coord@{Get\-X\-Coord}}
+\index{Get\-X\-Coord@{Get\-X\-Coord}!Player@{Player}}
+\subsubsection[{Get\-X\-Coord}]{\setlength{\rightskip}{0pt plus 5cm}int Player\-::\-Get\-X\-Coord (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_player_a63b37d8526ab108d420f59daa8b456ab}
+
+
+Get\-X\-Coord getter for the x coordinate of the current frame. 
+
+\begin{DoxyReturn}{Returns}
+The current x frame coordinate. 
+\end{DoxyReturn}
+
+
+Definition at line 143 of file Entity.\-cpp.
+
+\hypertarget{class_player_a0b6c9a9030fe30e04bd00f423d617b72}{\index{Player@{Player}!Get\-X\-Direction@{Get\-X\-Direction}}
+\index{Get\-X\-Direction@{Get\-X\-Direction}!Player@{Player}}
+\subsubsection[{Get\-X\-Direction}]{\setlength{\rightskip}{0pt plus 5cm}int Player\-::\-Get\-X\-Direction (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_player_a0b6c9a9030fe30e04bd00f423d617b72}
+
+
+Get\-X\-Direction getter for the direction of the animation either +-\/ 1 to indicate direction. 
+
+\begin{DoxyReturn}{Returns}
+The value to indicate animation direction. 
+\end{DoxyReturn}
+
+
+Definition at line 163 of file Entity.\-cpp.
+
+\hypertarget{class_player_a7ea86222c187ffc350e4948e3d82459e}{\index{Player@{Player}!Get\-Y\-Coord@{Get\-Y\-Coord}}
+\index{Get\-Y\-Coord@{Get\-Y\-Coord}!Player@{Player}}
+\subsubsection[{Get\-Y\-Coord}]{\setlength{\rightskip}{0pt plus 5cm}int Player\-::\-Get\-Y\-Coord (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_player_a7ea86222c187ffc350e4948e3d82459e}
+
+
+Get\-Y\-Coord getter for the y coordinate of the current frame. 
+
+\begin{DoxyReturn}{Returns}
+The current y frame coordinate. 
+\end{DoxyReturn}
+
+
+Definition at line 153 of file Entity.\-cpp.
+
+\hypertarget{class_player_a34ee83b70e69a08c2f397a05ab6421b9}{\index{Player@{Player}!Set\-Next\-Frame\-Trigger@{Set\-Next\-Frame\-Trigger}}
+\index{Set\-Next\-Frame\-Trigger@{Set\-Next\-Frame\-Trigger}!Player@{Player}}
+\subsubsection[{Set\-Next\-Frame\-Trigger}]{\setlength{\rightskip}{0pt plus 5cm}void Player\-::\-Set\-Next\-Frame\-Trigger (
+\begin{DoxyParamCaption}
+\item[{{\bf Time\-Int}}]{trigger}
+\end{DoxyParamCaption}
+)}}\label{class_player_a34ee83b70e69a08c2f397a05ab6421b9}
+
+
+Set\-Next\-Frame\-Trigger setter for the time until the next frame should be displayed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em trigger} & The time until the next frame should be displayed. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 188 of file Entity.\-cpp.
+
+\hypertarget{class_player_a171909ce2bc5ad4ed7bd1e329818f1cb}{\index{Player@{Player}!Set\-X\-Coord@{Set\-X\-Coord}}
+\index{Set\-X\-Coord@{Set\-X\-Coord}!Player@{Player}}
+\subsubsection[{Set\-X\-Coord}]{\setlength{\rightskip}{0pt plus 5cm}void Player\-::\-Set\-X\-Coord (
+\begin{DoxyParamCaption}
+\item[{int}]{x\-Coord}
+\end{DoxyParamCaption}
+)}}\label{class_player_a171909ce2bc5ad4ed7bd1e329818f1cb}
+
+
+Set\-X\-Coord setter for the x coordinate of the current frame. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x\-Coord} & The value to set as the new frame. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 148 of file Entity.\-cpp.
+
+\hypertarget{class_player_ad1d525ce156cc87325d671faa537c644}{\index{Player@{Player}!Set\-X\-Direction@{Set\-X\-Direction}}
+\index{Set\-X\-Direction@{Set\-X\-Direction}!Player@{Player}}
+\subsubsection[{Set\-X\-Direction}]{\setlength{\rightskip}{0pt plus 5cm}void Player\-::\-Set\-X\-Direction (
+\begin{DoxyParamCaption}
+\item[{int}]{x\-Direction}
+\end{DoxyParamCaption}
+)}}\label{class_player_ad1d525ce156cc87325d671faa537c644}
+
+
+Set\-X\-Direction setter for the direction of the animation either +-\/ 1 to indicate direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x\-Direction} & The value to set as the animation direction. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 168 of file Entity.\-cpp.
+
+\hypertarget{class_player_ae2b9268a010501d169798c201be0aea0}{\index{Player@{Player}!Set\-Y\-Coord@{Set\-Y\-Coord}}
+\index{Set\-Y\-Coord@{Set\-Y\-Coord}!Player@{Player}}
+\subsubsection[{Set\-Y\-Coord}]{\setlength{\rightskip}{0pt plus 5cm}void Player\-::\-Set\-Y\-Coord (
+\begin{DoxyParamCaption}
+\item[{int}]{y\-Coord}
+\end{DoxyParamCaption}
+)}}\label{class_player_ae2b9268a010501d169798c201be0aea0}
+
+
+Set\-Y\-Coord. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em y\-Coord} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 158 of file Entity.\-cpp.
+
+\hypertarget{class_player_a05b60cac1922c5be5c1be16baffa4497}{\index{Player@{Player}!Update@{Update}}
+\index{Update@{Update}!Player@{Player}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}void Player\-::\-Update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_player_a05b60cac1922c5be5c1be16baffa4497}
+
+
+Update, currently empty. 
+
+
+
+Reimplemented from \hyperlink{class_entity_a7e2a7c5df3bceaf41deea192eeba4d8f}{Entity}.
+
+
+
+Definition at line 133 of file Entity.\-cpp.
+
+\hypertarget{class_player_aee32aba0a12ace035c1fc0f3acfa31ca}{\index{Player@{Player}!Update\-Controls@{Update\-Controls}}
+\index{Update\-Controls@{Update\-Controls}!Player@{Player}}
+\subsubsection[{Update\-Controls}]{\setlength{\rightskip}{0pt plus 5cm}void Player\-::\-Update\-Controls (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_player_aee32aba0a12ace035c1fc0f3acfa31ca}
+
+
+Update\-Controls is empty, code moved to \hyperlink{class_level}{Level} class. 
+
+
+
+Definition at line 138 of file Entity.\-cpp.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_player_a8edce47b376093a95a89c91eee9b253e}{\index{Player@{Player}!m\-Map\-Tile\-Size@{m\-Map\-Tile\-Size}}
+\index{m\-Map\-Tile\-Size@{m\-Map\-Tile\-Size}!Player@{Player}}
+\subsubsection[{m\-Map\-Tile\-Size}]{\setlength{\rightskip}{0pt plus 5cm}int Player\-::m\-Map\-Tile\-Size\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_player_a8edce47b376093a95a89c91eee9b253e}
+
+
+Definition at line 233 of file Entity.\-hpp.
+
+\hypertarget{class_player_a97ef6ab1b525c97f0e4fdd9ece101b03}{\index{Player@{Player}!m\-Next\-Frame\-Trigger@{m\-Next\-Frame\-Trigger}}
+\index{m\-Next\-Frame\-Trigger@{m\-Next\-Frame\-Trigger}!Player@{Player}}
+\subsubsection[{m\-Next\-Frame\-Trigger}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Time\-Int} Player\-::m\-Next\-Frame\-Trigger\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_player_a97ef6ab1b525c97f0e4fdd9ece101b03}
+
+
+Definition at line 235 of file Entity.\-hpp.
+
+\hypertarget{class_player_a9d15c816285b1708e3a93ef41a628263}{\index{Player@{Player}!m\-Texture\-Sheet\-Height@{m\-Texture\-Sheet\-Height}}
+\index{m\-Texture\-Sheet\-Height@{m\-Texture\-Sheet\-Height}!Player@{Player}}
+\subsubsection[{m\-Texture\-Sheet\-Height}]{\setlength{\rightskip}{0pt plus 5cm}int Player\-::m\-Texture\-Sheet\-Height\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_player_a9d15c816285b1708e3a93ef41a628263}
+
+
+Definition at line 231 of file Entity.\-hpp.
+
+\hypertarget{class_player_abdccfacdffb3a21371af39dbe0255453}{\index{Player@{Player}!m\-Texture\-Sheet\-Width@{m\-Texture\-Sheet\-Width}}
+\index{m\-Texture\-Sheet\-Width@{m\-Texture\-Sheet\-Width}!Player@{Player}}
+\subsubsection[{m\-Texture\-Sheet\-Width}]{\setlength{\rightskip}{0pt plus 5cm}int Player\-::m\-Texture\-Sheet\-Width\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_player_abdccfacdffb3a21371af39dbe0255453}
+
+
+Definition at line 230 of file Entity.\-hpp.
+
+\hypertarget{class_player_ab5f657ba805e70319fc312533d715d96}{\index{Player@{Player}!m\-Xcoord@{m\-Xcoord}}
+\index{m\-Xcoord@{m\-Xcoord}!Player@{Player}}
+\subsubsection[{m\-Xcoord}]{\setlength{\rightskip}{0pt plus 5cm}int Player\-::m\-Xcoord\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_player_ab5f657ba805e70319fc312533d715d96}
+
+
+Definition at line 225 of file Entity.\-hpp.
+
+\hypertarget{class_player_a141ca66b2ec828bb84617b21dc7e9db0}{\index{Player@{Player}!m\-X\-Direction@{m\-X\-Direction}}
+\index{m\-X\-Direction@{m\-X\-Direction}!Player@{Player}}
+\subsubsection[{m\-X\-Direction}]{\setlength{\rightskip}{0pt plus 5cm}int Player\-::m\-X\-Direction\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_player_a141ca66b2ec828bb84617b21dc7e9db0}
+
+
+Definition at line 228 of file Entity.\-hpp.
+
+\hypertarget{class_player_ab3a89b65abf92da672ebc3c55b22dc80}{\index{Player@{Player}!m\-Ycoord@{m\-Ycoord}}
+\index{m\-Ycoord@{m\-Ycoord}!Player@{Player}}
+\subsubsection[{m\-Ycoord}]{\setlength{\rightskip}{0pt plus 5cm}int Player\-::m\-Ycoord\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_player_ab3a89b65abf92da672ebc3c55b22dc80}
+
+
+Definition at line 226 of file Entity.\-hpp.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Source/\hyperlink{_entity_8hpp}{Entity.\-hpp}\item 
+Source/\hyperlink{_entity_8cpp}{Entity.\-cpp}\end{DoxyCompactItemize}

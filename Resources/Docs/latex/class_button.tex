@@ -1,0 +1,186 @@
+\hypertarget{class_button}{\section{Button Class Reference}
+\label{class_button}\index{Button@{Button}}
+}
+
+
+The \hyperlink{class_button}{Button} class. This class represents a clickable and selectable button.  
+
+
+
+
+{\ttfamily \#include $<$Button.\-hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_button_aa4dd15f695a20943a6d7d773c7bb1d4e}{Button} (sf\-::\-Texture \&texture, const sf\-::\-Vector2f \&pos, string \&text, int button\-I\-D=0)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_button}{Button} ctor, builds a button that may be clicked, use Is\-Pos\-Within to detect clicks. \end{DoxyCompactList}\item 
+void \hyperlink{class_button_a002afec181e20098f3143583e66b1264}{Draw} (sf\-::\-Render\-Window \&render\-Window)
+\begin{DoxyCompactList}\small\item\em Draw will use sfml2 to draw to the window the button, including the texture and text. \end{DoxyCompactList}\item 
+void \hyperlink{class_button_a9f0b99d112108bae788b3be20a70d1d4}{Set\-Text\-Color} (const sf\-::\-Color \&color)
+\begin{DoxyCompactList}\small\item\em Set\-Text\-Color sets the text color to whatever you like. \end{DoxyCompactList}\item 
+int \hyperlink{class_button_a13681ae9a574971ab91bb26089e0b096}{Get\-Button\-I\-D} () const 
+\begin{DoxyCompactList}\small\item\em Get\-Button\-I\-D getter for the button I\-D you chose to associate with this button. \end{DoxyCompactList}\item 
+bool \hyperlink{class_button_af9884e3a187a28590094b669fe1583de}{Is\-Pos\-Within} (const sf\-::\-Vector2f \&pos)
+\begin{DoxyCompactList}\small\item\em Is\-Pos\-Within checks if the given 2d cordinate is within the button bounds. Usefull for detecting button clicks. \end{DoxyCompactList}\item 
+bool \hyperlink{class_button_a025e28407e49b4314d2b1eab86454a9e}{Is\-Pos\-Within} (float x, float y)
+\begin{DoxyCompactList}\small\item\em Is\-Pos\-Within Is\-Pos\-Within checks if the given 2d cordinate is within the button bounds. Usefull for detecting button clicks. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_button}{Button} class. This class represents a clickable and selectable button. 
+
+I wrote this instead of using a G\-U\-I library.
+
+Pass it a loaded texture for the button background, a position for the buttons top left corner, the text to display on the button, and an I\-D which you can associate with the button. 
+
+Definition at line 24 of file Button.\-hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_button_aa4dd15f695a20943a6d7d773c7bb1d4e}{\index{Button@{Button}!Button@{Button}}
+\index{Button@{Button}!Button@{Button}}
+\subsubsection[{Button}]{\setlength{\rightskip}{0pt plus 5cm}Button\-::\-Button (
+\begin{DoxyParamCaption}
+\item[{sf\-::\-Texture \&}]{texture, }
+\item[{const sf\-::\-Vector2f \&}]{pos, }
+\item[{string \&}]{text, }
+\item[{int}]{button\-I\-D = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{class_button_aa4dd15f695a20943a6d7d773c7bb1d4e}
+
+
+\hyperlink{class_button}{Button} ctor, builds a button that may be clicked, use Is\-Pos\-Within to detect clicks. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em texture} & The texture for the button background. \\
+\hline
+{\em pos} & The position of the top left corner. \\
+\hline
+{\em text} & The text to display centered on the button. \\
+\hline
+{\em button\-I\-D} & The optional button I\-D you may associate with this button. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 5 of file Button.\-cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_button_a002afec181e20098f3143583e66b1264}{\index{Button@{Button}!Draw@{Draw}}
+\index{Draw@{Draw}!Button@{Button}}
+\subsubsection[{Draw}]{\setlength{\rightskip}{0pt plus 5cm}void Button\-::\-Draw (
+\begin{DoxyParamCaption}
+\item[{sf\-::\-Render\-Window \&}]{render\-Window}
+\end{DoxyParamCaption}
+)}}\label{class_button_a002afec181e20098f3143583e66b1264}
+
+
+Draw will use sfml2 to draw to the window the button, including the texture and text. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em render\-Window} & The window to render to. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 32 of file Button.\-cpp.
+
+\hypertarget{class_button_a13681ae9a574971ab91bb26089e0b096}{\index{Button@{Button}!Get\-Button\-I\-D@{Get\-Button\-I\-D}}
+\index{Get\-Button\-I\-D@{Get\-Button\-I\-D}!Button@{Button}}
+\subsubsection[{Get\-Button\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}int Button\-::\-Get\-Button\-I\-D (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_button_a13681ae9a574971ab91bb26089e0b096}
+
+
+Get\-Button\-I\-D getter for the button I\-D you chose to associate with this button. 
+
+\begin{DoxyReturn}{Returns}
+The associated button I\-D. 
+\end{DoxyReturn}
+
+
+Definition at line 43 of file Button.\-cpp.
+
+\hypertarget{class_button_af9884e3a187a28590094b669fe1583de}{\index{Button@{Button}!Is\-Pos\-Within@{Is\-Pos\-Within}}
+\index{Is\-Pos\-Within@{Is\-Pos\-Within}!Button@{Button}}
+\subsubsection[{Is\-Pos\-Within}]{\setlength{\rightskip}{0pt plus 5cm}bool Button\-::\-Is\-Pos\-Within (
+\begin{DoxyParamCaption}
+\item[{const sf\-::\-Vector2f \&}]{pos}
+\end{DoxyParamCaption}
+)}}\label{class_button_af9884e3a187a28590094b669fe1583de}
+
+
+Is\-Pos\-Within checks if the given 2d cordinate is within the button bounds. Usefull for detecting button clicks. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & The position to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Yes or no if the position is inside. 
+\end{DoxyReturn}
+
+
+Definition at line 27 of file Button.\-cpp.
+
+\hypertarget{class_button_a025e28407e49b4314d2b1eab86454a9e}{\index{Button@{Button}!Is\-Pos\-Within@{Is\-Pos\-Within}}
+\index{Is\-Pos\-Within@{Is\-Pos\-Within}!Button@{Button}}
+\subsubsection[{Is\-Pos\-Within}]{\setlength{\rightskip}{0pt plus 5cm}bool Button\-::\-Is\-Pos\-Within (
+\begin{DoxyParamCaption}
+\item[{float}]{x, }
+\item[{float}]{y}
+\end{DoxyParamCaption}
+)}}\label{class_button_a025e28407e49b4314d2b1eab86454a9e}
+
+
+Is\-Pos\-Within Is\-Pos\-Within checks if the given 2d cordinate is within the button bounds. Usefull for detecting button clicks. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x coordinate to check. \\
+\hline
+{\em y} & The y coordinate to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Yes or no if the position is inside. 
+\end{DoxyReturn}
+
+
+Definition at line 48 of file Button.\-cpp.
+
+\hypertarget{class_button_a9f0b99d112108bae788b3be20a70d1d4}{\index{Button@{Button}!Set\-Text\-Color@{Set\-Text\-Color}}
+\index{Set\-Text\-Color@{Set\-Text\-Color}!Button@{Button}}
+\subsubsection[{Set\-Text\-Color}]{\setlength{\rightskip}{0pt plus 5cm}void Button\-::\-Set\-Text\-Color (
+\begin{DoxyParamCaption}
+\item[{const sf\-::\-Color \&}]{color}
+\end{DoxyParamCaption}
+)}}\label{class_button_a9f0b99d112108bae788b3be20a70d1d4}
+
+
+Set\-Text\-Color sets the text color to whatever you like. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & The color to set the text. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 38 of file Button.\-cpp.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Source/\hyperlink{_button_8hpp}{Button.\-hpp}\item 
+Source/\hyperlink{_button_8cpp}{Button.\-cpp}\end{DoxyCompactItemize}

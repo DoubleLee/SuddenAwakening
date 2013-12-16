@@ -1,0 +1,53 @@
+\hypertarget{_exceptions_8hpp}{\section{Source/\-Exceptions.hpp File Reference}
+\label{_exceptions_8hpp}\index{Source/\-Exceptions.\-hpp@{Source/\-Exceptions.\-hpp}}
+}
+{\ttfamily \#include $<$stdexcept$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_runtime_exception}{Runtime\-Exception}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_exceptions_8hpp_add43b7c317fdbc4248d7d0aa502d0fb3}{E\-X\-C\-E\-P\-T\-I\-O\-N\-S\-\_\-\-H\-P\-P}
+\item 
+\#define \hyperlink{_exceptions_8hpp_a5ac38416c603d2a2ac182687a070056d}{Throw\-Runtime\-Exception}(error\-Desc)~\{ throw \hyperlink{class_runtime_exception}{Runtime\-Exception}( \-\_\-\-\_\-\-F\-I\-L\-E\-\_\-\-\_\-, \-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\-, error\-Desc ); \}
+\item 
+\#define \hyperlink{_exceptions_8hpp_ae646ffab5d5e84c410a5fe4b23707d9c}{Throw\-Runtime\-Exception\-Str\-Code}(error\-Desc, error\-String, error\-Code)~\{ throw \hyperlink{class_runtime_exception}{Runtime\-Exception}( \-\_\-\-\_\-\-F\-I\-L\-E\-\_\-\-\_\-, \-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\-, error\-Desc, error\-String, error\-Code); \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{_exceptions_8hpp_add43b7c317fdbc4248d7d0aa502d0fb3}{\index{Exceptions.\-hpp@{Exceptions.\-hpp}!E\-X\-C\-E\-P\-T\-I\-O\-N\-S\-\_\-\-H\-P\-P@{E\-X\-C\-E\-P\-T\-I\-O\-N\-S\-\_\-\-H\-P\-P}}
+\index{E\-X\-C\-E\-P\-T\-I\-O\-N\-S\-\_\-\-H\-P\-P@{E\-X\-C\-E\-P\-T\-I\-O\-N\-S\-\_\-\-H\-P\-P}!Exceptions.hpp@{Exceptions.\-hpp}}
+\subsubsection[{E\-X\-C\-E\-P\-T\-I\-O\-N\-S\-\_\-\-H\-P\-P}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-X\-C\-E\-P\-T\-I\-O\-N\-S\-\_\-\-H\-P\-P}}\label{_exceptions_8hpp_add43b7c317fdbc4248d7d0aa502d0fb3}
+
+
+Definition at line 4 of file Exceptions.\-hpp.
+
+\hypertarget{_exceptions_8hpp_a5ac38416c603d2a2ac182687a070056d}{\index{Exceptions.\-hpp@{Exceptions.\-hpp}!Throw\-Runtime\-Exception@{Throw\-Runtime\-Exception}}
+\index{Throw\-Runtime\-Exception@{Throw\-Runtime\-Exception}!Exceptions.hpp@{Exceptions.\-hpp}}
+\subsubsection[{Throw\-Runtime\-Exception}]{\setlength{\rightskip}{0pt plus 5cm}\#define Throw\-Runtime\-Exception(
+\begin{DoxyParamCaption}
+\item[{}]{error\-Desc}
+\end{DoxyParamCaption}
+)~\{ throw {\bf Runtime\-Exception}( \-\_\-\-\_\-\-F\-I\-L\-E\-\_\-\-\_\-, \-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\-, error\-Desc ); \}}}\label{_exceptions_8hpp_a5ac38416c603d2a2ac182687a070056d}
+
+
+Definition at line 10 of file Exceptions.\-hpp.
+
+\hypertarget{_exceptions_8hpp_ae646ffab5d5e84c410a5fe4b23707d9c}{\index{Exceptions.\-hpp@{Exceptions.\-hpp}!Throw\-Runtime\-Exception\-Str\-Code@{Throw\-Runtime\-Exception\-Str\-Code}}
+\index{Throw\-Runtime\-Exception\-Str\-Code@{Throw\-Runtime\-Exception\-Str\-Code}!Exceptions.hpp@{Exceptions.\-hpp}}
+\subsubsection[{Throw\-Runtime\-Exception\-Str\-Code}]{\setlength{\rightskip}{0pt plus 5cm}\#define Throw\-Runtime\-Exception\-Str\-Code(
+\begin{DoxyParamCaption}
+\item[{}]{error\-Desc, }
+\item[{}]{error\-String, }
+\item[{}]{error\-Code}
+\end{DoxyParamCaption}
+)~\{ throw {\bf Runtime\-Exception}( \-\_\-\-\_\-\-F\-I\-L\-E\-\_\-\-\_\-, \-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\-, error\-Desc, error\-String, error\-Code); \}}}\label{_exceptions_8hpp_ae646ffab5d5e84c410a5fe4b23707d9c}
+
+
+Definition at line 11 of file Exceptions.\-hpp.
+

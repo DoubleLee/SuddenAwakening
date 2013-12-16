@@ -1,0 +1,120 @@
+\hypertarget{_logger_8hpp}{\section{Source/\-Logger.hpp File Reference}
+\label{_logger_8hpp}\index{Source/\-Logger.\-hpp@{Source/\-Logger.\-hpp}}
+}
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$iosfwd$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_logger}{Logger}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_logger_8hpp_a2c4dac972b595631cd4977151d7e62a7}{Log\-Func\-Begin}()~g\-Logger.\-Func\-Begin( \-\_\-\-\_\-\-P\-R\-E\-T\-T\-Y\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-\_\-\-\_\- );
+\item 
+\#define \hyperlink{_logger_8hpp_a1d6f2a3755a6fc05880f3d1233c20831}{Log\-Func\-End\-Success}()~g\-Logger.\-Func\-End\-Success( \-\_\-\-\_\-\-P\-R\-E\-T\-T\-Y\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-\_\-\-\_\- );
+\item 
+\#define \hyperlink{_logger_8hpp_aa55d1577f3f70faa5b6a5df804e4b855}{Log\-Message}(desc)~g\-Logger.\-Message( desc, \-\_\-\-\_\-\-F\-I\-L\-E\-\_\-\-\_\-, \-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\- );
+\item 
+\#define \hyperlink{_logger_8hpp_a53f872bb514338b8822b9710d41cc329}{Log\-Success}(desc)~g\-Logger.\-Success( desc, \-\_\-\-\_\-\-F\-I\-L\-E\-\_\-\-\_\-, \-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\- );
+\item 
+\#define \hyperlink{_logger_8hpp_a5cfce44f63469babb7d4a0566e2f9cd3}{Log\-Warning}(desc)~g\-Logger.\-Warning( desc, \-\_\-\-\_\-\-F\-I\-L\-E\-\_\-\-\_\-, \-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\- );
+\item 
+\#define \hyperlink{_logger_8hpp_a88a67b912ffe93b705f085fac8a343f1}{Log\-Error}(desc, error, code)~g\-Logger.\-Error( \-\_\-\-\_\-\-F\-I\-L\-E\-\_\-\-\_\-, \-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\-, desc, error, code );
+\item 
+\#define \hyperlink{_logger_8hpp_ad0f4e74a47e417cdb463a46120e08cba}{Log\-Failure}(desc)~g\-Logger.\-Failure( \-\_\-\-\_\-\-F\-I\-L\-E\-\_\-\-\_\-, \-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\-, desc );
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_logger}{Logger} \hyperlink{_logger_8hpp_afe4a9a25aa05f11daebd22b591605da7}{g\-Logger}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{_logger_8hpp_a88a67b912ffe93b705f085fac8a343f1}{\index{Logger.\-hpp@{Logger.\-hpp}!Log\-Error@{Log\-Error}}
+\index{Log\-Error@{Log\-Error}!Logger.hpp@{Logger.\-hpp}}
+\subsubsection[{Log\-Error}]{\setlength{\rightskip}{0pt plus 5cm}\#define Log\-Error(
+\begin{DoxyParamCaption}
+\item[{}]{desc, }
+\item[{}]{error, }
+\item[{}]{code}
+\end{DoxyParamCaption}
+)~g\-Logger.\-Error( \-\_\-\-\_\-\-F\-I\-L\-E\-\_\-\-\_\-, \-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\-, desc, error, code );}}\label{_logger_8hpp_a88a67b912ffe93b705f085fac8a343f1}
+
+
+Definition at line 33 of file Logger.\-hpp.
+
+\hypertarget{_logger_8hpp_ad0f4e74a47e417cdb463a46120e08cba}{\index{Logger.\-hpp@{Logger.\-hpp}!Log\-Failure@{Log\-Failure}}
+\index{Log\-Failure@{Log\-Failure}!Logger.hpp@{Logger.\-hpp}}
+\subsubsection[{Log\-Failure}]{\setlength{\rightskip}{0pt plus 5cm}\#define Log\-Failure(
+\begin{DoxyParamCaption}
+\item[{}]{desc}
+\end{DoxyParamCaption}
+)~g\-Logger.\-Failure( \-\_\-\-\_\-\-F\-I\-L\-E\-\_\-\-\_\-, \-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\-, desc );}}\label{_logger_8hpp_ad0f4e74a47e417cdb463a46120e08cba}
+
+
+Definition at line 34 of file Logger.\-hpp.
+
+\hypertarget{_logger_8hpp_a2c4dac972b595631cd4977151d7e62a7}{\index{Logger.\-hpp@{Logger.\-hpp}!Log\-Func\-Begin@{Log\-Func\-Begin}}
+\index{Log\-Func\-Begin@{Log\-Func\-Begin}!Logger.hpp@{Logger.\-hpp}}
+\subsubsection[{Log\-Func\-Begin}]{\setlength{\rightskip}{0pt plus 5cm}\#define Log\-Func\-Begin(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~g\-Logger.\-Func\-Begin( \-\_\-\-\_\-\-P\-R\-E\-T\-T\-Y\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-\_\-\-\_\- );}}\label{_logger_8hpp_a2c4dac972b595631cd4977151d7e62a7}
+
+
+Definition at line 22 of file Logger.\-hpp.
+
+\hypertarget{_logger_8hpp_a1d6f2a3755a6fc05880f3d1233c20831}{\index{Logger.\-hpp@{Logger.\-hpp}!Log\-Func\-End\-Success@{Log\-Func\-End\-Success}}
+\index{Log\-Func\-End\-Success@{Log\-Func\-End\-Success}!Logger.hpp@{Logger.\-hpp}}
+\subsubsection[{Log\-Func\-End\-Success}]{\setlength{\rightskip}{0pt plus 5cm}\#define Log\-Func\-End\-Success(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~g\-Logger.\-Func\-End\-Success( \-\_\-\-\_\-\-P\-R\-E\-T\-T\-Y\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-\_\-\-\_\- );}}\label{_logger_8hpp_a1d6f2a3755a6fc05880f3d1233c20831}
+
+
+Definition at line 23 of file Logger.\-hpp.
+
+\hypertarget{_logger_8hpp_aa55d1577f3f70faa5b6a5df804e4b855}{\index{Logger.\-hpp@{Logger.\-hpp}!Log\-Message@{Log\-Message}}
+\index{Log\-Message@{Log\-Message}!Logger.hpp@{Logger.\-hpp}}
+\subsubsection[{Log\-Message}]{\setlength{\rightskip}{0pt plus 5cm}\#define Log\-Message(
+\begin{DoxyParamCaption}
+\item[{}]{desc}
+\end{DoxyParamCaption}
+)~g\-Logger.\-Message( desc, \-\_\-\-\_\-\-F\-I\-L\-E\-\_\-\-\_\-, \-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\- );}}\label{_logger_8hpp_aa55d1577f3f70faa5b6a5df804e4b855}
+
+
+Definition at line 27 of file Logger.\-hpp.
+
+\hypertarget{_logger_8hpp_a53f872bb514338b8822b9710d41cc329}{\index{Logger.\-hpp@{Logger.\-hpp}!Log\-Success@{Log\-Success}}
+\index{Log\-Success@{Log\-Success}!Logger.hpp@{Logger.\-hpp}}
+\subsubsection[{Log\-Success}]{\setlength{\rightskip}{0pt plus 5cm}\#define Log\-Success(
+\begin{DoxyParamCaption}
+\item[{}]{desc}
+\end{DoxyParamCaption}
+)~g\-Logger.\-Success( desc, \-\_\-\-\_\-\-F\-I\-L\-E\-\_\-\-\_\-, \-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\- );}}\label{_logger_8hpp_a53f872bb514338b8822b9710d41cc329}
+
+
+Definition at line 29 of file Logger.\-hpp.
+
+\hypertarget{_logger_8hpp_a5cfce44f63469babb7d4a0566e2f9cd3}{\index{Logger.\-hpp@{Logger.\-hpp}!Log\-Warning@{Log\-Warning}}
+\index{Log\-Warning@{Log\-Warning}!Logger.hpp@{Logger.\-hpp}}
+\subsubsection[{Log\-Warning}]{\setlength{\rightskip}{0pt plus 5cm}\#define Log\-Warning(
+\begin{DoxyParamCaption}
+\item[{}]{desc}
+\end{DoxyParamCaption}
+)~g\-Logger.\-Warning( desc, \-\_\-\-\_\-\-F\-I\-L\-E\-\_\-\-\_\-, \-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\- );}}\label{_logger_8hpp_a5cfce44f63469babb7d4a0566e2f9cd3}
+
+
+Definition at line 31 of file Logger.\-hpp.
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{_logger_8hpp_afe4a9a25aa05f11daebd22b591605da7}{\index{Logger.\-hpp@{Logger.\-hpp}!g\-Logger@{g\-Logger}}
+\index{g\-Logger@{g\-Logger}!Logger.hpp@{Logger.\-hpp}}
+\subsubsection[{g\-Logger}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Logger} g\-Logger}}\label{_logger_8hpp_afe4a9a25aa05f11daebd22b591605da7}

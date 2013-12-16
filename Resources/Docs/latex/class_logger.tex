@@ -1,0 +1,217 @@
+\hypertarget{class_logger}{\section{Logger Class Reference}
+\label{class_logger}\index{Logger@{Logger}}
+}
+
+
+{\ttfamily \#include $<$Logger.\-hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_logger_a0a05ff69f854770ba73be8da23087c6f}{Logger} (const std\-::string \&file)
+\item 
+\hyperlink{class_logger_acb668a9e186a25fbaad2e4af6d1ed00a}{$\sim$\-Logger} ()
+\item 
+void \hyperlink{class_logger_a869a3da0fbc98ea124c8142441ba9979}{Func\-Begin} (const string \&function=\char`\"{}Not supported\char`\"{})
+\item 
+void \hyperlink{class_logger_af6534aa3be0f75da9476bdf98b0cd6bf}{Func\-End\-Success} (const string \&function=\char`\"{}Not supported\char`\"{})
+\item 
+void \hyperlink{class_logger_a0c51ea7dd128afa466379dee45487377}{Message} (const string \&desc, const string \&file, const unsigned long long line)
+\item 
+void \hyperlink{class_logger_a61d131fd8e6096c8711e5b05efe15761}{Success} (const string \&desc, const string \&file, const unsigned long long line)
+\item 
+void \hyperlink{class_logger_afc4de5bbb2fb2b647f0dc86cafc037cf}{Warning} (const string \&desc, const string \&file, const unsigned long long line)
+\item 
+void \hyperlink{class_logger_a60d34309f66f5ce02675bbdaca545094}{Exception} (const std\-::exception \&except)
+\item 
+void \hyperlink{class_logger_a7e67b48e4e24f6f2fb03ff40bbeeb9ad}{Error} (const string \&file, const unsigned long long line, const string \&desc, const string \&error=string(), const int error\-Code=0)
+\item 
+void \hyperlink{class_logger_aa7909a3a0a254c2e90abc09911ba9a20}{Failure} (const string \&file, const unsigned long long line, const string \&desc)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_logger_a6360e51a7be091da6419667be9baaf4d}{Log\-File\-Line\-Desc} (const string \&file, const unsigned long long line, const string \&desc)
+\item 
+void \hyperlink{class_logger_aa93d938b1a593173396d677f34dfbb1c}{Put\-Time\-Str} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+ofstream $\ast$ \hyperlink{class_logger_a69b68a1b1da1754873ebb48a9b045f74}{mp\-Ofs}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 61 of file Logger.\-hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_logger_a0a05ff69f854770ba73be8da23087c6f}{\index{Logger@{Logger}!Logger@{Logger}}
+\index{Logger@{Logger}!Logger@{Logger}}
+\subsubsection[{Logger}]{\setlength{\rightskip}{0pt plus 5cm}Logger\-::\-Logger (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{file}
+\end{DoxyParamCaption}
+)}}\label{class_logger_a0a05ff69f854770ba73be8da23087c6f}
+
+
+Definition at line 49 of file Logger.\-cpp.
+
+\hypertarget{class_logger_acb668a9e186a25fbaad2e4af6d1ed00a}{\index{Logger@{Logger}!$\sim$\-Logger@{$\sim$\-Logger}}
+\index{$\sim$\-Logger@{$\sim$\-Logger}!Logger@{Logger}}
+\subsubsection[{$\sim$\-Logger}]{\setlength{\rightskip}{0pt plus 5cm}Logger\-::$\sim$\-Logger (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_logger_acb668a9e186a25fbaad2e4af6d1ed00a}
+
+
+Definition at line 60 of file Logger.\-cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_logger_a7e67b48e4e24f6f2fb03ff40bbeeb9ad}{\index{Logger@{Logger}!Error@{Error}}
+\index{Error@{Error}!Logger@{Logger}}
+\subsubsection[{Error}]{\setlength{\rightskip}{0pt plus 5cm}void Logger\-::\-Error (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{file, }
+\item[{const unsigned long long}]{line, }
+\item[{const string \&}]{desc, }
+\item[{const string \&}]{error = {\ttfamily string()}, }
+\item[{const int}]{error\-Code = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{class_logger_a7e67b48e4e24f6f2fb03ff40bbeeb9ad}
+
+
+Definition at line 106 of file Logger.\-cpp.
+
+\hypertarget{class_logger_a60d34309f66f5ce02675bbdaca545094}{\index{Logger@{Logger}!Exception@{Exception}}
+\index{Exception@{Exception}!Logger@{Logger}}
+\subsubsection[{Exception}]{\setlength{\rightskip}{0pt plus 5cm}void Logger\-::\-Exception (
+\begin{DoxyParamCaption}
+\item[{const std\-::exception \&}]{except}
+\end{DoxyParamCaption}
+)}}\label{class_logger_a60d34309f66f5ce02675bbdaca545094}
+
+
+Definition at line 99 of file Logger.\-cpp.
+
+\hypertarget{class_logger_aa7909a3a0a254c2e90abc09911ba9a20}{\index{Logger@{Logger}!Failure@{Failure}}
+\index{Failure@{Failure}!Logger@{Logger}}
+\subsubsection[{Failure}]{\setlength{\rightskip}{0pt plus 5cm}void Logger\-::\-Failure (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{file, }
+\item[{const unsigned long long}]{line, }
+\item[{const string \&}]{desc}
+\end{DoxyParamCaption}
+)}}\label{class_logger_aa7909a3a0a254c2e90abc09911ba9a20}
+
+
+Definition at line 119 of file Logger.\-cpp.
+
+\hypertarget{class_logger_a869a3da0fbc98ea124c8142441ba9979}{\index{Logger@{Logger}!Func\-Begin@{Func\-Begin}}
+\index{Func\-Begin@{Func\-Begin}!Logger@{Logger}}
+\subsubsection[{Func\-Begin}]{\setlength{\rightskip}{0pt plus 5cm}void Logger\-::\-Func\-Begin (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{function = {\ttfamily \char`\"{}Not~supported\char`\"{}}}
+\end{DoxyParamCaption}
+)}}\label{class_logger_a869a3da0fbc98ea124c8142441ba9979}
+
+
+Definition at line 66 of file Logger.\-cpp.
+
+\hypertarget{class_logger_af6534aa3be0f75da9476bdf98b0cd6bf}{\index{Logger@{Logger}!Func\-End\-Success@{Func\-End\-Success}}
+\index{Func\-End\-Success@{Func\-End\-Success}!Logger@{Logger}}
+\subsubsection[{Func\-End\-Success}]{\setlength{\rightskip}{0pt plus 5cm}void Logger\-::\-Func\-End\-Success (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{function = {\ttfamily \char`\"{}Not~supported\char`\"{}}}
+\end{DoxyParamCaption}
+)}}\label{class_logger_af6534aa3be0f75da9476bdf98b0cd6bf}
+
+
+Definition at line 72 of file Logger.\-cpp.
+
+\hypertarget{class_logger_a6360e51a7be091da6419667be9baaf4d}{\index{Logger@{Logger}!Log\-File\-Line\-Desc@{Log\-File\-Line\-Desc}}
+\index{Log\-File\-Line\-Desc@{Log\-File\-Line\-Desc}!Logger@{Logger}}
+\subsubsection[{Log\-File\-Line\-Desc}]{\setlength{\rightskip}{0pt plus 5cm}void Logger\-::\-Log\-File\-Line\-Desc (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{file, }
+\item[{const unsigned long long}]{line, }
+\item[{const string \&}]{desc}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_logger_a6360e51a7be091da6419667be9baaf4d}
+
+
+Definition at line 138 of file Logger.\-cpp.
+
+\hypertarget{class_logger_a0c51ea7dd128afa466379dee45487377}{\index{Logger@{Logger}!Message@{Message}}
+\index{Message@{Message}!Logger@{Logger}}
+\subsubsection[{Message}]{\setlength{\rightskip}{0pt plus 5cm}void Logger\-::\-Message (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{desc, }
+\item[{const string \&}]{file, }
+\item[{const unsigned long long}]{line}
+\end{DoxyParamCaption}
+)}}\label{class_logger_a0c51ea7dd128afa466379dee45487377}
+
+
+Definition at line 78 of file Logger.\-cpp.
+
+\hypertarget{class_logger_aa93d938b1a593173396d677f34dfbb1c}{\index{Logger@{Logger}!Put\-Time\-Str@{Put\-Time\-Str}}
+\index{Put\-Time\-Str@{Put\-Time\-Str}!Logger@{Logger}}
+\subsubsection[{Put\-Time\-Str}]{\setlength{\rightskip}{0pt plus 5cm}void Logger\-::\-Put\-Time\-Str (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_logger_aa93d938b1a593173396d677f34dfbb1c}
+
+
+Definition at line 126 of file Logger.\-cpp.
+
+\hypertarget{class_logger_a61d131fd8e6096c8711e5b05efe15761}{\index{Logger@{Logger}!Success@{Success}}
+\index{Success@{Success}!Logger@{Logger}}
+\subsubsection[{Success}]{\setlength{\rightskip}{0pt plus 5cm}void Logger\-::\-Success (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{desc, }
+\item[{const string \&}]{file, }
+\item[{const unsigned long long}]{line}
+\end{DoxyParamCaption}
+)}}\label{class_logger_a61d131fd8e6096c8711e5b05efe15761}
+
+
+Definition at line 85 of file Logger.\-cpp.
+
+\hypertarget{class_logger_afc4de5bbb2fb2b647f0dc86cafc037cf}{\index{Logger@{Logger}!Warning@{Warning}}
+\index{Warning@{Warning}!Logger@{Logger}}
+\subsubsection[{Warning}]{\setlength{\rightskip}{0pt plus 5cm}void Logger\-::\-Warning (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{desc, }
+\item[{const string \&}]{file, }
+\item[{const unsigned long long}]{line}
+\end{DoxyParamCaption}
+)}}\label{class_logger_afc4de5bbb2fb2b647f0dc86cafc037cf}
+
+
+Definition at line 92 of file Logger.\-cpp.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_logger_a69b68a1b1da1754873ebb48a9b045f74}{\index{Logger@{Logger}!mp\-Ofs@{mp\-Ofs}}
+\index{mp\-Ofs@{mp\-Ofs}!Logger@{Logger}}
+\subsubsection[{mp\-Ofs}]{\setlength{\rightskip}{0pt plus 5cm}ofstream$\ast$ Logger\-::mp\-Ofs\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_logger_a69b68a1b1da1754873ebb48a9b045f74}
+
+
+Definition at line 90 of file Logger.\-hpp.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Source/\hyperlink{_logger_8hpp}{Logger.\-hpp}\item 
+Source/\hyperlink{_logger_8cpp}{Logger.\-cpp}\end{DoxyCompactItemize}

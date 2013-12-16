@@ -1,0 +1,308 @@
+\hypertarget{classtinyxml2_1_1_x_m_l_util}{\section{tinyxml2\-:\-:X\-M\-L\-Util Class Reference}
+\label{classtinyxml2_1_1_x_m_l_util}\index{tinyxml2\-::\-X\-M\-L\-Util@{tinyxml2\-::\-X\-M\-L\-Util}}
+}
+
+
+{\ttfamily \#include $<$tinyxml2.\-hpp$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static const char $\ast$ \hyperlink{classtinyxml2_1_1_x_m_l_util_a9333d20f2a34325b5115ca45849c4b2a}{Skip\-White\-Space} (const char $\ast$p)
+\item 
+static char $\ast$ \hyperlink{classtinyxml2_1_1_x_m_l_util_aa48025be8843ec5a79b65579d31bd8fc}{Skip\-White\-Space} (char $\ast$p)
+\item 
+static bool \hyperlink{classtinyxml2_1_1_x_m_l_util_a357ec3af8fc433d19023a815f45e8e33}{Is\-White\-Space} (char p)
+\item 
+static bool \hyperlink{classtinyxml2_1_1_x_m_l_util_abe106a69ac4d942a4381a4d9dfd0e0bd}{Is\-Name\-Start\-Char} (unsigned char ch)
+\item 
+static bool \hyperlink{classtinyxml2_1_1_x_m_l_util_a04b17341538fa11752f24b4301d19485}{Is\-Name\-Char} (unsigned char ch)
+\item 
+static bool \hyperlink{classtinyxml2_1_1_x_m_l_util_acfcd287cacfd2533e1bc9ea4dfb56602}{String\-Equal} (const char $\ast$p, const char $\ast$q, int n\-Char=I\-N\-T\-\_\-\-M\-A\-X)
+\item 
+static int \hyperlink{classtinyxml2_1_1_x_m_l_util_a24ba87b1d22528167a3d16c4f52096bf}{Is\-U\-T\-F8\-Continuation} (const char p)
+\item 
+static const char $\ast$ \hyperlink{classtinyxml2_1_1_x_m_l_util_ae9bcb2bc3cd6475fdc644c8c17790555}{Read\-B\-O\-M} (const char $\ast$p, bool $\ast$has\-B\-O\-M)
+\item 
+static const char $\ast$ \hyperlink{classtinyxml2_1_1_x_m_l_util_a5a96e5144a8d693dc4bcd783d9964648}{Get\-Character\-Ref} (const char $\ast$p, char $\ast$value, int $\ast$length)
+\item 
+static void \hyperlink{classtinyxml2_1_1_x_m_l_util_a31c00d5c5dfb38382de1dfcaf4be3595}{Convert\-U\-T\-F32\-To\-U\-T\-F8} (unsigned long input, char $\ast$output, int $\ast$length)
+\item 
+static void \hyperlink{classtinyxml2_1_1_x_m_l_util_a3cd6c703d49b9d51bdf0f4ff6aa021c7}{To\-Str} (int v, char $\ast$buffer, int buffer\-Size)
+\item 
+static void \hyperlink{classtinyxml2_1_1_x_m_l_util_ac00c2e52c1c36dab3ff41d86a9bf60f9}{To\-Str} (unsigned v, char $\ast$buffer, int buffer\-Size)
+\item 
+static void \hyperlink{classtinyxml2_1_1_x_m_l_util_adba0718527ae9e80f663a71ea325cb11}{To\-Str} (bool v, char $\ast$buffer, int buffer\-Size)
+\item 
+static void \hyperlink{classtinyxml2_1_1_x_m_l_util_a8957ad44fee5fa02ba52d73aad4d0a31}{To\-Str} (float v, char $\ast$buffer, int buffer\-Size)
+\item 
+static void \hyperlink{classtinyxml2_1_1_x_m_l_util_a1cd141e50980fcddd6bf9af5de4b1db7}{To\-Str} (double v, char $\ast$buffer, int buffer\-Size)
+\item 
+static bool \hyperlink{classtinyxml2_1_1_x_m_l_util_ad4df4023d11ee3fca9689c49b9707323}{To\-Int} (const char $\ast$str, int $\ast$value)
+\item 
+static bool \hyperlink{classtinyxml2_1_1_x_m_l_util_a210c8637d5eb4ce3d4625294af0efc2f}{To\-Unsigned} (const char $\ast$str, unsigned $\ast$value)
+\item 
+static bool \hyperlink{classtinyxml2_1_1_x_m_l_util_ae5b03e0a1ca5d42052a7ac540f7aa12a}{To\-Bool} (const char $\ast$str, bool $\ast$value)
+\item 
+static bool \hyperlink{classtinyxml2_1_1_x_m_l_util_a399e71edb5f29d61ea81d91ee0332bb9}{To\-Float} (const char $\ast$str, float $\ast$value)
+\item 
+static bool \hyperlink{classtinyxml2_1_1_x_m_l_util_ad8f75ac140fb19c1c6e164a957c4cd53}{To\-Double} (const char $\ast$str, double $\ast$value)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 472 of file tinyxml2.\-hpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classtinyxml2_1_1_x_m_l_util_a31c00d5c5dfb38382de1dfcaf4be3595}{\index{tinyxml2\-::\-X\-M\-L\-Util@{tinyxml2\-::\-X\-M\-L\-Util}!Convert\-U\-T\-F32\-To\-U\-T\-F8@{Convert\-U\-T\-F32\-To\-U\-T\-F8}}
+\index{Convert\-U\-T\-F32\-To\-U\-T\-F8@{Convert\-U\-T\-F32\-To\-U\-T\-F8}!tinyxml2::XMLUtil@{tinyxml2\-::\-X\-M\-L\-Util}}
+\subsubsection[{Convert\-U\-T\-F32\-To\-U\-T\-F8}]{\setlength{\rightskip}{0pt plus 5cm}void tinyxml2\-::\-X\-M\-L\-Util\-::\-Convert\-U\-T\-F32\-To\-U\-T\-F8 (
+\begin{DoxyParamCaption}
+\item[{unsigned long}]{input, }
+\item[{char $\ast$}]{output, }
+\item[{int $\ast$}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classtinyxml2_1_1_x_m_l_util_a31c00d5c5dfb38382de1dfcaf4be3595}
+
+
+Definition at line 282 of file tinyxml2.\-cpp.
+
+\hypertarget{classtinyxml2_1_1_x_m_l_util_a5a96e5144a8d693dc4bcd783d9964648}{\index{tinyxml2\-::\-X\-M\-L\-Util@{tinyxml2\-::\-X\-M\-L\-Util}!Get\-Character\-Ref@{Get\-Character\-Ref}}
+\index{Get\-Character\-Ref@{Get\-Character\-Ref}!tinyxml2::XMLUtil@{tinyxml2\-::\-X\-M\-L\-Util}}
+\subsubsection[{Get\-Character\-Ref}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ tinyxml2\-::\-X\-M\-L\-Util\-::\-Get\-Character\-Ref (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{p, }
+\item[{char $\ast$}]{value, }
+\item[{int $\ast$}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classtinyxml2_1_1_x_m_l_util_a5a96e5144a8d693dc4bcd783d9964648}
+
+
+Definition at line 330 of file tinyxml2.\-cpp.
+
+\hypertarget{classtinyxml2_1_1_x_m_l_util_a04b17341538fa11752f24b4301d19485}{\index{tinyxml2\-::\-X\-M\-L\-Util@{tinyxml2\-::\-X\-M\-L\-Util}!Is\-Name\-Char@{Is\-Name\-Char}}
+\index{Is\-Name\-Char@{Is\-Name\-Char}!tinyxml2::XMLUtil@{tinyxml2\-::\-X\-M\-L\-Util}}
+\subsubsection[{Is\-Name\-Char}]{\setlength{\rightskip}{0pt plus 5cm}static bool tinyxml2\-::\-X\-M\-L\-Util\-::\-Is\-Name\-Char (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{ch}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classtinyxml2_1_1_x_m_l_util_a04b17341538fa11752f24b4301d19485}
+
+
+Definition at line 499 of file tinyxml2.\-hpp.
+
+\hypertarget{classtinyxml2_1_1_x_m_l_util_abe106a69ac4d942a4381a4d9dfd0e0bd}{\index{tinyxml2\-::\-X\-M\-L\-Util@{tinyxml2\-::\-X\-M\-L\-Util}!Is\-Name\-Start\-Char@{Is\-Name\-Start\-Char}}
+\index{Is\-Name\-Start\-Char@{Is\-Name\-Start\-Char}!tinyxml2::XMLUtil@{tinyxml2\-::\-X\-M\-L\-Util}}
+\subsubsection[{Is\-Name\-Start\-Char}]{\setlength{\rightskip}{0pt plus 5cm}static bool tinyxml2\-::\-X\-M\-L\-Util\-::\-Is\-Name\-Start\-Char (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{ch}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classtinyxml2_1_1_x_m_l_util_abe106a69ac4d942a4381a4d9dfd0e0bd}
+
+
+Definition at line 493 of file tinyxml2.\-hpp.
+
+\hypertarget{classtinyxml2_1_1_x_m_l_util_a24ba87b1d22528167a3d16c4f52096bf}{\index{tinyxml2\-::\-X\-M\-L\-Util@{tinyxml2\-::\-X\-M\-L\-Util}!Is\-U\-T\-F8\-Continuation@{Is\-U\-T\-F8\-Continuation}}
+\index{Is\-U\-T\-F8\-Continuation@{Is\-U\-T\-F8\-Continuation}!tinyxml2::XMLUtil@{tinyxml2\-::\-X\-M\-L\-Util}}
+\subsubsection[{Is\-U\-T\-F8\-Continuation}]{\setlength{\rightskip}{0pt plus 5cm}static int tinyxml2\-::\-X\-M\-L\-Util\-::\-Is\-U\-T\-F8\-Continuation (
+\begin{DoxyParamCaption}
+\item[{const char}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classtinyxml2_1_1_x_m_l_util_a24ba87b1d22528167a3d16c4f52096bf}
+
+
+Definition at line 522 of file tinyxml2.\-hpp.
+
+\hypertarget{classtinyxml2_1_1_x_m_l_util_a357ec3af8fc433d19023a815f45e8e33}{\index{tinyxml2\-::\-X\-M\-L\-Util@{tinyxml2\-::\-X\-M\-L\-Util}!Is\-White\-Space@{Is\-White\-Space}}
+\index{Is\-White\-Space@{Is\-White\-Space}!tinyxml2::XMLUtil@{tinyxml2\-::\-X\-M\-L\-Util}}
+\subsubsection[{Is\-White\-Space}]{\setlength{\rightskip}{0pt plus 5cm}static bool tinyxml2\-::\-X\-M\-L\-Util\-::\-Is\-White\-Space (
+\begin{DoxyParamCaption}
+\item[{char}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classtinyxml2_1_1_x_m_l_util_a357ec3af8fc433d19023a815f45e8e33}
+
+
+Definition at line 489 of file tinyxml2.\-hpp.
+
+\hypertarget{classtinyxml2_1_1_x_m_l_util_ae9bcb2bc3cd6475fdc644c8c17790555}{\index{tinyxml2\-::\-X\-M\-L\-Util@{tinyxml2\-::\-X\-M\-L\-Util}!Read\-B\-O\-M@{Read\-B\-O\-M}}
+\index{Read\-B\-O\-M@{Read\-B\-O\-M}!tinyxml2::XMLUtil@{tinyxml2\-::\-X\-M\-L\-Util}}
+\subsubsection[{Read\-B\-O\-M}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ tinyxml2\-::\-X\-M\-L\-Util\-::\-Read\-B\-O\-M (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{p, }
+\item[{bool $\ast$}]{has\-B\-O\-M}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classtinyxml2_1_1_x_m_l_util_ae9bcb2bc3cd6475fdc644c8c17790555}
+
+
+Definition at line 267 of file tinyxml2.\-cpp.
+
+\hypertarget{classtinyxml2_1_1_x_m_l_util_a9333d20f2a34325b5115ca45849c4b2a}{\index{tinyxml2\-::\-X\-M\-L\-Util@{tinyxml2\-::\-X\-M\-L\-Util}!Skip\-White\-Space@{Skip\-White\-Space}}
+\index{Skip\-White\-Space@{Skip\-White\-Space}!tinyxml2::XMLUtil@{tinyxml2\-::\-X\-M\-L\-Util}}
+\subsubsection[{Skip\-White\-Space}]{\setlength{\rightskip}{0pt plus 5cm}static const char$\ast$ tinyxml2\-::\-X\-M\-L\-Util\-::\-Skip\-White\-Space (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classtinyxml2_1_1_x_m_l_util_a9333d20f2a34325b5115ca45849c4b2a}
+
+
+Definition at line 477 of file tinyxml2.\-hpp.
+
+\hypertarget{classtinyxml2_1_1_x_m_l_util_aa48025be8843ec5a79b65579d31bd8fc}{\index{tinyxml2\-::\-X\-M\-L\-Util@{tinyxml2\-::\-X\-M\-L\-Util}!Skip\-White\-Space@{Skip\-White\-Space}}
+\index{Skip\-White\-Space@{Skip\-White\-Space}!tinyxml2::XMLUtil@{tinyxml2\-::\-X\-M\-L\-Util}}
+\subsubsection[{Skip\-White\-Space}]{\setlength{\rightskip}{0pt plus 5cm}static char$\ast$ tinyxml2\-::\-X\-M\-L\-Util\-::\-Skip\-White\-Space (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classtinyxml2_1_1_x_m_l_util_aa48025be8843ec5a79b65579d31bd8fc}
+
+
+Definition at line 483 of file tinyxml2.\-hpp.
+
+\hypertarget{classtinyxml2_1_1_x_m_l_util_acfcd287cacfd2533e1bc9ea4dfb56602}{\index{tinyxml2\-::\-X\-M\-L\-Util@{tinyxml2\-::\-X\-M\-L\-Util}!String\-Equal@{String\-Equal}}
+\index{String\-Equal@{String\-Equal}!tinyxml2::XMLUtil@{tinyxml2\-::\-X\-M\-L\-Util}}
+\subsubsection[{String\-Equal}]{\setlength{\rightskip}{0pt plus 5cm}static bool tinyxml2\-::\-X\-M\-L\-Util\-::\-String\-Equal (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{p, }
+\item[{const char $\ast$}]{q, }
+\item[{int}]{n\-Char = {\ttfamily INT\-\_\-MAX}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classtinyxml2_1_1_x_m_l_util_acfcd287cacfd2533e1bc9ea4dfb56602}
+
+
+Definition at line 506 of file tinyxml2.\-hpp.
+
+\hypertarget{classtinyxml2_1_1_x_m_l_util_ae5b03e0a1ca5d42052a7ac540f7aa12a}{\index{tinyxml2\-::\-X\-M\-L\-Util@{tinyxml2\-::\-X\-M\-L\-Util}!To\-Bool@{To\-Bool}}
+\index{To\-Bool@{To\-Bool}!tinyxml2::XMLUtil@{tinyxml2\-::\-X\-M\-L\-Util}}
+\subsubsection[{To\-Bool}]{\setlength{\rightskip}{0pt plus 5cm}bool tinyxml2\-::\-X\-M\-L\-Util\-::\-To\-Bool (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{str, }
+\item[{bool $\ast$}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classtinyxml2_1_1_x_m_l_util_ae5b03e0a1ca5d42052a7ac540f7aa12a}
+
+
+Definition at line 454 of file tinyxml2.\-cpp.
+
+\hypertarget{classtinyxml2_1_1_x_m_l_util_ad8f75ac140fb19c1c6e164a957c4cd53}{\index{tinyxml2\-::\-X\-M\-L\-Util@{tinyxml2\-::\-X\-M\-L\-Util}!To\-Double@{To\-Double}}
+\index{To\-Double@{To\-Double}!tinyxml2::XMLUtil@{tinyxml2\-::\-X\-M\-L\-Util}}
+\subsubsection[{To\-Double}]{\setlength{\rightskip}{0pt plus 5cm}bool tinyxml2\-::\-X\-M\-L\-Util\-::\-To\-Double (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{str, }
+\item[{double $\ast$}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classtinyxml2_1_1_x_m_l_util_ad8f75ac140fb19c1c6e164a957c4cd53}
+
+
+Definition at line 481 of file tinyxml2.\-cpp.
+
+\hypertarget{classtinyxml2_1_1_x_m_l_util_a399e71edb5f29d61ea81d91ee0332bb9}{\index{tinyxml2\-::\-X\-M\-L\-Util@{tinyxml2\-::\-X\-M\-L\-Util}!To\-Float@{To\-Float}}
+\index{To\-Float@{To\-Float}!tinyxml2::XMLUtil@{tinyxml2\-::\-X\-M\-L\-Util}}
+\subsubsection[{To\-Float}]{\setlength{\rightskip}{0pt plus 5cm}bool tinyxml2\-::\-X\-M\-L\-Util\-::\-To\-Float (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{str, }
+\item[{float $\ast$}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classtinyxml2_1_1_x_m_l_util_a399e71edb5f29d61ea81d91ee0332bb9}
+
+
+Definition at line 473 of file tinyxml2.\-cpp.
+
+\hypertarget{classtinyxml2_1_1_x_m_l_util_ad4df4023d11ee3fca9689c49b9707323}{\index{tinyxml2\-::\-X\-M\-L\-Util@{tinyxml2\-::\-X\-M\-L\-Util}!To\-Int@{To\-Int}}
+\index{To\-Int@{To\-Int}!tinyxml2::XMLUtil@{tinyxml2\-::\-X\-M\-L\-Util}}
+\subsubsection[{To\-Int}]{\setlength{\rightskip}{0pt plus 5cm}bool tinyxml2\-::\-X\-M\-L\-Util\-::\-To\-Int (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{str, }
+\item[{int $\ast$}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classtinyxml2_1_1_x_m_l_util_ad4df4023d11ee3fca9689c49b9707323}
+
+
+Definition at line 438 of file tinyxml2.\-cpp.
+
+\hypertarget{classtinyxml2_1_1_x_m_l_util_a3cd6c703d49b9d51bdf0f4ff6aa021c7}{\index{tinyxml2\-::\-X\-M\-L\-Util@{tinyxml2\-::\-X\-M\-L\-Util}!To\-Str@{To\-Str}}
+\index{To\-Str@{To\-Str}!tinyxml2::XMLUtil@{tinyxml2\-::\-X\-M\-L\-Util}}
+\subsubsection[{To\-Str}]{\setlength{\rightskip}{0pt plus 5cm}void tinyxml2\-::\-X\-M\-L\-Util\-::\-To\-Str (
+\begin{DoxyParamCaption}
+\item[{int}]{v, }
+\item[{char $\ast$}]{buffer, }
+\item[{int}]{buffer\-Size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classtinyxml2_1_1_x_m_l_util_a3cd6c703d49b9d51bdf0f4ff6aa021c7}
+
+
+Definition at line 408 of file tinyxml2.\-cpp.
+
+\hypertarget{classtinyxml2_1_1_x_m_l_util_ac00c2e52c1c36dab3ff41d86a9bf60f9}{\index{tinyxml2\-::\-X\-M\-L\-Util@{tinyxml2\-::\-X\-M\-L\-Util}!To\-Str@{To\-Str}}
+\index{To\-Str@{To\-Str}!tinyxml2::XMLUtil@{tinyxml2\-::\-X\-M\-L\-Util}}
+\subsubsection[{To\-Str}]{\setlength{\rightskip}{0pt plus 5cm}void tinyxml2\-::\-X\-M\-L\-Util\-::\-To\-Str (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{v, }
+\item[{char $\ast$}]{buffer, }
+\item[{int}]{buffer\-Size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classtinyxml2_1_1_x_m_l_util_ac00c2e52c1c36dab3ff41d86a9bf60f9}
+
+
+Definition at line 414 of file tinyxml2.\-cpp.
+
+\hypertarget{classtinyxml2_1_1_x_m_l_util_adba0718527ae9e80f663a71ea325cb11}{\index{tinyxml2\-::\-X\-M\-L\-Util@{tinyxml2\-::\-X\-M\-L\-Util}!To\-Str@{To\-Str}}
+\index{To\-Str@{To\-Str}!tinyxml2::XMLUtil@{tinyxml2\-::\-X\-M\-L\-Util}}
+\subsubsection[{To\-Str}]{\setlength{\rightskip}{0pt plus 5cm}void tinyxml2\-::\-X\-M\-L\-Util\-::\-To\-Str (
+\begin{DoxyParamCaption}
+\item[{bool}]{v, }
+\item[{char $\ast$}]{buffer, }
+\item[{int}]{buffer\-Size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classtinyxml2_1_1_x_m_l_util_adba0718527ae9e80f663a71ea325cb11}
+
+
+Definition at line 420 of file tinyxml2.\-cpp.
+
+\hypertarget{classtinyxml2_1_1_x_m_l_util_a8957ad44fee5fa02ba52d73aad4d0a31}{\index{tinyxml2\-::\-X\-M\-L\-Util@{tinyxml2\-::\-X\-M\-L\-Util}!To\-Str@{To\-Str}}
+\index{To\-Str@{To\-Str}!tinyxml2::XMLUtil@{tinyxml2\-::\-X\-M\-L\-Util}}
+\subsubsection[{To\-Str}]{\setlength{\rightskip}{0pt plus 5cm}void tinyxml2\-::\-X\-M\-L\-Util\-::\-To\-Str (
+\begin{DoxyParamCaption}
+\item[{float}]{v, }
+\item[{char $\ast$}]{buffer, }
+\item[{int}]{buffer\-Size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classtinyxml2_1_1_x_m_l_util_a8957ad44fee5fa02ba52d73aad4d0a31}
+
+
+Definition at line 426 of file tinyxml2.\-cpp.
+
+\hypertarget{classtinyxml2_1_1_x_m_l_util_a1cd141e50980fcddd6bf9af5de4b1db7}{\index{tinyxml2\-::\-X\-M\-L\-Util@{tinyxml2\-::\-X\-M\-L\-Util}!To\-Str@{To\-Str}}
+\index{To\-Str@{To\-Str}!tinyxml2::XMLUtil@{tinyxml2\-::\-X\-M\-L\-Util}}
+\subsubsection[{To\-Str}]{\setlength{\rightskip}{0pt plus 5cm}void tinyxml2\-::\-X\-M\-L\-Util\-::\-To\-Str (
+\begin{DoxyParamCaption}
+\item[{double}]{v, }
+\item[{char $\ast$}]{buffer, }
+\item[{int}]{buffer\-Size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classtinyxml2_1_1_x_m_l_util_a1cd141e50980fcddd6bf9af5de4b1db7}
+
+
+Definition at line 432 of file tinyxml2.\-cpp.
+
+\hypertarget{classtinyxml2_1_1_x_m_l_util_a210c8637d5eb4ce3d4625294af0efc2f}{\index{tinyxml2\-::\-X\-M\-L\-Util@{tinyxml2\-::\-X\-M\-L\-Util}!To\-Unsigned@{To\-Unsigned}}
+\index{To\-Unsigned@{To\-Unsigned}!tinyxml2::XMLUtil@{tinyxml2\-::\-X\-M\-L\-Util}}
+\subsubsection[{To\-Unsigned}]{\setlength{\rightskip}{0pt plus 5cm}bool tinyxml2\-::\-X\-M\-L\-Util\-::\-To\-Unsigned (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{str, }
+\item[{unsigned $\ast$}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classtinyxml2_1_1_x_m_l_util_a210c8637d5eb4ce3d4625294af0efc2f}
+
+
+Definition at line 446 of file tinyxml2.\-cpp.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Source/\hyperlink{tinyxml2_8hpp}{tinyxml2.\-hpp}\item 
+Source/\hyperlink{tinyxml2_8cpp}{tinyxml2.\-cpp}\end{DoxyCompactItemize}

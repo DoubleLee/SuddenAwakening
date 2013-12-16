@@ -1,0 +1,73 @@
+\hypertarget{tinyxml2_8cpp}{\section{Source/tinyxml2.cpp File Reference}
+\label{tinyxml2_8cpp}\index{Source/tinyxml2.\-cpp@{Source/tinyxml2.\-cpp}}
+}
+{\ttfamily \#include \char`\"{}tinyxml2.\-hpp\char`\"{}}\\*
+{\ttfamily \#include $<$new$>$}\\*
+{\ttfamily \#include $<$cstddef$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structtinyxml2_1_1_entity}{tinyxml2\-::\-Entity}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacetinyxml2}{tinyxml2}
+\end{DoxyCompactItemize}
+\subsection*{Constant Groups}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacetinyxml2}{tinyxml2}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{tinyxml2_8cpp_a4c299946dbfd4ca62902537e5a0a1a75}{D\-E\-L\-E\-T\-E\-\_\-\-N\-O\-D\-E}(node)
+\item 
+\#define \hyperlink{tinyxml2_8cpp_a3764bbbd1a21d84d3b5a484bb3109aec}{D\-E\-L\-E\-T\-E\-\_\-\-A\-T\-T\-R\-I\-B\-U\-T\-E}(attrib)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{tinyxml2_8cpp_a3764bbbd1a21d84d3b5a484bb3109aec}{\index{tinyxml2.\-cpp@{tinyxml2.\-cpp}!D\-E\-L\-E\-T\-E\-\_\-\-A\-T\-T\-R\-I\-B\-U\-T\-E@{D\-E\-L\-E\-T\-E\-\_\-\-A\-T\-T\-R\-I\-B\-U\-T\-E}}
+\index{D\-E\-L\-E\-T\-E\-\_\-\-A\-T\-T\-R\-I\-B\-U\-T\-E@{D\-E\-L\-E\-T\-E\-\_\-\-A\-T\-T\-R\-I\-B\-U\-T\-E}!tinyxml2.cpp@{tinyxml2.\-cpp}}
+\subsubsection[{D\-E\-L\-E\-T\-E\-\_\-\-A\-T\-T\-R\-I\-B\-U\-T\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-E\-L\-E\-T\-E\-\_\-\-A\-T\-T\-R\-I\-B\-U\-T\-E(
+\begin{DoxyParamCaption}
+\item[{}]{attrib}
+\end{DoxyParamCaption}
+)}}\label{tinyxml2_8cpp_a3764bbbd1a21d84d3b5a484bb3109aec}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\{       \(\backslash\)
+        if ( attrib ) \{                         \(\backslash\)
+            MemPool* pool = attrib->\_memPool;   \(\backslash\)
+            attrib->~XMLAttribute();            \(\backslash\)
+            pool->Free( attrib );               \(\backslash\)
+        \}                                       \(\backslash\)
+    \}
+\end{DoxyCode}
+
+
+Definition at line 56 of file tinyxml2.\-cpp.
+
+\hypertarget{tinyxml2_8cpp_a4c299946dbfd4ca62902537e5a0a1a75}{\index{tinyxml2.\-cpp@{tinyxml2.\-cpp}!D\-E\-L\-E\-T\-E\-\_\-\-N\-O\-D\-E@{D\-E\-L\-E\-T\-E\-\_\-\-N\-O\-D\-E}}
+\index{D\-E\-L\-E\-T\-E\-\_\-\-N\-O\-D\-E@{D\-E\-L\-E\-T\-E\-\_\-\-N\-O\-D\-E}!tinyxml2.cpp@{tinyxml2.\-cpp}}
+\subsubsection[{D\-E\-L\-E\-T\-E\-\_\-\-N\-O\-D\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-E\-L\-E\-T\-E\-\_\-\-N\-O\-D\-E(
+\begin{DoxyParamCaption}
+\item[{}]{node}
+\end{DoxyParamCaption}
+)}}\label{tinyxml2_8cpp_a4c299946dbfd4ca62902537e5a0a1a75}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\{           \(\backslash\)
+        if ( node ) \{                       \(\backslash\)
+            MemPool* pool = node->\_memPool; \(\backslash\)
+            node->~XMLNode();               \(\backslash\)
+            pool->Free( node );             \(\backslash\)
+        \}                                   \(\backslash\)
+    \}
+\end{DoxyCode}
+
+
+Definition at line 49 of file tinyxml2.\-cpp.
+

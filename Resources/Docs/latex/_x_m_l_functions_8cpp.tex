@@ -1,0 +1,76 @@
+\hypertarget{_x_m_l_functions_8cpp}{\section{Source/\-X\-M\-L\-Functions.cpp File Reference}
+\label{_x_m_l_functions_8cpp}\index{Source/\-X\-M\-L\-Functions.\-cpp@{Source/\-X\-M\-L\-Functions.\-cpp}}
+}
+{\ttfamily \#include \char`\"{}X\-M\-L\-Functions.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Audio\-Effects.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Resource\-Manager.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}String\-Utilities.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Entity.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Level.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\-F\-M\-L/\-Audio.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\-F\-M\-L/\-Graphics.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}tinyxml2.\-hpp\char`\"{}}\\*
+{\ttfamily \#include $<$stdexcept$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class T $>$ }\\bool \hyperlink{_x_m_l_functions_8cpp_abc7b520958d2011d2c018fc2948d18b2}{Is\-Valid\-Enum} (T \&enum\-Ref, int value\-I\-D)
+\item 
+void \hyperlink{_x_m_l_functions_8cpp_a81e7aa4cc159aaeead9f01d9b63d03d6}{Load\-Textures\-From\-X\-M\-L} (\hyperlink{class_resource_manager}{Resource\-Manager}$<$ sf\-::\-Texture $>$ \&textures, \hyperlink{classtinyxml2_1_1_x_m_l_element}{tinyxml2\-::\-X\-M\-L\-Element} $\ast$p\-Textures\-Element)
+\item 
+void \hyperlink{_x_m_l_functions_8cpp_a58d2529e6b2668c375c655edb018f350}{Load\-Music\-From\-X\-M\-L} (sf\-::\-Music \&music, \hyperlink{classtinyxml2_1_1_x_m_l_element}{tinyxml2\-::\-X\-M\-L\-Element} $\ast$p\-Music\-Element)
+\item 
+void \hyperlink{_x_m_l_functions_8cpp_a9579e0ff2c67ce1fb6005a72dfb0473d}{Load\-Audios\-From\-X\-M\-L} (\hyperlink{class_audio_effects}{Audio\-Effects} \&audio\-Man, \hyperlink{classtinyxml2_1_1_x_m_l_element}{tinyxml2\-::\-X\-M\-L\-Element} $\ast$p\-Audios\-Element)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_x_m_l_functions_8cpp_abc7b520958d2011d2c018fc2948d18b2}{\index{X\-M\-L\-Functions.\-cpp@{X\-M\-L\-Functions.\-cpp}!Is\-Valid\-Enum@{Is\-Valid\-Enum}}
+\index{Is\-Valid\-Enum@{Is\-Valid\-Enum}!XMLFunctions.cpp@{X\-M\-L\-Functions.\-cpp}}
+\subsubsection[{Is\-Valid\-Enum}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ bool Is\-Valid\-Enum (
+\begin{DoxyParamCaption}
+\item[{T \&}]{enum\-Ref, }
+\item[{int}]{value\-I\-D}
+\end{DoxyParamCaption}
+)}}\label{_x_m_l_functions_8cpp_abc7b520958d2011d2c018fc2948d18b2}
+
+
+Definition at line 20 of file X\-M\-L\-Functions.\-cpp.
+
+\hypertarget{_x_m_l_functions_8cpp_a9579e0ff2c67ce1fb6005a72dfb0473d}{\index{X\-M\-L\-Functions.\-cpp@{X\-M\-L\-Functions.\-cpp}!Load\-Audios\-From\-X\-M\-L@{Load\-Audios\-From\-X\-M\-L}}
+\index{Load\-Audios\-From\-X\-M\-L@{Load\-Audios\-From\-X\-M\-L}!XMLFunctions.cpp@{X\-M\-L\-Functions.\-cpp}}
+\subsubsection[{Load\-Audios\-From\-X\-M\-L}]{\setlength{\rightskip}{0pt plus 5cm}void Load\-Audios\-From\-X\-M\-L (
+\begin{DoxyParamCaption}
+\item[{{\bf Audio\-Effects} \&}]{audio\-Man, }
+\item[{{\bf tinyxml2\-::\-X\-M\-L\-Element} $\ast$}]{p\-Audios\-Element}
+\end{DoxyParamCaption}
+)}}\label{_x_m_l_functions_8cpp_a9579e0ff2c67ce1fb6005a72dfb0473d}
+
+
+Definition at line 117 of file X\-M\-L\-Functions.\-cpp.
+
+\hypertarget{_x_m_l_functions_8cpp_a58d2529e6b2668c375c655edb018f350}{\index{X\-M\-L\-Functions.\-cpp@{X\-M\-L\-Functions.\-cpp}!Load\-Music\-From\-X\-M\-L@{Load\-Music\-From\-X\-M\-L}}
+\index{Load\-Music\-From\-X\-M\-L@{Load\-Music\-From\-X\-M\-L}!XMLFunctions.cpp@{X\-M\-L\-Functions.\-cpp}}
+\subsubsection[{Load\-Music\-From\-X\-M\-L}]{\setlength{\rightskip}{0pt plus 5cm}void Load\-Music\-From\-X\-M\-L (
+\begin{DoxyParamCaption}
+\item[{sf\-::\-Music \&}]{music, }
+\item[{{\bf tinyxml2\-::\-X\-M\-L\-Element} $\ast$}]{p\-Music\-Element}
+\end{DoxyParamCaption}
+)}}\label{_x_m_l_functions_8cpp_a58d2529e6b2668c375c655edb018f350}
+
+
+Definition at line 73 of file X\-M\-L\-Functions.\-cpp.
+
+\hypertarget{_x_m_l_functions_8cpp_a81e7aa4cc159aaeead9f01d9b63d03d6}{\index{X\-M\-L\-Functions.\-cpp@{X\-M\-L\-Functions.\-cpp}!Load\-Textures\-From\-X\-M\-L@{Load\-Textures\-From\-X\-M\-L}}
+\index{Load\-Textures\-From\-X\-M\-L@{Load\-Textures\-From\-X\-M\-L}!XMLFunctions.cpp@{X\-M\-L\-Functions.\-cpp}}
+\subsubsection[{Load\-Textures\-From\-X\-M\-L}]{\setlength{\rightskip}{0pt plus 5cm}void Load\-Textures\-From\-X\-M\-L (
+\begin{DoxyParamCaption}
+\item[{{\bf Resource\-Manager}$<$ sf\-::\-Texture $>$ \&}]{textures, }
+\item[{{\bf tinyxml2\-::\-X\-M\-L\-Element} $\ast$}]{p\-Textures\-Element}
+\end{DoxyParamCaption}
+)}}\label{_x_m_l_functions_8cpp_a81e7aa4cc159aaeead9f01d9b63d03d6}
+
+
+Definition at line 30 of file X\-M\-L\-Functions.\-cpp.
+

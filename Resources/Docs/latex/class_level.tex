@@ -1,0 +1,206 @@
+\hypertarget{class_level}{\section{Level Class Reference}
+\label{class_level}\index{Level@{Level}}
+}
+
+
+{\ttfamily \#include $<$Level.\-hpp$>$}
+
+Inheritance diagram for Level\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_level}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_level_a638468d7d98ba422bbcaf2e5ea05d421}{Level} (\hyperlink{_level_8hpp_aa0e387304096fe83aba77c85cb7be77a}{Level\-I\-D} level\-I\-D)
+\item 
+virtual \hyperlink{class_level_a249eac1e8f19ff44134efa5e986feaca}{$\sim$\-Level} ()
+\item 
+\hyperlink{_level_8hpp_aa0e387304096fe83aba77c85cb7be77a}{Level\-I\-D} \hyperlink{class_level_a03ef47d6709e8b62568cfaad9decfd0e}{Get\-I\-D} () const 
+\item 
+virtual void \hyperlink{class_level_a540d45e6d0ed7ce481d985881e8e27e2}{Update} ()=0
+\item 
+virtual void \hyperlink{class_level_a308eb5521217a781d2357ba83d041054}{Draw} ()=0
+\item 
+virtual void \hyperlink{class_level_a95bbafd05f5aa2396c36ff8343c62a2f}{Update\-Player} ()
+\item 
+virtual void \hyperlink{class_level_a26a3990bd47120e8e5c59f71d29ccb0a}{Load\-From\-X\-M\-L} (const string \&file)=0
+\item 
+virtual void \hyperlink{class_level_af8c86b5de9abc37b7f639fd9f5e9ea8e}{Process\-Event} (const sf\-::\-Event \&event)=0
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_game}{Game} $\ast$ \hyperlink{class_level_a21c456b270db451d1da365d37e365b32}{mp\-Game}
+\item 
+\hyperlink{class_resource_manager}{Resource\-Manager}$<$ sf\-::\-Texture $>$ \hyperlink{class_level_a17bf54432fa53317ab5d7ffffbfdec6f}{m\-Textures}
+\item 
+unique\-\_\-ptr$<$ \hyperlink{class_audio_effects}{Audio\-Effects} $>$ \hyperlink{class_level_ad7ed6a1f41d6557b9ca3f7e62d705eb2}{mp\-Audio\-Effects}
+\item 
+unique\-\_\-ptr$<$ \hyperlink{class_tile_map}{Tile\-Map} $>$ \hyperlink{class_level_a2294842a4de2c0fbe9b28a670088b5c4}{mp\-Tile\-Map}
+\item 
+unique\-\_\-ptr$<$ \hyperlink{class_player}{Player} $>$ \hyperlink{class_level_a1cb20848f0e9d49a6469b4682e105d94}{mp\-Player}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_level_ac44de73f21a1e6e5ae31d28a411395da}{Load\-Map\-Tiles\-From\-X\-M\-L} (\hyperlink{class_level}{Level} $\ast$, \hyperlink{classtinyxml2_1_1_x_m_l_element}{tinyxml2\-::\-X\-M\-L\-Element} $\ast$)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 40 of file Level.\-hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_level_a638468d7d98ba422bbcaf2e5ea05d421}{\index{Level@{Level}!Level@{Level}}
+\index{Level@{Level}!Level@{Level}}
+\subsubsection[{Level}]{\setlength{\rightskip}{0pt plus 5cm}Level\-::\-Level (
+\begin{DoxyParamCaption}
+\item[{{\bf Level\-I\-D}}]{level\-I\-D}
+\end{DoxyParamCaption}
+)}}\label{class_level_a638468d7d98ba422bbcaf2e5ea05d421}
+
+
+Definition at line 11 of file Level.\-cpp.
+
+\hypertarget{class_level_a249eac1e8f19ff44134efa5e986feaca}{\index{Level@{Level}!$\sim$\-Level@{$\sim$\-Level}}
+\index{$\sim$\-Level@{$\sim$\-Level}!Level@{Level}}
+\subsubsection[{$\sim$\-Level}]{\setlength{\rightskip}{0pt plus 5cm}Level\-::$\sim$\-Level (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_level_a249eac1e8f19ff44134efa5e986feaca}
+
+
+Definition at line 22 of file Level.\-cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_level_a308eb5521217a781d2357ba83d041054}{\index{Level@{Level}!Draw@{Draw}}
+\index{Draw@{Draw}!Level@{Level}}
+\subsubsection[{Draw}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Level\-::\-Draw (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_level_a308eb5521217a781d2357ba83d041054}
+
+
+Implemented in \hyperlink{class_level_one_ac39dc2f3934694f3428737b97001ff41}{Level\-One}.
+
+\hypertarget{class_level_a03ef47d6709e8b62568cfaad9decfd0e}{\index{Level@{Level}!Get\-I\-D@{Get\-I\-D}}
+\index{Get\-I\-D@{Get\-I\-D}!Level@{Level}}
+\subsubsection[{Get\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Level\-I\-D} Level\-::\-Get\-I\-D (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_level_a03ef47d6709e8b62568cfaad9decfd0e}
+
+
+Definition at line 27 of file Level.\-cpp.
+
+\hypertarget{class_level_a26a3990bd47120e8e5c59f71d29ccb0a}{\index{Level@{Level}!Load\-From\-X\-M\-L@{Load\-From\-X\-M\-L}}
+\index{Load\-From\-X\-M\-L@{Load\-From\-X\-M\-L}!Level@{Level}}
+\subsubsection[{Load\-From\-X\-M\-L}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Level\-::\-Load\-From\-X\-M\-L (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{file}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_level_a26a3990bd47120e8e5c59f71d29ccb0a}
+
+
+Implemented in \hyperlink{class_level_one_a6ff4ce4a9eaeb94987f897e47de62856}{Level\-One}.
+
+\hypertarget{class_level_af8c86b5de9abc37b7f639fd9f5e9ea8e}{\index{Level@{Level}!Process\-Event@{Process\-Event}}
+\index{Process\-Event@{Process\-Event}!Level@{Level}}
+\subsubsection[{Process\-Event}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Level\-::\-Process\-Event (
+\begin{DoxyParamCaption}
+\item[{const sf\-::\-Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_level_af8c86b5de9abc37b7f639fd9f5e9ea8e}
+
+
+Implemented in \hyperlink{class_level_one_ab806ffec162c436857edd2539e8f3d4e}{Level\-One}.
+
+\hypertarget{class_level_a540d45e6d0ed7ce481d985881e8e27e2}{\index{Level@{Level}!Update@{Update}}
+\index{Update@{Update}!Level@{Level}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Level\-::\-Update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_level_a540d45e6d0ed7ce481d985881e8e27e2}
+
+
+Implemented in \hyperlink{class_level_one_ad0078eaa35f035c1a6ec7bf0bbef2fba}{Level\-One}.
+
+\hypertarget{class_level_a95bbafd05f5aa2396c36ff8343c62a2f}{\index{Level@{Level}!Update\-Player@{Update\-Player}}
+\index{Update\-Player@{Update\-Player}!Level@{Level}}
+\subsubsection[{Update\-Player}]{\setlength{\rightskip}{0pt plus 5cm}void Level\-::\-Update\-Player (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_level_a95bbafd05f5aa2396c36ff8343c62a2f}
+
+
+Definition at line 32 of file Level.\-cpp.
+
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{class_level_ac44de73f21a1e6e5ae31d28a411395da}{\index{Level@{Level}!Load\-Map\-Tiles\-From\-X\-M\-L@{Load\-Map\-Tiles\-From\-X\-M\-L}}
+\index{Load\-Map\-Tiles\-From\-X\-M\-L@{Load\-Map\-Tiles\-From\-X\-M\-L}!Level@{Level}}
+\subsubsection[{Load\-Map\-Tiles\-From\-X\-M\-L}]{\setlength{\rightskip}{0pt plus 5cm}void Load\-Map\-Tiles\-From\-X\-M\-L (
+\begin{DoxyParamCaption}
+\item[{{\bf Level} $\ast$}]{, }
+\item[{{\bf tinyxml2\-::\-X\-M\-L\-Element} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{class_level_ac44de73f21a1e6e5ae31d28a411395da}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_level_ad7ed6a1f41d6557b9ca3f7e62d705eb2}{\index{Level@{Level}!mp\-Audio\-Effects@{mp\-Audio\-Effects}}
+\index{mp\-Audio\-Effects@{mp\-Audio\-Effects}!Level@{Level}}
+\subsubsection[{mp\-Audio\-Effects}]{\setlength{\rightskip}{0pt plus 5cm}unique\-\_\-ptr$<${\bf Audio\-Effects}$>$ Level\-::mp\-Audio\-Effects\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_level_ad7ed6a1f41d6557b9ca3f7e62d705eb2}
+
+
+Definition at line 64 of file Level.\-hpp.
+
+\hypertarget{class_level_a21c456b270db451d1da365d37e365b32}{\index{Level@{Level}!mp\-Game@{mp\-Game}}
+\index{mp\-Game@{mp\-Game}!Level@{Level}}
+\subsubsection[{mp\-Game}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Game}$\ast$ Level\-::mp\-Game\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_level_a21c456b270db451d1da365d37e365b32}
+
+
+Definition at line 61 of file Level.\-hpp.
+
+\hypertarget{class_level_a1cb20848f0e9d49a6469b4682e105d94}{\index{Level@{Level}!mp\-Player@{mp\-Player}}
+\index{mp\-Player@{mp\-Player}!Level@{Level}}
+\subsubsection[{mp\-Player}]{\setlength{\rightskip}{0pt plus 5cm}unique\-\_\-ptr$<$ {\bf Player} $>$ Level\-::mp\-Player\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_level_a1cb20848f0e9d49a6469b4682e105d94}
+
+
+Definition at line 66 of file Level.\-hpp.
+
+\hypertarget{class_level_a2294842a4de2c0fbe9b28a670088b5c4}{\index{Level@{Level}!mp\-Tile\-Map@{mp\-Tile\-Map}}
+\index{mp\-Tile\-Map@{mp\-Tile\-Map}!Level@{Level}}
+\subsubsection[{mp\-Tile\-Map}]{\setlength{\rightskip}{0pt plus 5cm}unique\-\_\-ptr$<$ {\bf Tile\-Map} $>$ Level\-::mp\-Tile\-Map\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_level_a2294842a4de2c0fbe9b28a670088b5c4}
+
+
+Definition at line 65 of file Level.\-hpp.
+
+\hypertarget{class_level_a17bf54432fa53317ab5d7ffffbfdec6f}{\index{Level@{Level}!m\-Textures@{m\-Textures}}
+\index{m\-Textures@{m\-Textures}!Level@{Level}}
+\subsubsection[{m\-Textures}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Resource\-Manager}$<$sf\-::\-Texture$>$ Level\-::m\-Textures\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_level_a17bf54432fa53317ab5d7ffffbfdec6f}
+
+
+Definition at line 63 of file Level.\-hpp.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Source/\hyperlink{_level_8hpp}{Level.\-hpp}\item 
+Source/\hyperlink{_level_8cpp}{Level.\-cpp}\end{DoxyCompactItemize}

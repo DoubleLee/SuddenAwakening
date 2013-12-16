@@ -1,0 +1,225 @@
+\hypertarget{class_tile_map_layer}{\section{Tile\-Map\-Layer Class Reference}
+\label{class_tile_map_layer}\index{Tile\-Map\-Layer@{Tile\-Map\-Layer}}
+}
+
+
+{\ttfamily \#include $<$Tile\-Map.\-hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tile_map_layer_ac9fba07c129ad2a52be1601f58eee773}{Tile\-Map\-Layer} (const string \&layer\-Name, unsigned int tile\-Width\-Count, unsigned int tile\-Height\-Count)
+\item 
+virtual \hyperlink{class_tile_map_layer_a8bee35e5252ed1c3c1ea6935003c5d10}{$\sim$\-Tile\-Map\-Layer} ()
+\item 
+virtual void \hyperlink{class_tile_map_layer_a1befe86a2d2bed2d410924875eca4847}{Update} ()
+\item 
+virtual void \hyperlink{class_tile_map_layer_ab09044152ad8bebc2afbe837858ac4ae}{Draw} (sf\-::\-Render\-Window $\ast$p\-Window) const 
+\item 
+virtual bool \hyperlink{class_tile_map_layer_af6140d8910838621911ee1aaefcf317e}{Is\-Colliding} (sf\-::\-Sprite $\ast$p\-Sprite) const 
+\item 
+virtual sf\-::\-Vector2f \hyperlink{class_tile_map_layer_a04a978cd751d8c67f483816827888c21}{Get\-Spawn\-Position} () const 
+\item 
+unsigned int \hyperlink{class_tile_map_layer_ace19c01d1db3ebd4d1d370a6b34a2db5}{Get\-Tile\-Width\-Count} () const 
+\item 
+unsigned int \hyperlink{class_tile_map_layer_a14fce828daafd9e07f855ad0bb274299}{Get\-Tile\-Height\-Count} () const 
+\item 
+void \hyperlink{class_tile_map_layer_add757a7c1952dc4e0b6cf67e2887b509}{Set\-Is\-Visible} (bool visible)
+\item 
+bool \hyperlink{class_tile_map_layer_a068d3fa1c63e2c78ec0feb41a441e63c}{Get\-Is\-Visible} () const 
+\item 
+void \hyperlink{class_tile_map_layer_a7a1e6fc535c544905cd5e96adbc0813a}{Add\-Entity} (unique\-\_\-ptr$<$ \hyperlink{class_map_entity}{Map\-Entity} $>$ p\-Ent)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{class_tile_map_layer_a2d89ec99671ed9cd422c68a5db26a5e4}{m\-Layer\-Name}
+\item 
+unsigned int \hyperlink{class_tile_map_layer_a1f7ed47471eae14e321db6e2da4d0547}{m\-Tile\-Width\-Count}
+\item 
+unsigned int \hyperlink{class_tile_map_layer_ad3731c3f3e38579327eb1a6b40e74af3}{m\-Tile\-Height\-Count}
+\item 
+bool \hyperlink{class_tile_map_layer_a516864f25003dad7720675ef44e727c0}{m\-Is\-Visible}
+\item 
+vector$<$ unique\-\_\-ptr$<$ \hyperlink{class_map_entity}{Map\-Entity} $>$ $>$ \hyperlink{class_tile_map_layer_a9c9c569f4c2f5de09b5541d079f5f97a}{m\-Tile\-Entities}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 60 of file Tile\-Map.\-hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_tile_map_layer_ac9fba07c129ad2a52be1601f58eee773}{\index{Tile\-Map\-Layer@{Tile\-Map\-Layer}!Tile\-Map\-Layer@{Tile\-Map\-Layer}}
+\index{Tile\-Map\-Layer@{Tile\-Map\-Layer}!TileMapLayer@{Tile\-Map\-Layer}}
+\subsubsection[{Tile\-Map\-Layer}]{\setlength{\rightskip}{0pt plus 5cm}Tile\-Map\-Layer\-::\-Tile\-Map\-Layer (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{layer\-Name, }
+\item[{unsigned int}]{tile\-Width\-Count, }
+\item[{unsigned int}]{tile\-Height\-Count}
+\end{DoxyParamCaption}
+)}}\label{class_tile_map_layer_ac9fba07c129ad2a52be1601f58eee773}
+
+
+Definition at line 373 of file Tile\-Map.\-cpp.
+
+\hypertarget{class_tile_map_layer_a8bee35e5252ed1c3c1ea6935003c5d10}{\index{Tile\-Map\-Layer@{Tile\-Map\-Layer}!$\sim$\-Tile\-Map\-Layer@{$\sim$\-Tile\-Map\-Layer}}
+\index{$\sim$\-Tile\-Map\-Layer@{$\sim$\-Tile\-Map\-Layer}!TileMapLayer@{Tile\-Map\-Layer}}
+\subsubsection[{$\sim$\-Tile\-Map\-Layer}]{\setlength{\rightskip}{0pt plus 5cm}Tile\-Map\-Layer\-::$\sim$\-Tile\-Map\-Layer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_tile_map_layer_a8bee35e5252ed1c3c1ea6935003c5d10}
+
+
+Definition at line 383 of file Tile\-Map.\-cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_tile_map_layer_a7a1e6fc535c544905cd5e96adbc0813a}{\index{Tile\-Map\-Layer@{Tile\-Map\-Layer}!Add\-Entity@{Add\-Entity}}
+\index{Add\-Entity@{Add\-Entity}!TileMapLayer@{Tile\-Map\-Layer}}
+\subsubsection[{Add\-Entity}]{\setlength{\rightskip}{0pt plus 5cm}void Tile\-Map\-Layer\-::\-Add\-Entity (
+\begin{DoxyParamCaption}
+\item[{unique\-\_\-ptr$<$ {\bf Map\-Entity} $>$}]{p\-Ent}
+\end{DoxyParamCaption}
+)}}\label{class_tile_map_layer_a7a1e6fc535c544905cd5e96adbc0813a}
+
+
+Definition at line 447 of file Tile\-Map.\-cpp.
+
+\hypertarget{class_tile_map_layer_ab09044152ad8bebc2afbe837858ac4ae}{\index{Tile\-Map\-Layer@{Tile\-Map\-Layer}!Draw@{Draw}}
+\index{Draw@{Draw}!TileMapLayer@{Tile\-Map\-Layer}}
+\subsubsection[{Draw}]{\setlength{\rightskip}{0pt plus 5cm}void Tile\-Map\-Layer\-::\-Draw (
+\begin{DoxyParamCaption}
+\item[{sf\-::\-Render\-Window $\ast$}]{p\-Window}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_tile_map_layer_ab09044152ad8bebc2afbe837858ac4ae}
+
+
+Definition at line 393 of file Tile\-Map.\-cpp.
+
+\hypertarget{class_tile_map_layer_a068d3fa1c63e2c78ec0feb41a441e63c}{\index{Tile\-Map\-Layer@{Tile\-Map\-Layer}!Get\-Is\-Visible@{Get\-Is\-Visible}}
+\index{Get\-Is\-Visible@{Get\-Is\-Visible}!TileMapLayer@{Tile\-Map\-Layer}}
+\subsubsection[{Get\-Is\-Visible}]{\setlength{\rightskip}{0pt plus 5cm}bool Tile\-Map\-Layer\-::\-Get\-Is\-Visible (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_tile_map_layer_a068d3fa1c63e2c78ec0feb41a441e63c}
+
+
+Definition at line 442 of file Tile\-Map.\-cpp.
+
+\hypertarget{class_tile_map_layer_a04a978cd751d8c67f483816827888c21}{\index{Tile\-Map\-Layer@{Tile\-Map\-Layer}!Get\-Spawn\-Position@{Get\-Spawn\-Position}}
+\index{Get\-Spawn\-Position@{Get\-Spawn\-Position}!TileMapLayer@{Tile\-Map\-Layer}}
+\subsubsection[{Get\-Spawn\-Position}]{\setlength{\rightskip}{0pt plus 5cm}sf\-::\-Vector2f Tile\-Map\-Layer\-::\-Get\-Spawn\-Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_tile_map_layer_a04a978cd751d8c67f483816827888c21}
+
+
+Definition at line 415 of file Tile\-Map.\-cpp.
+
+\hypertarget{class_tile_map_layer_a14fce828daafd9e07f855ad0bb274299}{\index{Tile\-Map\-Layer@{Tile\-Map\-Layer}!Get\-Tile\-Height\-Count@{Get\-Tile\-Height\-Count}}
+\index{Get\-Tile\-Height\-Count@{Get\-Tile\-Height\-Count}!TileMapLayer@{Tile\-Map\-Layer}}
+\subsubsection[{Get\-Tile\-Height\-Count}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Tile\-Map\-Layer\-::\-Get\-Tile\-Height\-Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_tile_map_layer_a14fce828daafd9e07f855ad0bb274299}
+
+
+Definition at line 432 of file Tile\-Map.\-cpp.
+
+\hypertarget{class_tile_map_layer_ace19c01d1db3ebd4d1d370a6b34a2db5}{\index{Tile\-Map\-Layer@{Tile\-Map\-Layer}!Get\-Tile\-Width\-Count@{Get\-Tile\-Width\-Count}}
+\index{Get\-Tile\-Width\-Count@{Get\-Tile\-Width\-Count}!TileMapLayer@{Tile\-Map\-Layer}}
+\subsubsection[{Get\-Tile\-Width\-Count}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Tile\-Map\-Layer\-::\-Get\-Tile\-Width\-Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_tile_map_layer_ace19c01d1db3ebd4d1d370a6b34a2db5}
+
+
+Definition at line 427 of file Tile\-Map.\-cpp.
+
+\hypertarget{class_tile_map_layer_af6140d8910838621911ee1aaefcf317e}{\index{Tile\-Map\-Layer@{Tile\-Map\-Layer}!Is\-Colliding@{Is\-Colliding}}
+\index{Is\-Colliding@{Is\-Colliding}!TileMapLayer@{Tile\-Map\-Layer}}
+\subsubsection[{Is\-Colliding}]{\setlength{\rightskip}{0pt plus 5cm}bool Tile\-Map\-Layer\-::\-Is\-Colliding (
+\begin{DoxyParamCaption}
+\item[{sf\-::\-Sprite $\ast$}]{p\-Sprite}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_tile_map_layer_af6140d8910838621911ee1aaefcf317e}
+
+
+Definition at line 401 of file Tile\-Map.\-cpp.
+
+\hypertarget{class_tile_map_layer_add757a7c1952dc4e0b6cf67e2887b509}{\index{Tile\-Map\-Layer@{Tile\-Map\-Layer}!Set\-Is\-Visible@{Set\-Is\-Visible}}
+\index{Set\-Is\-Visible@{Set\-Is\-Visible}!TileMapLayer@{Tile\-Map\-Layer}}
+\subsubsection[{Set\-Is\-Visible}]{\setlength{\rightskip}{0pt plus 5cm}void Tile\-Map\-Layer\-::\-Set\-Is\-Visible (
+\begin{DoxyParamCaption}
+\item[{bool}]{visible}
+\end{DoxyParamCaption}
+)}}\label{class_tile_map_layer_add757a7c1952dc4e0b6cf67e2887b509}
+
+
+Definition at line 437 of file Tile\-Map.\-cpp.
+
+\hypertarget{class_tile_map_layer_a1befe86a2d2bed2d410924875eca4847}{\index{Tile\-Map\-Layer@{Tile\-Map\-Layer}!Update@{Update}}
+\index{Update@{Update}!TileMapLayer@{Tile\-Map\-Layer}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}void Tile\-Map\-Layer\-::\-Update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_tile_map_layer_a1befe86a2d2bed2d410924875eca4847}
+
+
+Definition at line 388 of file Tile\-Map.\-cpp.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_tile_map_layer_a516864f25003dad7720675ef44e727c0}{\index{Tile\-Map\-Layer@{Tile\-Map\-Layer}!m\-Is\-Visible@{m\-Is\-Visible}}
+\index{m\-Is\-Visible@{m\-Is\-Visible}!TileMapLayer@{Tile\-Map\-Layer}}
+\subsubsection[{m\-Is\-Visible}]{\setlength{\rightskip}{0pt plus 5cm}bool Tile\-Map\-Layer\-::m\-Is\-Visible\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tile_map_layer_a516864f25003dad7720675ef44e727c0}
+
+
+Definition at line 87 of file Tile\-Map.\-hpp.
+
+\hypertarget{class_tile_map_layer_a2d89ec99671ed9cd422c68a5db26a5e4}{\index{Tile\-Map\-Layer@{Tile\-Map\-Layer}!m\-Layer\-Name@{m\-Layer\-Name}}
+\index{m\-Layer\-Name@{m\-Layer\-Name}!TileMapLayer@{Tile\-Map\-Layer}}
+\subsubsection[{m\-Layer\-Name}]{\setlength{\rightskip}{0pt plus 5cm}string Tile\-Map\-Layer\-::m\-Layer\-Name\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tile_map_layer_a2d89ec99671ed9cd422c68a5db26a5e4}
+
+
+Definition at line 82 of file Tile\-Map.\-hpp.
+
+\hypertarget{class_tile_map_layer_a9c9c569f4c2f5de09b5541d079f5f97a}{\index{Tile\-Map\-Layer@{Tile\-Map\-Layer}!m\-Tile\-Entities@{m\-Tile\-Entities}}
+\index{m\-Tile\-Entities@{m\-Tile\-Entities}!TileMapLayer@{Tile\-Map\-Layer}}
+\subsubsection[{m\-Tile\-Entities}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ unique\-\_\-ptr$<$ {\bf Map\-Entity} $>$ $>$ Tile\-Map\-Layer\-::m\-Tile\-Entities\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tile_map_layer_a9c9c569f4c2f5de09b5541d079f5f97a}
+
+
+Definition at line 89 of file Tile\-Map.\-hpp.
+
+\hypertarget{class_tile_map_layer_ad3731c3f3e38579327eb1a6b40e74af3}{\index{Tile\-Map\-Layer@{Tile\-Map\-Layer}!m\-Tile\-Height\-Count@{m\-Tile\-Height\-Count}}
+\index{m\-Tile\-Height\-Count@{m\-Tile\-Height\-Count}!TileMapLayer@{Tile\-Map\-Layer}}
+\subsubsection[{m\-Tile\-Height\-Count}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Tile\-Map\-Layer\-::m\-Tile\-Height\-Count\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tile_map_layer_ad3731c3f3e38579327eb1a6b40e74af3}
+
+
+Definition at line 85 of file Tile\-Map.\-hpp.
+
+\hypertarget{class_tile_map_layer_a1f7ed47471eae14e321db6e2da4d0547}{\index{Tile\-Map\-Layer@{Tile\-Map\-Layer}!m\-Tile\-Width\-Count@{m\-Tile\-Width\-Count}}
+\index{m\-Tile\-Width\-Count@{m\-Tile\-Width\-Count}!TileMapLayer@{Tile\-Map\-Layer}}
+\subsubsection[{m\-Tile\-Width\-Count}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Tile\-Map\-Layer\-::m\-Tile\-Width\-Count\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tile_map_layer_a1f7ed47471eae14e321db6e2da4d0547}
+
+
+Definition at line 84 of file Tile\-Map.\-hpp.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Source/\hyperlink{_tile_map_8hpp}{Tile\-Map.\-hpp}\item 
+Source/\hyperlink{_tile_map_8cpp}{Tile\-Map.\-cpp}\end{DoxyCompactItemize}

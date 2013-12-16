@@ -1,0 +1,138 @@
+\hypertarget{tinyxml2_8hpp}{\section{Source/tinyxml2.hpp File Reference}
+\label{tinyxml2_8hpp}\index{Source/tinyxml2.\-hpp@{Source/tinyxml2.\-hpp}}
+}
+{\ttfamily \#include $<$cctype$>$}\\*
+{\ttfamily \#include $<$climits$>$}\\*
+{\ttfamily \#include $<$cstdio$>$}\\*
+{\ttfamily \#include $<$cstdlib$>$}\\*
+{\ttfamily \#include $<$cstring$>$}\\*
+{\ttfamily \#include $<$cstdarg$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classtinyxml2_1_1_str_pair}{tinyxml2\-::\-Str\-Pair}
+\item 
+class \hyperlink{classtinyxml2_1_1_dyn_array}{tinyxml2\-::\-Dyn\-Array$<$ T, I\-N\-I\-T $>$}
+\item 
+class \hyperlink{classtinyxml2_1_1_mem_pool}{tinyxml2\-::\-Mem\-Pool}
+\item 
+class \hyperlink{classtinyxml2_1_1_mem_pool_t}{tinyxml2\-::\-Mem\-Pool\-T$<$ S\-I\-Z\-E $>$}
+\item 
+class \hyperlink{classtinyxml2_1_1_x_m_l_visitor}{tinyxml2\-::\-X\-M\-L\-Visitor}
+\item 
+class \hyperlink{classtinyxml2_1_1_x_m_l_util}{tinyxml2\-::\-X\-M\-L\-Util}
+\item 
+class \hyperlink{classtinyxml2_1_1_x_m_l_node}{tinyxml2\-::\-X\-M\-L\-Node}
+\item 
+class \hyperlink{classtinyxml2_1_1_x_m_l_text}{tinyxml2\-::\-X\-M\-L\-Text}
+\item 
+class \hyperlink{classtinyxml2_1_1_x_m_l_comment}{tinyxml2\-::\-X\-M\-L\-Comment}
+\item 
+class \hyperlink{classtinyxml2_1_1_x_m_l_declaration}{tinyxml2\-::\-X\-M\-L\-Declaration}
+\item 
+class \hyperlink{classtinyxml2_1_1_x_m_l_unknown}{tinyxml2\-::\-X\-M\-L\-Unknown}
+\item 
+class \hyperlink{classtinyxml2_1_1_x_m_l_attribute}{tinyxml2\-::\-X\-M\-L\-Attribute}
+\item 
+class \hyperlink{classtinyxml2_1_1_x_m_l_element}{tinyxml2\-::\-X\-M\-L\-Element}
+\item 
+class \hyperlink{classtinyxml2_1_1_x_m_l_document}{tinyxml2\-::\-X\-M\-L\-Document}
+\item 
+class \hyperlink{classtinyxml2_1_1_x_m_l_handle}{tinyxml2\-::\-X\-M\-L\-Handle}
+\item 
+class \hyperlink{classtinyxml2_1_1_x_m_l_const_handle}{tinyxml2\-::\-X\-M\-L\-Const\-Handle}
+\item 
+class \hyperlink{classtinyxml2_1_1_x_m_l_printer}{tinyxml2\-::\-X\-M\-L\-Printer}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacetinyxml2}{tinyxml2}
+\end{DoxyCompactItemize}
+\subsection*{Constant Groups}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacetinyxml2}{tinyxml2}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{tinyxml2_8hpp_a8953517b8490d756ad0bfef40fe5811f}{T\-I\-N\-Y\-X\-M\-L2\-\_\-\-L\-I\-B}
+\item 
+\#define \hyperlink{tinyxml2_8hpp_a029877acb3c6fd71698561044953bd14}{T\-I\-X\-M\-L\-A\-S\-S\-E\-R\-T}(x)~\{\}
+\item 
+\#define \hyperlink{tinyxml2_8hpp_afc6433f9b56e4f18833089b1df629e0a}{T\-I\-X\-M\-L\-\_\-\-S\-N\-P\-R\-I\-N\-T\-F}~snprintf
+\item 
+\#define \hyperlink{tinyxml2_8hpp_a96f54d7c855ad92e705510904a040393}{T\-I\-X\-M\-L\-\_\-\-S\-S\-C\-A\-N\-F}~sscanf
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespacetinyxml2_a1fbf88509c3ac88c09117b1947414e08}{tinyxml2\-::\-X\-M\-L\-Error} \{ \\*
+\hyperlink{namespacetinyxml2_a1fbf88509c3ac88c09117b1947414e08ad3b3f200ced09c9fc4166134a4ff8fef}{tinyxml2\-::\-X\-M\-L\-\_\-\-N\-O\-\_\-\-E\-R\-R\-O\-R} = 0, 
+\hyperlink{namespacetinyxml2_a1fbf88509c3ac88c09117b1947414e08a1fe1262fdb5ac05dd9cc4631f8c8e00d}{tinyxml2\-::\-X\-M\-L\-\_\-\-S\-U\-C\-C\-E\-S\-S} = 0, 
+\hyperlink{namespacetinyxml2_a1fbf88509c3ac88c09117b1947414e08abefb89c44285fb68e2218b2c71767f27}{tinyxml2\-::\-X\-M\-L\-\_\-\-N\-O\-\_\-\-A\-T\-T\-R\-I\-B\-U\-T\-E}, 
+\hyperlink{namespacetinyxml2_a1fbf88509c3ac88c09117b1947414e08ae9d8ee545a3a69e90df303257a658113}{tinyxml2\-::\-X\-M\-L\-\_\-\-W\-R\-O\-N\-G\-\_\-\-A\-T\-T\-R\-I\-B\-U\-T\-E\-\_\-\-T\-Y\-P\-E}, 
+\\*
+\hyperlink{namespacetinyxml2_a1fbf88509c3ac88c09117b1947414e08a38fd2a97fb1dbebd4c3640d75dc01a94}{tinyxml2\-::\-X\-M\-L\-\_\-\-E\-R\-R\-O\-R\-\_\-\-F\-I\-L\-E\-\_\-\-N\-O\-T\-\_\-\-F\-O\-U\-N\-D}, 
+\hyperlink{namespacetinyxml2_a1fbf88509c3ac88c09117b1947414e08afbbf37655523b79a88b04b77ec0f1258}{tinyxml2\-::\-X\-M\-L\-\_\-\-E\-R\-R\-O\-R\-\_\-\-F\-I\-L\-E\-\_\-\-C\-O\-U\-L\-D\-\_\-\-N\-O\-T\-\_\-\-B\-E\-\_\-\-O\-P\-E\-N\-E\-D}, 
+\hyperlink{namespacetinyxml2_a1fbf88509c3ac88c09117b1947414e08a8d4dd3ce2dee784a53f62fa8a6ac83ee}{tinyxml2\-::\-X\-M\-L\-\_\-\-E\-R\-R\-O\-R\-\_\-\-F\-I\-L\-E\-\_\-\-R\-E\-A\-D\-\_\-\-E\-R\-R\-O\-R}, 
+\hyperlink{namespacetinyxml2_a1fbf88509c3ac88c09117b1947414e08a37759723c0c5e954597654e4eccb4f4d}{tinyxml2\-::\-X\-M\-L\-\_\-\-E\-R\-R\-O\-R\-\_\-\-E\-L\-E\-M\-E\-N\-T\-\_\-\-M\-I\-S\-M\-A\-T\-C\-H}, 
+\\*
+\hyperlink{namespacetinyxml2_a1fbf88509c3ac88c09117b1947414e08afa96ea783aa93ea212f9e2d7d3a70ba5}{tinyxml2\-::\-X\-M\-L\-\_\-\-E\-R\-R\-O\-R\-\_\-\-P\-A\-R\-S\-I\-N\-G\-\_\-\-E\-L\-E\-M\-E\-N\-T}, 
+\hyperlink{namespacetinyxml2_a1fbf88509c3ac88c09117b1947414e08a380fd8846799b88773321efae83d26a3}{tinyxml2\-::\-X\-M\-L\-\_\-\-E\-R\-R\-O\-R\-\_\-\-P\-A\-R\-S\-I\-N\-G\-\_\-\-A\-T\-T\-R\-I\-B\-U\-T\-E}, 
+\hyperlink{namespacetinyxml2_a1fbf88509c3ac88c09117b1947414e08a48e646cfca6de90c3770faf535d3ed6b}{tinyxml2\-::\-X\-M\-L\-\_\-\-E\-R\-R\-O\-R\-\_\-\-I\-D\-E\-N\-T\-I\-F\-Y\-I\-N\-G\-\_\-\-T\-A\-G}, 
+\hyperlink{namespacetinyxml2_a1fbf88509c3ac88c09117b1947414e08a50ead30b94c7ae2957b9ccb08ec0994d}{tinyxml2\-::\-X\-M\-L\-\_\-\-E\-R\-R\-O\-R\-\_\-\-P\-A\-R\-S\-I\-N\-G\-\_\-\-T\-E\-X\-T}, 
+\\*
+\hyperlink{namespacetinyxml2_a1fbf88509c3ac88c09117b1947414e08a9d181628a1819f2b97835e6bc2c8bb3b}{tinyxml2\-::\-X\-M\-L\-\_\-\-E\-R\-R\-O\-R\-\_\-\-P\-A\-R\-S\-I\-N\-G\-\_\-\-C\-D\-A\-T\-A}, 
+\hyperlink{namespacetinyxml2_a1fbf88509c3ac88c09117b1947414e08a51786809e8b079c770853cf5890a7a35}{tinyxml2\-::\-X\-M\-L\-\_\-\-E\-R\-R\-O\-R\-\_\-\-P\-A\-R\-S\-I\-N\-G\-\_\-\-C\-O\-M\-M\-E\-N\-T}, 
+\hyperlink{namespacetinyxml2_a1fbf88509c3ac88c09117b1947414e08ad45b208578e30dab5a21bff1d8991b87}{tinyxml2\-::\-X\-M\-L\-\_\-\-E\-R\-R\-O\-R\-\_\-\-P\-A\-R\-S\-I\-N\-G\-\_\-\-D\-E\-C\-L\-A\-R\-A\-T\-I\-O\-N}, 
+\hyperlink{namespacetinyxml2_a1fbf88509c3ac88c09117b1947414e08a95a88813812a680fb7372f0149420a97}{tinyxml2\-::\-X\-M\-L\-\_\-\-E\-R\-R\-O\-R\-\_\-\-P\-A\-R\-S\-I\-N\-G\-\_\-\-U\-N\-K\-N\-O\-W\-N}, 
+\\*
+\hyperlink{namespacetinyxml2_a1fbf88509c3ac88c09117b1947414e08a1a0478cf44f0a733aa6f21bdf0db80b5}{tinyxml2\-::\-X\-M\-L\-\_\-\-E\-R\-R\-O\-R\-\_\-\-E\-M\-P\-T\-Y\-\_\-\-D\-O\-C\-U\-M\-E\-N\-T}, 
+\hyperlink{namespacetinyxml2_a1fbf88509c3ac88c09117b1947414e08a0cecc816939d9155d33b8a88fd50e4c1}{tinyxml2\-::\-X\-M\-L\-\_\-\-E\-R\-R\-O\-R\-\_\-\-M\-I\-S\-M\-A\-T\-C\-H\-E\-D\-\_\-\-E\-L\-E\-M\-E\-N\-T}, 
+\hyperlink{namespacetinyxml2_a1fbf88509c3ac88c09117b1947414e08af6b4caa10e1f2e9f19a3a24f5f3ce223}{tinyxml2\-::\-X\-M\-L\-\_\-\-E\-R\-R\-O\-R\-\_\-\-P\-A\-R\-S\-I\-N\-G}, 
+\hyperlink{namespacetinyxml2_a1fbf88509c3ac88c09117b1947414e08afdb8840395a7c13dfe6a3e104401c095}{tinyxml2\-::\-X\-M\-L\-\_\-\-C\-A\-N\-\_\-\-N\-O\-T\-\_\-\-C\-O\-N\-V\-E\-R\-T\-\_\-\-T\-E\-X\-T}, 
+\\*
+\hyperlink{namespacetinyxml2_a1fbf88509c3ac88c09117b1947414e08a5300bec98feccc8f0cdf567b88821f33}{tinyxml2\-::\-X\-M\-L\-\_\-\-N\-O\-\_\-\-T\-E\-X\-T\-\_\-\-N\-O\-D\-E}
+ \}
+\item 
+enum \hyperlink{namespacetinyxml2_a7f91d00f77360f850fd5da0861e27dd5}{tinyxml2\-::\-Whitespace} \{ \hyperlink{namespacetinyxml2_a7f91d00f77360f850fd5da0861e27dd5a751769aa625fe5fe5286e9779edec56a}{tinyxml2\-::\-P\-R\-E\-S\-E\-R\-V\-E\-\_\-\-W\-H\-I\-T\-E\-S\-P\-A\-C\-E}, 
+\hyperlink{namespacetinyxml2_a7f91d00f77360f850fd5da0861e27dd5a9a4a309029a6f5e636e20ef5e0b65136}{tinyxml2\-::\-C\-O\-L\-L\-A\-P\-S\-E\-\_\-\-W\-H\-I\-T\-E\-S\-P\-A\-C\-E}
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{tinyxml2_8hpp_a8953517b8490d756ad0bfef40fe5811f}{\index{tinyxml2.\-hpp@{tinyxml2.\-hpp}!T\-I\-N\-Y\-X\-M\-L2\-\_\-\-L\-I\-B@{T\-I\-N\-Y\-X\-M\-L2\-\_\-\-L\-I\-B}}
+\index{T\-I\-N\-Y\-X\-M\-L2\-\_\-\-L\-I\-B@{T\-I\-N\-Y\-X\-M\-L2\-\_\-\-L\-I\-B}!tinyxml2.hpp@{tinyxml2.\-hpp}}
+\subsubsection[{T\-I\-N\-Y\-X\-M\-L2\-\_\-\-L\-I\-B}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-I\-N\-Y\-X\-M\-L2\-\_\-\-L\-I\-B}}\label{tinyxml2_8hpp_a8953517b8490d756ad0bfef40fe5811f}
+
+
+Definition at line 75 of file tinyxml2.\-hpp.
+
+\hypertarget{tinyxml2_8hpp_afc6433f9b56e4f18833089b1df629e0a}{\index{tinyxml2.\-hpp@{tinyxml2.\-hpp}!T\-I\-X\-M\-L\-\_\-\-S\-N\-P\-R\-I\-N\-T\-F@{T\-I\-X\-M\-L\-\_\-\-S\-N\-P\-R\-I\-N\-T\-F}}
+\index{T\-I\-X\-M\-L\-\_\-\-S\-N\-P\-R\-I\-N\-T\-F@{T\-I\-X\-M\-L\-\_\-\-S\-N\-P\-R\-I\-N\-T\-F}!tinyxml2.hpp@{tinyxml2.\-hpp}}
+\subsubsection[{T\-I\-X\-M\-L\-\_\-\-S\-N\-P\-R\-I\-N\-T\-F}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-I\-X\-M\-L\-\_\-\-S\-N\-P\-R\-I\-N\-T\-F~snprintf}}\label{tinyxml2_8hpp_afc6433f9b56e4f18833089b1df629e0a}
+
+
+Definition at line 115 of file tinyxml2.\-hpp.
+
+\hypertarget{tinyxml2_8hpp_a96f54d7c855ad92e705510904a040393}{\index{tinyxml2.\-hpp@{tinyxml2.\-hpp}!T\-I\-X\-M\-L\-\_\-\-S\-S\-C\-A\-N\-F@{T\-I\-X\-M\-L\-\_\-\-S\-S\-C\-A\-N\-F}}
+\index{T\-I\-X\-M\-L\-\_\-\-S\-S\-C\-A\-N\-F@{T\-I\-X\-M\-L\-\_\-\-S\-S\-C\-A\-N\-F}!tinyxml2.hpp@{tinyxml2.\-hpp}}
+\subsubsection[{T\-I\-X\-M\-L\-\_\-\-S\-S\-C\-A\-N\-F}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-I\-X\-M\-L\-\_\-\-S\-S\-C\-A\-N\-F~sscanf}}\label{tinyxml2_8hpp_a96f54d7c855ad92e705510904a040393}
+
+
+Definition at line 116 of file tinyxml2.\-hpp.
+
+\hypertarget{tinyxml2_8hpp_a029877acb3c6fd71698561044953bd14}{\index{tinyxml2.\-hpp@{tinyxml2.\-hpp}!T\-I\-X\-M\-L\-A\-S\-S\-E\-R\-T@{T\-I\-X\-M\-L\-A\-S\-S\-E\-R\-T}}
+\index{T\-I\-X\-M\-L\-A\-S\-S\-E\-R\-T@{T\-I\-X\-M\-L\-A\-S\-S\-E\-R\-T}!tinyxml2.hpp@{tinyxml2.\-hpp}}
+\subsubsection[{T\-I\-X\-M\-L\-A\-S\-S\-E\-R\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-I\-X\-M\-L\-A\-S\-S\-E\-R\-T(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~\{\}}}\label{tinyxml2_8hpp_a029877acb3c6fd71698561044953bd14}
+
+
+Definition at line 90 of file tinyxml2.\-hpp.
+

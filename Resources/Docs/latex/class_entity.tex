@@ -1,0 +1,311 @@
+\hypertarget{class_entity}{\section{Entity Class Reference}
+\label{class_entity}\index{Entity@{Entity}}
+}
+
+
+The \hyperlink{class_entity}{Entity} class, represents a basic entity that exists in the 2d world.  
+
+
+
+
+{\ttfamily \#include $<$Entity.\-hpp$>$}
+
+Inheritance diagram for Entity\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_entity}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_entity_a5c738f826217b3f8ce83d4c6b856e3ab}{Entity} (const sf\-::\-Texture \&texture, const sf\-::\-Vector2f \&pos, bool collidable=false)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_entity}{Entity} ctor for making an entity. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_entity_adf6d3f7cb1b2ba029b6b048a395cc8ae}{$\sim$\-Entity} ()
+\begin{DoxyCompactList}\small\item\em $\sim$\-Entity virtual call to destruct entities. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_entity_a7e2a7c5df3bceaf41deea192eeba4d8f}{Update} ()
+\begin{DoxyCompactList}\small\item\em Update virtual call to update entities, and their child class. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_entity_ad8e60d2f123abe033b2653750e7944b3}{Draw} (sf\-::\-Render\-Window $\ast$p\-Window)
+\begin{DoxyCompactList}\small\item\em Draw to a window. \end{DoxyCompactList}\item 
+void \hyperlink{class_entity_a5009a2ec0e07f2decfdf80bce3a66d8e}{Set\-Is\-Collidable} (bool collidable)
+\begin{DoxyCompactList}\small\item\em Set\-Is\-Collidable setter for the collidable flag. \end{DoxyCompactList}\item 
+bool \hyperlink{class_entity_ac4cc6941a4a04be6e143ad240c499c46}{Get\-Is\-Collidable} () const 
+\begin{DoxyCompactList}\small\item\em Get\-Is\-Collidable getter for the collidable flag. \end{DoxyCompactList}\item 
+void \hyperlink{class_entity_abfdb5c682a32f0b5addfc77f171e4004}{Set\-Is\-Spawnable} (bool spawnable)
+\begin{DoxyCompactList}\small\item\em Set\-Is\-Spawnable setter for the spawnable flag. \end{DoxyCompactList}\item 
+bool \hyperlink{class_entity_aba3aa520f80f99a083fbfb2b604783cd}{Get\-Is\-Spawnable} () const 
+\begin{DoxyCompactList}\small\item\em Get\-Is\-Spawnable getter for the spawnable flag. \end{DoxyCompactList}\item 
+const sf\-::\-Vector2f \& \hyperlink{class_entity_a384e8c07dd367654bfba85c9921e0f88}{Get\-Position} ()
+\begin{DoxyCompactList}\small\item\em Get\-Position getter for the position of the sprite, usually in top left corner. \end{DoxyCompactList}\item 
+const sf\-::\-Float\-Rect \& \hyperlink{class_entity_a5e2cbcbaac883ed921888e6a90070d96}{Get\-Global\-Rect} ()
+\begin{DoxyCompactList}\small\item\em Get\-Global\-Rect getter for the rectangle that borders the sprite. \end{DoxyCompactList}\item 
+sf\-::\-Sprite $\ast$ \hyperlink{class_entity_a4481e6a0bf40afab75321078be213ebb}{Get\-Sprite} ()
+\begin{DoxyCompactList}\small\item\em Get\-Sprite getter for the sf\-::\-Sprite this \hyperlink{class_entity}{Entity} represents. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unique\-\_\-ptr$<$ sf\-::\-Sprite $>$ \hyperlink{class_entity_a52b9048640f6ffadfbc3e93d6184fe1f}{mp\-Sprite}
+\item 
+bool \hyperlink{class_entity_ade1f7c65bf9761c8e20188e67cb45556}{m\-Is\-Collidable}
+\item 
+bool \hyperlink{class_entity_a13cc8677fa51642cc3d60c13e9566dab}{m\-Is\-Spawnable}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_entity}{Entity} class, represents a basic entity that exists in the 2d world. 
+
+This class should be inherited from, to build complex types of objects that exist in the game world.
+
+For example the player, enemies, pick up items, keys, doors, ect...
+
+It can be drawable or non drawable. It can be a position that things may spawn on. 
+
+Definition at line 30 of file Entity.\-hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_entity_a5c738f826217b3f8ce83d4c6b856e3ab}{\index{Entity@{Entity}!Entity@{Entity}}
+\index{Entity@{Entity}!Entity@{Entity}}
+\subsubsection[{Entity}]{\setlength{\rightskip}{0pt plus 5cm}Entity\-::\-Entity (
+\begin{DoxyParamCaption}
+\item[{const sf\-::\-Texture \&}]{texture, }
+\item[{const sf\-::\-Vector2f \&}]{pos, }
+\item[{bool}]{collidable = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}}\label{class_entity_a5c738f826217b3f8ce83d4c6b856e3ab}
+
+
+\hyperlink{class_entity}{Entity} ctor for making an entity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em texture} & The texture to use for this objects when drawing. \\
+\hline
+{\em pos} & The position, usually in top left corner. \\
+\hline
+{\em collidable} & Whether this object can be collided. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 11 of file Entity.\-cpp.
+
+\hypertarget{class_entity_adf6d3f7cb1b2ba029b6b048a395cc8ae}{\index{Entity@{Entity}!$\sim$\-Entity@{$\sim$\-Entity}}
+\index{$\sim$\-Entity@{$\sim$\-Entity}!Entity@{Entity}}
+\subsubsection[{$\sim$\-Entity}]{\setlength{\rightskip}{0pt plus 5cm}Entity\-::$\sim$\-Entity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_entity_adf6d3f7cb1b2ba029b6b048a395cc8ae}
+
+
+$\sim$\-Entity virtual call to destruct entities. 
+
+
+
+Definition at line 20 of file Entity.\-cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_entity_ad8e60d2f123abe033b2653750e7944b3}{\index{Entity@{Entity}!Draw@{Draw}}
+\index{Draw@{Draw}!Entity@{Entity}}
+\subsubsection[{Draw}]{\setlength{\rightskip}{0pt plus 5cm}void Entity\-::\-Draw (
+\begin{DoxyParamCaption}
+\item[{sf\-::\-Render\-Window $\ast$}]{p\-Window}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_entity_ad8e60d2f123abe033b2653750e7944b3}
+
+
+Draw to a window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-Window} & The window to draw to. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 30 of file Entity.\-cpp.
+
+\hypertarget{class_entity_a5e2cbcbaac883ed921888e6a90070d96}{\index{Entity@{Entity}!Get\-Global\-Rect@{Get\-Global\-Rect}}
+\index{Get\-Global\-Rect@{Get\-Global\-Rect}!Entity@{Entity}}
+\subsubsection[{Get\-Global\-Rect}]{\setlength{\rightskip}{0pt plus 5cm}const sf\-::\-Float\-Rect \& Entity\-::\-Get\-Global\-Rect (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_entity_a5e2cbcbaac883ed921888e6a90070d96}
+
+
+Get\-Global\-Rect getter for the rectangle that borders the sprite. 
+
+\begin{DoxyReturn}{Returns}
+The rectangle of this object's sprite, in global coordinates. 
+\end{DoxyReturn}
+
+
+Definition at line 41 of file Entity.\-cpp.
+
+\hypertarget{class_entity_ac4cc6941a4a04be6e143ad240c499c46}{\index{Entity@{Entity}!Get\-Is\-Collidable@{Get\-Is\-Collidable}}
+\index{Get\-Is\-Collidable@{Get\-Is\-Collidable}!Entity@{Entity}}
+\subsubsection[{Get\-Is\-Collidable}]{\setlength{\rightskip}{0pt plus 5cm}bool Entity\-::\-Get\-Is\-Collidable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_entity_ac4cc6941a4a04be6e143ad240c499c46}
+
+
+Get\-Is\-Collidable getter for the collidable flag. 
+
+\begin{DoxyReturn}{Returns}
+The current value for collidable. 
+\end{DoxyReturn}
+
+
+Definition at line 56 of file Entity.\-cpp.
+
+\hypertarget{class_entity_aba3aa520f80f99a083fbfb2b604783cd}{\index{Entity@{Entity}!Get\-Is\-Spawnable@{Get\-Is\-Spawnable}}
+\index{Get\-Is\-Spawnable@{Get\-Is\-Spawnable}!Entity@{Entity}}
+\subsubsection[{Get\-Is\-Spawnable}]{\setlength{\rightskip}{0pt plus 5cm}bool Entity\-::\-Get\-Is\-Spawnable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_entity_aba3aa520f80f99a083fbfb2b604783cd}
+
+
+Get\-Is\-Spawnable getter for the spawnable flag. 
+
+\begin{DoxyReturn}{Returns}
+The current value for spawnable. 
+\end{DoxyReturn}
+
+
+Definition at line 66 of file Entity.\-cpp.
+
+\hypertarget{class_entity_a384e8c07dd367654bfba85c9921e0f88}{\index{Entity@{Entity}!Get\-Position@{Get\-Position}}
+\index{Get\-Position@{Get\-Position}!Entity@{Entity}}
+\subsubsection[{Get\-Position}]{\setlength{\rightskip}{0pt plus 5cm}const sf\-::\-Vector2f \& Entity\-::\-Get\-Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_entity_a384e8c07dd367654bfba85c9921e0f88}
+
+
+Get\-Position getter for the position of the sprite, usually in top left corner. 
+
+\begin{DoxyReturn}{Returns}
+The current position. 
+\end{DoxyReturn}
+
+
+Definition at line 36 of file Entity.\-cpp.
+
+\hypertarget{class_entity_a4481e6a0bf40afab75321078be213ebb}{\index{Entity@{Entity}!Get\-Sprite@{Get\-Sprite}}
+\index{Get\-Sprite@{Get\-Sprite}!Entity@{Entity}}
+\subsubsection[{Get\-Sprite}]{\setlength{\rightskip}{0pt plus 5cm}sf\-::\-Sprite $\ast$ Entity\-::\-Get\-Sprite (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_entity_a4481e6a0bf40afab75321078be213ebb}
+
+
+Get\-Sprite getter for the sf\-::\-Sprite this \hyperlink{class_entity}{Entity} represents. 
+
+\begin{DoxyReturn}{Returns}
+The sprite this \hyperlink{class_entity}{Entity} represents. 
+\end{DoxyReturn}
+
+
+Definition at line 46 of file Entity.\-cpp.
+
+\hypertarget{class_entity_a5009a2ec0e07f2decfdf80bce3a66d8e}{\index{Entity@{Entity}!Set\-Is\-Collidable@{Set\-Is\-Collidable}}
+\index{Set\-Is\-Collidable@{Set\-Is\-Collidable}!Entity@{Entity}}
+\subsubsection[{Set\-Is\-Collidable}]{\setlength{\rightskip}{0pt plus 5cm}void Entity\-::\-Set\-Is\-Collidable (
+\begin{DoxyParamCaption}
+\item[{bool}]{collidable}
+\end{DoxyParamCaption}
+)}}\label{class_entity_a5009a2ec0e07f2decfdf80bce3a66d8e}
+
+
+Set\-Is\-Collidable setter for the collidable flag. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em collidable} & The value to set for collidable. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 51 of file Entity.\-cpp.
+
+\hypertarget{class_entity_abfdb5c682a32f0b5addfc77f171e4004}{\index{Entity@{Entity}!Set\-Is\-Spawnable@{Set\-Is\-Spawnable}}
+\index{Set\-Is\-Spawnable@{Set\-Is\-Spawnable}!Entity@{Entity}}
+\subsubsection[{Set\-Is\-Spawnable}]{\setlength{\rightskip}{0pt plus 5cm}void Entity\-::\-Set\-Is\-Spawnable (
+\begin{DoxyParamCaption}
+\item[{bool}]{spawnable}
+\end{DoxyParamCaption}
+)}}\label{class_entity_abfdb5c682a32f0b5addfc77f171e4004}
+
+
+Set\-Is\-Spawnable setter for the spawnable flag. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em spawnable} & The value to set for spawnable. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 61 of file Entity.\-cpp.
+
+\hypertarget{class_entity_a7e2a7c5df3bceaf41deea192eeba4d8f}{\index{Entity@{Entity}!Update@{Update}}
+\index{Update@{Update}!Entity@{Entity}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}void Entity\-::\-Update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_entity_a7e2a7c5df3bceaf41deea192eeba4d8f}
+
+
+Update virtual call to update entities, and their child class. 
+
+
+
+Reimplemented in \hyperlink{class_player_a05b60cac1922c5be5c1be16baffa4497}{Player}, and \hyperlink{class_animated_entity_af12d83ab3604a110e37c66c33206104b}{Animated\-Entity}.
+
+
+
+Definition at line 25 of file Entity.\-cpp.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_entity_ade1f7c65bf9761c8e20188e67cb45556}{\index{Entity@{Entity}!m\-Is\-Collidable@{m\-Is\-Collidable}}
+\index{m\-Is\-Collidable@{m\-Is\-Collidable}!Entity@{Entity}}
+\subsubsection[{m\-Is\-Collidable}]{\setlength{\rightskip}{0pt plus 5cm}bool Entity\-::m\-Is\-Collidable\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_entity_ade1f7c65bf9761c8e20188e67cb45556}
+
+
+Definition at line 101 of file Entity.\-hpp.
+
+\hypertarget{class_entity_a13cc8677fa51642cc3d60c13e9566dab}{\index{Entity@{Entity}!m\-Is\-Spawnable@{m\-Is\-Spawnable}}
+\index{m\-Is\-Spawnable@{m\-Is\-Spawnable}!Entity@{Entity}}
+\subsubsection[{m\-Is\-Spawnable}]{\setlength{\rightskip}{0pt plus 5cm}bool Entity\-::m\-Is\-Spawnable\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_entity_a13cc8677fa51642cc3d60c13e9566dab}
+
+
+Definition at line 102 of file Entity.\-hpp.
+
+\hypertarget{class_entity_a52b9048640f6ffadfbc3e93d6184fe1f}{\index{Entity@{Entity}!mp\-Sprite@{mp\-Sprite}}
+\index{mp\-Sprite@{mp\-Sprite}!Entity@{Entity}}
+\subsubsection[{mp\-Sprite}]{\setlength{\rightskip}{0pt plus 5cm}unique\-\_\-ptr$<$sf\-::\-Sprite$>$ Entity\-::mp\-Sprite\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_entity_a52b9048640f6ffadfbc3e93d6184fe1f}
+
+
+Definition at line 100 of file Entity.\-hpp.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Source/\hyperlink{_entity_8hpp}{Entity.\-hpp}\item 
+Source/\hyperlink{_entity_8cpp}{Entity.\-cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,168 @@
+\hypertarget{class_state}{\section{State Class Reference}
+\label{class_state}\index{State@{State}}
+}
+
+
+{\ttfamily \#include $<$State.\-hpp$>$}
+
+Inheritance diagram for State\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_state}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_state_a4da3d6c4c175efa74f87a1d413a4486b}{State} (const \hyperlink{_state_8hpp_a905494cc15ee9757a813dbfe4b1072fe}{State\-I\-D} state\-I\-D)
+\item 
+virtual \hyperlink{class_state_afab438d92b90dc18d194dbd9c9c8bab3}{$\sim$\-State} ()
+\item 
+\hyperlink{_state_8hpp_a905494cc15ee9757a813dbfe4b1072fe}{State\-I\-D} \hyperlink{class_state_ab7022716d4d0c7aec82dbdd90e1e039e}{Get\-I\-D} () const 
+\item 
+virtual void \hyperlink{class_state_a43d4ca30d927c023316c058b700c0716}{Update} ()=0
+\item 
+virtual void \hyperlink{class_state_a8b0cdb0e7450a9bb3580a33dfbe4d981}{Draw} ()=0
+\item 
+virtual void \hyperlink{class_state_a8c96aac63e62b9b6bb491cae071d08f2}{Load\-From\-X\-M\-L} (const string \&file)=0
+\item 
+virtual void \hyperlink{class_state_aac4126b251b0c55d5c934982310c80ae}{Process\-Event} (const sf\-::\-Event \&event)=0
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_game}{Game} $\ast$ \hyperlink{class_state_a418f507cf3deef8f3653b8209a9f7b85}{mp\-Game}
+\item 
+\hyperlink{class_resource_manager}{Resource\-Manager}$<$ sf\-::\-Texture $>$ \hyperlink{class_state_a4eb530bbd8c56bb10ab4e36adeb097d9}{m\-Textures}
+\item 
+unique\-\_\-ptr$<$ \hyperlink{class_audio_effects}{Audio\-Effects} $>$ \hyperlink{class_state_a5b54964067de86bec58088f13d5a7564}{mp\-Audio\-Effects}
+\item 
+unique\-\_\-ptr$<$ sf\-::\-Sprite $>$ \hyperlink{class_state_ad77d6e8727cab4ac8ac5d44eacb41eba}{mp\-Background}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 38 of file State.\-hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_state_a4da3d6c4c175efa74f87a1d413a4486b}{\index{State@{State}!State@{State}}
+\index{State@{State}!State@{State}}
+\subsubsection[{State}]{\setlength{\rightskip}{0pt plus 5cm}State\-::\-State (
+\begin{DoxyParamCaption}
+\item[{const {\bf State\-I\-D}}]{state\-I\-D}
+\end{DoxyParamCaption}
+)}}\label{class_state_a4da3d6c4c175efa74f87a1d413a4486b}
+
+
+Definition at line 20 of file State.\-cpp.
+
+\hypertarget{class_state_afab438d92b90dc18d194dbd9c9c8bab3}{\index{State@{State}!$\sim$\-State@{$\sim$\-State}}
+\index{$\sim$\-State@{$\sim$\-State}!State@{State}}
+\subsubsection[{$\sim$\-State}]{\setlength{\rightskip}{0pt plus 5cm}State\-::$\sim$\-State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_state_afab438d92b90dc18d194dbd9c9c8bab3}
+
+
+Definition at line 30 of file State.\-cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_state_a8b0cdb0e7450a9bb3580a33dfbe4d981}{\index{State@{State}!Draw@{Draw}}
+\index{Draw@{Draw}!State@{State}}
+\subsubsection[{Draw}]{\setlength{\rightskip}{0pt plus 5cm}virtual void State\-::\-Draw (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_state_a8b0cdb0e7450a9bb3580a33dfbe4d981}
+
+
+Implemented in \hyperlink{class_state_main_menu_acd8b820dddbd9bd5515b1a3cebbe6978}{State\-Main\-Menu}, and \hyperlink{class_state_game_play_a5a4710616480b177cc8164675d5295ae}{State\-Game\-Play}.
+
+\hypertarget{class_state_ab7022716d4d0c7aec82dbdd90e1e039e}{\index{State@{State}!Get\-I\-D@{Get\-I\-D}}
+\index{Get\-I\-D@{Get\-I\-D}!State@{State}}
+\subsubsection[{Get\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}{\bf State\-I\-D} State\-::\-Get\-I\-D (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_state_ab7022716d4d0c7aec82dbdd90e1e039e}
+
+
+Definition at line 35 of file State.\-cpp.
+
+\hypertarget{class_state_a8c96aac63e62b9b6bb491cae071d08f2}{\index{State@{State}!Load\-From\-X\-M\-L@{Load\-From\-X\-M\-L}}
+\index{Load\-From\-X\-M\-L@{Load\-From\-X\-M\-L}!State@{State}}
+\subsubsection[{Load\-From\-X\-M\-L}]{\setlength{\rightskip}{0pt plus 5cm}virtual void State\-::\-Load\-From\-X\-M\-L (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{file}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_state_a8c96aac63e62b9b6bb491cae071d08f2}
+
+
+Implemented in \hyperlink{class_state_main_menu_a988befa6ae7c087935581b269fb8863f}{State\-Main\-Menu}, and \hyperlink{class_state_game_play_ab959c0ecf1e0db614a89a87bacd1ead1}{State\-Game\-Play}.
+
+\hypertarget{class_state_aac4126b251b0c55d5c934982310c80ae}{\index{State@{State}!Process\-Event@{Process\-Event}}
+\index{Process\-Event@{Process\-Event}!State@{State}}
+\subsubsection[{Process\-Event}]{\setlength{\rightskip}{0pt plus 5cm}virtual void State\-::\-Process\-Event (
+\begin{DoxyParamCaption}
+\item[{const sf\-::\-Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_state_aac4126b251b0c55d5c934982310c80ae}
+
+
+Implemented in \hyperlink{class_state_main_menu_ac9a02be51b4faa9c7d82e10af97ef6e4}{State\-Main\-Menu}, and \hyperlink{class_state_game_play_a9123dfdcf99f92706a00740245e98d23}{State\-Game\-Play}.
+
+\hypertarget{class_state_a43d4ca30d927c023316c058b700c0716}{\index{State@{State}!Update@{Update}}
+\index{Update@{Update}!State@{State}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}virtual void State\-::\-Update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_state_a43d4ca30d927c023316c058b700c0716}
+
+
+Implemented in \hyperlink{class_state_main_menu_afa9c12c0975a2af95fdd2cf1829c56df}{State\-Main\-Menu}, and \hyperlink{class_state_game_play_a56b45e9ee196d709557dac2a3a6f2b3d}{State\-Game\-Play}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_state_a5b54964067de86bec58088f13d5a7564}{\index{State@{State}!mp\-Audio\-Effects@{mp\-Audio\-Effects}}
+\index{mp\-Audio\-Effects@{mp\-Audio\-Effects}!State@{State}}
+\subsubsection[{mp\-Audio\-Effects}]{\setlength{\rightskip}{0pt plus 5cm}unique\-\_\-ptr$<${\bf Audio\-Effects}$>$ State\-::mp\-Audio\-Effects\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_state_a5b54964067de86bec58088f13d5a7564}
+
+
+Definition at line 58 of file State.\-hpp.
+
+\hypertarget{class_state_ad77d6e8727cab4ac8ac5d44eacb41eba}{\index{State@{State}!mp\-Background@{mp\-Background}}
+\index{mp\-Background@{mp\-Background}!State@{State}}
+\subsubsection[{mp\-Background}]{\setlength{\rightskip}{0pt plus 5cm}unique\-\_\-ptr$<$sf\-::\-Sprite$>$ State\-::mp\-Background\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_state_ad77d6e8727cab4ac8ac5d44eacb41eba}
+
+
+Definition at line 59 of file State.\-hpp.
+
+\hypertarget{class_state_a418f507cf3deef8f3653b8209a9f7b85}{\index{State@{State}!mp\-Game@{mp\-Game}}
+\index{mp\-Game@{mp\-Game}!State@{State}}
+\subsubsection[{mp\-Game}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Game}$\ast$ State\-::mp\-Game\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_state_a418f507cf3deef8f3653b8209a9f7b85}
+
+
+Definition at line 55 of file State.\-hpp.
+
+\hypertarget{class_state_a4eb530bbd8c56bb10ab4e36adeb097d9}{\index{State@{State}!m\-Textures@{m\-Textures}}
+\index{m\-Textures@{m\-Textures}!State@{State}}
+\subsubsection[{m\-Textures}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Resource\-Manager}$<$sf\-::\-Texture$>$ State\-::m\-Textures\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_state_a4eb530bbd8c56bb10ab4e36adeb097d9}
+
+
+Definition at line 57 of file State.\-hpp.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Source/\hyperlink{_state_8hpp}{State.\-hpp}\item 
+Source/\hyperlink{_state_8cpp}{State.\-cpp}\end{DoxyCompactItemize}

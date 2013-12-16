@@ -132,11 +132,12 @@ Player::~Player()
 
 void Player::Update()
 	{
-	UpdateControls();
+
 	}
 
 void Player::UpdateControls()
 	{
+
 	}
 
 int Player::GetXCoord() const
@@ -179,7 +180,7 @@ int Player::GetTextureSheetHeight() const
 	return mTextureSheetHeight;
 	}
 
-int Player::GetNextFrameTrigger() const
+TimeInt Player::GetNextFrameTrigger() const
 	{
 	return mNextFrameTrigger;
 	}
