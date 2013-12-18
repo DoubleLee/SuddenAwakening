@@ -49,7 +49,7 @@ win32:LIBS += -LC:\SFMLMinGW\lib
 
 #CONFIG ( release, debug | release ) {
 
-LIBS += -lsfml-audio -lsfml-network -lsfml-graphics -lsfml-window -lsfml-system -lGLEW
+LIBS += -lsfml-audio -lsfml-network -lsfml-graphics -lsfml-window -lsfml-system -glew32
 win32: LIBS += -lsfml-main
 
 #}
