@@ -72,7 +72,7 @@ bool Game::Init()
 
 		mpWindow.reset( new sf::RenderWindow(
 						sf::VideoMode( config.GetScreenWidth(), config.GetScreenHeight() ),
-                        config.GetWindowTitle(), sf::Style::Fullscreen ) );
+						config.GetWindowTitle() ) );
 
 		mTitleString = config.GetWindowTitle();
 		mpFontButton.reset( new sf::Font( ) );
