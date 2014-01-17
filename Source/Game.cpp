@@ -43,6 +43,7 @@ Game::Game()
 		mpsGame = this;
 
 	gGameStart = std::chrono::high_resolution_clock::now();
+	Init();
 	}
 
 Game::~Game()
@@ -55,7 +56,7 @@ Game * Game::Get()
 	return mpsGame;
 	}
 
-bool Game::Init()
+void Game::Init()
 	{
 	LogFuncBegin();
 	try
@@ -91,11 +92,11 @@ bool Game::Init()
 		{
 		gLogger.Exception(except);
 		throw std::runtime_error( except.what() );
-		return false;
+		return;
 		}
 
 	LogFuncEndSuccess();
-	return true;
+	return;
 	}
 
 int Game::Run()

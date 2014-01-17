@@ -55,7 +55,7 @@ public:
 	 * @brief Init all game/engine initialization starts here.
 	 * @return Success or fail of initialization of the entire game.
 	 */
-	bool Init();
+	void Init();
 
 	/**
 	 * @brief Run is where all the game loop code is location and starts.

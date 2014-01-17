@@ -6,9 +6,7 @@ using namespace std;
 int main()
 	{
 	Game game;
-	if ( game.Init() )
-		return game.Run();
-	else
-		return 1;
+
+	return game.Run();
 	}
 
